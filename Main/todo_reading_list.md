@@ -1,0 +1,227 @@
+# ToDo Reading List
+
+- **08.01.2016** - [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
+-  [Borg Backup](http://borgbackup.readthedocs.io/en/stable/)
+- **Done 07.21.2016** [IPv6 Crash Course](https://www.linux.com/learn/ipv6-crash-course-linux)
+- [POSIX](https://en.wikipedia.org/wiki/POSIX)
+- 07.11.107 - OS X & UNIX ACLs: http://www.techrepublic.com/blog/apple-in-the-enterprise/introduction-to-os-x-access-control-lists-acls/
+- Linux Journey - https://linuxjourney.com/lesson/etc-group-file
+- Done - KeePass - http://keepass.info/download.html - OS password locker
+- 1985 Brixton riot - Wikipedia, the free encyclopedia - https://en.wikipedia.org/wiki/1985_Brixton_riot
+- Sync Thing
+- Done - netboot.xyz
+- unRAID - http://lime-technology.com/
+- Done - OverLeaf - https://www.overleaf.com/ - online text editor
+- Done - OpenWRT - http://wiki.openwrt.org/toh/netgear/wnr1000 - OS router
+firmware
+- 05.27.2015 - DNS SOHO router Attack - https://threatpost.com/exploit-kit-using-csrf-to-redirect-soho-router-dns-settings/112993
+- SSH Tricks: http://www.linuxjournal.com/article/6602
+- Python for InfoSec: http://strategicsec.com/python-for-infosec-pros-2015/
+- CreepyDOL: https://media.blackhat.com/us-13/US-13-OConnor-CreepyDOL-Cheap-Distributed-Stalking-Slides.pdf
+- Pentesterlab.com - http://pentesterlab.com/exercises/
+- 09.10.2014 - Home Depot data breach - http://krebsonsecurity.com/2014/09/home-depot-hit-by-same-malware-as-target/
+- Rescator[dot]cc - underground black market where stolen cc were first seen to
+be for sale
+- 09.03.2014 - iCloud Account Hack: http://9to5mac.com/2014/09/03/metadata-analysis-of-leaked-photos-suggest-complete-iphone-backups-obtained/
+- Banking with a live cd: http://krebsonsecurity.com/2012/07/banking-on-a-live-cd/
+- Synolocker: http://www.f-secure.com/weblog/archives/00002733.html
+- Internet has a Hiccup Today: http://www.zdnet.com/internet-hiccups-today-youre-not-alone-heres-why-7000032566/ - cisco put out a paper to reconfigure the catalyst routers
+- Anonymous Web browsing - http://lifehacker.com/150074/anonymous-web-browsing-20
+- Fail2ban Documentation: http://www.fail2ban.org/wiki/index.php/MANUAL_0_8
+- 2014.08.08- Vulnhub.com - vulnerable virtual machines
+- http://www.openbl.org/
+- Netflix and Security Monkey - http://techblog.netflix.com/2014/06/announcing-security-monkey-aws-security.html
+- 2014.07.03- Researchers say reusing passwords isn't all bad - http://threatpost.com/researchers-say-password-re-use-isnt-all-bad/107265
+- POS Hack - http://threatpost.com/remote-access-hack-compromises-pos-vendor/107002
+- 2014.07.16 - Chewbacca Trojan - http://threatpost.com/chewbacca-point-of-sale-malware-campaign-found-in-10-countries/103985
+- Critical Security Controls: http://www.sans.org/critical-security-controls/
+- NIST Cyber Security Framework - http://www.nist.gov/cyberframework/upload/cybersecurity-framework-021214-final.pdf
+- Freehost9 - free Web hosting service - http://freehost9.com/
+- SquirrelMail - http://www.squirrelmail.org/
+- Researchers Find and decode the spy tools governments use to hijack phones: http://www.wired.com/2014/06/remote-control-system-phone-surveillance/?utm_source=SWPost%3A+June+26%2C+2014&utm_campaign=SWPost+June+12+2014&utm_medium=email
+- 2014.06.20 - Common DDoS Response Mistakes: http://www.darkreading.com/attacks-breaches/how-not-to-respond-to-a-ddos-attack/d/d-id/1278613?
+- 2014.06.20 - Hashing vs Encryption: http://www.darkreading.com/safely-storing-user-passwords-hashing-vs-encrypting/a/d-id/1269374
+- OpenVAS: http://www.openvas.org/
+- Security Enhanced Linux: http://selinuxproject.org/page/Main_Page
+- Using Google to DDoS any Website - http://chr13.com/2014/03/10/using-google-to-ddos-any-website/
+- 2014.05.27 - Using Facebook to DDoS any Website - http://chr13.com/2014/04/20/using-facebook-notes-to-ddos-any-website/
+- Project Bullrun - http://www.theguardian.com/world/interactive/2013/sep/05/nsa-project-bullrun-classification-guide
+- 2014.05.27 - Privacy under attack: the NSA files revealed new threats to democracy - http://www.theguardian.com/technology/2014/may/27/-sp-privacy-under-attack-nsa-files-revealed-new-threats-democracy
+- When a bad day gets worse - getting hacked twice in one day - http://chrishateswriting.com/post/84931829578/when-a-bad-day-gets-worse-getting-hacked-twice-in-one
+- Fishing for hackers Analysis of a Linux server attack - http://draios.com/fishing-for-hackers/
+- GIAC Certified Incident Handler - http://www.giac.org/certification/certified-incident-handler-gcih
+- GIAC Certified Forensic Examiner - http://www.giac.org/certification/certified-forensic-examiner-gcfe
+- 2014.04.24 - Show passwords hidden by asterisks or stars - http://www.tweakandtrick.com/2011/04/asterisk-password-star-show-view-reveal.html
+- 2014.04.24 - Cloud fogger - http://thehackernews.com/2014/01/how-to-encrypt-your-files-before.html
+- 2015.01.25 - Rsync command examples - http://www.thegeekstuff.com/2010/09/rsync-command-examples/
+- News for nerds - http://m.slashdot.org
+- How to generate OpenSSL keys - http://openssl.6102.n7.nabble.com/Machine-certificate-td906.html
+- Blowfish particulars - https://www.schneier.com/paper-blowfish-fse.html
+- Packet Life - http://packetlife.net/
+- 2014.04.09 - Video Explanation for Heartbleed - http://vimeo.com/91425662
+- Hack this Site - https://www.hackthissite.org/
+- How Heartbleed Works - http://security.stackexchange.com/questions/55116/how-exactly-does-the-openssl-tls-heartbeat-heartbleed-exploit-work
+- Code Fix for Heartbleed - http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=96db9023b881d7cd9f379b0c154650d6c108e9a3
+- 2014.04.08 - heartbleed.com - http://heartbleed.com/
+- 2014.04.08 - HeartBleed OpenSSL Vulnerability - http://threatpost.com/seriousness-of-openssl-heartbleed-bug-sets-in/105309
+- Kaspersky 2013 Threat Report - http://report.kaspersky.com/
+- John the Ripper Password Cracker -
+- XSS - https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
+- Government Breaches at an All-Time High - http://www.zdnet.com/government-breaches-at-all-time-high-press-blunder-under-reports-by-millions-7000028113/
+- Deception Force Security - http://deceptionforce.org/#/hero/trailer
+- 2014.03.12 - Computer cleaning tools - http://www.bleepingcomputer.com/download/rkill/
+- 2014.03.11 - Password Protecting the BIOS - http://security.blogoverflow.com/2014/02/qotw-50-does-password-protecting-the-bios-help-in-securing-sensitive-data/
+- 2014.03.11 - The NSA is planning to infect machines with malware - http://techcrunch.com/2014/03/12/report-nsa-has-plans-to-infect-millions-of-computers-with-malware/?ncid=rss
+- Honeynet.org - HoneyNets - http://old.honeynet.org/papers/honeynet/
+- Honeynet.org - phishing - http://www.honeynet.org/papers/phishing
+- Rugged Software - http://www.ruggedsoftware.org/
+- OWASP - https://www.owasp.org/index.php/Main_Page
+- Certificate pinning - https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning
+- 4 ways to become a leader in IT problem solving - http://searchwindowsserver.techtarget.com/tip/Four-steps-to-become-a-leader-in-IT-problem-solving
+- Synology NAS - http://www.synology.com/en-us/products/compare_products/DS214+/DS412+
+- Qnap NAS servers - http://www.staples.com/office/supplies/StaplesProductDisplay?storeId=10001&catalogIdentifier=2&partNumber=IM1PK7895&langid=-1&cid=PS:GooglePLAs:IM1PK7895&srccode=cii_17588969&cpncode=35-172700112-2
+- 2014.03.02 - Phony SSL Certs in the wild - http://arstechnica.com/security/2014/02/in-the-wild-phony-ssl-certificates-impersonating-google-facebook-and-itunes/
+- 2014.02.21 - The top 10 IT skills for 2014 - http://www.globalknowledge.com/training/generic.asp?pageid=3635&country=United+States
+- Next Gen datacenters = next gen security - https://www.sans.org/reading-room/analysts-program/mcAfee-next-generation
+- NIST Security Maturity Levels - http://csrc.nist.gov/groups/SMA/prisma/security_maturity_levels.html
+- Despite Target data breach, PCI security standard remains solid, Chief says: http://www.computerworld.com/s/article/9245984/Despite_Target_data_breach_PCI_security_standard_remains_solid_chief_says?taxonomyId=17
+- 2014.02.05 - Senate cybersecurity report finds agencies often fail to take basic preventive measures - http://www.washingtonpost.com/business/technology/senate-cybersecurity-report-finds-agencies-often-fail-to-take-basic-preventive-measures/2014/02/03/493390c2-8ab6-11e3-833c-33098f9e5267_story.html
+- HMAC key hashing algorithm - http://en.wikipedia.org/wiki/HMAC
+- 2014.03.10 - Snapchat cracked again -http://stevenhickson.blogspot.ca/2014/01/hacking-snapchats-people-verification.html
+- 2014.02.28 - The 25 Worst passwords of 2013 http://www.pcworld.com/article/2089244/the-25-worst-passwords-of-2013-password-gets-dethroned.html
+- Encrypt the Web Report - https://www.eff.org/deeplinks/2013/11/encrypt-web-report-whos-doing-what#crypto-chart
+- Netmeister - http://www.netmeister.org/
+- Lockheed Martin Case Studey - Kill Chain - http://papers.rohanamin.com/wp-content/uploads/papers.rohanamin.com/2011/08/iciw2011.pdf
+- Behavior Based Firewall - http://techcrunch.com/2014/01/21/aorato/
+- 01.21.2014 - Cryptographic Key Management System http://csrc.nist.gov/publications/nistbul/itlbul2014_01.pdf
+- 01.22.2014 - Google ASP Vulnerability -https://www.duosecurity.com/blog/bypassing-googles-two-factor-authentication
+- https://www.womenandco.com/infographic/shred-scan-or-store.jsp
+- http://www.watchguard.com/infocenter/editorial/41649.asp
+
+- Dexter POS Malware: http://www.arbornetworks.com/asert/wp-content/uploads/2013/12/Dexter-and-Project-Hook-Break-the-Bank.pdf
+- http://www.thedrum.com/opinion/2014/01/15/us-appeals-court-ends-net-neutrality
+- http://krebsonsecurity.com/wp-content/uploads/2014/01/POSWDS-ThreatExpert-Report.pdf
+- Leveling the Playing Field - http://www.cioreview.com/magazine/Leveling-The-Playing-Field-HIKR363158496.html
+- Python Naming Conventions: http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html
+- Vivo Barefoot Shoes: http://www.vivobarefoot.com/us/mens
+- Kismet - https://kismetwireless.net/download.shtml - /etc/kismet.conf
+- cucumber.io - simple word test cases. Also has a python plugin!
+- seleniumhq.org - browser automation
+- George Conrades - Embrace change, I don't have to have all the answers, I can
+build a great team full of innovative thinks, I will be one with the team, I
+will look for new ideas in the midst of uncertainty, team player
+- SpiceWorks
+- plixer - scrutinizer
+- Shitoshi Nokumoto
+- Done - Elementary Linux distro
+- Jay Radcliff - research on insulin pump and how to exploit it
+- netcat, ncat and powercat
+- dirbuster from OWASP - directory field brute forcer
+- berp suite - proxy tool
+- pfsense firewall: https://www.pfsense.org/
+- Take a snapshot then use something like Backulla to backup the snapshot
+- Wake up and Shut down apps for Linux
+- Done - Pianobar - terminal command line program
+- Zeus Man in the Browser attack
+- ScreenCloud: screen sharing and uploading
+- Galise: auto dims computer screen by controlling the backlighting
+- Linux Stickers: http://www.unixstickers.com/stickers/linux_os_distribution_stickers/the-classics-bundle
+- deft: digital forensics for Linux (deftlinux.net)
+- Done - Arch Assault: security software (Because of rolling release)
+- 2014.08.27: Cool old terminal - old looking terminal for linux: http://linuxg.net/how-to-install-cool-old-term-0-9-on-ubuntu-14-04-debian-jessie-fedora-20-opensuse-13-1-and-arch-linux/
+- Lynis Enterprise Suite: vulnerability scanner for arch linux (Rootkit.nl)
+- Done - System76 - Linux ready laptops and desktops
+- ssl stripper - pulls the ssl cert off and runs the site through http so that
+they can read the content.
+- Tortilla, whonix, tails
+
+    - https://github.com/CrowdStrike/Tortilla
+    - http://distrowatch.com/table.php?distribution=Tails
+    - https://www.whonix.org/wiki/Download
+
+- mimicats
+- OSSIM, OSSEC - created by alien vault. https://www.youtube.com/watch?v=JVmvgLS81wk
+- 2014.06.03 - http://www.facets.la/2014/363/wallpaper/
+- ROT13
+- IDS: AIDE, OSSEC, Snort
+- PownPhone - there is a community addition
+- Metasploit, Set, Dsploit, Etercap
+- wifighter, evil ip, reverse shell
+- WPS Pen #
+- Rever and Patty brute forcers, AirCrack
+- Ifinity - loosing and gaining a new IP during a current session.
+- Routing
+    - VSRP - routing
+    - SFP - routing
+    - OSPF
+    - Bonded switches
+    - advanced routing license
+- iperf - wireless trouble shooting
+- Cobalt strike
+- Learn How This Work
+- Heep versus Stack memory request
+- Sflow and Netflow
+- AngryIP scanner
+- Hack this Site - https://www.hackthissite.org/
+- Learn how to explain passwords
+- Prevention, Detection, Response
+- The internet of things
+- RAM Scraper
+- Security Management, Configuration Management, Contingency Planning, Access
+Control,
+- Pauldotcom.com
+- Pwnie express
+- Power Top
+- IBAM application for battery monitoring
+- Intergos Linux, Gnome 3.10
+- Galago UltraPro - notebooks design for Linux
+- Krita - photo editor, compatible with .pds files, load Microsoft and Mac fonts
+- Ting.com
+- Dukto 6
+- Nautilus, Area 2, uGet
+- Heroku.com
+- Lustre file system - massive parallel file system
+- Dell server development white papers and cookbooks for view by anyone - NSS
+and HSS
+- Storage - HSS, NSS, PSS
+- Rack U
+- Bright cluster management
+- Computing nodes
+- Texas advanced computing center - stampede computing center
+- SAS storage
+- Infiniban - storage
+- Hadoop - I have notes on this on flash drive
+- Team viewer
+- Folding@home - creating the worlds largest super computer.
+- POTS Plain old telephone service
+- Uplink Game on Steam
+- Remote Procedure Call - http://searchsoa.techtarget.com/definition/Remote-Procedure-Call
+- Squid proxy server - http://whatis.techtarget.com/definition/Squid-proxy-server
+- Plex - https://plex.tv/
+- Clonezilla - http://clonezilla.org/
+- Amazon Cloud Computing
+- Done - BitTorrentSync - http://getsync.com/
+- Done - Pidgin will store passwords in plaintext inside of an XML file. Pidgin
+is a chat client.
+- Done - Application Specific Password - a google implementation
+- Golden Image - the base image
+- Done - LVM - logical volume management
+- Thin v Full storage allocation
+- Server justification
+    - License information - Legal should be married to this piece. Because of
+    sarbanes oxly
+    - PingFederated server
+- Proxy Servers
+- Network mapping
+- How to remove account access
+    - Delete LDAP
+    - Remove banner
+- GLUU
+- SAML, SSO, Shibalith
+- Layer 2 Encryption
+- Black box encryption
+- PCI going away
+- Done - Target hacking scandle
+- GTA data classification chart
+- shadowserver.com
+- honeynet.com
