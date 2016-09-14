@@ -1,4 +1,6 @@
-Primary Commands:
+# tmutil
+
+## Primary Commands:
 
 - enable
 - disable
@@ -20,6 +22,7 @@ Primary Commands:
 - verifyadditions
 - verifybackups
 
-Other Info:
+## Other Info:
 
 - man tmutil for more info
+- strings /usr/bin/tmutil | less
