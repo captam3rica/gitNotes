@@ -73,7 +73,7 @@ Just some info that I found while searching for profile packaging solutions.
 
 ## Resources
 
-- macops.ca
-- commandments of packaging in OS X <https://www.afp548.com/2010/06/03/the-commandments-of-packaging-in-os-x/>
-- How to package Profiles <https://macops.ca/how-to-package-profiles>
+- [macops.ca](https://macops.ca)
+- [commandments of packaging in OS X](https://www.afp548.com/2010/06/03/the-commandments-of-packaging-in-os-x/)
+- [How to package Profiles](https://macops.ca/how-to-package-profiles)
 - https://github.com/timsutton/mcxToProfile
