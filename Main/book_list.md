@@ -10,7 +10,7 @@
 - **Done 2015** - Harry Potter and the Prisoner of Azkaban
 - **Done 2015** - Total Money Makeover
 - **Done 2015** - The Meaning of Marriage
-- **Done 2015**- Sheet Music
+- **Done 2015** - Sheet Music
 - **Done 2015** - 3 weeks to shredded
 - **Done 2015** - The Dolce Diet
 - **Done 2015** - security plus
@@ -31,6 +31,8 @@
 - **Done 2016** - Radical | David Platt  
 - **Done 2016** - The BFG | Roald Dahl
 - **Done 2016** - Disarming the Narcissist
+- **Done 2016** - Alexander Hamilton | Ron Chernow
+- **Reading** - Hillary's America | Dinesh D'Souza
 - **Reading** - Serve to Win | Novak Djokovic
 - Viva La Madness - J. J. Connolly
 - **Reading** - Mac Hacks: Tips & Tools for Unlocking the Power of OS X
