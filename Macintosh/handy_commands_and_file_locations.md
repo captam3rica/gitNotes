@@ -2,6 +2,10 @@
 
 ## Commands
 
+Turn on "Install from Anywhere"
+
+`sudo spctl --manster-disable`
+
 Convert DMG to installosx
 
 `hdiutil convert apple.dmg -format UDTO -o apple.iso`
