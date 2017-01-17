@@ -2,6 +2,12 @@
 
 ## Commands
 
+### Generate Key
+- ssh-keygen -t rsa -b 4096 -C "Label the key here"
+
+### Push Keys
+- cat ~/.ssh/shhkey.pub | ssh user@remoteserver "mkdir -p ~/.ssh/ && cat >> ~/.ssh/authorized_keys"
+
 Turn on "Install from Anywhere"
 
 `sudo spctl --manster-disable`
@@ -10,7 +16,14 @@ Convert DMG to installosx
 
 `hdiutil convert apple.dmg -format UDTO -o apple.iso`
 
-Reset a User Password from Single User Mode
+### User Modifications
+
+- Change the shortname (username) of a particular user
+  - Backup the current username to something like [username.old]
+
+`sudo chown -R [newshortname] /Users/[newshortname]`
+
+- Reset a User Password from Single User Mode
 
 `cmd + S ` to enter single user Mode
 
@@ -18,6 +31,11 @@ Reset a User Password from Single User Mode
     /sbin/mount -uw /
     launchctl load /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
     dscl . -passwd /Users/whitsongordon [new password here]
+
+- Manipulate User Accounts & Passwords:
+
+`pwpolicy [-v] [-a authenticator] [-p password] [-u username | -c computername]
+                [-n nodename] command command-arg`
 
 Neighbor Discovery Cache:
 
@@ -30,57 +48,58 @@ Enable the root user:
 Use logcheck to automatically scan log files and notify you of any unusual
 activity:
 
-    $ logcheck
+`$ logcheck`
 
 Use pwpolicy to create an organization wide password policy:
 
-    $ pwpolicy
+`$ pwpolicy`
 
 OS Version:
 
-    $ sw_vers
+`$ sw_vers`
 
 Edit Hostname:
 
-    $ sudo scutil --set HostName <new-hostname>
+`$ sudo scutil --set HostName [new-hostname]`  
+`$ sudo scutil --set ComputerName [new computer name]`
 
 Connect to shares using a different user:
 
-    $ smb://<username>:*@<servername>
+`$ smb://<username>:*@<servername>`
 
 Show Hidden Files & Folders:
 
-    $ defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder
+`$ defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder`
 
 Force Empty Trash:
 
-    $ rm -rf ~/.Trash/*
+`$ rm -rf ~/.Trash/*`
 
 Force the user to be admin:
 
-    $ sudo dseditgroup -o edit -a jwils156 admin
+`$ sudo dseditgroup -o edit -a jwils156 admin`
 
 Convert Plist to xml and binary:
 
-    plutil -convert xml1 </path/to/property/list>
-    plutil -convert binary </path/to/property/list>
+`plutil -convert xml1 </path/to/property/list>`  
+`plutil -convert binary </path/to/property/list>`
 
 Note: make sure to make a copy before converting the file.
 
 Allow keys to repeat:
 
-    defaults write -g ApplePressAndHoldEnabled -bool false
+`defaults write -g ApplePressAndHoldEnabled -bool false`
 
 Create OS X install media:
 
-    sudo /Applications/Install\ OS\ X\ El\
+`sudo /Applications/Install\ OS\ X\ El\
     Capitan.app/Contents/Resources/createinstallmedia --volume
     /Volumes/elcapitaninstaller --applicationpath /Applications/Install\ OS\
-    X\ El\ Capitan.app –nointeraction
+    X\ El\ Capitan.app –nointeraction`
 
 Reload /etc/hosts file manually & reload DNS service:
 
-    sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
+`sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder`
 
 Mount User's Scan folder to "Scan" folder:
 
@@ -91,24 +110,24 @@ Mount User's Scan folder to "Scan" folder:
 
 Removing Java:
 
-    sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
-    sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefpane
+`sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin`
+`sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefpane`
 
 Find Java Version:
 
-    /Library/Internet\
-    Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version
+`./Library/Internet\
+Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
 
 Reset Network configs & other settings:
 
-    /Library/Preferences/
+`/Library/Preferences/`
 
 *   Move the "SystemConfiguration" folder to the trash or a different
 location or rename it just encase removing it does not solve the problem.
 
 To Remove a Receipt:
 
-    sudo pkgutil --forget <com.name.of.package.pck>
+`sudo pkgutil --forget <com.name.of.package.pck>`
 
 *   or go to /var/db/receipts and search for and delete the receipt that you
 need.
@@ -121,8 +140,8 @@ input their login credentials.
 
 If the OS X upgrade package fails to install:
 
-    com.googlecode.installosx.pkg.plist
-    com.googlecode.installosx.pkg.bom
+`com.googlecode.installosx.pkg.plist`
+`com.googlecode.installosx.pkg.bom`
 
 ## File Locations
 
