@@ -1,8 +1,14 @@
 # Book List
 
-- **Done 2015** - Spam Nation
+## Complete
+
+### 2014  
+
 - **Done** - Bible - 06.01.15 to 09.12.15
 - **Done 2014** - Cyber Warfare and What You Can Do to Fight Against It
+
+### 2015  
+
 - **Done 2015**  - The Calling of Cathullu
 - **Done 2015** - Rambo First Blood
 - **Done 2015** - Harry Potter and the Sorcerer's Stone
@@ -16,6 +22,10 @@
 - **Done 2015** - security plus
 - **Done 2015** - About My Fathers Business - Regi Campbell
 - **Done 2015** - Taming your Tongue - Deborah Pegues
+- **Done 2015** - Spam Nation | Brian Krebs
+
+### 2016  
+
 - **Done 2016** - Countdown to Zero Day: The Story of Stucks Net
 - **Done 2016** - It's Not What You Think - Jefferson Bethke
 - **Done 2016** - Jesus > Religion - Jefferson Bethke
@@ -24,7 +34,6 @@
 - **Done 2016** - George Washington's secret six
 - **Done 2016** - From Good to Great
 - **Done 2016** - Harry Potter and the Half Blood Prince
-- Harry Potter and the Deathly Hallows
 - **Done 2016** - Crazy Love | Francis Chan
 - **Done 2016** - Killing Jesus | Bill O'Reilly
 - **Done 2016** - Mere Christianity | C.S. Lewis
@@ -33,9 +42,20 @@
 - **Done 2016** - Disarming the Narcissist
 - **Done 2016** - Alexander Hamilton | Ron Chernow
 - **Done 2016** - Hillary's America | Dinesh D'Souza
-- **Reading** - Serve to Win | Novak Djokovic
-- Viva La Madness - J. J. Connolly
 - **Done 2016** - Mac Hacks: Tips & Tools for Unlocking the Power of OS X
+
+## Current  
+
+- **Reading** - Hacking Exposed: Linux 3rd Edition
+- **Reading** - Serve to Win | Novak Djokovic
+- **Reading** - The Are of Ware | Sun Tzu
+- **Reading** - The Myth of the Garage
+- **Reading** - Team of Rivals | Doris Kearns Goodwin
+- **Reading** - The Art of Deception | Kevin Mitnick
+
+## ToRead  
+
+-
 - Cyber Warfare
 - Jumping Point - 0.49
 - How to manage the IT help desk
@@ -47,4 +67,7 @@
 - How to Win Friends and Influence People.
 - Genesis and the mystery Confucius couldn't solve - Gk Chesterton
 - I am legend - Richard Matheson
-- **Reading** - Hacking Exposed: Linux 3rd Edition
+- Viva La Madness - J. J. Connolly
+- Harry Potter and the Deathly Hallows
+- A Tale of Two Cities | Charles Dickens
+- 30 Days to Taming Your Tongue | Deborah Smith Pegues
