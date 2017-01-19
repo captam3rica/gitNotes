@@ -18,6 +18,9 @@ Convert DMG to installosx
 
 ### User Modifications
 
+`sudo dseditgroup -o edit -a $username_to_add -t user admin`
+`sudo dseditgroup -o edit -a $username_to_add -t user wheel`  
+
 - Change the shortname (username) of a particular user
   - Backup the current username to something like [username.old]
 
