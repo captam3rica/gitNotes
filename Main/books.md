@@ -48,7 +48,7 @@
 
 - **Reading** - Hacking Exposed: Linux 3rd Edition
 - **Reading** - Serve to Win | Novak Djokovic
-- **Reading** - The Are of Ware | Sun Tzu
+- **Reading** - The Are of War | Sun Tzu
 - **Reading** - The Myth of the Garage
 - **Reading** - Team of Rivals | Doris Kearns Goodwin
 - **Reading** - The Art of Deception | Kevin Mitnick
