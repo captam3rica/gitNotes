@@ -50,6 +50,7 @@
 
 ## Current  
 
+- **Reading** - Body Mind Mastery | Dan Millman
 - **Reading** - Hacking Exposed: Linux 3rd Edition
 - **Reading** - Serve to Win | Novak Djokovic
 - **Reading** - The Myth of the Garage
@@ -58,7 +59,7 @@
 
 ## ToRead  
 
-- Body Mind Mastery | Dan Millman
+
 - Cyber Warfare
 - Jumping Point - 0.49
 - How to manage the IT help desk
