@@ -12,31 +12,28 @@ Create a git repository
 
 `git remote add origin https://github.com/captam3rica/gitNotes`
 
-`git add .`
+To add entire local repo: `git add .`
 
-`git commit -m "Some note about the commit"`
+commit: `git commit -m "Some note about the commit"`
 
-`git push origin master`
+Initial push of commits: `git push origin master`
 
-`git push`
-Push commits
+Push commits: `git push`
 
-`git pull`  
-Downloads bookmark history and incorporates changes
+Download bookmark history and incorporates changes: `git pull`  
 
-`git pull --rebase`  
 Downloads bookmark history and incorporates your changes on top of
-remote changes  
+remote changes: `git pull --rebase`  
 
-`git revert -n <sha>`  
-Revert a commit  
+Revert a commit: `git revert -n <sha>`  
 
-`git blame [file]`  
-Show what revision and author last modified each line of a file
+Show what revision and author last modified each line of a file: `git blame [file]`  
 
-`git log`  
+Show log of changes: `git log`  
 
-`git rm [file name]`
+Remove from local repo and server: `git rm [file name]`
+
+Remove from server only: `get rm --cached -r [dir name]` or `get rm --cached [file name]`
 
 
 ## Notes
