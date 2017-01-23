@@ -1,6 +1,6 @@
 ###
 # rsync script to syncronize the DeployStudioServer files between two servers
-# 
+#
 #
 # Matt Wilson
 # Kennesaw State University
@@ -19,8 +19,11 @@
 SOURCE="/Volumes/DSRepo"
 DESTINATION="/Volumes/DSR/images/"
 DESTSERVER=[Remote server]
+DATE=`date "+%Y%m%d"`
 # EXCLUDE_FILES
 
-rsync -vvrucip --progress --itemize-changes --human-readable --log-file=$SOURCE/rsync_netboot.log $SOURCE $USER@$DESTSERVER:$DESTINATION
+rsync -vvrucip --progress --itemize-changes --human-readable --log-file=$SOURCE/rsync_netboot_"$DATE".log $SOURCE $USER@$DESTSERVER:$DESTINATION
 
 scp $SOURCE/rsync_netboot.log $USER@$PUSHTOSERVER:$DESTINATION
+
+exit

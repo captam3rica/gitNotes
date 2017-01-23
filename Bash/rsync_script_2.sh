@@ -19,8 +19,11 @@
 SOURCE="/Volumes/DSR/images/"
 DESTINATION="/Volumes/DSRepo/"
 DESTSERVER=[Remote servers]
+DATE=`date "+%Y%m%d"`
 # EXCLUDE_FILES
 
-rsync -vvpurci --progress --itemize-changes --human-readable --log-file=$SOURCE/rsync_netbootm.log $SOURCE $USER@$DESTSERVER:$DESTINATION
+rsync -vvpurci --progress --itemize-changes --human-readable --log-file=$SOURCE/rsync_netbootm_"$DATE".log $SOURCE $USER@$DESTSERVER:$DESTINATION
 
 scp $SOURCE/rsync_netbootm.log $USER@$DESTSERVER:$DESTINATION
+
+exit
