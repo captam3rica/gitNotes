@@ -55,16 +55,16 @@ be for sale
 - 2014.04.24 - Cloud fogger - http://thehackernews.com/2014/01/how-to-encrypt-your-files-before.html
 - 2015.01.25 - Rsync command examples - http://www.thegeekstuff.com/2010/09/rsync-command-examples/
 - News for nerds - http://m.slashdot.org
-- How to generate OpenSSL keys - http://openssl.6102.n7.nabble.com/Machine-certificate-td906.html
+- **Done** - How to generate OpenSSL keys - http://openssl.6102.n7.nabble.com/Machine-certificate-td906.html
 - Blowfish particulars - https://www.schneier.com/paper-blowfish-fse.html
-- Packet Life - http://packetlife.net/
+- **Done** - Packet Life - http://packetlife.net/
 - 2014.04.09 - Video Explanation for Heartbleed - http://vimeo.com/91425662
 - Hack this Site - https://www.hackthissite.org/
-- How Heartbleed Works - http://security.stackexchange.com/questions/55116/how-exactly-does-the-openssl-tls-heartbeat-heartbleed-exploit-work
+- **Done** - How Heartbleed Works - http://security.stackexchange.com/questions/55116/how-exactly-does-the-openssl-tls-heartbeat-heartbleed-exploit-work
 - Code Fix for Heartbleed - http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=96db9023b881d7cd9f379b0c154650d6c108e9a3
 - 2014.04.08 - heartbleed.com - http://heartbleed.com/
 - 2014.04.08 - HeartBleed OpenSSL Vulnerability - http://threatpost.com/seriousness-of-openssl-heartbleed-bug-sets-in/105309
-- Kaspersky 2013 Threat Report - http://report.kaspersky.com/
+- **Done** - Kaspersky 2013 Threat Report - http://report.kaspersky.com/
 - John the Ripper Password Cracker -
 - XSS - https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
 - Government Breaches at an All-Time High - http://www.zdnet.com/government-breaches-at-all-time-high-press-blunder-under-reports-by-millions-7000028113/
@@ -75,10 +75,10 @@ be for sale
 - Honeynet.org - HoneyNets - http://old.honeynet.org/papers/honeynet/
 - Honeynet.org - phishing - http://www.honeynet.org/papers/phishing
 - Rugged Software - http://www.ruggedsoftware.org/
-- OWASP - https://www.owasp.org/index.php/Main_Page
+- **Done** - OWASP - https://www.owasp.org/index.php/Main_Page
 - Certificate pinning - https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning
 - 4 ways to become a leader in IT problem solving - http://searchwindowsserver.techtarget.com/tip/Four-steps-to-become-a-leader-in-IT-problem-solving
-- Synology NAS - http://www.synology.com/en-us/products/compare_products/DS214+/DS412+
+- **Done** - Synology NAS - http://www.synology.com/en-us/products/compare_products/DS214+/DS412+
 - Qnap NAS servers - http://www.staples.com/office/supplies/StaplesProductDisplay?storeId=10001&catalogIdentifier=2&partNumber=IM1PK7895&langid=-1&cid=PS:GooglePLAs:IM1PK7895&srccode=cii_17588969&cpncode=35-172700112-2
 - 2014.03.02 - Phony SSL Certs in the wild - http://arstechnica.com/security/2014/02/in-the-wild-phony-ssl-certificates-impersonating-google-facebook-and-itunes/
 - 2014.02.21 - The top 10 IT skills for 2014 - http://www.globalknowledge.com/training/generic.asp?pageid=3635&country=United+States
@@ -102,18 +102,18 @@ be for sale
 - http://www.thedrum.com/opinion/2014/01/15/us-appeals-court-ends-net-neutrality
 - http://krebsonsecurity.com/wp-content/uploads/2014/01/POSWDS-ThreatExpert-Report.pdf
 - Leveling the Playing Field - http://www.cioreview.com/magazine/Leveling-The-Playing-Field-HIKR363158496.html
-- Python Naming Conventions: http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html
+- **Done** - Python Naming Conventions: http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html
 - Vivo Barefoot Shoes: http://www.vivobarefoot.com/us/mens
 - Kismet - https://kismetwireless.net/download.shtml - /etc/kismet.conf
-- cucumber.io - simple word test cases. Also has a python plugin!
+- **Done** - cucumber.io - simple word test cases. Also has a python plugin! Automates your test cases
 - seleniumhq.org - browser automation
-- George Conrades - Embrace change, I don't have to have all the answers, I can
-build a great team full of innovative thinks, I will be one with the team, I
+- **Done** - George Conrades - Embrace change, I don't have to have all the answers, I can
+build a great team full of innovative thinkers, I will be one with the team, I
 will look for new ideas in the midst of uncertainty, team player
 - SpiceWorks
 - plixer - scrutinizer
-- Shitoshi Nokumoto
-- Done - Elementary Linux distro
+- **Done** - Shitoshi Nokumoto
+- **Done** - Elementary Linux distro
 - Jay Radcliff - research on insulin pump and how to exploit it
 - netcat, ncat and powercat
 - dirbuster from OWASP - directory field brute forcer
@@ -121,19 +121,19 @@ will look for new ideas in the midst of uncertainty, team player
 - pfsense firewall: https://www.pfsense.org/
 - Take a snapshot then use something like Backulla to backup the snapshot
 - Wake up and Shut down apps for Linux
-- Done - Pianobar - terminal command line program
+- **Done** - Pianobar - terminal command line program
 - Zeus Man in the Browser attack
 - ScreenCloud: screen sharing and uploading
 - Galise: auto dims computer screen by controlling the backlighting
 - Linux Stickers: http://www.unixstickers.com/stickers/linux_os_distribution_stickers/the-classics-bundle
 - deft: digital forensics for Linux (deftlinux.net)
-- Done - Arch Assault: security software (Because of rolling release)
+- **Done** - Arch Assault: security software (Because of rolling release)
 - 2014.08.27: Cool old terminal - old looking terminal for linux: http://linuxg.net/how-to-install-cool-old-term-0-9-on-ubuntu-14-04-debian-jessie-fedora-20-opensuse-13-1-and-arch-linux/
-- Lynis Enterprise Suite: vulnerability scanner for arch linux (Rootkit.nl)
-- Done - System76 - Linux ready laptops and desktops
+- **Done** - Lynis Enterprise Suite: vulnerability scanner for arch linux (Rootkit.nl)
+- **Done** - System76 - Linux ready laptops and desktops
 - ssl stripper - pulls the ssl cert off and runs the site through http so that
 they can read the content.
-- Tortilla, whonix, tails
+- Tortilla, whonix, **Done** - tails
 
     - https://github.com/CrowdStrike/Tortilla
     - http://distrowatch.com/table.php?distribution=Tails
@@ -144,10 +144,10 @@ they can read the content.
 - 2014.06.03 - http://www.facets.la/2014/363/wallpaper/
 - ROT13
 - IDS: AIDE, OSSEC, Snort
-- PownPhone - there is a community addition
+- **Done** - PownPhone - there is a community addition
 - Metasploit, Set, Dsploit, Etercap
 - wifighter, evil ip, reverse shell
-- WPS Pen #
+- **Done** - WPS Pen #
 - Rever and Patty brute forcers, AirCrack
 - Ifinity - loosing and gaining a new IP during a current session.
 - Routing
@@ -158,28 +158,27 @@ they can read the content.
     - advanced routing license
 - iperf - wireless trouble shooting
 - Cobalt strike
-- Learn How This Work
 - Heep versus Stack memory request
 - Sflow and Netflow
 - AngryIP scanner
 - Hack this Site - https://www.hackthissite.org/
-- Learn how to explain passwords
-- Prevention, Detection, Response
-- The internet of things
+- **Done** - Learn how to explain passwords
+- **Done** - Prevention, Detection, Response
+- **Done** - The internet of things
 - RAM Scraper
-- Security Management, Configuration Management, Contingency Planning, Access
+- **Done** - Security Management, Configuration Management, Contingency Planning, Access
 Control,
-- Pauldotcom.com
-- Pwnie express
+- **Done** - Pauldotcom.com
+- **Done** - Pwnie express
 - Power Top
-- IBAM application for battery monitoring
-- Intergos Linux, Gnome 3.10
-- Galago UltraPro - notebooks design for Linux
-- Krita - photo editor, compatible with .pds files, load Microsoft and Mac fonts
-- Ting.com
+- **Done** - IBAM application for battery monitoring
+- **Done** - Intergos Linux, Gnome 3.10
+- **Done** - Galago UltraPro - notebooks design for Linux
+- **Done** - Krita - photo editor, compatible with .pds files, load Microsoft and Mac fonts
+- **Done** - Ting.com
 - Dukto 6
 - Nautilus, Area 2, uGet
-- Heroku.com
+- **Done** - Heroku.com
 - Lustre file system - massive parallel file system
 - Dell server development white papers and cookbooks for view by anyone - NSS
 and HSS
@@ -191,37 +190,38 @@ and HSS
 - SAS storage
 - Infiniban - storage
 - Hadoop - I have notes on this on flash drive
-- Team viewer
-- Folding@home - creating the worlds largest super computer.
-- POTS Plain old telephone service
+- **Done** - Team viewer
+- **Done** - Folding@home - creating the worlds largest super computer.
+- **Done** - POTS Plain old telephone service
 - Uplink Game on Steam
 - Remote Procedure Call - http://searchsoa.techtarget.com/definition/Remote-Procedure-Call
-- Squid proxy server - http://whatis.techtarget.com/definition/Squid-proxy-server
-- Plex - https://plex.tv/
-- Clonezilla - http://clonezilla.org/
-- Amazon Cloud Computing
-- Done - BitTorrentSync - http://getsync.com/
-- Done - Pidgin will store passwords in plaintext inside of an XML file. Pidgin
+
+- **Done** - https://plex.tv/
+- **Done** - Clonezilla - http://clonezilla.org/
+- **Done** - Amazon Cloud Computing
+- **Done** - BitTorrentSync - http://getsync.com/ (works ok)
+- **Done** - Pidgin will store passwords in plaintext inside of an XML file. Pidgin
 is a chat client.
-- Done - Application Specific Password - a google implementation
-- Golden Image - the base image
-- Done - LVM - logical volume management
+- **Done** - Application Specific Password - a google implementation
+- **Done** - Golden Image - the base image
+- **Done** - LVM - logical volume management
 - Thin v Full storage allocation
-- Server justification
+- **Done** - Server justification
     - License information - Legal should be married to this piece. Because of
     sarbanes oxly
     - PingFederated server
 - Proxy Servers
-- Network mapping
+  - Squid proxy server - http://whatis.techtarget.com/definition/Squid-proxy-server
+- **Done** - Network mapping
 - How to remove account access
     - Delete LDAP
     - Remove banner
 - GLUU
-- SAML, SSO, Shibalith
+- **Done** - SAML, SSO, Shibalith
 - Layer 2 Encryption
 - Black box encryption
 - PCI going away
-- Done - Target hacking scandle
+- **Done** - Target hacking scandle
 - GTA data classification chart
 - shadowserver.com
 - honeynet.com
