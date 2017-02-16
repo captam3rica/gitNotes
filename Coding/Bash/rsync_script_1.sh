@@ -16,9 +16,9 @@
 #
 ###
 
-SOURCE="/Volumes/DSRepo"
-DESTINATION="/Volumes/DSR/images/"
-DESTSERVER=[Remote server]
+SOURCE="/Location/of/files"
+DESTINATION="/Destination/of/files"
+DESTSERVER=[Remote server IP address here]
 DATE=`date "+%Y%m%d"`
 # EXCLUDE_FILES
 
