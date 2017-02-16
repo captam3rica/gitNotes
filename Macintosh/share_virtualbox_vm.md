@@ -47,4 +47,4 @@
         </dict>
         </plist>
 
-Thanks to [Derflounder](https://derflounder.wordpress.com/2011/10/26/configuring-a-virtualbox-vm-to-be-shared-by-multiple-users-on-the-same-mac/)
+Thanks in part to [Derflounder](https://derflounder.wordpress.com/2011/10/26/configuring-a-virtualbox-vm-to-be-shared-by-multiple-users-on-the-same-mac/)
