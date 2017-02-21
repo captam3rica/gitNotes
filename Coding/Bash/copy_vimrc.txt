@@ -1,0 +1,110 @@
+" Make sure to have Vundle installed from GitHub before starting any of the
+" configs below.
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+Plugin 'python-mode/python-mode'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'dracula/vim'
+Plugin 'darfink/vim-plist'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'rkulla/pydiction'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+" Plugin 'user/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"
+"Set indent length
+set tabstop=4
+set shiftwidth=4
+set expandtab
+"
+" Theme Settings
+syntax enable
+
+"let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+"set background=dark
+colorscheme dracula
+"
+"let g:jedi#auto_initialization = 0
+let g:plist_display_format = 'xml'
+
+" Syntastic Settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_plist_checkers = ['plutil', 'xmllint']
+
+" Pydiction Settings
+" <Space>              -- Accept current match and insert a space.
+" CTRL-Y               -- Accept current match and and don't insert a space.
+" <Enter>              -- Accept current match and insert a newline.
+" <ESC> or CTRL-E      -- Close the menu and do not accept any match.
+"
+" You can also now use Shift-Tab to Tab backwards through the popup menu.
+" 
+" Change the file path to reflect the location of "complete-dict" on your machine
+" let g:pydiction_location = '/home/captam3rica/.vim/bundle/pydiction/complete-dict'
+"
+if has('win32')
+	let g:pydiction_location = 'C:/vim/vimfiles/ftplugin/pydiction/complete-dict'
+else
+	if system('uname')=~'Darwin'
+		let g:pydiction_location = '/Users/$USER/.vim/bundle/pydiction/complete-dict'
+	else
+		let g:pydiction_location = '/home/$USER/.vim/bundle/pydiction/complete-dict'
+	endif
+endif
+"
+" To change the number of items in the list
+" let g:pydiction_menu_heigh = 3
+
+
+" Misc ...
+
+set number
