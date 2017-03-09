@@ -20,10 +20,10 @@ SOURCE="/Location/of/files"
 DESTINATION="/Destination/of/files"
 DESTSERVER=[Remote server IP address here]
 DATE=`date "+%Y%m%d"`
-# EXCLUDE_FILES
+# EXCLUDE_FILES=S[some exclude file]
 
-rsync -vvrucip --progress --itemize-changes --human-readable --log-file=$SOURCE/rsync_netboot_"$DATE".log $SOURCE $USER@$DESTSERVER:$DESTINATION
+rsync -vvrucip --progress --itemize-changes --human-readable --log-file=$SOURCE/rsync_example_"$DATE".log $SOURCE $USER@$DESTSERVER:$DESTINATION
 
-scp $SOURCE/rsync_netboot.log $USER@$PUSHTOSERVER:$DESTINATION
+scp $SOURCE/rsync_example.log $USER@$PUSHTOSERVER:$DESTINATION
 
 exit
