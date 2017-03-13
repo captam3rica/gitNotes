@@ -1,6 +1,6 @@
 # CentOS 7 Minimal
 
-Packages:
+## Packages:
 
 - yum install epel-release (repository)
 - firewalld
@@ -19,7 +19,7 @@ Packages:
 - mod_ssl
 - vim
 
-Network Config:
+## Network Config:
 
 - Check network interfaces: nuclei d
 - cd /etc/sysconfig/network-scripts/
@@ -29,12 +29,12 @@ Network Config:
         - ONBOOT=yes
 - systemctl restart network
 
-Gnome Installation & Setup:
+## Gnome Installation & Setup:
 
 - Install: yum groupinstall "GNOME Desktop" "Graphical Administration Tools"
 - Enable GUI: ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
 
-Sources:
+## Sources:
 
 - Gnome: http://www.itzgeek.com/how-tos/linux/centos-how-tos/install-gnome-gui-on-centos-7-rhel-7.html
 - Network: http://www.krizna.com/centos/setup-network-centos-7/
