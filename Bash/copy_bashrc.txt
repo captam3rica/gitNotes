@@ -1,0 +1,35 @@
+# System-wide .bashrc file for interactive bash(1) shells.
+
+echo "
+ ██████╗ █████╗ ██████╗ ████████╗ █████╗ ███╗   ███╗██████╗ ██████╗ ██╗ ██████╗ █████╗ 
+██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗████╗ ████║╚════██╗██╔══██╗██║██╔════╝██╔══██╗
+██║     ███████║██████╔╝   ██║   ███████║██╔████╔██║ █████╔╝██████╔╝██║██║     ███████║
+██║     ██╔══██║██╔═══╝    ██║   ██╔══██║██║╚██╔╝██║ ╚═══██╗██╔══██╗██║██║     ██╔══██║
+╚██████╗██║  ██║██║        ██║   ██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║██║╚██████╗██║  ██║
+ ╚═════╝╚═╝  ╚═╝╚═╝        ╚═╝   ╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═
+"
+echo ""
+ 
+uptime
+echo ""
+date
+echo ""
+
+if [ -z "$PS1" ]; then
+      return
+fi
+
+PS1='\h:\W \$ '
+
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+export HISTFILESIZE=0
+export PATH=$PATH:/Users/jwils156/bin/
+
+alias ls='ls -F'
+alias emptyTrash='rm -rf ~/.Trash/*'
+
+# Make bash check its window size after a process completes
+shopt -s checkwinsize
+ 
+[ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
