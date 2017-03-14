@@ -47,18 +47,18 @@
 ### 2017
 
 - **Done 2017** - The Are of War | Sun Tzu
+- **Done 2017** - Team of Rivals: Abraham Lincoln | Doris Kearns Goodwin
+- **Done 2017** - The Art of Deception | Kevin Mitnick
 
 ## Current  
 
 - **Reading** - Body Mind Mastery | Dan Millman
 - **Reading** - Hacking Exposed: Linux 3rd Edition
+- **Reading** - Hacking Exposed: Windows 3rd Edition | Joel Scambray, CISSP & Stuart McClure, CISSP
 - **Reading** - Serve to Win | Novak Djokovic
 - **Reading** - The Myth of the Garage
-- **Reading** - Team of Rivals | Doris Kearns Goodwin
-- **Reading** - The Art of Deception | Kevin Mitnick
 
 ## ToRead  
-
 
 - Cyber Warfare
 - Jumping Point - 0.49
