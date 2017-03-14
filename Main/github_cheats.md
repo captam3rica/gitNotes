@@ -31,7 +31,12 @@ Show what revision and author last modified each line of a file: `git blame [fil
 
 Show log of changes: `git log`  
 
-Remove from local repo and server: `git rm [file name]`
+Remove from local repo and server:
+
+    git rm [file name] - to remove folder
+    git rm -r [folder name] - to remove folder
+    git commit -m "Some message"
+    git push or git push origin [repo branch name]
 
 Remove from server only: `get rm --cached -r [dir name]` or `get rm --cached [file name]`
 
