@@ -25,6 +25,9 @@ class Quadralateral(Shape):
     def calcArea(self):
         return self.width * self.length
 
+    def calcPerimeter(self):
+        return 2 * (self.width + self.length)
+
 
 # Square class
 # Inherits from Shape and Quadralateral
@@ -51,7 +54,7 @@ class Cirlce(Shape):
 # Rectangle class
 class Rectangle(Quadralateral):
     def __init__(self, l, w, c):
-        super(Rectangle, self).__init__()
+        super(Rectangle, self).__init__(l, w, c)
 
 
 # Triangle class
@@ -70,18 +73,23 @@ def printArea(s):
 # Doing things below
 ###################################################################
 
-square1 = Square(5, "Orange)
+square1 = Square(3, "Orange")
 square2 = Square(9, "Purple")
+
+rectangle1 = Rectangle(6, 10, "Yellow")
 
 cirlce1 = Cirlce(6, "Green")
 
 triangle1 = Triangle(3, 3, 3, "Blue")
 
-print "Square Sizes:", square1.width, "x", square1.sides, \
+print "Square Sizes:", square1.width, "x", square1.width, \
             square1.color, ",", square2.width, "x", \
             square2.sides, square2.color
 print "Area:", square1.calcArea()
-print "Circle:", cirlce1.radius, "x", cirlce1.color
+print "Perimeter:", square1.calcPerimeter()
+print "Rectangle:", rectangle1.calcArea()
+print "Circle:", cirlce1.radius
+print "Circle Color:", cirlce1.color
 print "Area:", cirlce1.calcArea()
 print "Triangle Color:", triangle1.color
 printArea(triangle1)
