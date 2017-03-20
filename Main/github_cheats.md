@@ -38,7 +38,7 @@ Remove from local repo and server:
     git commit -m "Some message"
     git push or git push origin [repo branch name]
 
-Remove from server only: `get rm --cached -r [dir name]` or `get rm --cached [file name]`
+Remove from server only: `git rm --cached -r [dir name]` or `git rm --cached [file name]`
 
 
 ## Notes
