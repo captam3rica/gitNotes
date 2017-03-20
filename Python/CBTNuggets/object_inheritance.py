@@ -9,7 +9,7 @@ class Shape(object):
         self.color = "Red"
         self.sides = 0
 
-    def calcArea(self):
+    def calc_area(self):
         return 0
 
 
@@ -22,10 +22,10 @@ class Quadralateral(Shape):
         self.color = c
 
     # Calculate Area of Quadralateral
-    def calcArea(self):
+    def calc_area(self):
         return self.width * self.length
 
-    def calcPerimeter(self):
+    def calc_perimeter(self):
         return 2 * (self.width + self.length)
 
 
@@ -47,7 +47,7 @@ class Cirlce(Shape):
         self.color = c
 
     # Calculate Area of Cirlce
-    def calcArea(self):
+    def calc_area(self):
         return math.pi * (self.radius ** 2)
 
 
@@ -68,7 +68,7 @@ class Triangle(Shape):
 
 
 def printArea(s):
-    print "Area:", s.calcArea()
+    print "Area:", s.calc_area()
 
 # Doing things below
 ###################################################################
@@ -82,14 +82,14 @@ cirlce1 = Cirlce(6, "Green")
 
 triangle1 = Triangle(3, 3, 3, "Blue")
 
-print "Square Sizes:", square1.width, "x", square1.width, \
+print "Square Sizes:", square1.width, "x", square1.length, \
             square1.color, ",", square2.width, "x", \
-            square2.sides, square2.color
-print "Area:", square1.calcArea()
-print "Perimeter:", square1.calcPerimeter()
-print "Rectangle:", rectangle1.calcArea()
+            square2.length, square2.color
+print "Area:", square1.calc_area()
+print "Perimeter:", square1.calc_perimeter()
+print "Rectangle:", rectangle1.calc_area()
 print "Circle:", cirlce1.radius
 print "Circle Color:", cirlce1.color
-print "Area:", cirlce1.calcArea()
+print "Area:", cirlce1.calc_area()
 print "Triangle Color:", triangle1.color
 printArea(triangle1)
