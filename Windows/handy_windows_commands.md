@@ -42,13 +42,19 @@
 
 `net localgroup [group name] [Domain\username] /add`
 
+`get-ciminstance win32_account -filter "sid='S-1-5-21-2250542124-3280448597-2353175939-1019'"`
+
+`Get-WSManInstance -ResourceURI "wmicimv2/Win32_SID" -SelectorSet @{SID="S-1-5-21-2250542124-3280448597-2353175939-1019"}`
+
+- can get a bit more granular with is command
+
 ## Mounting network shares via cmd
 
 `net use <driveletter>: \\<server>\<sharename> /USER:<domain>\<username> <password> /PERSISTENT:YES`
 
 ## Getting Product UUIDs
 
-`get-wmicobject -class win32_product` 
+`get-wmicobject -class win32_product`
 
 `get-ciminstance -classname win32_product | select name, identifyingnumber`
 
