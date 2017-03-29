@@ -2,19 +2,9 @@
 
 ## Commands
 
-### Generate Key
-- ssh-keygen -t rsa -b 4096 -C "Label the key here"
-
-### Push Keys
-- cat ~/.ssh/shhkey.pub | ssh user@remoteserver "mkdir -p ~/.ssh/ && cat >> ~/.ssh/authorized_keys"
-
-Turn on "Install from Anywhere"
+Turn on "Install from Anywhere" in GateKeeper
 
 `sudo spctl --manster-disable`
-
-Convert DMG to installosx
-
-`hdiutil convert apple.dmg -format UDTO -o apple.iso`
 
 ### User Modifications
 
@@ -40,20 +30,54 @@ Convert DMG to installosx
 `pwpolicy [-v] [-a authenticator] [-p password] [-u username | -c computername]
                 [-n nodename] command command-arg`
 
-Neighbor Discovery Cache:
-
-`ndp -- control/diagnose IPv6 neighbor discovery protocol`
-
 Enable the root user:
 
 `dsenableroot -d`
 
-Use logcheck to automatically scan log files and notify you of any unusual
-activity:
+Force the user to be admin:  
 
-`$ logcheck`
+`$ sudo dseditgroup -o edit -a jwils156 admin`
 
-Use pwpolicy to create an organization wide password policy:
+Mount User's Scan folder to "Scan" folder
+
+    sudo -u $user -H sh -c "mount_smbfs
+    //'win.kennesaw.edu;$user@scan-pass01.win.kennesaw.edu/CampusFolders/$user' /Volumes/Scan"
+
+Connect to shares using a different user
+
+`smb://<username>:*@<servername>`
+
+Dropbox having issues starting up
+
+- There is a hidden folder, under the Users folder, called ".dropbox".
+Remove that folder then try to launch DB again. It should allow the user
+input their login credentials.
+
+### Microsoft Word Hacks
+
+Find Unsaved Word Docs
+
+`~/Library/Containers/com.microsoft.Word/Data/Library/Preferences/AutoRecovery/`
+
+- May need to rename .docx to .doc if the file does not open  
+
+Template Location
+
+- Word Templates Location: `/Users/$username/Library/Application Support/Microsoft/Office/UserTemplates/`
+
+### Network Stuff
+
+Neighbor Discovery Cache
+
+`ndp -- control/diagnose IPv6 neighbor discovery protocol`
+
+Reload /etc/hosts file manually & reload DNS service
+
+`sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder`
+
+### System Stuff
+
+Use pwpolicy to create an organization wide password policy
 
 `$ pwpolicy`
 
@@ -66,52 +90,32 @@ Edit Hostname:
 `$ sudo scutil --set HostName [new-hostname]`  
 `$ sudo scutil --set ComputerName [new computer name]`
 
-Connect to shares using a different user:
-
-`$ smb://<username>:*@<servername>`
-
-Show Hidden Files & Folders:
+Show Hidden Files & Folders
 
 `$ defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder`
 
-Force Empty Trash:
+Force Empty Trash
 
 `$ rm -rf ~/.Trash/*`
 
-Force the user to be admin:
-
-`$ sudo dseditgroup -o edit -a jwils156 admin`
-
-Convert Plist to xml and binary:
+Convert Plist to xml and binary
 
 `plutil -convert xml1 </path/to/property/list>`  
 `plutil -convert binary </path/to/property/list>`
 
-Note: make sure to make a copy before converting the file.
+- make sure to make a copy before converting the file.
 
-Allow keys to repeat:
+Allow keys to repeat
 
 `defaults write -g ApplePressAndHoldEnabled -bool false`
 
-Create OS X install media:
+To Remove a Receipt
 
-`sudo /Applications/Install\ OS\ X\ El\
-    Capitan.app/Contents/Resources/createinstallmedia --volume
-    /Volumes/elcapitaninstaller --applicationpath /Applications/Install\ OS\
-    X\ El\ Capitan.app –nointeraction`
+`sudo pkgutil --forget [com.name.of.package.pck]`  
+or   
+`sudo rm -rf /var/db/receipts/[name of receipt]`
 
-Reload /etc/hosts file manually & reload DNS service:
-
-`sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder`
-
-Mount User's Scan folder to "Scan" folder:
-
-    sudo -u $user -H sh -c "mount_smbfs
-    //'win.kennesaw.edu;$user@scan-pass01.win.kennesaw.edu/CampusFolders/$use
-    r
-    ' /Volumes/Scan"
-
-Removing Java:
+Removing Java
 
 `sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin`
 `sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefpane`
@@ -125,48 +129,42 @@ Reset Network configs & other settings:
 
 `/Library/Preferences/`
 
-*   Move the "SystemConfiguration" folder to the trash or a different
+- Move the "SystemConfiguration" folder to the trash or a different
 location or rename it just encase removing it does not solve the problem.
 
-To Remove a Receipt:
+### Installers & Install media
 
-`sudo pkgutil --forget <com.name.of.package.pck>`
+Convert DMG to installosx
 
-*   or go to /var/db/receipts and search for and delete the receipt that you
-need.
+`hdiutil convert apple.dmg -format UDTO -o apple.iso`
 
-Dropbox having issues starting up:
+Create OS X install media:
 
-*   There is a hidden folder, under the Users folder, called ".dropbox".
-Remove that folder then try to launch DB again. It should allow the user
-input their login credentials.
+`sudo /Applications/Install\ OS\ X\ El\
+    Capitan.app/Contents/Resources/createinstallmedia --volume
+    /Volumes/elcapitaninstaller --applicationpath /Applications/Install\ OS\
+    X\ El\ Capitan.app –nointeraction`
 
 If the OS X upgrade package fails to install:
 
 `com.googlecode.installosx.pkg.plist`
 `com.googlecode.installosx.pkg.bom`
 
+### SSH Keys
+
+Generate Keys
+
+- ssh-keygen -t rsa -b 4096 -C "Label the key here"
+
+Push Keys
+
+- cat ~/.ssh/shhkey.pub | ssh user@remoteserver "mkdir -p ~/.ssh/ && cat >> ~/.ssh/authorized_keys"
+
 ## File Locations
 
-*   /Users/$username/Library/Application Support/Microsoft/Office/User
-Templates/
 
-*   /Library/Scripts/KSU/studentprint2  
-
-*   /Library/Printers/guestqueue
-
-*   /Library/Preferences/ManagedInstalls.plist
-
-*   /Library/LaunchAgents/ (run as the user)
-
-*   /Library/LaunchDaemons/ (Run as root)
-
-*   /private/var/db/receipts
-
-*   Printer Drivers: /Library/Printers/PPDs/Contents/Resources
-
-*   munki downloads that have not yet been installed - /Library/Managed\
+- /Library/Printers/guestqueue
+- /Library/Preferences/ManagedInstalls.plist
+- Printer Drivers: /Library/Printers/PPDs/Contents/Resources
+- munki downloads that have not yet been installed - /Library/Managed\
 Installs/Cache
-
-*   Network Utility: /System/Library/CoreServices/Applications/Network
-Utility.app
