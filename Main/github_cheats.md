@@ -1,16 +1,28 @@
 # GitHub Cheats
 
-`git config --global user.name "[name]"`
+**Configure the git Environment**  
 
-`git config --global user.email "[email]"`
+    git config --global user.name "[name]"
+    git config --global user.email "[email]"f
+    git config --global color.ui auto
 
-`git init [name of new repository]`  
+**Create an Empty repo**
 
-Create a git repository
+    echo "# TMAS" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git remote add origin https://github.com/captam3rica/[app name].git
+    git push -u origin master
 
-`git clone [url]`
+**Check the Status**
 
-`git remote add origin https://github.com/captam3rica/gitNotes`
+    $ git status
+
+**Create a git repository from a clone**
+
+    git clone [url]
+    git remote add origin https://github.com/captam3rica/[gitRepoName]
 
 To add entire local repo: `git add .`
 
