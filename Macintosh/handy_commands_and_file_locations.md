@@ -4,6 +4,8 @@
 
 ### User Modifications
 
+For the username to be an admin and add that user to the admin group wheel.
+
 `sudo dseditgroup -o edit -a $username_to_add -t user admin`  
 `sudo dseditgroup -o edit -a $username_to_add -t user wheel`  
 
@@ -73,7 +75,7 @@ Reload /etc/hosts file manually & reload DNS service
 
 ### System Stuff
 
-Turn on "Install from Anywhere" in GateKeeper. This a setting that Apple decided to remove with the release of Mac OS Sierra. However, it can be re enabled with the command below. 
+Turn on "Install from Anywhere" in GateKeeper. This a setting that Apple decided to remove with the release of Mac OS Sierra. However, it can be re enabled with the command below.
 
 `sudo spctl --master-disable`
 
