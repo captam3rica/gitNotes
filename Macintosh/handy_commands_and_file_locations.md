@@ -1,5 +1,7 @@
 # Handy Commands & File Locations
 
+Precursors to using some of the commands below. PLEASE be sure to make a backup copy of any files before altering them.
+
 ## Commands
 
 ### User Modifications
