@@ -4,7 +4,7 @@
 
 Turn on "Install from Anywhere" in GateKeeper
 
-`sudo spctl --manster-disable`
+`sudo spctl --master-disable`
 
 ### User Modifications
 
@@ -20,14 +20,14 @@ Turn on "Install from Anywhere" in GateKeeper
 
 `cmd + S ` to enter single user Mode
 
-    /sbin/fsck -fy
-    /sbin/mount -uw /
-    launchctl load /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
-    dscl . -passwd /Users/whitsongordon [new password here]
+    $ /sbin/fsck -fy
+    $ /sbin/mount -uw /
+    $ launchctl load /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
+    $ dscl . -passwd /Users/whitsongordon [new password here]
 
-- Manipulate User Accounts & Passwords:
+Manipulate User Accounts & Passwords
 
-`pwpolicy [-v] [-a authenticator] [-p password] [-u username | -c computername]
+  `pwpolicy [-v] [-a authenticator] [-p password] [-u username | -c computername]
                 [-n nodename] command command-arg`
 
 Enable the root user:
@@ -94,6 +94,11 @@ Show Hidden Files & Folders
 
 `$ defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder`
 
+Unhide ~/Library
+
+`chflags nohidden ~/Library`
+`chflags hiddent ~/Library` - to hide it again
+
 Force Empty Trash
 
 `$ rm -rf ~/.Trash/*`
@@ -150,6 +155,21 @@ If the OS X upgrade package fails to install:
 `com.googlecode.installosx.pkg.plist`
 `com.googlecode.installosx.pkg.bom`
 
+### Munki related
+
+- /usr/local/munki
+
+Client Setup
+
+- `$ defaults write /Library/Preferences/com.github.salopensource.sal ServerURL http://something.com`  
+- `$ defaults write /Library/Preferences/com.github.salopensource.sal key [yourreallyreallylongkey]`
+
+Removing All-in-one Puppet Scripts
+
+- `rm /Library/LaunchDaemons/com.puppetlabs.mcollective.plist`
+- `rm /Library/LaunchDaemons/com.puppetlabs.puppet.plist`
+- `rm /Library/LaunchDaemons/com.puppetlabs.pxp-agent.plist`
+
 ### SSH Keys
 
 Generate Keys
@@ -161,7 +181,6 @@ Push Keys
 - cat ~/.ssh/shhkey.pub | ssh user@remoteserver "mkdir -p ~/.ssh/ && cat >> ~/.ssh/authorized_keys"
 
 ## File Locations
-
 
 - /Library/Printers/guestqueue
 - /Library/Preferences/ManagedInstalls.plist
