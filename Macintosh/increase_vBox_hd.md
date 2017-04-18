@@ -7,6 +7,6 @@
     - Example: `VBoxManage modifyhd myDisk.vdi --resize `
 3. VirtualBox will start to increase the size of the disk
     - 10..20..30..40..
-4. Startup the VirtualBox VM and type "computer management" in the start menu.
+4. Startup the VirtualBox Windows VM and type "computer management" in the start menu.
 5. Go to "Disk Management".
 6. Expand the size of the disk by right-clicking and choosing "Expand Volume".
