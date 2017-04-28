@@ -84,8 +84,11 @@ Use *lsblk* again to see how the LVMs are named.
 Now lets create the file system:
 
     # mkfs.ext4 /dev/mapper/examplevg-rootlv
+
     # mkfs.ext4 /dev/mapper/examplevg-homelv
+
     # mkfs.fat -F32 /dev/sda1
+
     # mkswap /dev/mapper/examplevg-swaplv
     # swapon /dev/mapper/examplevg-swaplv
 
@@ -184,6 +187,8 @@ Save the file and exit
 Run the following command to build the initial RAM filesystem:
 
     # mkinitcpio -p linux
+    or
+    # mkinitcpio -p linux-lts (You must download the lts kernel first)
 
 ### Install the Boot Loader
 
@@ -294,3 +299,5 @@ Once the system comes backup (as long as everything was configured correctly), y
 * [LVM Creation Guide](https://wiki.archlinux.org/index.php/LVM)
 * [Using Parted for LVM Creation](https://www.gnu.org/software/parted/manual/html_chapter/parted_7.html)
 * [Themes & Icons](http://gnome-look.com)
+* [Yaourt Installation](https://aur.archlinux.org/packages/yaourt/)
+* [Gnome3 Desktop](https://www.gnome.org)
