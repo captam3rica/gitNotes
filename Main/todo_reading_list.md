@@ -1,5 +1,7 @@
 # ToDo Reading List
 
+- Casting JonBenet - https://www.netflix.com/title/80142316
+- Dee Dee Wanted Her Daughter To Be Sick, Gypsy Wanted Her Mom To Be Murdered https://www.buzzfeed.com/michelledean/dee-dee-wanted-her-daughter-to-be-sick-gypsy-wanted-her-mom?utm_term=.se6wwANmM#.bevmm1pok
 - **08.01.2016** - [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
 -  [Borg Backup](http://borgbackup.readthedocs.io/en/stable/)
 - **Done 07.21.2016** [IPv6 Crash Course](https://www.linux.com/learn/ipv6-crash-course-linux)

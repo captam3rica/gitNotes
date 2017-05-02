@@ -46,15 +46,16 @@
 
 ### 2017
 
-- **Done 2017** - The Are of War | Sun Tzu
-- **Done 2017** - Team of Rivals: Abraham Lincoln | Doris Kearns Goodwin
-- **Done 2017** - The Art of Deception | Kevin Mitnick
-- **Done 2017** - How to Win Friends & Influence People | Dale Carnegie
-- **Done 2017** - The Circle | Dave Eggers
+- **Done Jan 2017** - The Are of War | Sun Tzu
+- **Done Mar 2017** - Team of Rivals: Abraham Lincoln | Doris Kearns Goodwin
+- **Done March 2017** - The Art of Deception | Kevin Mitnick
+- **Done April 2017** - How to Win Friends & Influence People | Dale Carnegie
+- **Done April 2017** - The Circle | Dave Eggers
+- **Done April 2017** - Body Mind Mastery | Dan Millman
 
 ## Current  
 
-- **Reading** - Body Mind Mastery | Dan Millman
+- **Reading** - Blink: The Power of Thinking Without Thinking | Malcolm Gladwell
 - **Reading** - Hacking Exposed: Linux 3rd Edition
 - **Reading** - Hacking Exposed: Windows 3rd Edition | Joel Scambray, CISSP & Stuart McClure, CISSP
 - **Reading** - Serve to Win | Novak Djokovic
@@ -76,4 +77,3 @@
 - Harry Potter and the Deathly Hallows
 - A Tale of Two Cities | Charles Dickens
 - 30 Days to Taming Your Tongue | Deborah Smith Pegues
-- blink | Malcolm Gladwell
