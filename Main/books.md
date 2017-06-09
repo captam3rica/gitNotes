@@ -60,6 +60,7 @@
 - **Reading** - Hacking Exposed: Windows 3rd Edition | Joel Scambray, CISSP & Stuart McClure, CISSP
 - **Reading** - Serve to Win | Novak Djokovic
 - **Reading** - The Myth of the Garage
+- **Reading** - Harry Potter and the Deathly Hallows | JK Rowling
 
 ## ToRead  
 
