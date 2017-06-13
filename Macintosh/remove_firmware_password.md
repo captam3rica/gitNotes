@@ -2,13 +2,6 @@
 
 Only Apple Retail Stores or Apple Authorized Service Providers can unlock the following Mac models when protected by a firmware password:
 
-- iMac (Mid 2011 and later)
-- MacBook (Retina, 12-inch, Early 2015 and later)
-- MacBook Air (Late 2010 and later)
-- MacBook Pro (Early 2011 and later)
-- Mac mini (Mid 2011 and later)
-- Mac Pro (Late 2013)
-
 ## Lost Firmware Password
 
 1. Start up the computer to the password entry screen by pressing and holding the Option key.
@@ -20,9 +13,6 @@ Only Apple Retail Stores or Apple Authorized Service Providers can unlock the fo
 4. Contact TSPS via chat. Select Yes for the pre-chat question regarding firmware reset and provide the Hash to the advisor assisting you.
 
 5. TSPS will provide a signed binary file to be copied to a USB storage device (such as a flash formatted FAT or a USB hard drive with Mac OS Extended with GUID partition table). MacBook (Retina, 12-inch, Early 2015) and later requires an adapter to attach the USB device. The USB-C to USB adapter is recommended. Be sure you have enough battery power to complete the procedure.
-7. Insert the drive into the computer while it is off.
-
-8. Start up the computer while pressing and holding the Option key. Continue holding the Option key until the boot picker in EFI appears and confirm the password has been removed. If the computer does not start up without the password prompt after following these steps and while you are holding down the Option key, either the Hash was provided incorrectly to TSPS or the file did not read off the drive successfully. The file may have been read correctly but confirmed it does not belong in the computer.  Work with TSPS to troubleshoot these issues if necessary.
 
 ### Multiple Computers
 
