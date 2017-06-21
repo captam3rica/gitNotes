@@ -52,15 +52,16 @@
 - **Done April 2017** - How to Win Friends & Influence People | Dale Carnegie
 - **Done April 2017** - The Circle | Dave Eggers
 - **Done April 2017** - Body Mind Mastery | Dan Millman
+- **Done June 2017** - Blink: The Power of Thinking Without Thinking | Malcolm Gladwell
+- **Done June 2017** - Harry Potter and the Deathly Hallows | JK Rowling
 
 ## Current  
 
-- **Reading** - Blink: The Power of Thinking Without Thinking | Malcolm Gladwell
+- **Reading** - The Screwtape Letters | C.S. Lewis 
 - **Reading** - Hacking Exposed: Linux 3rd Edition
 - **Reading** - Hacking Exposed: Windows 3rd Edition | Joel Scambray, CISSP & Stuart McClure, CISSP
 - **Reading** - Serve to Win | Novak Djokovic
 - **Reading** - The Myth of the Garage
-- **Reading** - Harry Potter and the Deathly Hallows | JK Rowling
 
 ## ToRead  
 
