@@ -38,10 +38,10 @@ Force the user to be admin:
 
 `$ sudo dseditgroup -o edit -a jwils156 admin`
 
-Mount User's Scan folder to "Scan" folder
+Mount User's Something folder to "Scan" folder
 
     sudo -u $user -H sh -c "mount_smbfs
-    //'win.kennesaw.edu;$user@scan-pass01.win.kennesaw.edu/CampusFolders/$user' /Volumes/Scan"
+    //'your.computer.domain;$user@something.server.name/location/of/folder"
 
 Connect to shares using a different user
 
@@ -76,6 +76,16 @@ Reload /etc/hosts file manually & reload DNS service
 `sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder`
 
 ### System Stuff
+
+To disable AutoBoot features use the following command from Terminal
+
+`$ sudo nvram AutoBoot=%00`
+
+To enable AutoBoot run the following command from Terminal
+
+`$ sudo nvram AutoBoot=%03`
+
+**NOTE**: MacBook Pro 2016 with Thunderbolt 3 will startup automatically while opening the lid or connecting the power adapter.
 
 Turn on "Install from Anywhere" in GateKeeper. This a setting that Apple decided to remove with the release of Mac OS Sierra. However, it can be re enabled with the command below.
 
