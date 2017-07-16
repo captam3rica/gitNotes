@@ -1,6 +1,8 @@
 # ToDo Reading List
 
-- The boxer rebellion - https://en.wikipedia.org/wiki/Boxer_Rebellion
+- 07.15.2017 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
+- 07.15.2017 - [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
+- [The boxer rebellion](https://en.wikipedia.org/wiki/Boxer_Rebellion)
 - WikiLeaks DarkMatter -  https://wikileaks.org/vault7/darkmatter/document/SonicScrewdriver_1p0/page-3/#pagination
 - Casting JonBenet - https://www.netflix.com/title/80142316
 - Dee Dee Wanted Her Daughter To Be Sick, Gypsy Wanted Her Mom To Be Murdered https://www.buzzfeed.com/michelledean/dee-dee-wanted-her-daughter-to-be-sick-gypsy-wanted-her-mom?utm_term=.se6wwANmM#.bevmm1pok
