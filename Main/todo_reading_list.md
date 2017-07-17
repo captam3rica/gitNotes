@@ -1,7 +1,10 @@
 # ToDo Reading List
 
+- 07.15.2017 - [The /sbin Directory](http://www.linfo.org/sbin.html)
+- 07.15.2017 - [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
 - 07.15.2017 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
 - 07.15.2017 - [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
+- 07.13.2017 - [AngryIP](https://github.com/angryip/ipscan)
 - [The boxer rebellion](https://en.wikipedia.org/wiki/Boxer_Rebellion)
 - WikiLeaks DarkMatter -  https://wikileaks.org/vault7/darkmatter/document/SonicScrewdriver_1p0/page-3/#pagination
 - Casting JonBenet - https://www.netflix.com/title/80142316
@@ -166,7 +169,6 @@ they can read the content.
 - Cobalt strike
 - Heep versus Stack memory request
 - Sflow and Netflow
-- AngryIP scanner
 - Hack this Site - https://www.hackthissite.org/
 - **Done** - Learn how to explain passwords
 - **Done** - Prevention, Detection, Response
