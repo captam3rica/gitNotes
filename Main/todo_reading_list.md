@@ -1,5 +1,11 @@
 # ToDo Reading List
 
+- Driver management - https://technet.microsoft.com/en-us/library/hh301101.aspx
+- Convert from BIOS to UEFI Using SCCM - https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence
+  - Another Article regarding Bios to UEFI conversion - https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion
+- Deploy Windows from Captured Media -  https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/
+- 07.19.2017 - [About Apple video adapters and cables](https://support.apple.com/en-us/HT201853)
+- 07.18.2017 - [25 Simple Find commands](http://www.binarytides.com/linux-find-command-examples/)
 - 07.15.2017 - [The /sbin Directory](http://www.linfo.org/sbin.html)
 - 07.15.2017 - [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
 - 07.15.2017 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
