@@ -1,0 +1,25 @@
+# Learning Resources
+
+- Apple Support article HT204349, About Integrated Video on Intel-Based Macs
+- Apple Support article HT3400, Mac computers: About liquid contact indicators (LCIs) and warranty coverage
+- Apple Support article HT202500, About the Low Battery Indicator
+- Apple Support article HT203747, Apple Diagnostics: Reference Codes
+- Apple Support article HT201788, Get help with the slot-loading SuperDrive on your Mac computer
+- Apple Support article TS3403, Battery May Not Charge or Drains While Using AC Power
+- Apple Support article HT202733, Boot Camp: Headphone Volume on Windows 8
+- Apple Support article HT203732, Boot Camp: Windows Installation Boots to Black Screen With Blinking Cursor
+- Apple Support article HT201585, Mac notebooks: Determining battery cycle count
+- Apple Support article HT203727, Distorted or Black Screen During Windows 8 Installation
+- Apple Support article HT201862, How to Identify Your MacBook Air
+- Apple Support article HT201700, Intel-Based Apple Notebooks: Identifying the Right Power Adapter and Power Cord
+- Apple Support article HT201257, Using Apple Hardware Test
+- Apple Support article HT203161, Isolating Issues in Mac OS X
+- Apple Support article HT202546, MacBook Pro with Retina display, MacBook Air: Locating Thunderbolt and display adapters
+- Apple Support article HT204319, Mac OS X Versions (Builds) for Computers
+- Apple Support article HT203409, MacBook Air (Late 2010) and Later, MacBook Pro (Early 2011) and Later, iMac (Mid 2011) and Later, Mac mini (Mid 2011): Recovering a Lost Firmware Password
+- Apple Support article TS4552, MacBook Air (Mid 2013): FaceTime HD Camera May Not Work With Some Applications
+- Apple Support article HT201665, MacBook Air: How to Find the Serial Number
+- Apple Support article HT204054, Mac notebooks: All about batteries
+- Apple Support article HT204154, Thunderbolt Ports and Displays: Frequently Asked Questions (FAQ)
+- Apple Support article HT202731, Using Apple Diagnostics
+- Apple Support article HT201163, Using USB 3 Devices on Mac Computers FAQ
