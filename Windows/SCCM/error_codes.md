@@ -9,6 +9,22 @@
   - Windows OS after the SCCM client is installed: c:\windows\ccm\logs\Smstslog\smsts.log
   - Windows OS after the Task Sequence is complete: c:\windows\ccm\logs\smsts.log
 
+## 0x80070490
+
+**Possible Error Messages**
+
+- Failed to stage WinPE
+- Failed to find the system root for the applied OS
+
+**Documentation**
+
+- [UEFI task sequence fails to apply operating system image](https://social.technet.microsoft.com/Forums/en-US/f6d6d07c-bc10-4395-96e7-5c199d70d4e1/uefi-task-sequence-fails-to-apply-operating-system-image?forum=configmanagerosd)
+  - The reason for this is SCCM (without MDT) does not have the ability to correctly state images in UEFI mode.
+
+- [ConfigMgr 2012: Staging of WinPE Is Not Fully Supported in UEFI-GPT Deployment Scenarios](https://social.technet.microsoft.com/Forums/en-US/d39d36d9-8177-4a37-8fbc-b7ecfaaa7929/configmgr-2012-staging-of-winpe-is-not-fully-supported-in-uefigpt-deployment-scenarios?forum=configmanagerosd)
+
+- [OSD fails with error 80070490](https://sccmdiet.wordpress.com/2014/04/23/osd-fails-with-error-80070490/)
+
 ## 0x80070032
 
 **Possible Error Messages**
