@@ -1,19 +1,41 @@
 # ToDo Reading List
 
+## Regular Expressions References
+
+- http://www.grymoire.com/Unix/Regular.html
+
+## Related to Mac OS Support & Administration
+
 - 07.24.2017 - Create Master Mac OS Image - https://deploystudio.wikispaces.com/Creating+Master+Disk+Images
-- List of WMIC CSProduct Get Name Results - http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/
+- 07.19.2017 - [About Apple video adapters and cables](https://support.apple.com/en-us/HT201853)
+- - 07.15.2017 - [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
+
+## Related to Scripting
+
+### Bash
+
 - User input with a while loop - http://alvinalexander.com/linux-unix/shell-script-how-prompt-read-user-input-bash
 - 8 examples of Bash if statements - http://bencane.com/2014/01/27/8-examples-of-bash-if-statements-to-get-you-started/
-- Driver management - https://technet.microsoft.com/en-us/library/hh301101.aspx
+
+
+## Related Windows Administration
+
+- List of WMIC CSProduct Get Name Results - http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/
+- 07.15.2017 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
+- 07.15.2017 - [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
+
+### SCCM Administration
+
 - Convert from BIOS to UEFI Using SCCM - https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence
   - Another Article regarding Bios to UEFI conversion - https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion
 - Deploy Windows from Captured Media -  https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/
-- 07.19.2017 - [About Apple video adapters and cables](https://support.apple.com/en-us/HT201853)
+- Driver management - https://technet.microsoft.com/en-us/library/hh301101.aspx
+
+## Unorganized References
+
 - 07.18.2017 - [25 Simple Find commands](http://www.binarytides.com/linux-find-command-examples/)
 - 07.15.2017 - [The /sbin Directory](http://www.linfo.org/sbin.html)
-- 07.15.2017 - [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
-- 07.15.2017 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
-- 07.15.2017 - [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
+
 - 07.13.2017 - [AngryIP](https://github.com/angryip/ipscan)
 - [The boxer rebellion](https://en.wikipedia.org/wiki/Boxer_Rebellion)
 - WikiLeaks DarkMatter -  https://wikileaks.org/vault7/darkmatter/document/SonicScrewdriver_1p0/page-3/#pagination
