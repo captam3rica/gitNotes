@@ -62,9 +62,11 @@
 - **Reading** - Hacking Exposed: Windows 3rd Edition | Joel Scambray, CISSP & Stuart McClure, CISSP
 - **Reading** - Serve to Win | Novak Djokovic
 - **Reading** - The Myth of the Garage
+- **Reading** - 6 Months to 6 Figures
 
 ## ToRead  
 
+- JI Packer - Knowing God
 - Cyber Warfare
 - Jumping Point - 0.49
 - How to manage the IT help desk
