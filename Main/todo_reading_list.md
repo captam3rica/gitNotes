@@ -8,7 +8,7 @@
 
 - 07.24.2017 - Create Master Mac OS Image - https://deploystudio.wikispaces.com/Creating+Master+Disk+Images
 - 07.19.2017 - [About Apple video adapters and cables](https://support.apple.com/en-us/HT201853)
-- - 07.15.2017 - [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
+- 07.15.2017 - [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
 
 ## Related to Scripting
 
@@ -18,7 +18,7 @@
 - 8 examples of Bash if statements - http://bencane.com/2014/01/27/8-examples-of-bash-if-statements-to-get-you-started/
 
 
-## Related Windows Administration
+## Related to Windows Administration
 
 - List of WMIC CSProduct Get Name Results - http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/
 - 07.15.2017 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
