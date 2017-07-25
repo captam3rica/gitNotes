@@ -1,5 +1,6 @@
 # ToDo Reading List
 
+- 07.24.2017 - Create Master Mac OS Image - https://deploystudio.wikispaces.com/Creating+Master+Disk+Images
 - Driver management - https://technet.microsoft.com/en-us/library/hh301101.aspx
 - Convert from BIOS to UEFI Using SCCM - https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence
   - Another Article regarding Bios to UEFI conversion - https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion
