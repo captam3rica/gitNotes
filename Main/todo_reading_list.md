@@ -1,12 +1,10 @@
 # ToDo Reading List
 
-<<<<<<< HEAD
 - List of WMIC CSProduct Get Name Results - http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/
 - User input with a while loop - http://alvinalexander.com/linux-unix/shell-script-how-prompt-read-user-input-bash
 - 8 examples of Bash if statements - http://bencane.com/2014/01/27/8-examples-of-bash-if-statements-to-get-you-started/
 =======
 - 07.24.2017 - Create Master Mac OS Image - https://deploystudio.wikispaces.com/Creating+Master+Disk+Images
->>>>>>> 05c8000dd5ffe8dfd1a711d1bae76c166ce4e1bb
 - Driver management - https://technet.microsoft.com/en-us/library/hh301101.aspx
 - Convert from BIOS to UEFI Using SCCM - https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence
   - Another Article regarding Bios to UEFI conversion - https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion
