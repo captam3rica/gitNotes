@@ -1,4 +1,4 @@
-# ToDo Reading List
+# Reference List
 
 ## Regular Expressions References
 
@@ -6,6 +6,12 @@
 
 ## Related to Mac OS Support & Administration
 
+- ClamAV on Mac OS - http://www.clamav.net/documents/installing-clamav
+- autopkgr - https://github.com/lindegroup/autopkgr
+    - [Guide from Der Flounder ](https://derflounder.wordpress.com/2014/07/15/autopkgr-a-gui-for-autopkg/ "Der Flounder Guide for AutoPkgr")
+- First Boot Package Install Generator - https://github.com/rtrouton/First_Boot_Package_Install_Generator
+- Terminal-based package builder - https://www.ibm.com/developerworks/library/x-starlet/index.html
+- Edit XML from Terminal - https://www.ibm.com/developerworks/library/x-starlet/index.html
 - 07.24.2017 - Create Master Mac OS Image - https://deploystudio.wikispaces.com/Creating+Master+Disk+Images
 - 07.19.2017 - [About Apple video adapters and cables](https://support.apple.com/en-us/HT201853)
 - 07.15.2017 - [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
@@ -20,6 +26,12 @@
 - 2015.01.25 - Rsync command examples - http://www.thegeekstuff.com/2010/09/rsync-command-examples/
 - POSIX - https://en.wikipedia.org/wiki/POSIX
 - Security Enhanced Linux: http://selinuxproject.org/page/Main_Page
+
+## Office Products
+
+### Excel
+
+- [ExcelJet.net](https://exceljet.net)
 
 ## Related to Scripting
 
@@ -65,6 +77,9 @@
 
 ## Certifications
 
+- [CompTIA](https://www.certmetrics.com/comptia/candidate/ecom_creq_ce_list.aspx)
+- [ChannelCon](https://hybrid.socialpoint.io/apps/custom/comptia/#hybrid/track4techs?eventId=event150002)
+- [IT PRO Training](https://itpro.tv/course-library/)
 - GIAC Certified Incident Handler - http://www.giac.org/certification/certified-incident-handler-gcih
 - GIAC Certified Forensic Examiner - http://www.giac.org/certification/certified-forensic-examiner-gcfe
 
