@@ -6,12 +6,7 @@
 
 ## Related to Mac OS Support & Administration
 
-- ClamAV on Mac OS - http://www.clamav.net/documents/installing-clamav
-- autopkgr - https://github.com/lindegroup/autopkgr
-    - [Guide from Der Flounder ](https://derflounder.wordpress.com/2014/07/15/autopkgr-a-gui-for-autopkg/ "Der Flounder Guide for AutoPkgr")
-- First Boot Package Install Generator - https://github.com/rtrouton/First_Boot_Package_Install_Generator
-- Terminal-based package builder - https://www.ibm.com/developerworks/library/x-starlet/index.html
-- Edit XML from Terminal - https://www.ibm.com/developerworks/library/x-starlet/index.html
+- SPSS 24 Documentation - ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/
 - 07.24.2017 - Create Master Mac OS Image - https://deploystudio.wikispaces.com/Creating+Master+Disk+Images
 - 07.19.2017 - [About Apple video adapters and cables](https://support.apple.com/en-us/HT201853)
 - 07.15.2017 - [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
@@ -27,21 +22,20 @@
 - POSIX - https://en.wikipedia.org/wiki/POSIX
 - Security Enhanced Linux: http://selinuxproject.org/page/Main_Page
 
-## Office Products
-
-### Excel
-
-- [ExcelJet.net](https://exceljet.net)
-
 ## Related to Scripting
 
 ### Bash
 
+- Shell Variables - https://www.gnu.org/software/bash/manual/bash.html#Shell-Variables
 - User input with a while loop - http://alvinalexander.com/linux-unix/shell-script-how-prompt-read-user-input-bash
 - 8 examples of Bash if statements - http://bencane.com/2014/01/27/8-examples-of-bash-if-statements-to-get-you-started/
 - 07.18.2017 - [25 Simple Find commands](http://www.binarytides.com/linux-find-command-examples/)
 - 07.15.2017 - [The /sbin Directory](http://www.linfo.org/sbin.html)
 - **08.01.2016** - [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
+
+### PowerShell
+
+- Bypass Execution Policies - https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/
 
 ### Python
 
@@ -70,6 +64,7 @@
 
 ### SCCM Administration
 
+- WMI SCCM Queries - https://www.andersrodland.com/ultimate-sccm-querie-collection-list/
 - Convert from BIOS to UEFI Using SCCM - https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence
   - Another Article regarding Bios to UEFI conversion - https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion
 - Deploy Windows from Captured Media -  https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/
@@ -77,9 +72,6 @@
 
 ## Certifications
 
-- [CompTIA](https://www.certmetrics.com/comptia/candidate/ecom_creq_ce_list.aspx)
-- [ChannelCon](https://hybrid.socialpoint.io/apps/custom/comptia/#hybrid/track4techs?eventId=event150002)
-- [IT PRO Training](https://itpro.tv/course-library/)
 - GIAC Certified Incident Handler - http://www.giac.org/certification/certified-incident-handler-gcih
 - GIAC Certified Forensic Examiner - http://www.giac.org/certification/certified-forensic-examiner-gcfe
 
