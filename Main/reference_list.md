@@ -70,6 +70,10 @@
 - Deploy Windows from Captured Media -  https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/
 - Driver management - https://technet.microsoft.com/en-us/library/hh301101.aspx
 
+### Driver Resources
+
+- HP Drivers - http://www8.hp.com/us/en/ads/clientmanagement/overview.html#manageability-tools
+
 ## Certifications
 
 - GIAC Certified Incident Handler - http://www.giac.org/certification/certified-incident-handler-gcih
