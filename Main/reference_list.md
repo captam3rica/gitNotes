@@ -79,18 +79,6 @@
 - GIAC Certified Incident Handler - http://www.giac.org/certification/certified-incident-handler-gcih
 - GIAC Certified Forensic Examiner - http://www.giac.org/certification/certified-forensic-examiner-gcfe
 
-
-## Netflix
-
-- Casting JonBenet - https://www.netflix.com/title/80142316
-- Dee Dee Wanted Her Daughter To Be Sick, Gypsy Wanted Her Mom To Be Murdered https://www.buzzfeed.com/michelledean/dee-dee-wanted-her-daughter-to-be-sick-gypsy-wanted-her-mom?utm_term=.se6wwANmM#.bevmm1pok
-
-## History
-
-- [The boxer rebellion](https://en.wikipedia.org/wiki/Boxer_Rebellion)
-- 1985 Brixton riot - Wikipedia, the free encyclopedia - https://en.wikipedia.org/wiki/1985_Brixton_riot
-
-
 ## Security
 
 - Anonymous Web browsing - http://lifehacker.com/150074/anonymous-web-browsing-20
@@ -158,10 +146,6 @@ be for sale
 - OpenWRT - http://wiki.openwrt.org/toh/netgear/wnr1000 - OS router
 firmware
 - Packet Life - http://packetlife.net/
-
-## Shopping
-
-- Vivo Barefoot Shoes: http://www.vivobarefoot.com/us/mens
 
 ## Unorganized References
 
