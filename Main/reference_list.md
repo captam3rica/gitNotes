@@ -22,6 +22,24 @@
 - POSIX - https://en.wikipedia.org/wiki/POSIX
 - Security Enhanced Linux: http://selinuxproject.org/page/Main_Page
 
+## Related to Windows Administration
+
+- List of WMIC CSProduct Get Name Results - http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/
+- 07.15.2017 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
+- 07.15.2017 - [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
+
+### SCCM Administration
+
+- WMI SCCM Queries - https://www.andersrodland.com/ultimate-sccm-querie-collection-list/
+- Convert from BIOS to UEFI Using SCCM - https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence
+  - Another Article regarding Bios to UEFI conversion - https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion
+- Deploy Windows from Captured Media -  https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/
+- Driver management - https://technet.microsoft.com/en-us/library/hh301101.aspx
+
+### Driver Resources
+
+- HP Drivers - http://www8.hp.com/us/en/ads/clientmanagement/overview.html#manageability-tools
+
 ## Related to Scripting
 
 ### Bash
@@ -55,24 +73,6 @@
 - Done - KeePass - http://keepass.info/download.html - OS password locker
 - Synology NAS - http://www.synology.com/en-us/products/compare_products/DS214+/DS412+
 - Qnap NAS servers - http://www.staples.com/office/supplies/StaplesProductDisplay?storeId=10001&catalogIdentifier=2&partNumber=IM1PK7895&langid=-1&cid=PS:GooglePLAs:IM1PK7895&srccode=cii_17588969&cpncode=35-172700112-2
-
-## Related to Windows Administration
-
-- List of WMIC CSProduct Get Name Results - http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/
-- 07.15.2017 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
-- 07.15.2017 - [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
-
-### SCCM Administration
-
-- WMI SCCM Queries - https://www.andersrodland.com/ultimate-sccm-querie-collection-list/
-- Convert from BIOS to UEFI Using SCCM - https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence
-  - Another Article regarding Bios to UEFI conversion - https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion
-- Deploy Windows from Captured Media -  https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/
-- Driver management - https://technet.microsoft.com/en-us/library/hh301101.aspx
-
-### Driver Resources
-
-- HP Drivers - http://www8.hp.com/us/en/ads/clientmanagement/overview.html#manageability-tools
 
 ## Certifications
 
