@@ -46,7 +46,8 @@ remote changes: `$ git pull --rebase`
 
 **Remove from server only**
 
-- `$ git rm --cached -r [dir name]` or `$ git rm --cached [file name]`
+- `$ git rm --cached -r [dir name]`
+- `$ git rm --cached [file name]`
 
 
 ## Notes
