@@ -74,6 +74,10 @@
 - Synology NAS - http://www.synology.com/en-us/products/compare_products/DS214+/DS412+
 - Qnap NAS servers - http://www.staples.com/office/supplies/StaplesProductDisplay?storeId=10001&catalogIdentifier=2&partNumber=IM1PK7895&langid=-1&cid=PS:GooglePLAs:IM1PK7895&srccode=cii_17588969&cpncode=35-172700112-2
 
+### Web Browser Settings
+
+- Chrome, Chromium, and Vivaldi Autofill Settings - `chrome://settings/search#autofill`
+
 ## Certifications
 
 - GIAC Certified Incident Handler - http://www.giac.org/certification/certified-incident-handler-gcih
