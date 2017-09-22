@@ -57,8 +57,8 @@ Matt Wilson <matthewilson2@gmail.com>
 
 ## My Public Key
 
------BEGIN PGP PUBLIC KEY BLOCK-----
-Comment: GPGTools - https://gpgtools.org
+-----BEGIN PGP PUBLIC KEY BLOCK-----  
+Comment: GPGTools - https://gpgtools.org  
 
 mQENBFX1gkUBCADKx7vc229tTGwUk4gRE6SwIMZZjlak4VWzKElYIpU7zmzEKWFM
 e+6GaZAPONbcFz5KxSg7A/xHB9mIiJYaiuX0qITFHlwkm4I+v8e3m1m9hGi1JBPn
@@ -118,5 +118,5 @@ pI3uAhAyuoiH4gL9X+Trg5wNgXgyszQt6FAy7C0wohzB0geskqEpHHdIp3XSKJIc
 5a5fFgRtFRmroRRBZHid4m2A3+rbxd8smgL2g3ft7gkJB4B1mYQZ3WV+aeRkUk2H
 KX2psjApVZEpitFZvm3pZANC8zcYSSktlJddhKrLXNYoWKN9aR4laaTh4WIWu8GE
 m56uHjeKijUdd4DvTdsV9wPRO2mwXJ7kjSG+L1U=
-=aN/g
+=aN/g  
 -----END PGP PUBLIC KEY BLOCK-----
