@@ -2,18 +2,18 @@
 
 **Configure the git Environment**  
 
-    git config --global user.name "[name]"
-    git config --global user.email "[email]"f
-    git config --global color.ui auto
+    $ git config --global user.name "[name]"
+    $ git config --global user.email "[email]"f
+    $ git config --global color.ui auto
 
 **Create an Empty repo**
 
-    echo "# TMAS" >> README.md
-    git init
-    git add README.md
-    git commit -m "first commit"
-    git remote add origin https://github.com/captam3rica/[app name].git
-    git push -u origin master
+    $ echo "# TMAS" >> README.md
+    $ git init
+    $ git add README.md
+    $ git commit -m "first commit"
+    $ git remote add origin https://github.com/captam3rica/[app name].git
+    $ git push -u origin master
 
 **Check the Status**
 
@@ -21,36 +21,32 @@
 
 **Create a git repository from a clone**
 
-    git clone [url]
-    git remote add origin https://github.com/captam3rica/[gitRepoName]
+    $ git clone [url]
+    $ git remote add origin https://github.com/captam3rica/[gitRepoName]
 
-To add entire local repo: `git add .`
+**Basics**
 
-commit: `git commit -m "Some note about the commit"`
+- To add entire local repo: `$ git add .`
+- Commit a change: `$ git commit -m "Some note about the commit"`
+- Initial push of commits: `$ git push origin [main_branch_name]`
+- Push commits: `$ git push`
+- Download bookmark history and incorporates changes: `$ git pull`  
+- Downloads bookmark history and incorporates your changes on top of
+remote changes: `$ git pull --rebase`  
+- Revert a commit: `$ git revert -n <sha>`  
+- Show what revision and author last modified each line of a file: `$ git blame [file]`  
+- Show log of changes: `$ git log`  
 
-Initial push of commits: `git push origin master`
+**Remove from local repo and server**
 
-Push commits: `git push`
+    $ git rm [file name] - to remove file
+    $ git rm -r [folder name] - to remove folder
+    $ git commit -m "Some message"
+    $ git push or git push origin [repo branch name]
 
-Download bookmark history and incorporates changes: `git pull`  
+**Remove from server only**
 
-Downloads bookmark history and incorporates your changes on top of
-remote changes: `git pull --rebase`  
-
-Revert a commit: `git revert -n <sha>`  
-
-Show what revision and author last modified each line of a file: `git blame [file]`  
-
-Show log of changes: `git log`  
-
-Remove from local repo and server:
-
-    git rm [file name] - to remove folder
-    git rm -r [folder name] - to remove folder
-    git commit -m "Some message"
-    git push or git push origin [repo branch name]
-
-Remove from server only: `git rm --cached -r [dir name]` or `git rm --cached [file name]`
+- `$ git rm --cached -r [dir name]` or `$ git rm --cached [file name]`
 
 
 ## Notes
