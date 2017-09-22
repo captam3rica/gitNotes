@@ -1,0 +1,35 @@
+select distinct
+
+SMS_R_System.Name,
+SMS_R_System.ResourceDomainORWorkgroup, SMS_R_System.OperatingSystemNameandVersion,
+SMS_R_System.Client,
+SMS_G_System_CH_ClientSummary.ClientActiveStatus,
+SMS_R_System.ClientType,
+SMS_R_System.LastLogonUserName,
+SMS_R_System.IPAddresses,
+SMS_R_System.SMSUniqueIdentifier,
+SMS_R_System.ResourceId
+
+from
+
+SMS_R_System inner join SMS_G_System_CH_ClientSummary on SMS_G_System_CH_ClientSummary.ResourceID = SMS_R_System.ResourceId
+
+where
+
+SMS_R_System.Name like "%P[0-9][0-9][0-9][0-9][0-9]%"
+
+
+Other Commands
+
+Last Policy Request
+inner join SMS_G_System_CH_ClientSummary on SMS_G_System_CH_ClientSummary.ResourceID = SMS_R_System.ResourceId
+
+SMS_G_System_CH_ClientSummary.LastPolicyRequest
+
+Client Activity Status
+inner join SMS_G_System_CH_ClientSummary on SMS_G_System_CH_ClientSummary.ResourceID = SMS_R_System.ResourceId
+
+SMS_G_System_CH_ClientSummary.ClientActiveStatus
+
+System Resource ID
+SMS_R_System.ResourceId
