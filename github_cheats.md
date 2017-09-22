@@ -8,11 +8,10 @@
 
 **Create an Empty repo**
 
-    $ echo "# TMAS" >> README.md
+    $ mkdir TMAS && cd TMAS && echo "# TMAS" >> README.md
     $ git init
-    $ git add README.md
-    $ git commit -m "first commit"
-    $ git remote add origin https://github.com/captam3rica/[app name].git
+    $ git add README.md && git commit -m "first commit"
+    $ git remote add origin https://github.com/captam3rica/TMAS.git
     $ git push -u origin master
 
 **Check the Status**
