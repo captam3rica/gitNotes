@@ -3,28 +3,42 @@
 ## Commands
 https://www.gnupg.org/documentation/manpage.en.html
 
+**Key Basics**
+
 - gpg --key-gen
-- gpg --delete-key <key_id>
-- gpg --send-keys <key_id> --keyserver hkp://subkys/pgp.net - will export public keys to key servers (hkp server by default)
+- gpg --delete-key [keyid]
+- gpg --send-keys [keyid] --keyserver hkp://subkys/pgp.net - will export public keys to key servers (hkp server by default)
 - gpg --search-keys [search string]
-- gpg --export -a <uid> > file_name.key
-- gpg --export-secret-key -a <uid> > file_name.key
-- gpg --import <file-name>
-- gpg --recv-keys <key-id>
+- gpg --list-keys
+- gpg --list-secret-keys
+- gpg --fingerprint
+- gpg --list-public-keys
+
+**Export & Import**
+
+- gpg --export -a [uid] > file_name.key
+- gpg --export-secret-key -a [uid] > file_name.key
+- gpg --import [file name]
+- gpg --recv-keys [keyid]
+
+**Key Verification**
+
 - gpg --verify [file_signature.sig.asc] [file_name]
-- gpg --keyid-format long --import <name of key.key>
-- gpg --keyid-format long --verify <name of sig file.sig> <name of file to verify>
-- gpg --sign <name_of_file>
-- gpg --sign-key <key_id>
-- gpg --output <file_name.gpg> --encrypt --recipient <user_name> <name_of_file> - to encrypt a file (can be used with -s)
+- gpg --keyid-format long --import [name_of_file]
+- gpg --keyid-format long --verify [name_of_file.sig] [name_of_file]
+- gpg --sign [name_of_file]
+- gpg --sign-key [keyid]
+
+**Encrypt & Decrypt**
+
+- gpg --output [file_name.gpg] --encrypt --recipient [uid] [name_of_file] (can be used with -s)
     - gpg -o [file_name.gpg] -e -r Name [file]
-- gpg --output <file> --decrypt <file.txt.gpg>
-- gpg --list-keys and --list-secret-keys and --fingerprint and --list-public-keys
-- gpg --delete-secret-and-public-key <name> | --delete-secret-key <name>
+- gpg --output [file] --decrypt [file.txt.gpg]
 
-mailevelope: email extension
+**Delete Keys**
 
-Encrypt Thumbdrive
+- gpg --delete-secret-and-public-key [uid]
+- gpg --delete-secret-key [uid]
 
 ## Resources
 
