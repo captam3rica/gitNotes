@@ -6,13 +6,18 @@
     $ git config --global user.email "[email]"f
     $ git config --global color.ui auto
 
-**Create an Empty repo**
+**Create an Empty Repo & Push Remotely to GitHub**
 
-    $ mkdir TMAS && cd TMAS && echo "# TMAS" >> README.md
+    $ mkdir [repo_name_here]
+    $ cd [repo_name_here]
+    $ echo "# [repo_name_here]" >> README.md
     $ git init
     $ git add README.md && git commit -m "first commit"
-    $ git remote add origin https://github.com/captam3rica/TMAS.git
-    $ git push -u origin master
+    $ curl -u '[username]' https://api.github.com/user/repos -d '{"name":"[repo_name_here]"}'
+    $ git remote add origin https://github.com/[username]/[repo_name_here].git
+    $ git push --set-upstream origin master
+
+**Note:** Change `[username]` to your *GitHub* user, and change `[repo_name_here]` to the name of the repository being created. 
 
 **Check the Status**
 
