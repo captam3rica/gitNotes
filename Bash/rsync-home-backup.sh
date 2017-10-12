@@ -54,10 +54,8 @@
 
 ME=`whoami`
 SOURCE="/home/$ME"
-#DESTINATION=/home/captam3rica/Storage/Backups/home_backup
-DATE=`date +%d%m%Y-%H%M%S`
 DAILY=Backup-`date +%A`
-INCREMENTAL="/run/media/$ME/CHRONOSMACH/RsyncBackup/$DAILY"
+INCREMENTAL="/run/media/$ME/CHRONOSMACH/RsyncBackup/Backup-`date +%A`"
 CURRENT="/run/media/$ME/CHRONOSMACH/RsyncBackup/Current-Backup"
 ALTDEST=''
 EXCLUDE="/home/$ME/rsync-exclude"
@@ -75,7 +73,7 @@ if [ -d "$CURRENT" ]; then
     	printf "rsync --delete --backup --backup-dir=$INCREMENTAL -az --acls --stats --progress --human-readable --exclude-from=$EXCLUDE --log-file=$LOGS/rsync_backup_$DATE.log $SOURCE $CURRENT\n"
 
 	# Rsync script to backup home directory incrementally and with an entire snapshot
-    	/usr/bin/rsync --delete --exclude-from=$EXCLUDE --backup --backup-dir=$INCREMENTAL -az --acls --stats --progress --human-readable --log-file=$SOURCE/rsync_backup_"$DATE".log $SOURCE $CURRENT
+    	/usr/bin/rsync --delete --exclude-from=$EXCLUDE --backup --backup-dir=$INCREMENTAL -az --acls --stats --progress --human-readable --log-file=$LOGS/rsync_backup_"`date +%d%m%Y-%H%M%S`.log" $SOURCE $CURRENT
 	printf "Backup to $CURRENT has completed!\n"
 	echo "Unmounting backup drive"
 	umount /run/media/captam3rica/CHRONOSMACH
