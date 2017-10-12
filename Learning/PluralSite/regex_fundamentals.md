@@ -105,3 +105,39 @@
   - ? - zero or one times
   - \* - zero or more times (unlimited)
   - \+ - one or more times (unlimited)
+  - {n} - exact amount of times to match
+  - {n,} - n or more times
+  - {n,m} - between n and m times
+  - {,m} - between 0(zero) and m times ({0,m})
+
+- Backtracing
+  - The regex will look for the first possible match and then serge forward. Then, backtrack until it can complete the last listed match. The more times that a regex has to do this, the slower it will be in completing the search.
+
+- Best Practice
+  - Be precise
+  - Use negated character classes
+
+- Reluctant Quantifiers (lazy)
+  - Adding an extra `?` to the end of the regex will try match the least amount of times while still making a match
+    - Not available in grep
+
+- Pitfalls
+  - Repeating some chars are usless
+  - order is important
+  - Repetition limits
+  - Mixing some type of syntax
+
+- Alternations (|)
+  - Separate branchs
+  - Not speical in a class
+  - Note:
+    - PCRE will match Left-most (first) match
+    - POSIX will try to match Left-most longest match
+  - Mind the branch order
+  - Make the beginning and end of an Alternation with grouping delimiters
+
+-
+
+## Resources
+
+- [Regex101](https://regex101.com/ "Regex practice tool")

@@ -20,7 +20,7 @@
 **Task Sequences**
 
 - name, boot image to use, browse for image package and select wim
-- Partition adn format the target computer
+- Partition and format the target computer
 - Licensing information (optional)
 - Enable to local admin and specify credentials
 - Join Domain or Work Group
@@ -28,4 +28,4 @@
   - Verify with AD to confirm
   - Test connection
 - Config manager client package
-- 
+-
