@@ -1,0 +1,4 @@
+#!/bin/bash
+
+defaults write /Library/Preferences/com.github.salopensource.sal key c388a4rvirb2hohjaj1m6yrz5u5dvzowmvb19sjt9z2a7dtbzww9deo9qhow7qrn8jj2pzckj800bdwrh0w3n92xxa8vyf6j6ktmfd0cl4gbojd4hiwsakwnqmyo1g6i
+touch /Library/Scripts/KSU/sallabclient
