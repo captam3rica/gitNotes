@@ -1,4 +1,0 @@
-#!/bin/bash
-
-defaults write /Library/Preferences/com.github.salopensource.sal key pb173xxuqj3sxg1mmql483q6bmxiu6k2csjbczgdl349kpbxew97guj4wdbcyktc8astuoj9tc7o2x5bzzdun2m4o3tpxtpjl3uwbmn7iznc8tq0pl1xz8byeflirdxz
-touch /Library/Scripts/KSU/salfacstaffclient
