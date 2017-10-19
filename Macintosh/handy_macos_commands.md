@@ -2,6 +2,86 @@
 
 Precursors to using some of the commands below. **PLEASE** be sure to make a backup copy of any files before altering them.
 
+## Terminal Hacks
+
+#### OS Version
+
+`$ sw_vers`
+
+#### Show Hidden Files & Folders
+
+`$ defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder`
+
+#### Unhide ~/Library
+
+`chflags nohidden ~/Library`
+`chflags hiddent ~/Library` - to hide it again
+
+#### Edit Your '$PATH'
+
+`sudo launchctl config user path "/usr/local/bin:$PATH" && sudo launchctl reboot`
+
+#### Turn on "Install from Anywhere" in GateKeeper.
+
+- This is a setting that Apple decided to remove with the release of Mac OS Sierra.
+
+`sudo spctl --master-disable`
+
+#### Allow Keyboard Keys to repeat
+
+`defaults write -g ApplePressAndHoldEnabled -bool false`
+
+#### Change ScreenShot File Type to PDF
+
+`defaults write com.apple.screencapture type PDF`
+
+#### Remove Smooth Scrolling
+
+When you hit spacebar in a browser, the page will automatically scroll with a smooth transition effect. Sometimes this animation can be clunky. To remove this setting use the following.
+
+`defaults write -g NSScrollAnimationEnabled -bool NO`
+
+#### Remove the Bouncy Elastic Effect in Finder and Other Apps
+
+`defaults write -g NSScrollViewRubberbanding -int 0`
+
+#### Force Empty Trash
+
+`$ rm -rf ~/.Trash/*`
+
+#### Convert Plist to xml and binary
+
+`plutil -convert xml1 </path/to/property/list>`  
+`plutil -convert binary </path/to/property/list>`
+
+#### Remove a Package Receipt
+
+`sudo pkgutil --forget [com.name.of.package.pck]`  
+
+or   
+
+`sudo rm -rf /var/db/receipts/[name of receipt]`
+
+## Application Specific ...
+
+### Issues with DropBox Starting Up
+
+- There is a hidden folder, under the Users folder, called ".dropbox".
+Remove that folder then try to launch DB again. It should allow the user
+input their login credentials.
+
+#### Microsoft Word Hacks
+
+#### Find Unsaved Word Docs
+
+`~/Library/Containers/com.microsoft.Word/Data/Library/Preferences/AutoRecovery/`
+
+- May need to rename .docx to .doc if the file does not open  
+
+#### UserTemplates Location
+
+- Word Templates Location: `/Users/$username/Library/Application Support/Microsoft/Office/UserTemplates/`
+
 ## User Modifications
 
 #### For the username to be an admin & add that user to the admin group wheel
@@ -44,47 +124,49 @@ Precursors to using some of the commands below. **PLEASE** be sure to make a bac
     sudo -u $user -H sh -c "mount_smbfs
     //'your.computer.domain;$user@something.server.name/location/of/folder"
 
-#### Connect to shares using a different user
+**Connect to shares using a different user**
 
 `smb://<username>:*@<servername>`
 
-#### Issues with DropBox Starting Up
+## Security
 
-- There is a hidden folder, under the Users folder, called ".dropbox".
-Remove that folder then try to launch DB again. It should allow the user
-input their login credentials.
+### XProtect and Gatekeeper
 
-#### Edit Your '$PATH'
+- *XProtect* is technically a feature builtin to *File Quarantine*
+- Just sits between you and the Web.
+- Contains an Apple curated list of bad software
 
-`sudo launchctl config user path "/usr/local/bin:$PATH"`
+**Location**
+- `/System/Library/Core Services/CoreTypes.bundle/Contents/Resources/XProtect.plist`
 
-- Reboot
+**Definition Updates**
 
-## Microsoft Word Hacks
-
-Find Unsaved Word Docs
-
-`~/Library/Containers/com.microsoft.Word/Data/Library/Preferences/AutoRecovery/`
-
-- May need to rename .docx to .doc if the file does not open  
-
-Template Location
-
-- Word Templates Location: `/Users/$username/Library/Application Support/Microsoft/Office/UserTemplates/`
+- Come through the *App Store* in the form of security updates
 
 ## Network Stuff
 
-Neighbor Discovery Cache
+**Reset Network configs**
+
+`/Library/Preferences/SystemConfiguration`
+
+- Move the **NetworkInterfaces.plist** file to the trash or rename it just encase removing it does not solve the problem.
+-
+**Edit Hostname**
+
+`$ sudo scutil --set HostName [new-hostname]`  
+`$ sudo scutil --set ComputerName [new computer name]`
+
+**Neighbor Discovery Cache**
 
 `ndp -- control/diagnose IPv6 neighbor discovery protocol`
 
-Reload /etc/hosts file manually & reload DNS service
+**Reload /etc/hosts file manually & reload DNS service**
 
 `sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder`
 
-## System Stuff
+## Storage ...
 
-####Convert to APFS
+###Convert to APFS
 
 [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
 
@@ -108,62 +190,19 @@ The fsck_apfs utility verifies and repairs APFS containers and volumes.
 
   `fsck_apfs`
 
-#### To disable AutoBoot features use the following command from Terminal
+### Boot Options
+
+**To disable AutoBoot features use the following command from Terminal**
 
 `$ sudo nvram AutoBoot=%00`
 
-#### To enable AutoBoot run the following command from Terminal
+**To enable AutoBoot run the following command from Terminal**
 
 `$ sudo nvram AutoBoot=%03`
 
 **NOTE**: MacBook Pro 2016 with Thunderbolt 3 will startup automatically while opening the lid or connecting the power adapter.
 
-#### Turn on "Install from Anywhere" in GateKeeper.
-
-  - This is a setting that Apple decided to remove with the release of Mac OS Sierra.
-
-`sudo spctl --master-disable`
-
-#### Use pwpolicy to create an organization wide password policy
-
-`$ pwpolicy`
-
-#### OS Version
-
-`$ sw_vers`
-
-#### Edit Hostname
-
-`$ sudo scutil --set HostName [new-hostname]`  
-`$ sudo scutil --set ComputerName [new computer name]`
-
-#### Show Hidden Files & Folders
-
-`$ defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder`
-
-#### Unhide ~/Library
-
-`chflags nohidden ~/Library`
-`chflags hiddent ~/Library` - to hide it again
-
-#### Force Empty Trash
-
-`$ rm -rf ~/.Trash/*`
-
-#### Convert Plist to xml and binary
-
-`plutil -convert xml1 </path/to/property/list>`  
-`plutil -convert binary </path/to/property/list>`
-
-#### Allow Keyboard Keys to repeat
-
-`defaults write -g ApplePressAndHoldEnabled -bool false`
-
-#### To Remove a Receipt
-
-`sudo pkgutil --forget [com.name.of.package.pck]`  
-or   
-`sudo rm -rf /var/db/receipts/[name of receipt]`
+## Java ...
 
 #### Removing Java
 
@@ -175,13 +214,11 @@ or
 `./Library/Internet\
 Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
 
-#### Reset Network configs & other settings
-
-`/Library/Preferences/SystemConfiguration`
-
-- Move the **NetworkInterfaces.plist** file to the trash or rename it just encase removing it does not solve the problem.
-
 ## Diagnostics & Testing
+
+#### Local Diagnostics
+
+- Hold `cmd+D` at boot
 
 #### Target Disk Mode
 
@@ -233,18 +270,13 @@ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
 
     sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/[usb device] --applicationpath /Applications/Install\ macOS\ High\ Sierra.app/ –nointeraction
 
-#### If the OS X upgrade package fails to install:
-
-`com.googlecode.installosx.pkg.plist`
-`com.googlecode.installosx.pkg.bom`
-
-### Munki related
+## Munki related
 
 #### Path to *Munki* Files
 
 /usr/local/munki
 
-#### Client Setup
+#### Sal Client Setup
 
 `$ defaults write /Library/Preferences/com.github.salopensource.sal ServerURL http://something.com`  
 
@@ -256,23 +288,12 @@ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
     rm /Library/LaunchDaemons/com.puppetlabs.puppet.plist
     rm /Library/LaunchDaemons/com.puppetlabs.pxp-agent.plist
 
-### Terminal Hacks
+#### If the OS X upgrade package fails to install:
 
-#### Change ScreenShot File Type to PDF
+`com.googlecode.installosx.pkg.plist`
+`com.googlecode.installosx.pkg.bom`
 
-`defaults write com.apple.screencapture type PDF`
-
-#### Remove Smooth Scrolling
-
-When you hit spacebar in a browser, the page will automatically scroll with a smooth transition effect. Sometimes this animation can be clunky. To remove this setting use the following.
-
-`defaults write -g NSScrollAnimationEnabled -bool NO`
-
-#### Remove the Bouncy Elastic Effect in Finder and Other Apps
-
-`defaults write -g NSScrollViewRubberbanding -int 0`
-
-### SSH Keys
+## SSH Keys
 
 Generate Keys
 
