@@ -53,6 +53,10 @@
 
 **Note:** Change `[username]` to your *GitHub* user, and change `[repo_name_here]` to the name of the repository being created.
 
+**Update Repo URL**
+
+`git remote set-url origin git@github.com:[your-username]/[your-repo].git`
+
 **Check the Status**
 
     $ git status
