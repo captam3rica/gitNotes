@@ -70,7 +70,7 @@ or
 Remove that folder then try to launch DB again. It should allow the user
 input their login credentials.
 
-#### Microsoft Word Hacks
+### Microsoft Word Hacks
 
 #### Find Unsaved Word Docs
 
