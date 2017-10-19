@@ -3,8 +3,42 @@
 **Configure the git Environment**  
 
     $ git config --global user.name "[name]"
-    $ git config --global user.email "[email]"f
+    $ git config --global user.email "[email]"
     $ git config --global color.ui auto
+
+**Generate an SSH Key for GitHub**
+
+- Go to **Terminal**
+
+      ## Check to see if you already have an SSH key pair
+      $ ls ~/.ssh
+          id_rsa
+          id_rsa.pub
+      ## Generate a new SSH key pair
+      $ ssh-keygen -t rsa 4096 -C "[your-github-email@email.com]"
+      ## Add the ssh key to the ssh Agent
+      $ eval "$(ssh-agent -s)"
+      $ ssh-add ~/.ssh/[ssh-key-name]
+      ## List the contents of your .pub key
+      $ less ~/.ssh/[ssh-key-name].pub
+          ssh-rsa ...
+
+- Copy the contents of your *.pub* ssh key  
+- Go to your GitHub page. Then, Top-right **Click your photo > Settings > SSH and GPG keys > click New SSH key**
+- Give the new key a **Title**
+- Paste your *SSH Key* in the box labeled **Key**
+- Go back to the **Terminal**
+
+      ## Try to connect to GitHub over SSH
+      $ ssh -v git@github.com
+
+      The authenticity of host 'github.com (192.30.253.113)' can't be established.  
+      RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.  
+      Are you sure you want to continue connecting (yes/no)? yes
+
+
+- Make sure that the SHA256 key matches the above and type "yes"
+- Done!!!!!
 
 **Create an Empty Repo & Push Remotely to GitHub**
 
@@ -17,7 +51,7 @@
     $ git remote add origin https://github.com/[username]/[repo_name_here].git
     $ git push --set-upstream origin master
 
-**Note:** Change `[username]` to your *GitHub* user, and change `[repo_name_here]` to the name of the repository being created. 
+**Note:** Change `[username]` to your *GitHub* user, and change `[repo_name_here]` to the name of the repository being created.
 
 **Check the Status**
 
