@@ -5,12 +5,11 @@
 
 1. [macOS Requirements](#macos_)
     1. [Installed Files & Folders](#installed_files_and_folders)
+    2. [Requirements](#requirements)  
+        1. [JPS Server](#jps_server_mac)
 1. [Linux Requirements](#linux)
-    1.
 1. [Windows Requirements](#windows)
-1. [Requirements](#requirements)  
-    1. [JPS Server](#jps_server_mac)
-1. [Installation](#installation)  
+1. [ JPS Installation](#jps_installation)  
 2. [Upgrading the JSS](#upgrading_jps_server)
 3. [Setting up the JPS Server](#setting_up_jps_server)
     1. [Network Ports Used](#network_ports_used)
@@ -118,8 +117,8 @@ The following files and folders are installed when you run the JSS Installer and
 
 ---
 
-<a name="installation"></a>
-## Installation
+<a name="jps_installation"></a>
+## JPS Installation
 [top](#top)
 
 ### Required Software
