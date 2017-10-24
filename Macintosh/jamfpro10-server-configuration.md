@@ -25,7 +25,7 @@
 8.  [GSX Integration](#gsx_integration)
     1.  [GSX Integration Requirements](#gsx_integration_requiremetns)
         1.  [GSX Account Creation & Apple Cert](#gsx_account_creation_and_apple_cert)
-    1.  [GSX Connection Configuration](#gsx_connection_configuration)
+    1.  [GSX Connection Configuration](#gsx_connection_configuration)  
         9.  [Testing GSX Connection](#gsx_testing_connection)
     2.  [Renewing the Apple Certificate](#gsx_renew_apple_cert)
 1.  [JPS Summary](#jps_summary)
