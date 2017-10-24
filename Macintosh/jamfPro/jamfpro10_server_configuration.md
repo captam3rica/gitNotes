@@ -61,7 +61,7 @@ The following files and folders are installed when you run the JSS Installer and
 <a name="jps_server_mac"></a>
 ####  JPS Server
 
-**Applications**
+Applications
 
 - Java 1.7 or Java 1.8 (Java 1.8 is recommended)
 - MySQL 5.6.x or 5.7.x (MySQL 5.7.x is recommended)
@@ -69,7 +69,7 @@ The following files and folders are installed when you run the JSS Installer and
 
 #### JPS Installer for Mac
 
-**System Reqs**
+System Reqs
 
 - A 64-bit capable Intel processor
 - 2 GB of RAM
