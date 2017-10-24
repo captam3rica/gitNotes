@@ -598,14 +598,14 @@ All files can be replicated, or just a subset of files.
 
 #### Requirements
 
-**For Mac**
+_For Mac_
 
 -   Intel processor
 -   2 GB of RAM
 -   100 GB of disk space
 -   macOS 10.7 or later with macOS Server 1.4.3 or later
 
-**For Linux**
+_For Linux_
 
 -   Intel processor
 -   2 GB of RAM
@@ -625,7 +625,7 @@ To manage JDS instances from the JPS, you need a valid SSL certificate on the JP
 
   [ac3617d1]: https://www.jamf.com/jamf-nation/articles/327/migrating-packages-and-scripts "Migrating Packages and Scripts"  
 
-**JDS Instance Installation on Mac**
+_JDS Instance Installation on Mac_
 
 1.  Copy the `JDS Installer.pkg` to the server you will be using as the *JDS* instance.  
 
@@ -636,4 +636,4 @@ To manage JDS instances from the JPS, you need a valid SSL certificate on the JP
 2.  Launch the installer
 3.  Follow the onscreen prompts
 
-**JDS Instance Installation on Linux**
+_JDS Instance Installation on Linux_
