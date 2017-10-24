@@ -1,6 +1,6 @@
 # jamfPro Server Notes
 
-<a name="top"></a>
+<a name="toc"></a>
 ## Table of Contents
 
 1.  [macOS](#macos)
@@ -31,9 +31,13 @@
 1.  [JPS Summary](#jps_summary)
 2.  [Server Infrastructure](#server-infrastructure)
     1.  [About Distribution Points](#about-distribution-points)
-    1.  [Differences Between DP Types](#dp-type-differences)
+        1.  [Differences Between DP Types](#dp-type-differences)
+    1.  [File Share Distribution Point](#dp-file-shares)
+    2.  [Cloud Distribution Point](#dp-cloud)
+    3.  [Jamf Distribution Server Instance](#dp-jamf-distribution-server-instance)
 
-[[top](#top)]
+
+[[top](#toc)]
 
 <a name="macos"></a>
 ## macOS
@@ -58,7 +62,7 @@ The following files and folders are installed when you run the JSS Installer and
 -   **JDS Instance** - `/Library/JDS/`
     -   More info on *JDS* install files [here](https://www.jamf.com/jamf-nation/articles/339/components-installed-on-jds-instances)
 
-[[top](#top)]
+[[top](#toc)]
 
 ### Requirements <a name="macos_requirements"></a>
 
@@ -95,7 +99,7 @@ The following files and folders are installed when you run the JSS Installer and
 -   **100GB** of disk space available
 -   macOS 10.7 or later with macOS Server 1.4.3 or later installed
 
-[[top](#top)]
+[[top](#toc)]
 <a name="linux"></a>
 ## Linux Requirements
 
@@ -110,11 +114,11 @@ The following files and folders are installed when you run the JSS Installer and
     -   Red Hat Enterprise Linux (RHEL) 6.4, 6.5, 6.6, or 7.0
     **Note**: To install a JDS instance on a Linux operating system that is running on a virtual machine, you need a virtualization platform that provides **SMBIOS** information.
 
-[[top](#top)]
+[[top](#toc)]
 <a name="windows"></a>
 ## Windows Requirements
 
-[[top](#top)]
+[[top](#toc)]
 <a name="jps_installation"></a>
 ## JPS Installation
 
@@ -154,7 +158,7 @@ The following files and folders are installed when you run the JSS Installer and
 1.  Backup the *JSS DB* using the *JSS Database Utility*
 2.  Copy the latest *JSS Installer* to the macOS server.
 
-[[top](#top)]
+[[top](#toc)]
 <a name="setting_up_jps_server"></a>
 ## Setting up the JPS Server
 
@@ -169,7 +173,7 @@ The following files and folders are installed when you run the JSS Installer and
 
 -   [JPS Knowledge Base](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro)
 
-[[top](#top)]
+[[top](#toc)]
 <a name="user_accounts_and_groups"></a>
 ## User Accounts & Groups
 
@@ -230,13 +234,12 @@ The following files and folders are installed when you run the JSS Installer and
     -   By default, this is set to *Exact match* but can be changed to **Starts with** or **Contains**
 -   **Save**
 
-
-### Password Policy Configuration <a name="jps_password_policy_configuration"></a>
+<a name="jps_password_policy_configuration"></a>
+### Password Policy Configuration
 
 `JPS Home Page > Settings > System Settings > JPS User Accounts & Groups`
 
-Applies to all standard *JPS* server users. However, the JPS server password  
-policy does not apply to users added via **LDAP**
+Applies to all standard *JPS* server users. However, the JPS server password policy does not apply to users added via **LDAP**
 
 -   Click **Password Policy**
 -   Click **Edit**
@@ -246,10 +249,7 @@ policy does not apply to users added via **LDAP**
 <a name="jps_unlock_user_accounts"></a>
 ### Unlocking a JPS Server User Account
 
-This is done if an account is locked due to too many login attempts. If the  
-user is allowed to unlock their own account, the user will be able to reset  
-their own password. In this case, an email is sent to the address specified by  
-the user in their preferences pane.
+This is done if an account is locked due to too many login attempts. If the user is allowed to unlock their own account, the user will be able to reset their own password. In this case, an email is sent to the address specified by the user in their preferences pane.
 
 For an email to be sent to the user, an SMTP server must be configured - [SMTP Server Integration](#smtp_integration)
 
@@ -262,7 +262,7 @@ For an email to be sent to the user, an SMTP server must be configured - [SMTP S
 
 For more information about *Sites* and how to add them to the JPS Server, see [Sites](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Sites.html) on the Casper Suite Admin's Guide.
 
-[[top](#top)]
+[[top](#toc)]
 <a name="activation_code"></a>
 ## Activation Code
 
@@ -274,7 +274,7 @@ Can change the *Activation Code* and the *Organization Name* here
 -   Enter new activation code
 -   **Save**
 
-[[top](#top)]
+[[top](#toc)]
 <a name="smtp_integration"></a>
 ## Integration with an SMTP Server
 
@@ -304,7 +304,7 @@ Can change the *Activation Code* and the *Organization Name* here
 -   [Performing Mass Actions for Computers](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing_Mass_Actions_for_Computers.html)
 -   [Performing Mass Actions for Mobile Devices](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing_Mass_Actions_for_Mobile_Devices.html)
 
-[[top](#top)]
+[[top](#toc)]
 <a name="change_management"></a>
 ## Change Management
 
@@ -346,7 +346,7 @@ directory where the *JAMFChangeManagement.log* is located.
 
 For more information regarding syslog setup on a **macOS** server - [Change Management with the Casper Suite: macOS Setup Guide](https://www.jamf.com/jamf-nation/articles/129/change-management-with-the-casper-suite-macos-setup-guide)
 
-[[top](#top)]
+[[top](#toc)]
 <a name="gsx_integration"></a>
 ## Integrating with GSX
 
@@ -403,7 +403,7 @@ Take a look at the following JPS Admin guide articles for more information:
 -   [Local Enrollment Using Recon](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Local_Enrollment_Using_Recon.html)
 -   [Remote Enrollment Using Recon](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Remote_Enrollment_Using_Recon.html)
 
-[[top](#top)]
+[[top](#toc)]
 <a name="jps_summary"></a>
 ## JPS Summary
 
@@ -458,15 +458,14 @@ The following can be added the JPS summary as needed
 
 -   [Customer Experience Metrics](https://www.jamf.com/jamf-nation/articles/364/customer-experience-metrics)
 
-[[top](#top)]
+[[top](#toc)]
 <a name="server-infrastructure"></a>
 ## Server Infrastructure
 
 <a name="about-distribution-points"></a>
-### About Distribution Points (DS)
-[top](#top)
+### About Distribution Points (DPs)
 
-#### File Types
+File Types
 
 -   Packages
 -   Scripts
@@ -475,15 +474,14 @@ The following can be added the JPS summary as needed
 
 JPS supports **3** types of DPs
 
--   **File Share**
--   **Cloud**
--   **JDS Instance**
+-   File Share
+-   Cloud
+-   JDS Instance
 
-By default, the first **DP** add to the JPS is the **Master DP**. The master is seen as the authoritative source for all files during replication. The master can be changed at any time.
+By default, the first **DP** add to the JPS is the **Master DP**. The master is seen as the authoritative source for all files during replication. The master can be changed at any time. Below are the differences between the DPs
 
 <a name="dp-type-differences"></a>
-#### Differences Between DP Types
-[top](#top)
+**Differences Between DPs**
 
 |   ...   | File Share DP     | Cloud DP | JDS Instance |
 | :------------- | :------------- | :------------- | :------------- |
@@ -497,3 +495,145 @@ By default, the first **DP** add to the JPS is the **Master DP**. The master is 
 | **Parent-Child Capabilities**   | No  | No | Yes |
 | **File Replication Method**   | Replication to file share DPs must be initiated from jamf Admin  | Replication to a cloud DP must be initiated from jamf Admin | Replication to **root JDS** instance must be initiated from jamf Admin. Replication to **non-root JDS** instances happen automatically and immediately |
 | **Selective Replication**   | Not available when replicating to file share DPs | Available when replicating to **Cloud** DP if the **master** DP is the **JDS instance** or **file share** DP. The files for replication must specify in the JPS and the replication initiated from jamf admin | Not available when replicating to **root JDS** instances. Available when replicating to **non-root JDS** instances. The files for replication must be specified in the JPS. The replication from non-root parent to child instances is initiated on check-in with the JSS
+
+[[top](#toc)]
+<a name="dp-file-shares"></a>
+### File Share DPs  
+
+[jamf-nation: File Share DP](https://www.jamf.com/jamf-nation/articles/325/setting-up-a-file-share-distribution-point)
+
+Once added, you can do the following with a *File Share DP*
+
+-   Make it a master
+-   Choose a failover DP
+-   Configure HTTP downloads
+
+#### Adding a File Share DP
+
+`JPS Home Page > Settings > Server Infrastructure > File Share Distribution Point`
+
+1.  Click **New**
+2.  Use the *General Settings* pane to configure basic settings
+3.  Click the **File Sharing** tab and enter the necessary information
+    1.  Optionally click **HTTP** to setup HTTP downloads
+4.  **Save**
+
+#### Replicating Files to a FS DP
+
+1.  Login to JPS
+2.  In the sidebar, select the FS DP that you would like replicate to
+3.  Click **Replicate**
+
+All of the files on the *Master* will be pushed to the FS DP that you chose.
+
+**Other Resources**
+
+-   [Using Appache to set up a Files Share on Linux](https://www.jamf.com/jamf-nation/articles/216/using-apache-http-server-to-enable-http-downloads-on-a-linux-file-share-distribution-point)
+-   [Set up a file share on Linux using Samba](https://www.jamf.com/jamf-nation/articles/215/setting-up-a-file-share-distribution-point-on-linux-using-samba)
+-   [Using IIS to setup a Win Serv 2008 File Share](https://www.jamf.com/jamf-nation/articles/309/using-iis-to-enable-http-downloads-on-a-windows-server-2008-or-2012-file-share-distribution-point)
+
+[[top](#toc)]
+<a name="dp-cloud"></a>
+### Cloud DP
+
+The following cloud services are supported by the JPS:
+
+-   RackspaceCloud Files
+-   Amazon S3 or Amazon CloudFront
+-   Akamai NetStorage
+-   JamfCloud Distribution Service (JCDS)
+
+You can choose to make the cloud DS the *Master* and whether or not you would like to replicate all files or just a subset of files if the *Master* is a **JDS** or **File Share** DP.
+
+Amazon CloudFront signed URLs and Akamai Remote Auth are supported by the JPS. Learn more about Amazon CloudFront [here](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-signed-urls.html)
+
+#### Requirements
+
+**Akamai** must be configured to use **FTP** (20-21)
+
+**Note**: for **Casper Suite v8.x** upgrades, please reference this [link](https://www.jamf.com/jamf-nation/articles/327/migrating-packages-and-scripts)
+
+Files being uploaded to a cloud DP must not contain the following characters:
+
+-   `/ : ? < > \ * | ” [ ] @ ! % ^ #`
+
+#### Configure Cloud DP
+
+`JPS Home Page > Settings > Server Infrastructure > Cloud Distribution Point`
+
+1.  Click **Edit**
+2.  Select a *CDN* from the **Content Delivery Network** menu
+3.  Configure the settings
+4.  **Save**
+
+#### Testing the Connection
+
+`JPS Home Page > Settings > Server Infrastructure > Cloud Distribution Point`  
+
+1.  Click **Test**
+2.  Click **Test** again
+
+#### Replicating Files to a Cloud DP
+
+All files can be replicated, or just a subset of files.
+
+1.  Login to **JPS**
+2.  In the sidebar, select the *Cloud DP* that you would like to replicate to.
+3.  Click **Replicate**
+
+**More Info**
+
+[jamfPro User Guide: Network Segments](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Network_Segments.html)
+
+-   Network segments can be used to ensure that clients are connecting to the closest DP.
+
+[jamf-nation Knowledge Base: Config Cloud DP on jamfPro](https://www.jamf.com/jamf-nation/articles/383/information-required-to-configure-a-cloud-distribution-point-in-jamf-pro)
+
+-   Determine the necessary info needed from your cloud provider
+-   [jamf cloud service](https://www.jamf.com/products/jamf-cloud/)
+
+[[top](#toc)]
+<a name="dp-jamf-distribution-server-instance"></a>
+### JDS Instance
+
+#### Requirements
+
+**For Mac**
+
+-   Intel processor
+-   2 GB of RAM
+-   100 GB of disk space
+-   macOS 10.7 or later with macOS Server 1.4.3 or later
+
+**For Linux**
+
+-   Intel processor
+-   2 GB of RAM
+-   100 GB of disk space
+-   One of the following distros
+    *   Ubuntu 10.04 LTS Server
+    *   Ubuntu 12.04 LTS Server
+    *   Ubuntu 14.04 LTS Server
+    *   Ubuntu 16.04 LTS Server
+    *   RHEL 6.4, 6.5, 6.6, or 7.0
+
+        **NOTE**: For virtual environments, the VM platform must provide **SMBIOS** information
+
+To manage JDS instances from the JPS, you need a valid SSL certificate on the JPS host server. See [SSL Certificate](dp-jds-ssl-certificate)
+
+**Note**: If you have upgraded from the Casper Suite v8.x, you must migrate the scripts and packages on your master distribution point before configuring JDS instances. (For more information, see the [Migrating Packages and Scripts][ac3617d1] Knowledge Base article.)  
+
+  [ac3617d1]: https://www.jamf.com/jamf-nation/articles/327/migrating-packages-and-scripts "Migrating Packages and Scripts"  
+
+**JDS Instance Installation on Mac**
+
+1.  Copy the `JDS Installer.pkg` to the server you will be using as the *JDS* instance.  
+
+**Note**: Login to [jamf-nation][fc61e61c]  
+
+  [fc61e61c]: https://www.jamf.com/jamf-nation/ "Jamf Nation Login"
+
+2.  Launch the installer
+3.  Follow the onscreen prompts
+
+**JDS Instance Installation on Linux**
