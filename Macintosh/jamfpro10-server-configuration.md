@@ -4,7 +4,7 @@
 ## Table of Contents
 
 1.  [macOS](#macos)
-1.  [Installed Files & Folders](#macos-installed_files_and_folders)
+1.  [Installed Files & Folders](#macos-installed-files-and-folders)
 1.  [Requirements](#macos_requirements)
     1.  [JPS Server](#macos-jps-server_mac)
 2.  [Linux](#linux)
@@ -38,7 +38,8 @@
 <a name="macos"></a>
 ## macOS
 
-### Installed Files and Folders <a name="installed_files_and_folders"></a>
+<a name="macos-installed-files-and-folders"></a>
+### Installed Files and Folders
 
 The following files and folders are installed when you run the JSS Installer and everything can be found in `/Library/JSS` or `/Library/JDS/` with the exception of the *LaunchDaemon*:
 
