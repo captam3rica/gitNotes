@@ -1,6 +1,7 @@
 # jamfPro Server Notes
 
-## Table of Contents <a name="top"></a>
+<a name="top"></a>
+## Table of Contents
 
 1.  [macOS](#macos)
 1.  [Installed Files & Folders](#macos-installed_files_and_folders)
