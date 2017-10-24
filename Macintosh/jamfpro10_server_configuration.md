@@ -3,7 +3,7 @@
 
 ## Table of Contents
 
-1. [macOS Requirements](#macos_)
+1. [macOS](#macos)
     1. [Installed Files & Folders](#installed_files_and_folders)
     2. [Requirements](#requirements)  
         1. [JPS Server](#jps_server_mac)
@@ -31,9 +31,10 @@
 
 ---
 
-## macOS Requirements
-<a name="installed_files_and_folders"></a>
+<a name="macos"></a>
+## macOS
 
+<a name="installed_files_and_folders"></a>
 ### Installed Files and Folders
 [top](#top)
 
