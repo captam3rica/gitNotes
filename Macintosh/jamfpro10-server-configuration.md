@@ -34,7 +34,8 @@
 
 [[top](#top)]
 
-## macOS <a name="macos"></a>
+<a name="macos"></a>
+## macOS
 
 ### Installed Files and Folders <a name="installed_files_and_folders"></a>
 
@@ -59,7 +60,8 @@ The following files and folders are installed when you run the JSS Installer and
 
 ### Requirements <a name="macos_requirements"></a>
 
-#### JPS Server <a name="jps_server_mac"></a>
+<a name="jps_server_mac"></a>
+#### JPS Server
 
 -   Java 1.7 or Java 1.8 (Java 1.8 is recommended)
 -   MySQL 5.6.x or 5.7.x (MySQL 5.7.x is recommended)
