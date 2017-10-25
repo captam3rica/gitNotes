@@ -625,15 +625,15 @@ To manage JDS instances from the JPS, you need a valid SSL certificate on the JP
 
   [ac3617d1]: https://www.jamf.com/jamf-nation/articles/327/migrating-packages-and-scripts "Migrating Packages and Scripts"  
 
-_JDS Instance Installation on Mac_
+*JDS Instance Installation on Mac*
 
 1.  Copy the `JDS Installer.pkg` to the server you will be using as the *JDS* instance.  
 
-**Note**: Login to [jamf-nation][fc61e61c]  
+**Note**: Login to [jamf-nation][fc61e61c] to grab the latest installer.
 
   [fc61e61c]: https://www.jamf.com/jamf-nation/ "Jamf Nation Login"
 
 2.  Launch the installer
 3.  Follow the onscreen prompts
 
-_JDS Instance Installation on Linux_
+*JDS Instance Installation on Linux*
