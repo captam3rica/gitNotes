@@ -4,37 +4,45 @@
 ## Table of Contents
 
 1.  [macOS](#macos)
-1.  [Installed Files & Folders](#macos-installed-files-and-folders)
-1.  [Requirements](#macos_requirements)
-    1.  [JPS Server](#macos-jps-server_mac)
+    1.  [Installed Files & Folders](#macos-installed-files-and-folders)
+    1.  [Requirements](#macos-requirements)
 2.  [Linux](#linux)
     1.  [Installed Files & Folders](#linux-installed-files-and-folders)
-    1.  [Requirements](#linux_requirements)
-1.  [Windows](#windows)
+    1.  [Requirements](#linux-requirements)
+3.  [Windows](#windows)
     1.  [Installed Files & Folders](#windows-installed-files-and-folders)
     1.  [Requirements](#windows-requirements)
-1.  [jamfPro Server Installation](#jps_installation)
-    1.  [Upgrading the JSS](#upgrading_jps_server)
-    1.  [Setting up the JPS Server](#setting_up_jps_server)
-    1.  [Network Ports Used](#network_ports_used)
-4.  [User Accounts & Groups](#user_accounts_and_groups)
-    1.  [LDAP Integration](#ldap_integration)
-1.  [Activation Code](#activation_code)
-6.  [SMTP Server Integration](#smtp_integration)
-7.  [Change Management](#change_management)
-8.  [GSX Integration](#gsx_integration)
-    1.  [GSX Integration Requirements](#gsx_integration_requiremetns)
-        1.  [GSX Account Creation & Apple Cert](#gsx_account_creation_and_apple_cert)
-    1.  [GSX Connection Configuration](#gsx_connection_configuration)  
-        1.  [Testing GSX Connection](#gsx_testing_connection)
-    2.  [Renewing the Apple Certificate](#gsx_renew_apple_cert)
-1.  [JPS Summary](#jps_summary)
-2.  [Server Infrastructure](#server-infrastructure)
+4.  [jamfPro Server Installation](#jps-installation)
+    1.  [Requirements](#jps-installation-requirements)
+    1.  [Database Creation](#jps-database-creation)
+    1.  [Run the JSS Installer](#jps-run-installer)
+    1.  [Upgrading the JSS](#upgrading-jps-server)
+1.  [Setting up the JPS Server](#setting-up-jps-server)
+    1.  [Default Configuration Files](#jps-default-config)
+    1.  [Network Ports Used](#network-ports-used)
+5.  [User Accounts & Groups](#user-accounts-and-groups)
+        1. [LDAP Integration](#ldap-integration)
+    1.  [JPS User Group Creation](#jps-user-group-creation)
+    2.  [JPS User Account Creation](#jps-user-account-creation)
+    3.  [Account Preferences](#jps-account-preferences)
+    4.  [Password Policy Configuration](#jps-password-policy-configuration)
+    5.  [Unlocking a JPS Server User Account](#jps-unlock-user-accounts)
+6.  [Activation Code](#activation-code)
+7.  [SMTP Server Integration](#smtp-integration)
+8.  [Change Management](#change-management)
+9.  [GSX Integration](#gsx-integration)
+    1.  [GSX Integration Requirements](#gsx-integration-requiremetns)
+        1.  [GSX Account Creation & Apple Cert](#gsx-account-creation-and-apple-cert)
+    1.  [GSX Connection Configuration](#gsx-connection-configuration)  
+        1.  [Testing GSX Connection](#gsx-testing-connection)
+    2.  [Renewing the Apple Certificate](#gsx-renew-apple-cert)
+10. [JPS Summary](#jps-summary)
+11. [Server Infrastructure](#server-infrastructure)
     1.  [About Distribution Points](#about-distribution-points)
         1.  [Differences Between DP Types](#dp-type-differences)
-    1.  [File Share Distribution Point](#dp-file-shares)
-    2.  [Cloud Distribution Point](#dp-cloud)
-    3.  [Jamf Distribution Server Instance](#dp-jamf-distribution-server-instance)
+    2.  [File Share Distribution Point](#dp-file-shares)
+    3.  [Cloud Distribution Point](#dp-cloud)
+    4.  [Jamf Distribution Server Instance](#dp-jamf-distribution-server-instance)
 
 
 [[top](#toc)]
@@ -63,10 +71,10 @@ The following files and folders are installed when you run the JSS Installer and
     -   More info on *JDS* install files [here](https://www.jamf.com/jamf-nation/articles/339/components-installed-on-jds-instances)
 
 [[top](#toc)]
+<a name="macos-requirements"></a>
+### Requirements
 
-### Requirements <a name="macos_requirements"></a>
-
-<a name="jps_server_mac"></a>
+<a name="jps-server-mac"></a>
 #### JPS Server
 
 -   Java 1.7 or Java 1.8 (Java 1.8 is recommended)
@@ -101,34 +109,35 @@ The following files and folders are installed when you run the JSS Installer and
 
 [[top](#toc)]
 <a name="linux"></a>
-## Linux Requirements
+## Linux
 
-#### JPS DP Installer for Linux
+#### JDS Installer for Linux
 
 -   An Intel processor
 -   2 GB of RAM
 -   100 GB of disk space available
 -   One of the following operating systems:
-    -   Ubuntu 10.04 LTS Server
-    -   Ubuntu 12.04 LTS Server
+    -   Ubuntu 10.04 LTS - Ubuntu .04 LTS Server
     -   Red Hat Enterprise Linux (RHEL) 6.4, 6.5, 6.6, or 7.0
     **Note**: To install a JDS instance on a Linux operating system that is running on a virtual machine, you need a virtualization platform that provides **SMBIOS** information.
 
 [[top](#toc)]
 <a name="windows"></a>
-## Windows Requirements
+## Windows
 
 [[top](#toc)]
-<a name="jps_installation"></a>
+<a name="jps-installation"></a>
 ## JPS Installation
 
+<a name="jps-installation-requirements"></a>
 ### Required Software
 
 -   From previous *Requirements* sections
-    -   [macOS](#macos_requirements)
-    -   [Linux](#linux_requirements)
-    -   [Windows](#windows_requirements)
+    -   [macOS](#macos-requirements)
+    -   [Linux](#linux-requirements)
+    -   [Windows](#windows-requirements)
 
+<a name="jps-database-creation"></a>
 ### Database Creation
 
 1.  Open a **Terminal** to access the **MySQL** command line
@@ -138,7 +147,7 @@ The following files and folders are installed when you run the JSS Installer and
 2.  Enter the password for the *root* user
 3.  Create the database
 
-    `CREATE DATABASE [server_name];`
+    `CREATE DATABASE [server-name];`
 
 4.  Create a new *MySQL* user
 
@@ -146,35 +155,37 @@ The following files and folders are installed when you run the JSS Installer and
 
 5.  Grant access to the user so that it can access the database
 
-    `GRANT ALL ON [server_name].* TO '[username]'@'localhost';`
+    `GRANT ALL ON [server-name].* TO '[username]'@'localhost';`
 
+<a name="jps-run-installer"></a>
 ### Run the JSS Installer
 
 -   The **JSS Installer.mpkg** installs *Apache Tomcat* and the *JSS web app*
 
-<a name="upgrading_jss"></a>
-## Upgrading the JSS
+<a name="upgrading-jps-server"></a>
+### Upgrading the JSS
 
 1.  Backup the *JSS DB* using the *JSS Database Utility*
 2.  Copy the latest *JSS Installer* to the macOS server.
 
 [[top](#toc)]
-<a name="setting_up_jps_server"></a>
+<a name="setting-up-jps-server"></a>
 ## Setting up the JPS Server
 
+<a name="jps-default-config"></a>
 ### Default Config Files
 
 -   Update Inventory policy
 -   Recurring check-in frequency
 -   Mobile device inventory collection frequency
 
-<a name="network_ports_used"></a>
+<a name="network-ports-used"></a>
 ### Network Ports Used
 
 -   [JPS Knowledge Base](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro)
 
 [[top](#toc)]
-<a name="user_accounts_and_groups"></a>
+<a name="user-accounts-and-groups"></a>
 ## User Accounts & Groups
 
 | User | Definition     |
@@ -188,12 +199,12 @@ The following files and folders are installed when you run the JSS Installer and
 -   Users and groups can be added manually, or they can come from a **LDAP** directory service.
     -   It is recommended to have at least one account that is local to the JPS server just in case the LDAP server becomes unavailable.
 
-<a name="ldap_integration"></a>
+<a name="ldap-integration"></a>
 #### LDAP Integration
 
--   [Integration with LDAP Directory Services](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Integrating_with_LDAP_Directory_Services.html)
+-   [Integration with LDAP Directory Services](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Integrating-with-LDAP-Directory-Services.html)
 
-<a name="jps_user_group_creation"></a>
+<a name="jps-user-group-creation"></a>
 ### JPS User Group Creation
 
 `JPS Server Home Screen > Settings > System Settings > JPS User Accounts & Groups`
@@ -204,7 +215,7 @@ The following files and folders are installed when you run the JSS Installer and
     -   If you choose *Custom* from the **Privilege Set** menu, select the **Privileges** tab and select the privileges that you would like the group to have.
 -   **Save**
 
-<a name="jps_user_account_creation"></a>
+<a name="jps-user-account-creation"></a>
 ### JPS User Account Creation
 
 `JPS Server Home Screen > Settings > System Settings > JPS User Accounts & Groups`]
@@ -224,7 +235,7 @@ The following files and folders are installed when you run the JSS Installer and
     -   If the account was added to a group, click **Group Membership** and select the desired groups.
 -   **Save**
 
-<a name="jps_account_preferences"></a>
+<a name="jps-account-preferences"></a>
 ### Account Preferences
 
 -   Log in the JPS server
@@ -234,7 +245,7 @@ The following files and folders are installed when you run the JSS Installer and
     -   By default, this is set to *Exact match* but can be changed to **Starts with** or **Contains**
 -   **Save**
 
-<a name="jps_password_policy_configuration"></a>
+<a name="jps-password-policy-configuration"></a>
 ### Password Policy Configuration
 
 `JPS Home Page > Settings > System Settings > JPS User Accounts & Groups`
@@ -246,12 +257,12 @@ Applies to all standard *JPS* server users. However, the JPS server password pol
 -   Select desired settings
 -   **Save**
 
-<a name="jps_unlock_user_accounts"></a>
+<a name="jps-unlock-user-accounts"></a>
 ### Unlocking a JPS Server User Account
 
 This is done if an account is locked due to too many login attempts. If the user is allowed to unlock their own account, the user will be able to reset their own password. In this case, an email is sent to the address specified by the user in their preferences pane.
 
-For an email to be sent to the user, an SMTP server must be configured - [SMTP Server Integration](#smtp_integration)
+For an email to be sent to the user, an SMTP server must be configured - [SMTP Server Integration](#smtp-integration)
 
 `JPS Server Home Page > Settings > JPS User Accounts & Groups`
 
@@ -263,7 +274,7 @@ For an email to be sent to the user, an SMTP server must be configured - [SMTP S
 For more information about *Sites* and how to add them to the JPS Server, see [Sites](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Sites.html) on the Casper Suite Admin's Guide.
 
 [[top](#toc)]
-<a name="activation_code"></a>
+<a name="activation-code"></a>
 ## Activation Code
 
 Can change the *Activation Code* and the *Organization Name* here
@@ -275,10 +286,10 @@ Can change the *Activation Code* and the *Organization Name* here
 -   **Save**
 
 [[top](#toc)]
-<a name="smtp_integration"></a>
+<a name="smtp-integration"></a>
 ## Integration with an SMTP Server
 
--   Send event notifications to JPS server users - see [Email Notifications](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Email_Notifications.html)
+-   Send event notifications to JPS server users - see [Email Notifications](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Email-Notifications.html)
 -   Send **enrollment** invitations
 -   Send mass emails to end users
 
@@ -299,13 +310,13 @@ Can change the *Activation Code* and the *Organization Name* here
 
 ### Related in the JPS Admins Guide
 
--   [Email Notifications](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Email_Notifications.html)
--   [User Initiated Enrollment Settings](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/User-Initiated_Enrollment_Settings.html)
--   [Performing Mass Actions for Computers](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing_Mass_Actions_for_Computers.html)
--   [Performing Mass Actions for Mobile Devices](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing_Mass_Actions_for_Mobile_Devices.html)
+-   [Email Notifications](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Email-Notifications.html)
+-   [User Initiated Enrollment Settings](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/User-Initiated-Enrollment-Settings.html)
+-   [Performing Mass Actions for Computers](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing-Mass-Actions-for-Computers.html)
+-   [Performing Mass Actions for Mobile Devices](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing-Mass-Actions-for-Mobile-Devices.html)
 
 [[top](#toc)]
-<a name="change_management"></a>
+<a name="change-management"></a>
 ## Change Management
 
 Can be configured to the **JAMFChangeManagement.log** and/or to a **syslog** server.
@@ -347,21 +358,21 @@ directory where the *JAMFChangeManagement.log* is located.
 For more information regarding syslog setup on a **macOS** server - [Change Management with the Casper Suite: macOS Setup Guide](https://www.jamf.com/jamf-nation/articles/129/change-management-with-the-casper-suite-macos-setup-guide)
 
 [[top](#toc)]
-<a name="gsx_integration"></a>
+<a name="gsx-integration"></a>
 ## Integrating with GSX
 
 **Note**: GSX may not always return complete purchasing information. Only the information found in GSX is returned.
 
-<a name="gsx_integration_requiremetns"></a>
+<a name="gsx-integration-requiremetns"></a>
 #### Requirements
 
 -   GSX account with the **Manager** role, access to **Web Services**, and access to coverage/warranty information
 -   An **Apple Certificate** (.pem or .p12)
 
-<a name="gsx_account_creation_and_apple_cert"></a>
+<a name="gsx-account-creation-and-apple-cert"></a>
 How to get a GSX account and an Apple cert - [Integrating with Apple's GSX](https://www.jamf.com/jamf-nation/articles/26/integrating-with-apple-s-global-service-exchange-gsx)
 
-<a name="gsx_connection_configuration"></a>
+<a name="gsx-connection-configuration"></a>
 ### Configure GSX Connection Settings
 
 `JPS Home Page > Settings > Global Management > GSX connection`
@@ -374,7 +385,7 @@ How to get a GSX account and an Apple cert - [Integrating with Apple's GSX](http
 -   Select **Certificate-based Authentication** and click **Upload**
 -   Follow the onscreen prompts to upload **Apple Cert**
 
-<a name="gsx_testing_connection"></a>
+<a name="gsx-testing-connection"></a>
 #### Testing the GSX Connection
 
 `JPS Server Home Page > Settings > Global Management > GSX Connection`
@@ -382,7 +393,7 @@ How to get a GSX account and an Apple cert - [Integrating with Apple's GSX](http
 -   Click **Test**.
 -   Click, **Test** again
 
-<a name="gsx_renew_apple_cert"></a>
+<a name="gsx-renew-apple-cert"></a>
 #### Renewing the Apple Certificate
 
 You may upload a new Apple Cert through the JPS server without losing connection to GSX.
@@ -397,14 +408,14 @@ You may upload a new Apple Cert through the JPS server without losing connection
 
 Take a look at the following JPS Admin guide articles for more information:
 
--   [Performing Mass Actions for Computers](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing_Mass_Actions_for_Computers.html)
--   [Performing Mass Actions for Mobile Devices](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing_Mass_Actions_for_Mobile_Devices.html)
--   [Viewing and Editing Inventory Info for a Mobile Device](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Viewing_and_Editing_Inventory_Information_for_a_Mobile_Device.html)
--   [Local Enrollment Using Recon](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Local_Enrollment_Using_Recon.html)
--   [Remote Enrollment Using Recon](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Remote_Enrollment_Using_Recon.html)
+-   [Performing Mass Actions for Computers](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing-Mass-Actions-for-Computers.html)
+-   [Performing Mass Actions for Mobile Devices](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing-Mass-Actions-for-Mobile-Devices.html)
+-   [Viewing and Editing Inventory Info for a Mobile Device](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Viewing-and-Editing-Inventory-Information-for-a-Mobile-Device.html)
+-   [Local Enrollment Using Recon](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Local-Enrollment-Using-Recon.html)
+-   [Remote Enrollment Using Recon](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Remote-Enrollment-Using-Recon.html)
 
 [[top](#toc)]
-<a name="jps_summary"></a>
+<a name="jps-summary"></a>
 ## JPS Summary
 
 -   Keeps information about the JPS Server implementation.
@@ -583,7 +594,7 @@ All files can be replicated, or just a subset of files.
 
 **More Info**
 
-[jamfPro User Guide: Network Segments](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Network_Segments.html)
+[jamfPro User Guide: Network Segments](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Network-Segments.html)
 
 -   Network segments can be used to ensure that clients are connecting to the closest DP.
 
@@ -598,23 +609,20 @@ All files can be replicated, or just a subset of files.
 
 #### Requirements
 
-_For Mac_
+*For Mac*
 
 -   Intel processor
 -   2 GB of RAM
 -   100 GB of disk space
 -   macOS 10.7 or later with macOS Server 1.4.3 or later
 
-_For Linux_
+*For Linux*
 
 -   Intel processor
 -   2 GB of RAM
 -   100 GB of disk space
 -   One of the following distros
-    *   Ubuntu 10.04 LTS Server
-    *   Ubuntu 12.04 LTS Server
-    *   Ubuntu 14.04 LTS Server
-    *   Ubuntu 16.04 LTS Server
+    *   Ubuntu 10.04 - 16.04 LTS Server
     *   RHEL 6.4, 6.5, 6.6, or 7.0
 
         **NOTE**: For virtual environments, the VM platform must provide **SMBIOS** information
