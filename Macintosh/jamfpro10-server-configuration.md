@@ -806,7 +806,7 @@ JPS must be the root web app, and the user running the Tomcat process must have 
 
 #### More Info
 
--   [Using OpenSSL to Create a Certificate Keystore for Tomcat](https://www.jamf.com/jamf-nation/articles/117/starting-and-stopping-tomcat "Using OpenSSL to Create a Certificate Keystore for Tomcat")
+-   [Using OpenSSL to Create a Certificate Keystore for Tomcat](https://www.jamf.com/jamf-nation/articles/138/using-openssl-to-create-a-certificate-keystore-for-tomcat "Using OpenSSL to Create a Certificate Keystore for Tomcat")
 
 [[top][]]
 <a name="adv-configure-load-balancer"></a>
