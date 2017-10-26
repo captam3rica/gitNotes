@@ -1,50 +1,76 @@
 # Reference List
 
-## Regular Expressions References
+## TOC <a name="top"></a>
 
-- http://www.grymoire.com/Unix/Regular.html
+1. [Related to Scripting & Computer Languages](#scripting-and-languages)
+    1. [Markdown](#markdown)
 
 ## Related to Mac OS Support & Administration
 
-- [JAMF - Casper Admin Documentation](http://docs.jamf.com)
-- [HP Printer Driver FTP](ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
-- APFS
-  - http://www.iphonehacks.com/2017/03/apfs-apple-new-file-system-10-things-to-know.html
-  - https://www.backblaze.com/blog/apfs-apple-file-system/
-- [Startup Cmd Options](https://support.apple.com/en-us/HT201255)
-- [Apple software Restore - ASR](https://en.wikipedia.org/wiki/Apple_Software_Restore)
-  - [Syntax](https://ss64.com/osx/asr.html)
-- SPSS 24 Documentation - ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/
-- 07.24.2017 - Create Master Mac OS Image - https://deploystudio.wikispaces.com/Creating+Master+Disk+Images
-- 07.19.2017 - [About Apple video adapters and cables](https://support.apple.com/en-us/HT201853)
-- 07.15.2017 - [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
-- 07.11.107 - Mac OS X & UNIX ACLs: http://www.techrepublic.com/blog/apple-in-the-enterprise/introduction-to-os-x-access-control-lists-acls/
+
+-   [HP Printer Driver FTP](ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
+-   [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
+
+### App Stuff ...
+
+-   [Jamf](jamf.com "jamf Mac administration")
+    -   [jampPro Admin Admin Guide](http://docs.jamf.com)  
+    -   [jamf Developer](http://developer.jamf.com/index "jamf Developter portal")
+
+-   [NoMAD](https://nomad.menu/downloads/ "No More Active Directory")
+-   [Backblaze](https://www.backblaze.com "Data backup solution")
+-   [DeployStudio](https://deploystudio.wikispaces.com "DeployStudio Wiki")
+
+### Documentation
+
+-   **Apple**
+
+    -    [macOS Builds](https://support.apple.com/en-us/HT201260)
+    -    [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
+    -   [Mac Startup Cmd Options](https://support.apple.com/en- us/HT201255)
+    -    [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
+
+-    [IBM SPSS Documentation](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/ "Documentation for IBM SPSS")
 
 ## Unix & GNU/Linux
 
-- [Sane scanner](https://wiki.archlinux.org/index.php/SANE)
-- Linux Journey - https://linuxjourney.com/lesson/etc-group-file
-- Done - netboot.xyz
-- Banking with a live cd: http://krebsonsecurity.com/2012/07/banking-on-a-live-cd/
-- SSH Tricks: http://www.linuxjournal.com/article/6602
-- 2015.01.25 - Rsync command examples - http://www.thegeekstuff.com/2010/09/rsync-command-examples/
-- POSIX - https://en.wikipedia.org/wiki/POSIX
-- Security Enhanced Linux: http://selinuxproject.org/page/Main_Page
-- Cool old terminal - old looking terminal for linux: http://linuxg.net/how-to-install-cool-old-term-0-9-on-ubuntu-14-04-debian-jessie
+-  [Sane scanner](https://wiki.archlinux.org/index.php/SANE)
+
+-  Linux Journey - https://linuxjourney.com/lesson/etc-group-file
+
+-  netboot.xyz
+
+-  Banking with a live cd: http://krebsonsecurity.com/2012/07/banking-on-a-live-cd/
+
+-  SSH Tricks: http://www.linuxjournal.com/article/6602
+
+-  Rsync command examples - http://www.thegeekstuff.com/2010/09/rsync-command-examples/
+
+-  POSIX - https://en.wikipedia.org/wiki/POSIX
+
+-  Security Enhanced Linux: http://selinuxproject.org/page/Main_Page
+
+-  Cool old terminal - old looking terminal for linux: http://linuxg.net/how-to-install-cool-old-term-0-9-on-ubuntu-14-04-debian-jessie
 
 ## Related to Windows Administration
 
-- List of WMIC CSProduct Get Name Results - http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/
-- 07.15.2017 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
-- 07.15.2017 - [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
+-   List of WMIC CSProduct Get Name Results - http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/
+
+-   [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
+
+-   [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
 
 ### SCCM Administration
 
 - [SCCM Queries with PowerShell](http://blog.ctglobalservices.com/powershell/kaj/working-with-queries-in-configmgr-with-powershell/)
-- WMI SCCM Queries - https://www.andersrodland.com/ultimate-sccm-querie-collection-list/
+
+- [WMI SCCM Queries] (https://www.andersrodland.com/ultimate-sccm-querie-collection-list/)
+
 - Convert from BIOS to UEFI Using SCCM - https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence
   - Another Article regarding Bios to UEFI conversion - https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion
+
 - Deploy Windows from Captured Media -  https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/
+
 - Driver management - https://technet.microsoft.com/en-us/library/hh301101.aspx
 
 ### Driver Resources
@@ -52,7 +78,37 @@
 - [ Microsoft Surface Drivers](https://docs.microsoft.com/en-us/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices#a-href-idsurface-pro-3-asurface-pro-3)
 - HP Drivers - http://www8.hp.com/us/en/ads/clientmanagement/overview.html#manageability-tools
 
-## Related to Scripting
+[[top](#top)]
+
+## Related to Scripting & Computer Languages <a name="scripting-and-languages"></a>
+
+### Markdown <a name="markdown"></a>
+
+- [CommmonMark](http://commonmark.org/)
+  - [CommmonMark Spec](http://spec.commonmark.org/)
+
+- [Brett Terpstra: Write Better Markdown](http://brettterpstra.com/2015/08/24/write-better-markdown/)
+
+- [vim-markdownfmt](https://github.com/moorereason/vim-markdownfmt)
+- Table of contents
+
+      # Table of contents
+      1. [Introduction](#introduction)
+      2. [Some paragraph](#paragraph1)
+      1. [Sub paragraph](#subparagraph1)
+      3. [Another paragraph](#paragraph2)
+
+      ## This is the introduction <a name="introduction"></a>
+      Some introduction text, formatted in heading 2 style
+
+      ## Some paragraph <a name="paragraph1"></a>
+      The first paragraph text
+
+      ### Sub paragraph <a name="subparagraph1"></a>
+      This is a sub paragraph, formatted in heading 3 style
+
+      ## Another paragraph <a name="paragraph2"></a>
+      The second paragraph text
 
 ### Bash
 
@@ -63,6 +119,10 @@
 - 07.18.2017 - [25 Simple Find commands](http://www.binarytides.com/linux-find-command-examples/)
 - 07.15.2017 - [The /sbin Directory](http://www.linfo.org/sbin.html)
 - **08.01.2016** - [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
+
+### RegEx
+
+-   [RegEx - Grymoire](http://www.grymoire.com/Unix/Regular.html "Learn about regex")
 
 ### PowerShell
 
@@ -75,6 +135,10 @@
   - `pip (or pip2) install pycodestyle && apm install pycodestyle`
 - Python for InfoSec: http://strategicsec.com/python-for-infosec-pros-2015/
 - Python Naming Conventions: http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html
+
+### sed
+
+- [Learn Sed](http://www.grymoire.com/Unix/Sed.html)
 
 ## Software
 
