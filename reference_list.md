@@ -1,16 +1,17 @@
 # Reference List
 
-## TOC <a name="top"></a>
+<a name="top"></a>
+## TOC
 
 1. [Related to Scripting & Computer Languages](#scripting-and-languages)
     1. [Markdown](#markdown)
 
 ## Related to Mac OS Support & Administration
 
-
 -   [HP Printer Driver FTP](ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
 -   [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
 
+[[top](#top)]
 ### App Stuff ...
 
 -   [Jamf](jamf.com "jamf Mac administration")
@@ -21,6 +22,7 @@
 -   [Backblaze](https://www.backblaze.com "Data backup solution")
 -   [DeployStudio](https://deploystudio.wikispaces.com "DeployStudio Wiki")
 
+[[top](#top)]
 ### Documentation
 
 -   **Apple**
@@ -32,6 +34,7 @@
 
 -    [IBM SPSS Documentation](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/ "Documentation for IBM SPSS")
 
+[[top](#top)]
 ## Unix & GNU/Linux
 
 -  [Sane scanner](https://wiki.archlinux.org/index.php/SANE)
@@ -52,6 +55,7 @@
 
 -  Cool old terminal - old looking terminal for linux: http://linuxg.net/how-to-install-cool-old-term-0-9-on-ubuntu-14-04-debian-jessie
 
+[[top](#top)]
 ## Related to Windows Administration
 
 -   List of WMIC CSProduct Get Name Results - http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/
@@ -60,6 +64,7 @@
 
 -   [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
 
+[[top](#top)]
 ### SCCM Administration
 
 - [SCCM Queries with PowerShell](http://blog.ctglobalservices.com/powershell/kaj/working-with-queries-in-configmgr-with-powershell/)
@@ -73,16 +78,18 @@
 
 - Driver management - https://technet.microsoft.com/en-us/library/hh301101.aspx
 
+[[top](#top)]
 ### Driver Resources
 
 - [ Microsoft Surface Drivers](https://docs.microsoft.com/en-us/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices#a-href-idsurface-pro-3-asurface-pro-3)
 - HP Drivers - http://www8.hp.com/us/en/ads/clientmanagement/overview.html#manageability-tools
 
 [[top](#top)]
+<a name="scripting-and-languages"></a>
+## Related to Scripting & Computer Languages
 
-## Related to Scripting & Computer Languages <a name="scripting-and-languages"></a>
-
-### Markdown <a name="markdown"></a>
+<a name="markdown"></a>
+### Markdown
 
 - [CommmonMark](http://commonmark.org/)
   - [CommmonMark Spec](http://spec.commonmark.org/)
@@ -110,6 +117,7 @@
       ## Another paragraph <a name="paragraph2"></a>
       The second paragraph text
 
+[[top](#top)]
 ### Bash
 
 - [bashoneliners.com](http://www.bashoneliners.com/oneliners/oneliner/popular/)
@@ -120,15 +128,18 @@
 - 07.15.2017 - [The /sbin Directory](http://www.linfo.org/sbin.html)
 - **08.01.2016** - [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
 
+[[top](#top)]
 ### RegEx
 
 -   [RegEx - Grymoire](http://www.grymoire.com/Unix/Regular.html "Learn about regex")
 
+[[top](#top)]
 ### PowerShell
 
 - [Memory and Handle Quotas in the WMI Provider Ser](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/)
 - Bypass Execution Policies - https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/
 
+[[top](#top)]
 ### Python
 
 - For **pycodestyle** - PEP8 linter for *Atom*
@@ -136,10 +147,12 @@
 - Python for InfoSec: http://strategicsec.com/python-for-infosec-pros-2015/
 - Python Naming Conventions: http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html
 
+[[top](#top)]
 ### sed
 
 - [Learn Sed](http://www.grymoire.com/Unix/Sed.html)
 
+[[top](#top)]
 ## Software
 
 - Borg Backup - (http://borgbackup.readthedocs.io/en/stable/)
@@ -150,16 +163,19 @@
 - Synology NAS - http://www.synology.com/en-us/products/compare_products/DS214+/DS412+
 - Qnap NAS servers - http://www.staples.com/office/supplies/StaplesProductDisplay?storeId=10001&catalogIdentifier=2&partNumber=IM1PK7895&langid=-1&cid=PS:GooglePLAs:IM1PK7895&srccode=cii_17588969&cpncode=35-172700112-2
 
+[[top](#top)]
 ### Web Browser Settings
 
-- Chrome, Chromium, and Vivaldi Autofill Settings - `chrome://settings/search#autofill`
+-   [Chrome, Chromium, and Vivaldi Autofill Settings](chrome://settings/search#autofill)
 
+[[top](#top)]
 ## Certifications
 
-- GIAC Certified Incident Handler - http://www.giac.org/certification/certified-incident-handler-gcih
-- GIAC Certified Forensic Examiner - http://www.giac.org/certification/certified-forensic-examiner-gcfe
+-   GIAC Certified Incident Handler - http://www.giac.org/certification/certified-incident-handler-gcih
+-   GIAC Certified Forensic Examiner - http://www.giac.org/certification/certified-forensic-examiner-gcfe
 
-## Security
+[[top](#top)]
+## Security Tools & Info ...
 
 - Anonymous Web browsing - http://lifehacker.com/150074/anonymous-web-browsing-20
 - WikiLeaks DarkMatter -  https://wikileaks.org/vault7/darkmatter/document/SonicScrewdriver_1p0/page-3/#pagination
@@ -177,15 +193,7 @@ be for sale
 - 2014.04.24 - Cloud fogger - http://thehackernews.com/2014/01/how-to-encrypt-your-files-before.html
 - 2014.03.11 - Password Protecting the BIOS - http://security.blogoverflow.com/2014/02/qotw-50-does-password-protecting-the-bios-help-in-securing-sensitive-data/
 
-#### Heartbleed
-
-- 2014.04.09 - Video Explanation for Heartbleed - http://vimeo.com/91425662
-- How Heartbleed Works - http://security.stackexchange.com/questions/55116/how-exactly-does-the-openssl-tls-heartbeat-heartbleed-exploit-work
-- Code Fix for Heartbleed - http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=96db9023b881d7cd9f379b0c154650d6c108e9a3
-- 2014.04.08 - heartbleed.com - http://heartbleed.com/
-- 2014.04.08 - HeartBleed OpenSSL Vulnerability - http://threatpost.com/seriousness-of-openssl-heartbleed-bug-sets-in/105309
-- XSS - https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)
-
+[[top](#top)]
 ### Security Tools
 
 - 07.13.2017 - AngryIP - (https://github.com/angryip/ipscan
@@ -220,13 +228,14 @@ they can read the content.
 - RAM Scraper
 - Power Top
 
+[[top](#top)]
 ### Encryption & Cryptography
 
-- 2014.06.20 - Hashing vs Encryption: http://www.darkreading.com/safely-storing-user-passwords-hashing-vs-encrypting/a/d-id/1269374
+-   [Hashing vs Encryption](http://www.darkreading.com/safely-storing-user-passwords-hashing-vs-encrypting/a/d-id/1269374)
 
+[[top](#top)]
 ## Networking
 
-- [IPv6 Crash Course](https://www.linux.com/learn/ipv6-crash-course-linux)
-- OpenWRT - http://wiki.openwrt.org/toh/netgear/wnr1000 - OS router
-firmware
-- Packet Life - http://packetlife.net/
+-   [IPv6 Crash Course](https://www.linux.com/learn/ipv6-crash-course-linux)
+-   [OpenWRT](http://wiki.openwrt.org/toh/netgear/wnr1000 - OS router firmware)
+-   [Packet Life](http://packetlife.net/)
