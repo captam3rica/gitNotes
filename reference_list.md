@@ -17,6 +17,7 @@
 -   [Jamf](jamf.com "jamf Mac administration")
     -   [jampPro Admin Admin Guide](http://docs.jamf.com)  
     -   [jamf Developer](http://developer.jamf.com/index "jamf Developter portal")
+    -   [jamf Marketplace](marketplac.jamf.com "jamf curated apps")
 
 -   [NoMAD](https://nomad.menu/downloads/ "No More Active Directory")
 -   [Backblaze](https://www.backblaze.com "Data backup solution")
