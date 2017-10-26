@@ -5,7 +5,7 @@
 
 1.  [macOS](#macos)
     1.  [Installed Files & Folders](#macos-installed-files-and-folders)
-    1.  [Requirements](#macos-requirements)
+    2.  [Requirements](#macos-requirements)
 2.  [Linux](#linux)
     1.  [Installed Files & Folders](#linux-installed-files-and-folders)
     1.  [Requirements](#linux-requirements)
@@ -17,35 +17,54 @@
     1.  [Database Creation](#jps-database-creation)
     1.  [Run the JSS Installer](#jps-run-installer)
     1.  [Upgrading the JSS](#upgrading-jps-server)
-1.  [Setting up the JPS Server](#setting-up-jps-server)
+5.  [Setting up the JPS Server](#setting-up-jps-server)
     1.  [Default Configuration Files](#jps-default-config)
     1.  [Network Ports Used](#network-ports-used)
-5.  [User Accounts & Groups](#user-accounts-and-groups)
+6.  [User Accounts & Groups](#user-accounts-and-groups)
         1. [LDAP Integration](#ldap-integration)
     1.  [JPS User Group Creation](#jps-user-group-creation)
     2.  [JPS User Account Creation](#jps-user-account-creation)
     3.  [Account Preferences](#jps-account-preferences)
     4.  [Password Policy Configuration](#jps-password-policy-configuration)
     5.  [Unlocking a JPS Server User Account](#jps-unlock-user-accounts)
-6.  [Activation Code](#activation-code)
-7.  [SMTP Server Integration](#smtp-integration)
-8.  [Change Management](#change-management)
-9.  [GSX Integration](#gsx-integration)
+7.  [Activation Code](#activation-code)
+8.  [SMTP Server Integration](#smtp-integration)
+9.  [Change Management](#change-management)
+10. [GSX Integration](#gsx-integration)
     1.  [GSX Integration Requirements](#gsx-integration-requiremetns)
         1.  [GSX Account Creation & Apple Cert](#gsx-account-creation-and-apple-cert)
     1.  [GSX Connection Configuration](#gsx-connection-configuration)  
         1.  [Testing GSX Connection](#gsx-testing-connection)
     2.  [Renewing the Apple Certificate](#gsx-renew-apple-cert)
-10. [JPS Summary](#jps-summary)
-11. [Server Infrastructure](#server-infrastructure)
+11. [JPS Summary](#jps-summary)
+12. [Server Infrastructure](#server-infrastructure)
     1.  [About Distribution Points](#about-distribution-points)
         1.  [Differences Between DP Types](#dp-type-differences)
     2.  [File Share Distribution Point](#dp-file-shares)
     3.  [Cloud Distribution Point](#dp-cloud)
     4.  [Jamf Distribution Server Instance](#dp-jamf-distribution-server-instance)
+        1.  [Requirements](#jds-instance-requirements)
+        2.  [Installation](#jds-instance-installation)
+        3.  [Configuration](#jds-instance-configuration)
+        4.  [Replication](#jds-instance-replication)
+    5.  [Jamf Infrastructure Manager Instance](jim-instance)
+        1.  [Viewing Inventory](#jim-viewing-inventory)
+13. [Advanced Configuration](#advanced-configuration)
+    1.  [SSL Certificate](#adv-ssl-certificate)
+    1.  [Configuring Tomcat to Work with a Load Balancer](#adv-configure-load-balancer)
+    1.  [Tomcat Thread Pool Settings](#adv-tomcat-thread-pool-settings)
+    1.  [JPS Web App memory](#adv-jps-web-app-memory)
+    1.  [Viewing DB Table Status](#adv-viewing-db-table-status)
+    1.  [Clustering](#adv-clustering)
+    1.  [Limited Access Settings](#adv-limited-access-settings)
+    1.  [Backing up the Database](#adv-backing-up-the-db)
+    1.  [Flushing Logs](#adv-flushing-logs)
+    1.  [Migrate to Another Server](#adv-migrate-server)
+14. [How To ...](#how-to)
+    1.  [Restart the Tomcat Service](#how-to-restart-tomcat-service)
 
 
-[[top](#toc)]
+[[top][]]
 
 <a name="macos"></a>
 ## macOS
@@ -70,7 +89,7 @@ The following files and folders are installed when you run the JSS Installer and
 -   **JDS Instance** - `/Library/JDS/`
     -   More info on *JDS* install files [here](https://www.jamf.com/jamf-nation/articles/339/components-installed-on-jds-instances)
 
-[[top](#toc)]
+[[top][]]
 <a name="macos-requirements"></a>
 ### Requirements
 
@@ -107,7 +126,7 @@ The following files and folders are installed when you run the JSS Installer and
 -   **100GB** of disk space available
 -   macOS 10.7 or later with macOS Server 1.4.3 or later installed
 
-[[top](#toc)]
+[[top][]]
 <a name="linux"></a>
 ## Linux
 
@@ -121,11 +140,11 @@ The following files and folders are installed when you run the JSS Installer and
     -   Red Hat Enterprise Linux (RHEL) 6.4, 6.5, 6.6, or 7.0
     **Note**: To install a JDS instance on a Linux operating system that is running on a virtual machine, you need a virtualization platform that provides **SMBIOS** information.
 
-[[top](#toc)]
+[[top][]]
 <a name="windows"></a>
 ## Windows
 
-[[top](#toc)]
+[[top][]]
 <a name="jps-installation"></a>
 ## JPS Installation
 
@@ -168,7 +187,7 @@ The following files and folders are installed when you run the JSS Installer and
 1.  Backup the *JSS DB* using the *JSS Database Utility*
 2.  Copy the latest *JSS Installer* to the macOS server.
 
-[[top](#toc)]
+[[top][]]
 <a name="setting-up-jps-server"></a>
 ## Setting up the JPS Server
 
@@ -184,7 +203,7 @@ The following files and folders are installed when you run the JSS Installer and
 
 -   [JPS Knowledge Base](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro)
 
-[[top](#toc)]
+[[top][]]
 <a name="user-accounts-and-groups"></a>
 ## User Accounts & Groups
 
@@ -273,7 +292,7 @@ For an email to be sent to the user, an SMTP server must be configured - [SMTP S
 
 For more information about *Sites* and how to add them to the JPS Server, see [Sites](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Sites.html) on the Casper Suite Admin's Guide.
 
-[[top](#toc)]
+[[top][]]
 <a name="activation-code"></a>
 ## Activation Code
 
@@ -285,7 +304,7 @@ Can change the *Activation Code* and the *Organization Name* here
 -   Enter new activation code
 -   **Save**
 
-[[top](#toc)]
+[[top][]]
 <a name="smtp-integration"></a>
 ## Integration with an SMTP Server
 
@@ -315,7 +334,7 @@ Can change the *Activation Code* and the *Organization Name* here
 -   [Performing Mass Actions for Computers](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing-Mass-Actions-for-Computers.html)
 -   [Performing Mass Actions for Mobile Devices](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Performing-Mass-Actions-for-Mobile-Devices.html)
 
-[[top](#toc)]
+[[top][]]
 <a name="change-management"></a>
 ## Change Management
 
@@ -357,7 +376,7 @@ directory where the *JAMFChangeManagement.log* is located.
 
 For more information regarding syslog setup on a **macOS** server - [Change Management with the Casper Suite: macOS Setup Guide](https://www.jamf.com/jamf-nation/articles/129/change-management-with-the-casper-suite-macos-setup-guide)
 
-[[top](#toc)]
+[[top][]]
 <a name="gsx-integration"></a>
 ## Integrating with GSX
 
@@ -414,7 +433,7 @@ Take a look at the following JPS Admin guide articles for more information:
 -   [Local Enrollment Using Recon](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Local-Enrollment-Using-Recon.html)
 -   [Remote Enrollment Using Recon](http://docs.jamf.com/9.101.0/casper-suite/administrator-guide/Remote-Enrollment-Using-Recon.html)
 
-[[top](#toc)]
+[[top][]]
 <a name="jps-summary"></a>
 ## JPS Summary
 
@@ -469,7 +488,7 @@ The following can be added the JPS summary as needed
 
 -   [Customer Experience Metrics](https://www.jamf.com/jamf-nation/articles/364/customer-experience-metrics)
 
-[[top](#toc)]
+[[top][]]
 <a name="server-infrastructure"></a>
 ## Server Infrastructure
 
@@ -507,7 +526,7 @@ By default, the first **DP** add to the JPS is the **Master DP**. The master is 
 | **File Replication Method**   | Replication to file share DPs must be initiated from jamf Admin  | Replication to a cloud DP must be initiated from jamf Admin | Replication to **root JDS** instance must be initiated from jamf Admin. Replication to **non-root JDS** instances happen automatically and immediately |
 | **Selective Replication**   | Not available when replicating to file share DPs | Available when replicating to **Cloud** DP if the **master** DP is the **JDS instance** or **file share** DP. The files for replication must specify in the JPS and the replication initiated from jamf admin | Not available when replicating to **root JDS** instances. Available when replicating to **non-root JDS** instances. The files for replication must be specified in the JPS. The replication from non-root parent to child instances is initiated on check-in with the JSS
 
-[[top](#toc)]
+[[top][]]
 <a name="dp-file-shares"></a>
 ### File Share DPs  
 
@@ -543,7 +562,7 @@ All of the files on the *Master* will be pushed to the FS DP that you chose.
 -   [Set up a file share on Linux using Samba](https://www.jamf.com/jamf-nation/articles/215/setting-up-a-file-share-distribution-point-on-linux-using-samba)
 -   [Using IIS to setup a Win Serv 2008 File Share](https://www.jamf.com/jamf-nation/articles/309/using-iis-to-enable-http-downloads-on-a-windows-server-2008-or-2012-file-share-distribution-point)
 
-[[top](#toc)]
+[[top][]]
 <a name="dp-cloud"></a>
 ### Cloud DP
 
@@ -592,7 +611,7 @@ All files can be replicated, or just a subset of files.
 2.  In the sidebar, select the *Cloud DP* that you would like to replicate to.
 3.  Click **Replicate**
 
-**More Info**
+#### More Info
 
 [jamfPro User Guide: Network Segments](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Network-Segments.html)
 
@@ -603,10 +622,11 @@ All files can be replicated, or just a subset of files.
 -   Determine the necessary info needed from your cloud provider
 -   [jamf cloud service](https://www.jamf.com/products/jamf-cloud/)
 
-[[top](#toc)]
+[[top][]]
 <a name="dp-jamf-distribution-server-instance"></a>
 ### JDS Instance
 
+<a name="jds-instance-requirements"></a>
 #### Requirements
 
 *For Mac*
@@ -633,6 +653,9 @@ To manage JDS instances from the JPS, you need a valid SSL certificate on the JP
 
   [ac3617d1]: https://www.jamf.com/jamf-nation/articles/327/migrating-packages-and-scripts "Migrating Packages and Scripts"  
 
+<a name="jds-instance-installation"></a>
+#### Installation
+
 *JDS Instance Installation on Mac*
 
 1.  Copy the `JDS Installer.pkg` to the server you will be using as the *JDS* instance.  
@@ -645,3 +668,443 @@ To manage JDS instances from the JPS, you need a valid SSL certificate on the JP
 3.  Follow the onscreen prompts
 
 *JDS Instance Installation on Linux*
+
+1.  Copy the `JDS Installer.run` installer to the server you will be using as the *JDS* instance.
+
+**Note**: Login to [jamf-nation][7985d839] to grab the latest installer.
+
+  [7985d839]: https://www.jamf.com/jamf-nation/ "Jamf Nation Login"
+
+2.  Login to server as a user with *admin* privileges
+3.  Launch the installer
+
+    `sudo /path/to/JDS Installer.run`
+
+4.  Enter a *JDS* hostname. Example: `jds.acme.com`
+5.  Enter a *JPS* URL. Example: `https://`jps.acme.com:8443/
+6.  Enter credentials for the *JPS* user account that has the *JDS* privileges
+7.  Follow the onscreen prompts to complete the installation
+
+<a name="jds-instance-configuration"></a>
+#### Configuration
+
+`Login to JPS > Settings > Server Infrastructure > JDS Instances`
+
+1.  Click the *JDS* instance to configure
+2.  Click **Edit**
+3.  Use the *General* to edit basic settings
+4.  Click the **Distribution Point** tap to configure distribution settings.
+5.  Click **Save**  
+
+<a name="jds-instance-replication"></a>
+#### Replicating Files to the Root JDS Instace
+
+During the replication process, all files on the Master DP are sent over to the root JDS instance. Then, files are replicated to Child JDS instances from their non-root Parents JDS instances upon check-in with the JPS. Files are replicated according to the non-root instance configuration.
+
+#### Viewing Replication Progress
+
+`Login to JPS > Settings > Server Infrastructure > JDS Instances`
+
+1.  Click **Grid View** at the top of the list.
+
+    If the master DP is a JDS instance it is marked by `**`. If the master DP is a different type of DP it is marked by `*`.
+
+#### Viewing JDS Instance Inventory Information
+
+The JPS displays the following inventory info fore each JDS instance:
+
+-   If it is a master DP
+-   If it is a root instance
+-   Hostname
+-   URL
+-   Reported IP address
+-   jamfds binary version
+-   Operating System (OS)
+-   OS version
+-   Total memory
+-   Available memory
+-   HD size
+-   HD space utilized
+
+`Login to JPS > Settings > Server Infrastructure > JDS Instances`
+
+1.  Select the instance you would like to view.
+
+#### More Info
+
+[jamfPro Admin Guide: Network Segments](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Network_Segments.html "Network Segments")
+
+[Knowledge Base: Components Installed on JDS Instances](https://www.jamf.com/jamf-nation/articles/339/components-installed-on-jds-instances "Components Installed on JDS Instances")
+
+[Knowledge Base: Changing JDS Hierarchy](https://www.jamf.com/jamf-nation/articles/330/changing-jds-hierarchy "Changing JDS Hierarchy")
+
+[Knowledge Base: Uninstalling a JDS Instance](https://www.jamf.com/jamf-nation/articles/340/uninstalling-a-jds-instance "Uninstalling a JDS Instance")
+
+[[top][]]
+<a name="jim-instance"></a>
+### Jamf Infrastructure Manager Instances
+
+A **JIM** instance is a service that is managed by the JPS and it can be used to host the following services.
+
+-   **LDAP Proxy** - This allows traffic to pass securely between LDAP and the JPS. The JIM and the LDAP Proxy typically reside within a **DMZ**.
+
+    For more info see [LDAP Proxy](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/LDAP_Proxy.html) in the jamfPro Admin Guide.
+
+-   **Healthcare Listener** - This allows healthcare information to pass to the JPS securely.
+
+    For more info see [Healthcare Listener](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Healthcare_Listener.html "JamfPro Admin Guide: Healthcare Listener") in the jamfPro Admin Guide.
+
+JIM instances can be installed on Linux and Windows servers. [Jamf Infrastructure Manager Instance](http://docs.jamf.com/infrastructure-manager/1.3.2/Jamf_Infrastructure_Manager_Overview.html "Jamf Infrastructure Manager Instance")
+
+<a name="jim-viewing-inventory"></a>
+#### Viewing Inventory Information for a JIM.
+
+The following is listed in the JIM instance inventory:
+
+-   Last check-in
+-   IP Address at Last check-in
+-   OS and OS version
+
+`Login to the JPS > Settings > Computer Management`
+
+1.  In the *Computer Management-Server Infrastructure* section, click **Infrastructure Managers**. A list of Infrastructure Manager Instances will be displayed along with the services that are installed on each instance.
+2.  Select an instance to view its inventory information.
+
+#### Other Considerations
+
+-   Only the display name and check-in interval can be changed on a JIM instance. By default, the check-in interval is set to **30 seconds**.
+-   A JIM instance cannot be deleted if there are dependencies for the Infrastructure Manager. If an LDAP proxy is hosted on the JIM, the JIM cannot be deleted. You must first delete the LDAP Proxy.
+-   Healthcare Listeners are deleted when the JIM instance is deleted.
+
+#### More Info
+
+-   See [jamfPro Admin Guide: Email Notification](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Email_Notifications.html "Email Notification")
+
+[[top][]]
+<a name="advanced-configuration"></a>
+## Advanced Configuration
+
+[[top][]]
+<a name="adv-ssl-certificate"></a>
+### SSL Certificate
+
+The Tomcat settings in the JPS allow you to create an cert from the **CA** that is build into the JPS. You can also upload a cert keystore from a local CA or trusted third party.
+
+**Note**: If jamfCloud is used, the Tomcat settings are managed by Jamf and are not accessible.
+
+#### Requirements
+
+JPS must be the root web app, and the user running the Tomcat process must have +rw access to the Tomcat `server.xml` file.
+
+#### Creating or Uploading SSL Certificate
+
+`Login to JPS > System Settings > Apache Tomcat Settings > Edit`
+
+1.  Select **Change the SSL Certifiate used for HTTPS** and click **Next**
+2.  Follow the onscreen prompts
+3.  Restart Tomcat service so that changes will take affect. Got to [Restart Tomcat][]
+
+#### More Info
+
+-   [Using OpenSSL to Create a Certificate Keystore for Tomcat](https://www.jamf.com/jamf-nation/articles/117/starting-and-stopping-tomcat "Using OpenSSL to Create a Certificate Keystore for Tomcat")
+
+[[top][]]
+<a name="adv-configure-load-balancer"></a>
+### Configuring Tomcat to Work with a Load Balancer
+
+Must configure the following:
+
+-   remote IP value
+-   Proxy Port
+-   Scheme in Tomcat's `server.xml`
+
+These can be edit in the **Load Balancing** settings from with the JPS so that you do not have to edit the `server.xml` file manually.
+
+#### Requirements
+
+JPS must be installed as the root web app, and the user runner the Tomcat service must have `+rw` on the `server.xml` file.
+
+#### Configure LB Settings
+
+`Login to JPS > Settings > System Settings`
+
+1.  Click **Apache Tomcat Settings**
+2.  Click **Edit**
+3.  Select **Configure Tomcat for working behind a load balancer**
+4.  Click **Next**
+5.  Follow the onscreen prompts
+6.  Restart Tomcat for changes to take affect. Got to [Restart Tomcat][]
+
+[[top][]]
+<a name="adv-tomcat-thread-pool-settings"></a>
+### Tomcat Thread Pool Settings
+
+Tomcat Thread Pool allows you to edit the `server.xml` file from the JPS without have to edit it manually.
+
+#### Requirements
+
+JPS must be installed as the root web app, and the user runner the Tomcat service must have `+rw` on the `server.xml` file.
+
+#### Configuration
+
+`Login to JPS > Settings > System Settings`
+
+1.  Click **Apache Tomcat Settings**
+2.  Click **Edit**
+3.  Select **Update the settings for Tomcat's thread pool**
+4.  Click **Next**
+5.  Follow the onscreen prompts
+6.  Restart Tomcat for changes to take affect. Got to [Restart Tomcat][]
+
+[[top][]]
+<a name="adv-jps-web-app-memory"></a>
+### JPS Web App memory
+
+Allows viewing of JPS web app memory utilization. the JPS Database Utility can be used to edit memory settings.
+
+#### View Memory Usage
+
+`Login to JPS > Settings > JPS Information > Memory Usage`
+
+#### Configure Web App Mem
+
+1.  Open JPS DB Util on the JPS host server.
+
+    See Files and Folder Locations for you platform [macOS][], [Linux][], or [Windows][]
+
+2.  Enter the credentials for the server admin account and click **OK**
+3.  If the JPS is unable to locate the MySQL binary, it will prompt for the location. Click **continue** and enter the full path.
+4.  From the menu bar `Utilities > Change Tomcat Settings`
+5.  Use the sliders to configure memory allocation
+6.  Click **Apply Settings**
+7.  Restart Tomcat when prompted
+
+[[top][]]
+<a name="adv-tomcat-permgen-size"></a>
+### Tomcat PermGen Size
+
+The the JPS DB utility to manage settings for PermGen.
+
+**Note**: When upgrade from Tomcat 7 to 8, the min and max PermGen sizes are set to 256 MB. When using Java 1.8, PermGen does not need to be set.
+
+#### Configure PermGen Size
+
+1.  Open JPS DB Util on the JPS host server.
+
+    See Files and Folder Locations for you platform [macOS][], [Linux][], or [Windows][]
+
+2.  Enter the credentials for the server admin account and click **OK**
+3.  If the JPS is unable to locate the MySQL binary, it will prompt for the location. Click **continue** and enter the full path.
+4.  From the menu bar `Utilities > Change Tomcat Settings`
+5.  Use the sliders to configure memory allocation
+6.  Click **Apply Settings**
+7.  Restart Tomcat when prompted
+
+[[top][]]
+<a name="adv-viewing-db-table-status"></a>
+### Viewing DB Table Status
+
+MySQL DB tables can become corrupt if the DB is not shutdown properly, or the DB is running to slow and unable to keep with the number of computers in the environment.
+
+`Log in to JPS > Settings > JPS Information > Database Table Status`
+
+[[top][]]
+<a name="adv-clustering"></a>
+### Clustering
+
+Multiple JPS instances pointing to the same DB. Good for large environments or environments that have a JPS in a DMZ.
+
+It is recommended to configure a clustered environment from the JPS that is designated as the *Master*. Then, create secondary JPS web apps that point to the same DB. However, clustering can be configured after the fact if multiple JPS instances exist and are pointing to the same DB.
+
+The Cluster settings in the JPS can configure the frequency at which JPS web apps sync with the DB, and which web app should function as *Master*
+
+The *Master* handles tasks like upgrading the DB schema and flushing logs from the DB. You can also view other web apps pointing to the same DB, and other info about the secondary web apps.
+
+#### Requirements
+
+For JPS web apps not a DMZ, you need a *load balancer* with the address of the JPS.
+
+`https://jps.acme.com:8443/`
+
+The load balancer should route traffic to the servers running the JPS web app.
+
+#### Configure Clustering Settings
+
+`Log in to JPS > Settings > System Settings > Clustering > Edit`
+
+1.  Configure the settings on the pane. The specify a *Master* select the **Master** option.
+2.  Click **Save**
+3.  If multiple JPS instances are already pointing to the same DB, make sure to [Restart the Tomcat service](#how-to-restart-tomcat-service) on each one so that the changes take effect.
+
+#### More Info
+
+-   [Knowledge Base: Caching Configuration](https://www.jamf.com/jamf-nation/articles/428/memcached-installation-and-configuration-for-clustered-jamf-pro-environments "Caching Configuration")
+-   [Knowledge Base: Installing JPS Web App in DMZ](https://www.jamf.com/jamf-nation/articles/174/installing-a-jss-web-application-in-the-dmz "Installing JPS Web App in DMZ")
+
+[[top][]]
+<a name="adv-limited-access-settings"></a>
+### Limited Access Settings
+
+In a clustered environment, you can use the *Limited Access* settings in the JPS to disable the JPS interface and limit types of devices that can communicate with the JPS. Most commonly used in situations where a JPS is in a *DMZ*
+
+*The following options are available:*
+
+-   Full Access
+-   Computer access only
+-   Mobile device access only
+-   Computer and mobile device access
+
+**Note**: Selecting any other that *Full Access* will disable the JPS interface.
+
+#### Configuration
+
+`Log in to the JPS > Settings > System Settings > Limited Access`
+
+1.  Select settings for each JPS web app
+2.  **Save**
+
+[[top][]]
+<a name="adv-backing-up-the-db"></a>
+### Backing up the DB
+
+Backups can be done manually as needed, or configured to run automatically. Time taken depends on the size of the DB. Other DB backups can be scheduled for deletion as well.
+
+#### Create a DB Backup
+
+1.  Open JPS DB Utility
+
+    See Files and Folder Locations for you platform [macOS][], [Linux][], or [Windows][]
+
+2.  Enter the credentials for the server admin account and click **OK**
+3.  If the JPS is unable to locate the MySQL binary, it will prompt for the location. Click **continue** and enter the full path.
+4.  Configure the settings to match your DB configuration and click **Apply Settings**
+5.  Click **Save Backup Now**
+6.  Select a location to save the DB backups
+
+The JPS DB Utility creates a backup and saves it as a `.sql.gz` file.
+
+#### Scheduling DB Backups
+
+1.  Open JPS DB Utility
+
+    See Files and Folder Locations for you platform [macOS][], [Linux][], or [Windows][]
+
+2.  Enter the credentials for the server admin account and click **OK**
+3.  If the JPS is unable to locate the MySQL binary, it will prompt for the location. Click **continue** and enter the full path.
+4.  Configure the settings to match your DB configuration and click **Apply Settings**
+5.  Select the **Schedule automatic backups for** checkbox and choose the hour of day.
+    -   Deselect this box to stop automatic backups  
+6.  For a custom location, specify a path and click **Change**
+7.  To automate deletion, select the **Delete backups older than** box and choose how many days before deletion.
+
+Backups are taken at the *HOUR* specified
+
+#### Restore DB Backups
+
+1.  Open JPS DB Utility
+
+    See Files and Folder Locations for you platform [macOS][], [Linux][], or [Windows][]
+
+2.  Enter the credentials for the server admin account and click **OK**
+3.  If the JPS is unable to locate the MySQL binary, it will prompt for the location. Click **continue** and enter the full path.
+4.  Configure the settings to match your DB configuration and click **Apply Settings**
+5.  Click **Restore Backups Now ...**
+6.  Select the backup (`.sql` or `.sql.gz`) that you would like to restore.
+7.  When prompted, [Restart Tomcat](#how-to-restart-tomcat-service "Restart Tomcat")
+
+[[top][]]
+<a name="adv-flushing-logs"></a>
+### Flushing Logs
+
+Flushing the logs reduce overall size or the DB and can speed up queries.
+
+*The following types of logs can be flushed*
+
+-   Application usage logs
+-   Computer usage logs
+-   Policy logs
+-   Casper remote logs
+-   Screen sharing logs
+-   Casper imaging logs
+-   Computer and mobile device management history logs
+-   JDS management history
+-   Computer inventory reports (from past inventory submissions)
+-   Mobile device inventory reports (from past inventory submissions)
+-   **JPS Acess Logs**
+-   **Change Management Logs**
+-   Event logs
+
+Log flushes can be scheduled or performed manually.
+
+For more info regarding which logs are flushed and DB tables that are affect see [Knowledge Base: Data and Tables Affected by Log Flushing](https://www.jamf.com/jamf-nation/articles/412/data-and-tables-affected-by-log-flushing "Data and Tables Affected by Log Flushing") and the Jamf Pro Admin Guide: [Flushing Logs](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Flushing_Logs.html "Flushing Logs")
+
+#### Schedule Log Flushing
+
+`Log in to the JPS > Settings > System Settings > Log Flushing > Edit`
+
+1.  Use the pop-up menus to choose the number of days, weeks, or months to flush logs.
+2.  Choose time of day from **Time to Flush Logs Each Day**
+3.  **Save**
+
+#### Manual Flush
+
+`Log in to the JPS > Settings > System Settings > Log Flushing > Flush Manually`
+
+1.  Select each type of log to be flushed
+2.  Choose how from back from the **Flush Logs Older Than** menu
+3.  Click **Flush**
+
+#### More Info
+
+*From Jamf Pro Admin Guide:*
+
+-   [Viewing and Flushing Policy logs for a computer](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Viewing_the_History_for_a_Computer.html#src-16441277_id-.ViewingtheHistoryforaComputerv10.0.0-VAFPLFAC "Viewing and Flushing Policy logs for a computer")
+
+-   [Viewing and Flushing Logs for a Policy](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Managing_Policies.html#src-16441296_id-.ManagingPoliciesv10.0.0-VAFLFAP "Viewing and Flushing Logs for a Policy")
+
+-   [Viewing the History for a Computer](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Viewing_the_History_for_a_Computer.html "Viewing the History for a Computer")
+
+-   [Viewing the Management History for a Mobile Device](http://docs.jamf.com/10.0.0/jamf-pro/administrator-guide/Viewing_the_History_for_a_Mobile_Device.html#src-16440111_id-.ViewingtheHistoryforaMobileDevicev10.0.0-VMHFAMD "Viewing the Management History for a Mobile Device")
+
+[[top][]]
+<a name="adv-migrate-server"></a>
+### Migrate to Another Server
+
+
+
+[[top][]]
+<a name="how-to"></a>
+## How To ...
+
+<a name="adv-restart-tomcat-service"></a>
+### Restart the Apache Tomcat Service
+
+jamf-nation Knowledge Base click [here](https://www.jamf.com/jamf-nation/articles/117/starting-and-stopping-tomcat "jamf-nation Knowledge Base: Starting and Stopping Tomcat")
+
+-   **macOS**
+
+    `sudo lauchctl unload /Library/LaunchDaemons/com.jamfsoftware.tomcat.plist`  
+    `sudo lauchctl load /Library/LaunchDaemons/com.jamfsoftware.tomcat.plist`
+
+-   **Linux**
+
+    *initd*  
+    `sudo /etc/init.d/jamf.tomcat8 restart`
+
+    *Systemd*  
+    `sudo systemctl restart jamf.tomcat8` (httpd??? or apache???)
+
+-   **Windows**
+
+    `Net stop Tomecat8`  
+    `Net start Tomcat8`
+
+[comment]: <> "Widely used reference links beyond this point"
+
+[top]: #toc                                     "Got to table of contents"
+[macOS]: #macos-installed-files-and-folders     "macOS install locations"
+[Linux]: #linux-installed-files-and-folders     "Linux install locations"
+[Windows]: #windows-installed-files-and-folders "Windows install locations"
+[Restart Tomcat]: #adv-restart-tomcat-service   "Restart the Apache Tomcat Service"
+
+Restarting the Apache Tomcat Service](#adv-restart-tomcat-service)
