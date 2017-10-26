@@ -166,7 +166,7 @@
 [[top](#top)]
 ### Web Browser Settings
 
--   [Chrome, Chromium, and Vivaldi Autofill Settings](chrome://settings/search#autofill)
+-   Chrome, Chromium, and Vivaldi Autofill Settings - `chrome://settings/search#autofill`
 
 [[top](#top)]
 ## Certifications
