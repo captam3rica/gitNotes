@@ -89,6 +89,25 @@
 <a name="scripting-and-languages"></a>
 ## Related to Scripting & Computer Languages
 
+### Atom Customization ...
+
+```css
+// Selection color - added by captam3rica
+atom-text-editor::shadow .selection .region {
+    background-color: #eb2d53;
+}
+
+// To style other content in the text editor's shadow DOM, use the ::shadow expression
+atom-text-editor::shadow .cursor {
+  border-color: #eb2d53;
+}
+
+// Minimap cursor color style
+.minimap .cursor-line {
+    background: #eb2d53;
+}
+```
+
 <a name="markdown"></a>
 ### Markdown
 
@@ -98,13 +117,17 @@
 - [Brett Terpstra: Write Better Markdown](http://brettterpstra.com/2015/08/24/write-better-markdown/)
 
 - [vim-markdownfmt](https://github.com/moorereason/vim-markdownfmt)
+
 - Table of contents
+
+    ```md
+    # Markdown syntax
 
       # Table of contents
       1. [Introduction](#introduction)
       2. [Some paragraph](#paragraph1)
-      1. [Sub paragraph](#subparagraph1)
-      3. [Another paragraph](#paragraph2)
+      3. [Sub paragraph](#subparagraph1)
+      4. [Another paragraph](#paragraph2)
 
       ## This is the introduction <a name="introduction"></a>
       Some introduction text, formatted in heading 2 style
@@ -115,8 +138,10 @@
       ### Sub paragraph <a name="subparagraph1"></a>
       This is a sub paragraph, formatted in heading 3 style
 
-      ## Another paragraph <a name="paragraph2"></a>
+      <a name="paragraph2"></a>
+      ## Another paragraph
       The second paragraph text
+    ```
 
 [[top](#top)]
 ### Bash
