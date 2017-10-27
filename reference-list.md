@@ -3,8 +3,8 @@
 <a name="top"></a>
 ## TOC
 
-1. [Related to Scripting & Computer Languages](#scripting-and-languages)
-    1. [Markdown](#markdown)
+1.  [Related to Scripting & Computer Languages](#scripting-and-languages)
+    1.  [Markdown](#markdown)
 
 ## Related to Mac OS Support & Administration
 
@@ -15,6 +15,7 @@
 ### App Stuff ...
 
 -   [Jamf](jamf.com "jamf Mac administration")
+
     -   [jampPro Admin Admin Guide](http://docs.jamf.com)  
     -   [jamf Developer](http://developer.jamf.com/index "jamf Developter portal")
     -   [jamf Marketplace](marketplac.jamf.com "jamf curated apps")
@@ -28,23 +29,23 @@
 
 -   **Apple**
 
-    -    [macOS Builds](https://support.apple.com/en-us/HT201260)
-    -    [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
-    -   [Mac Startup Cmd Options](https://support.apple.com/en- us/HT201255)
-    -    [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
+    -   [macOS Builds](https://support.apple.com/en-us/HT201260)
+    -   [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
+    -   [Mac Startup Cmd Options](https://support.apple.com/en-us/HT201255)
+    -   [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
 
--    [IBM SPSS Documentation](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/ "Documentation for IBM SPSS")
+-   [IBM SPSS Documentation](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/ "Documentation for IBM SPSS")
 
 [[top](#top)]
 ## Unix & GNU/Linux
 
--  [Sane scanner](https://wiki.archlinux.org/index.php/SANE)
+-   [Sane scanner](https://wiki.archlinux.org/index.php/SANE)
 
--  Linux Journey - https://linuxjourney.com/lesson/etc-group-file
+-   Linux Journey - https://linuxjourney.com/lesson/etc-group-file
 
--  netboot.xyz
+-   netboot.xyz
 
--  Banking with a live cd: http://krebsonsecurity.com/2012/07/banking-on-a-live-cd/
+-   Banking with a live cd: http://krebsonsecurity.com/2012/07/banking-on-a-live-cd/
 
 -  SSH Tricks: http://www.linuxjournal.com/article/6602
 
