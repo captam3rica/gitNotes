@@ -7,7 +7,7 @@
     1.  [Installed Files & Folders](#macos-installed-files-and-folders)
     2.  [Requirements](#macos-requirements)
 2.  [Linux](#linux)
-    1.  [Installed Files & Folders](#linux-installed-files-and-folders)
+    1.  [File & Folder Locations](#linux-file-and-folder-locations)
     1.  [Requirements](#linux-requirements)
 3.  [Windows](#windows)
     1.  [Installed Files & Folders](#windows-installed-files-and-folders)
@@ -15,13 +15,13 @@
 4.  [jamfPro Server Installation](#jps-installation)
     1.  [Requirements](#jps-installation-requirements)
     1.  [Database Creation](#jps-database-creation)
-    1.  [Run the JSS Installer](#jps-run-installer)
-    1.  [Upgrading the JSS](#upgrading-jps-server)
+    1.  [Run the JPS Installer](#jps-run-installer)
+    1.  [Upgrading the JPS](#upgrading-jps-server)
 5.  [Setting up the JPS Server](#setting-up-jps-server)
     1.  [Default Configuration Files](#jps-default-config)
     1.  [Network Ports Used](#network-ports-used)
-6.  [User Accounts & Groups](#user-accounts-and-groups)
-        1. [LDAP Integration](#ldap-integration)
+6.  [JPS Setup](#jps-setup)
+        1.  [LDAP Integration](#ldap-integration)  
     1.  [JPS User Group Creation](#jps-user-group-creation)
     2.  [JPS User Account Creation](#jps-user-account-creation)
     3.  [Account Preferences](#jps-account-preferences)
@@ -62,6 +62,7 @@
     1.  [Migrate to Another Server](#adv-migrate-server)
 14. [How To ...](#how-to)
     1.  [Restart the Tomcat Service](#how-to-restart-tomcat-service)
+    1.  [Generate an SSL Cert Using OpenSSL](#how-to-generate-ssl-cert)
 
 
 [[top][]]
@@ -72,22 +73,21 @@
 <a name="macos-installed-files-and-folders"></a>
 ### Installed Files and Folders
 
-The following files and folders are installed when you run the JSS Installer and everything can be found in `/Library/JSS` or `/Library/JDS/` with the exception of the *LaunchDaemon*:
+The following files and folders are installed when you run the JPS Installer and everything can be found in `/Library/JPS` or `/Library/JDS/` with the exception of the *LaunchDaemon*:
 
--   JSS web application - `/Library/JSS/Tomcat/webapps/ROOT/`
--   Apache Tomcat - `/Library/JSS/`
--   server.xml - `/Library/JSS/Tomcat/conf/`
--   This is a modified version of the default *Tomcat* config.
--   Enables SSL, ensures that the JSS appears in the *root* context, and enables database connection pooling.
--   com.jamfsoftware.tomcat.plist - `/Library/LaunchDaemons`
--   keystore - `/Library/JSS/Tomcat/`
-    -   Tomcat requrires a *.keystore* file to provide connections over SSL
-    -   JSS Database Utility - `/Library/JSS/bin/`  
-        -   JSSDatabaseUtil.jar
--   Database backup location - `/Library/JSS/Backups/Database`
--   **Logs** - `/Library/JSS/Logs/`
--   **JDS Instance** - `/Library/JDS/`
-    -   More info on *JDS* install files [here](https://www.jamf.com/jamf-nation/articles/339/components-installed-on-jds-instances)
+| App/Files | Location |
+| :------------- | :------------- |
+| JPS web application | `/Library/JPS/Tomcat/webapps/ROOT/` |
+| Apache Tomcat   | `/Library/JPS/`  |
+| **server.xml** - This is a modified version of the default *Tomcat* config. Enables SSL, ensures that the JPS appears in the *root* context, and enables database connection pooling. | `/Library/JPS/Tomcat/conf/` |
+| com.jamfsoftware.tomcat.plist  | `/Library/LaunchDaemons` |
+| keystore - Tomcat requrires a *.keystore* file to provide connections over SSL -  | `/Library/JPS/Tomcat/` |
+| JPS Database Utility  | `/Library/JPS/bin/JPSDatabaseUtil.jar` |
+| Database backup location | `/Library/JPS/Backups/Database`  |
+| **Logs**  | `/Library/JPS/Logs/`  |
+| **JDS Instance** | `/Library/JDS/`  |
+
+-   More info on *JDS* install files [here](https://www.jamf.com/jamf-nation/articles/339/components-installed-on-jds-instances)
 
 [[top][]]
 <a name="macos-requirements"></a>
@@ -130,15 +130,44 @@ The following files and folders are installed when you run the JSS Installer and
 <a name="linux"></a>
 ## Linux
 
-#### JDS Installer for Linux
+<a name="linux-file-and-folder-locations"></a>
+### File & Folder Locations
 
--   An Intel processor
--   2 GB of RAM
--   100 GB of disk space available
--   One of the following operating systems:
-    -   Ubuntu 10.04 LTS - Ubuntu .04 LTS Server
+| App/Files | Location |
+| :------------- | :------------- |
+| JPS web application | `/usr/local/jss/tomcat/webapps/ROOT/` |
+| Apache Tomcat   | `/usr/local/jss/`  |
+| **server.xml** - This is a modified version of the default *Tomcat* config. Enables SSL, ensures that the JPS appears in the *root* context, and enables database connection pooling. | `/usr/local/jss/tomcat/conf/` |
+| Tomcat service file  | `/etc/init.d/jamf.tomcat8` |
+| keystore - Tomcat requrires a *.keystore* file to provide connections over SSL -  | `/usr/local/jss/tomcat/` |
+| JPS Database Utility  | `/usr/local/jss/bin/JPSDatabaseUtil.jar` |
+| Database backup location | `/usr/local/jss/backups/database/`  |
+| **Logs**  | `/usr/local/jss/logs/`  |
+| **JDS Instance** | ``  |
+
+### JDS Installer for Linux
+
+The JSS Installer for Linux requires the following:
+
+-   Minimum operating systems:
+
+    -   Ubuntu 12.04 LTS Server (64-bit)
+
     -   Red Hat Enterprise Linux (RHEL) 6.4, 6.5, 6.6, or 7.0
-    **Note**: To install a JDS instance on a Linux operating system that is running on a virtual machine, you need a virtualization platform that provides **SMBIOS** information.
+
+-   Recommended operating systems:
+
+    -   Ubuntu 14.04 LTS Server (64-bit)
+
+    -   Ubuntu 16.04 LTS Server (64-bit)
+
+    -   Red Hat Enterprise Linux (RHEL) 6.8
+
+    -   Red Hat Enterprise Linux (RHEL) 7.3
+
+-   In addition, you need the following:
+
+    -   A 64-bit capable Intel processor
 
 [[top][]]
 <a name="windows"></a>
@@ -157,7 +186,7 @@ The following files and folders are installed when you run the JSS Installer and
     -   [Windows](#windows-requirements)
 
 <a name="jps-database-creation"></a>
-### Database Creation
+### Database Creation (macOS & Linux)
 
 1.  Open a **Terminal** to access the **MySQL** command line
 
@@ -177,15 +206,49 @@ The following files and folders are installed when you run the JSS Installer and
     `GRANT ALL ON [server-name].* TO '[username]'@'localhost';`
 
 <a name="jps-run-installer"></a>
-### Run the JSS Installer
+### Run the JPS Installer (macOS)
 
--   The **JSS Installer.mpkg** installs *Apache Tomcat* and the *JSS web app*
+-   The **JPS Installer.mpkg** installs *Apache Tomcat* and the *JPS web app*
 
 <a name="upgrading-jps-server"></a>
-### Upgrading the JSS
+### Upgrading the JPS
 
-1.  Backup the *JSS DB* using the *JSS Database Utility*
-2.  Copy the latest *JSS Installer* to the macOS server.
+1.  Backup the *JPS DB* using the *JPS Database Utility*
+2.  Copy run the latest *JPS Installer* to the macOS server.
+
+[[top](toc)]
+<a name="jps-run-installer-linux"></a>
+### Run the JPS Installer (Linux)
+
+3.  Initiate the installer by executing a command similar to the following:
+
+    `sudo sh /path/to/jssinstaller.run`
+
+4.  When the requirement check is complete, type "y" to proceed.
+
+5.  (RHEL only) When the installation is complete, edit the firewall configuration to allow access to port 8443 by executing:
+
+    `sudo system-config-firewall-tui`
+
+6.  (**RHEL only**) Choose Other or Customize , and manually add port 8443 with TCP protocol. The option you choose depends on whether you have a GUI or shell-only interface.
+
+7.  Access the JSS by opening a web browser and typing the protocol, IP address or hostname of the server, and port. For example:
+
+    `https://jss.mycompany.com:8443/`
+
+8.  If you entered a custom database name, username, or password when you created the jamfsoftware database, or MySQL is using a port other than 3306, the Database Connection Properties pane is displayed. Before you can access the JSS, you must follow the onscreen instructions to create a connection between the JSS and the jamfsoftware database.
+
+<a name="upgrading-jps-server-linux"></a>
+### Upgrading the JPS
+
+1.  Back up the current database using the JSS Database Utility.
+For more information, see Backing Up the Database .
+
+2.  Copy the latest version of the JSS Installer for Linux ( `jssinstaller.run` ) to the server.
+
+3.  Log in to the server as a user with superuser privileges and run the following command and follow the onscreen prompts.
+
+    `sudo sh /path/to/jssinstaller.run`
 
 [[top][]]
 <a name="setting-up-jps-server"></a>
@@ -204,8 +267,11 @@ The following files and folders are installed when you run the JSS Installer and
 -   [JPS Knowledge Base](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro)
 
 [[top][]]
+<a name="jps-setup"></a>
+### Setup
+
 <a name="user-accounts-and-groups"></a>
-## User Accounts & Groups
+### User Accounts & Groups
 
 | User | Definition     |
 | :------------- | :------------- |
@@ -524,7 +590,7 @@ By default, the first **DP** add to the JPS is the **Master DP**. The master is 
 | **Files that can be hosted**   | Packages, Scripts  | Packages, In-house apps, In-house eBooks, **Note**: if cloud it's used, scripts will be stored in the **jamf software database** | Packages, In-house apps, In-house eBooks, **Note**: if cloud it's used, scripts will be stored in the **jamf software database** |
 | **Parent-Child Capabilities**   | No  | No | Yes |
 | **File Replication Method**   | Replication to file share DPs must be initiated from jamf Admin  | Replication to a cloud DP must be initiated from jamf Admin | Replication to **root JDS** instance must be initiated from jamf Admin. Replication to **non-root JDS** instances happen automatically and immediately |
-| **Selective Replication**   | Not available when replicating to file share DPs | Available when replicating to **Cloud** DP if the **master** DP is the **JDS instance** or **file share** DP. The files for replication must specify in the JPS and the replication initiated from jamf admin | Not available when replicating to **root JDS** instances. Available when replicating to **non-root JDS** instances. The files for replication must be specified in the JPS. The replication from non-root parent to child instances is initiated on check-in with the JSS
+| **Selective Replication**   | Not available when replicating to file share DPs | Available when replicating to **Cloud** DP if the **master** DP is the **JDS instance** or **file share** DP. The files for replication must specify in the JPS and the replication initiated from jamf admin | Not available when replicating to **root JDS** instances. Available when replicating to **non-root JDS** instances. The files for replication must be specified in the JPS. The replication from non-root parent to child instances is initiated on check-in with the JPS
 
 [[top][]]
 <a name="dp-file-shares"></a>
@@ -806,7 +872,7 @@ JPS must be the root web app, and the user running the Tomcat process must have 
 
 #### More Info
 
--   [Using OpenSSL to Create a Certificate Keystore for Tomcat](https://www.jamf.com/jamf-nation/articles/138/using-openssl-to-create-a-certificate-keystore-for-tomcat "Using OpenSSL to Create a Certificate Keystore for Tomcat")
+-   [Generate an SSL Certificate using OpenSSL](#how-to-generate-ssl-cert "Using OpenSSL to Create a Certificate Keystore for Tomcat")
 
 [[top][]]
 <a name="adv-configure-load-balancer"></a>
@@ -939,7 +1005,7 @@ The load balancer should route traffic to the servers running the JPS web app.
 #### More Info
 
 -   [Knowledge Base: Caching Configuration](https://www.jamf.com/jamf-nation/articles/428/memcached-installation-and-configuration-for-clustered-jamf-pro-environments "Caching Configuration")
--   [Knowledge Base: Installing JPS Web App in DMZ](https://www.jamf.com/jamf-nation/articles/174/installing-a-jss-web-application-in-the-dmz "Installing JPS Web App in DMZ")
+-   [Knowledge Base: Installing JPS Web App in DMZ](https://www.jamf.com/jamf-nation/articles/174/installing-a-JPS-web-application-in-the-dmz "Installing JPS Web App in DMZ")
 
 [[top][]]
 <a name="adv-limited-access-settings"></a>
@@ -1070,13 +1136,35 @@ For more info regarding which logs are flushed and DB tables that are affect see
 <a name="adv-migrate-server"></a>
 ### Migrate to Another Server
 
+1.  Back up the existing jamfsoftware database using the JPS Database Utility.
 
+For more information, see [Backing Up the Database](#adv-backing-up-the-db).
+
+2.  Ensure that the new server meets the requirements for the JPS Installer, and then follow the instructions in [Installing the JPS](#jps-installation) to install the required software (if needed) and create the jamfsoftware database.
+
+3.  Copy the JPS Installer to the new server.
+
+4.  Install the JPS by launching the installer and following the onscreen instructions.
+
+For more information, see [Installing the JPS](#jps-installation)
+
+5.  Copy the database backup to the new server, and then use the JPS Database Utility to restore the backup.
+
+For more information, see [Restoring Database Backups](#adv-backing-up-the-db) .
+
+6.  Re-upload or create the SSL certificate.
+
+For more information, see [SSL Cert creation][] .
+
+7.  Update the DNS entry to point to the new server’s IP address.
+
+**Note**: If you can’t change the DNS entry, you must change the JPS URL and re-enroll all mobiledevices and computers.
 
 [[top][]]
 <a name="how-to"></a>
 ## How To ...
 
-<a name="adv-restart-tomcat-service"></a>
+<a name="how-to-restart-tomcat-service"></a>
 ### Restart the Apache Tomcat Service
 
 jamf-nation Knowledge Base click [here](https://www.jamf.com/jamf-nation/articles/117/starting-and-stopping-tomcat "jamf-nation Knowledge Base: Starting and Stopping Tomcat")
@@ -1099,12 +1187,44 @@ jamf-nation Knowledge Base click [here](https://www.jamf.com/jamf-nation/article
     `Net stop Tomecat8`  
     `Net start Tomcat8`
 
+[top[]]
+<a name="how-to-generate-ssl-cert"></a>
+### Generate an SSL Cert Using OpenSSL
+
+The following components are required to create a keystore for Tomcat:
+
+-   OpenSSL
+-   Private key with a .key file extension from CA
+-   SSL certificate file from CA
+-   Certificate bundle from CA
+
+1.  From **Terminal** run
+
+        openssl pkcs12 -export -in mycert.crt -inkey mykey.key -out mycert.p12 -name tomcat -CAfile myCA.crt -caname root -chain
+
+2.  Enter a *passphase* when prompted.
+
+    **Note**: The passphase chosen will need to be specified in the `server.xml` file.
+
+3.  Move the newly created `.p12` file to the *root* of the Tomcat directory.
+
+    See Tomcat root location for your platform: [macOS][], [Linux][], or [Windows][]
+
+4.  Update the line `keystoreFile` in the `server.xml` file so that it reflects the name of the new `.p12` bundle file (do not include `[]` in your file name)
+
+    `keystoreFile=[your-new-bundle.p12]`
+
+5.  Modify the `server.xml` file to include the line:
+
+    `keystoreType="PKCS12"`
+
+6.  [Restart Tomcat][]
+
 [comment]: <> "Widely used reference links beyond this point"
 
-[top]: #toc                                     "Got to table of contents"
-[macOS]: #macos-installed-files-and-folders     "macOS install locations"
-[Linux]: #linux-installed-files-and-folders     "Linux install locations"
-[Windows]: #windows-installed-files-and-folders "Windows install locations"
-[Restart Tomcat]: #adv-restart-tomcat-service   "Restart the Apache Tomcat Service"
-
-Restarting the Apache Tomcat Service](#adv-restart-tomcat-service)
+[top]: #toc                                         "Got to table of contents"
+[macOS]: #macos-installed-files-and-folders         "macOS install locations"
+[Linux]: #linux-installed-files-and-folders         "Linux install locations"
+[Windows]: #windows-installed-files-and-folders     "Windows install locations"
+[Restart Tomcat]: #how-to-restart-tomcat-service    "Restart the Apache Tomcat Service"
+[SSL Cert creation]: #how-to-generate-ssl-cert               "Create SSL Certs for Tomcat"
