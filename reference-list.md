@@ -90,6 +90,10 @@
 <a name="scripting-and-languages"></a>
 ## Related to Scripting & Computer Languages
 
+### Vim Customization
+
+- [NerdTree Doc](https://github.com/scrooloose/nerdtree/blob/master/doc/NERDTree.txt)
+
 ### Atom Customization ...
 
 ```css
