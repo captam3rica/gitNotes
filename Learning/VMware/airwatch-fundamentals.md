@@ -134,21 +134,21 @@ Wed Nov  1 08:43:32 EDT 2017
 
 -   Single server: Less than 5000 non crit endpoints and proof of concept
 
-![On-Prem Single Server Photo here](/home/captam3rica/Pictures/on-prem-single-server.png "single server on-prem")
+![On-Prem Single Server Photo here](/images/2017/10/on-prem-single-server.png "single server on-prem")
 
 -   Multi server:
 
     -   Dedicated or shared servers
     -   AW Device Services Server can go in DMZ so that mobile endpoints never connect directly to the AW Control Server.
 
-![On-Prem Multi Server Photo here](/home/captam3rica/Pictures/on-prem-multi-server.png "multi server on-prem")
+![On-Prem Multi Server Photo here](/images/2017/10/on-prem-multi-server.png "multi server on-prem")
 
 
 -   On-prem high availability
 
     -   Add a load balancer with multiple AWDS servers
 
-![On-Prem High Availability Photo here](/home/captam3rica/Pictures/on-prem-high-availability.png "high availability on-prem")
+![On-Prem High Availability Photo here](/images/2017/10/on-prem-high-availability.png "high availability on-prem")
 
 
 -   On-Prem Disaster Recovery
@@ -157,21 +157,21 @@ Wed Nov  1 08:43:32 EDT 2017
     -   See *VMware AW Recommended Arch Guide*
 
 
-![On-Prem DR  Photo here](/home/captam3rica/Pictures/on-prem-dr.png "DR on-prem")
+![On-Prem DR  Photo here](/images/2017/10/on-prem-dr.png "DR on-prem")
 
 
 #### SaaS (Pure cloud & Hybrid) - Most common install
 
 -   Pure Cloud
 
-![Pure Cloud Photo here](/home/captam3rica/Pictures/aw-pure-cloud.png "Pure Cloud")
+![Pure Cloud Photo here](/images/2017/10/Pictures/aw-pure-cloud.png "Pure Cloud")
 
 
 -   Hybrid Cloud
 
     -   For orgs that want the flexibility of the cloud and want to integrate AW with internal back-end resources as well.
 
-![Hybrid Cloud  Photo here](/home/captam3rica/Pictures/aw-hybrid-cloud.png "Hybrid Cloud")
+![Hybrid Cloud  Photo here](/images/2017/10/aw-hybrid-cloud.png "Hybrid Cloud")
 
 
 -   SaaS Hosting Solutions
