@@ -176,7 +176,7 @@ Wed Nov  1 08:43:32 EDT 2017
 
 -   SaaS Hosting Solutions
 
-![SaaS Hosting Photo here](/images/2017/aw-saas-hosting.png "SaaS hosting solutions")
+![SaaS Hosting Photo here](/images/2017/10/10/10/10/10/10/10/10/10/10/aw-saas-hosting.png "SaaS hosting solutions")
 
     -   Hosted (Shared solution) and Managed Hosted (Dedicated Solution)
     -   See *Dedicated SaaS Overview Guide*
