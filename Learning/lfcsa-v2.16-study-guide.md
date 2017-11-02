@@ -1,4 +1,4 @@
-#Linux Foundation Certified Sys Admin (LFCSA v2.16)
+# Linux Foundation Certified Sys Admin (LFCSA v2.16)
 
 ## Essentials 
 
@@ -102,6 +102,9 @@
 -   tar -xzvf filename.tar.gz .
 -   --exclude=filname.txt: put this at the end of the cammand to add exclusions.
 -   -p: will preserve ownership and file permissions 
+-   tar -tvf: look at the contents of the archive without unpacking 
+-   tar -rvf file.tar file.txt or dir/file.txt: append a file to an archive. 
+-   tar -zvcf exclusion.tar.gz mybkup/ --exclude 'mybkup/ssh': this will exclude the ssh directory within the mybkup directory
 
 
 ### File Attributes
