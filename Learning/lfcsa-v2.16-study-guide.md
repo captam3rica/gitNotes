@@ -74,23 +74,47 @@ Mon Nov  6 15:45:45 EST 2017
 
 ### Searching for files
     
+#### find
+
 -   search with the -name of the "file"
--   -i: search ignoring case 
+-   -iname: search ignoring case 
 -   -not: search for every thing execept 
 -   c: find character devices (dev)
+-   -executable; -readable; writeable
+-   -perm [mode]: files permissions are exactly (octal or symbolic) - ie 700, 644, etc.
 -   -type l: for symbolic links 
+-   -type f: file
+-   -type d: directory
+-   -d, -depth: process the contents of the directory before the directory itself
+-   -maxdepth [level] or mindepth [level]
 -   -size: find the size of files (less than or greater than)
         
     -   1M, 24000c, 1K, 1G
-    
+
+-   -group [group-name]: find files with a given group name
 -   find  -atime -1:  access less than a day ago 
 -   -mtime: modification time
+
+Full Command Lines ...
+
 -   find / -user syslog: all files owned by syslog
 -   find / -perm 755: find all files with permissions 755
+-   find / -type f -name "some-file.txt" -exec ls -lth {} \; - only look for files name "some-file.txt" then execute the "ls" command.
+-   sudo find / -type f -name "myTesT.txt" -exec chmod 707 {} \; -exec ls -l {} \; - find the file named "myTesT.txt", change the permissions, then list the file with a long listing.
+
+
+Fun fact
+
+- The following command will create a loop that will look a each line individually until complete. I broke my shell doing this my accident ... :)
+
+    -   sudo find / -type f -name "*.txt" -exec less {} \;
+
+#### locate
+
 -   locate 
         
     -   sudo updatedb 
-    -   locate filename
+    -   locate filename filename filename ...
     -   must know the exact name, including case, inorder to use locate. 
 
 
