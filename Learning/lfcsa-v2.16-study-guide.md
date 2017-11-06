@@ -105,7 +105,7 @@ Full Command Lines ...
 
 Fun fact
 
-- The following command will create a loop that will look a each line individually until complete. I broke my shell doing this my accident ... :)
+- The following command will  will you to look a each line individually until complete. I broke my shell doing this by accident ... :)
 
     -   sudo find / -type f -name "*.txt" -exec less {} \;
 
