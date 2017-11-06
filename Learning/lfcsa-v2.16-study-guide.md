@@ -39,20 +39,20 @@ Mon Nov  6 15:45:45 EST 2017
 ### du
 
 -   `du -sch /some/dir`
--   `c` or `--total` - total size 
--   `s` - summarize
--   `h` - human-readable
+-   `c` or `--total`: total size 
+-   `s`: summarize
+-   `h`: human-readable
 
 
 ### sort
 
--   `-h` - human-readable numeric sort (ascending)
+-   `-h`: human-readable numeric sort (ascending)
 -   -r: reverse order 
 
 
 ###  uniq
 
--   `-c` - count the uniq number of occurences
+-   `-c`: count the uniq number of occurences
 -   `-w [n]` - the first \[n\] characters in a line
     
     
@@ -117,7 +117,7 @@ Mon Nov  6 15:45:45 EST 2017
     
     -   chmod u+s
 
--   **setgid** - any user can access the directory with the permissions of the group owner
+-   **setgid**: any user can access the directory with the permissions of the group owner
 
     -   Anything under the parent directory will also get the permissions of the group when the **setgid** option (chmod g+s)is specified on the group 
     -   Usually when members of a group need access to all files in a directory regarless of who owns the primary group 
@@ -129,9 +129,9 @@ Mon Nov  6 15:45:45 EST 2017
     -   Usually set on directories that a "world" write able. 
     -   Prevents a user from removing a file that they do not own inspite of the permissions that are set.
 
-- lsattr - show special attributes if they exist
+- lsattr: show special attributes if they exist
 - chattr 
-    -   i: immutable - cannot delete a file, even as root
+    -   i: immutable: cannot delete a file, even as root
     -   a: append mode
 
 
@@ -158,29 +158,32 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 -   top
 -   htop (install after the fact)
--   free - see memory utilzation
+-   free: see memory utilzation
     
-    -   cache aka paging - used to speedup i/o if memory space allows
+    -   cache aka paging: used to speedup i/o if memory space allows
 
--   df - disk space usage 
+-   df: disk space usage 
     
-    -   df -hTi - check inodes - file system reference
+    -   df -hTi: check inodes - file system reference
     
         -   Can find and delete empty inodes 
 
--   du - disk utilization
+-   du: disk utilization
         
-    -   du -sch /dir/* - summary of space utilized 
+    -   du -sch /dir/*: summary of space utilized 
 
-- ps - process management 
 
-    -   ps ef - every process, full format listing 
+- ps : process management 
+
+    -   ps ef: every process, full format listing 
     -   ps -aux | grep -i \[search\] | grep -v \[what you want to omit\]
-    
+    -   ps -aujf: running processes in a tree view
+
+
 -   log files 
     
-    -   dmesg - print or control kernel ring buffer
-    -   journalctl - query the systemd journal
+    -   dmesg: print or control kernel ring buffer
+    -   journalctl: query the systemd journal
     
 
 
