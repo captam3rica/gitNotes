@@ -72,7 +72,7 @@ Mon Nov  6 15:45:45 EST 2017
 -   -f1-n: this is the column number for the text input
   
 
-### Searching for files
+### Searching ...
     
 #### find
 
