@@ -1,4 +1,7 @@
-# Linux Foundation Certified Sys Admin (LFCSA v2.16)
+# Linux Foundation Certified Sys Admin (LFCSA v2.16) - Study Guide
+
+Mon Nov  6 15:45:45 EST 2017
+
 
 ## Essentials 
 
@@ -177,7 +180,7 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 -   log files 
     
     -   dmesg - print or control kernel ring buffer
-   
+    -   journalctl - query the systemd journal
     
 
 
