@@ -13,17 +13,6 @@ Mon Nov  6 15:45:45 EST 2017
 -   can use strings like '1 year from now'
 
 
-### vim
-
--   Lookup shift+U
--   Look up editing with split view (vim -O\[N\] or tabs vim -p\[N\])
-
-    
-### cat
-    
--   combining text 
-
-
 ### sed (stream editor)
 
 -   `sed 's/oldtext/newtext/g' \[textfile.txt\]`
@@ -59,11 +48,6 @@ Mon Nov  6 15:45:45 EST 2017
 ### fmt - format text
     
 -   fmt filename.txt > newfilename.txt
-
-
-### nl 
-
-- number of lines in a file
 
 
 ### cut
@@ -208,9 +192,4 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
     
     -   dmesg: print or control kernel ring buffer
     -   journalctl: query the systemd journal
-    
-
-
-
-
 
