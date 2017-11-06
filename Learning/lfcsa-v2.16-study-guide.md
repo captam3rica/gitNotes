@@ -134,7 +134,7 @@
 
 ### Transfer Files Securely
 
-For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master/Linux/generating-ssh-keys.md" target="_blank" title="Generating SSH Keys">generating-shh-keys</a>
+For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master/Linux/generating-ssh-keys.md" target="external" titl="ienerating SSH Keys">generating-shh-keys</a>
 
 #### SCP
 
