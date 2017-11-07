@@ -185,11 +185,58 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
     -   ps ef: every process, full format listing 
     -   ps -aux | grep -i \[search\] | grep -v \[what you want to omit\]
-    -   ps -aujf: running processes in a tree view
+    -   ps -axjf: running processes in a tree view
 
 
 -   log files 
     
     -   dmesg: print or control kernel ring buffer
     -   journalctl: query the systemd journal
+
+
+## Operating on Running Systems
+
+### Process Priority & Resource Utilization
+
+-   pgrep: find a process id for a process
+
+-   kill [options] [pid]
+
+    -   kill -KILL: another way to send a kill signal. Given to the OS to shutdown the process instead of directly to the process. (same as -9)
+    -   kill -HUP: hangup the process 
+
+
+-   nice: run process with modified scheduling priority
+
+    -   nice -n [priority -20 to 20]
+
+
+-   renice -n [priority] -g|-p|-u [id-of-process]: alter the priority of an already running process
+
+
+### Manage Startup Process and Services 
+
+-   upstart: debian and Ubuntu < 14.04
+
+    -   /etc/init/: process configuration files
+    -   echo "manual" | tee /etc/init/[service-name].override: this will put a process in a "stopped" or "waiting" state on boot as long as this file is in place. The name must be exactly as the service name.
+    -   status [process-name]
+
+
+-   systemd: Ubuntu 14.04 up, RHEL, CentOS, Arch, Fedora ...
+
+    -   Ubuntu
+
+        -   /etc/init
+        -   systemctl 16.04
+
+
+    -   CentOS
+
+        -   /etc/rc.d
+        -   /etc/rc.d/init.d: All of the runlevels
+    
+
+    -   /etc/systemd/system: service runlevel targets
+    -   --now: when used with "enable", will start the process as well
 
