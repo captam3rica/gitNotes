@@ -240,3 +240,76 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
     -   /etc/systemd/system: service runlevel targets
     -   --now: when used with "enable", will start the process as well
 
+
+### Package Management (Debian/Ubuntu)
+
+-   dpkg - .deb 
+
+    -   dpkg -l: list the installed packages 
+    -   dpkg -L [package names]: list all of the files and dirs created after a packages is installed
+    
+
+- apt-get
+    
+    -   apt-cache pkgnames: see installed packages 
+    -   apt-cache search 
+    -   apt-cache show [package-name]: information about a package
+    -   apt-cache stats: information about packages in the cache
+    -   apt-get autoclean: clean the package cache
+        
+        -   /var/cache/apt/archives: contain cached .deb files
+      
+    - /etc/apt/sources.list: list of repos
+    -   apt-get update && apt-get upgrade: to upgrade
+    -   apt-get dist-upgrade: upgrade the distro
+
+        -   will determine which packages are compatible or which are not
+
+    -   apt-get remove --purge [package-name]
+
+        -   apt-get purge [package-name]: is an option, but not the best 
+
+    -   apt-get download [package name]
+        
+        -   Will download to the pwd 
+        -   Make sure that all deps are there (the distro will tell what is needed)
+        -   dpkg -i [depfile.deb]
+
+    -   apt-get changelog [packag name]
+    -   apt-get check: let us know which deps may be broken
+
+        -   apt-get build-dep [package name]: grab and build deps packages for a give package
+
+
+-   aptitude is a fronted for dpkg. Similar to ncurses 
+
+
+### Package Management (CentOS & RHEL)
+
+-   yum (yellow dog updater) - from Yellow Dog Linux
+    
+    -   What should you do the first time you login to a newly installed system - yum check-update && yum update
+    -   yum list [packag]: get version information and whether or not the package is accepting updates 
+    -   yum search [package] and yum list | grep [package] are synonymous 
+    -   yum info [package]
+    -   yum-utils: extra utilities revolving around yum
+        
+        -   yumdownloader [package]: to get the .rpm only
+
+    -   yum list | less: see a list of available packages in the yum db, the versions, and the repos that they belong to.
+    -   yum list installed: see a list of locally installed packages 
+    -   yum grouplist: see a list of group packages 
+        
+        -   yum groupinstall ['group name']
+        -   yum groupupdate
+        -   yum groupremove ['group name']
+    
+    -   yum repolist
+        
+        -   yum repolist all
+
+
+
+-   rpm
+
+-   dnf
