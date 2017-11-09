@@ -303,13 +303,45 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
         -   yum groupinstall ['group name']
         -   yum groupupdate
         -   yum groupremove ['group name']
-    
+
     -   yum repolist
         
         -   yum repolist all
+        -   yum --enablerepo=[repo-name] install [package-name]
+
+    -   yum clean all
+    -   yum history
+    -   yum remove [package-name]: will only remove the specified package. It will not remove the deps.
 
 
+-   rpm (RedHat Package Manager)
 
--   rpm
+    -   rpm -ivh
+    -   rpm -Uvh: if the package exists, upgrade it. Otherwise, install it. 
+    -   rpm *will not* install deps for a particular package
+        
+        -   can use **yum** to get deps
+        -   `yum install [package]`
+        -   `yum remove [package`
+        -   yum should have only removed the specified [package] and left the deps behind to be utilized by rpm or saved for later. 
 
--   dnf
+    -   rpm -q [package]: search to see if a particular package is installed and the version 
+    -   rpm -ql [package]: will query and list the files and folders associated with a given package
+    -   rpm -qa --last: will show the packages that were last installed or upgraded
+    
+        -   rmp -qa: will show everything 
+
+    -   rpm -evv [package]: to remove individual package files.
+    -   rpm -qdf [/dir/location/for/package/documentation/]: list locations for documentation that has the [package] name mentioned in it.
+    -   rpm -Va: verify rpm packages 
+    -   rpm --import: to import keys
+    -   rpm --qa  gpg-pubkey*: to show the gpg-public keys that have been imported
+    -   If receive a message stating that the **rpm** db has been corrupted, do the following ...
+
+        -   `cd /var/lib`
+        -   remove offending dbs 
+        -   `rpm --rebuilddb`: rebuild the rpm DB
+
+
+### Set File Permission & Ownership
+
