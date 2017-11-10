@@ -183,11 +183,23 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 - ps : process management 
 
-    -   ps ef: every process, full format listing 
-    -   ps -aux | grep -i \[search\] | grep -v \[what you want to omit\]
-    -   ps -axjf: running processes in a tree view
+    -   ps -e: list all processes (same as -A)
+    
+    -   ps -ef: every process, full format listing 
+    -   ps -ef | grep -i \[search\] | grep -v \[what you want to omit\]
+    -   ps -axjf: running processes in a tree view (similar to ps -ejH)
+    -   ps -eLf: see thread information 
+    -   ps -U [username] -u [username] u: see all process owned by a user
+    -   ps -aux: see all process regarless of user
+    -   ps aux: see all processes (BSD style)
+    -   ps au: list all process belonging to a terminal regardless of user (will list username)
+    -   ps t [tty#]: select based on tty#
+    -   ps -d: select all but session leaders 
+    -   ps r: select only the **running** processes 
+    -   ps -p [pid]: select based on process id (same as p & --pid, also -[pid #] ie -1234)
 
-
+    The use of BSD-style options will add process state **(stat=STAT)** to the default display and show the comma nd args **(args=COMMAND)** instead of the executable name. You can override this with the PS_FORMAT environment variable. The use of BSD-style options will also change the process selection to **include processes on other terminals (TTYs) that are owned by you**; alternately, this may be described as setting the selection to be the set of all processes filtered to exclude processes owned by other users or not on a terminal. 
+    
 -   log files 
     
     -   dmesg: print or control kernel ring buffer
@@ -203,7 +215,7 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 -   kill [options] [pid]
 
     -   kill -KILL: another way to send a kill signal. Given to the OS to shutdown the process instead of directly to the process. (same as -9)
-    -   kill -HUP: hangup the process 
+    -   kill -SIGHUP: hangup the process 
 
 
 -   nice: run process with modified scheduling priority
