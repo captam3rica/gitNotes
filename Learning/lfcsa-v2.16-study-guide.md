@@ -345,3 +345,23 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 ### Set File Permission & Ownership
 
+
+### Shell Scripting
+
+-   export PATH=$PATH:/your/scripts
+
+```sh
+while read HOST; do
+
+    ping -c 3 $HOST
+
+done < myhosts
+```
+
+```sh
+for this in 1 2 3 4 5; do
+
+    echo "This is line # $this"
+
+done
+```
