@@ -257,6 +257,8 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 **NOTE**: If you are a regular user remember to use *sudo* in front of these commands.
 
+[man apt-get](https://manpages.debian.org/stretch/apt/apt-get.8.en.html "Manual pages for apt-get")
+
 -   dpkg - .deb 
 
     -   dpkg -l: list the installed packages 
@@ -297,8 +299,8 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
     -   apt-get remove --purge [package-name]
 
         -   apt-get purge [package-name]: is an option, but not the best 
-
-    -   apt-get --download-only [package name]
+    
+    -   apt-get --download-only [package name] or apt-get download [package name]
         
         -   Will download to the pwd 
         -   Make sure that all deps are there (the distro will tell what is needed)
