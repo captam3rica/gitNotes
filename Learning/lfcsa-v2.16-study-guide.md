@@ -255,6 +255,8 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 ### Package Management (Debian/Ubuntu)
 
+**NOTE**: If you are a regular user remember to use *sudo* in front of these commands.
+
 -   dpkg - .deb 
 
     -   dpkg -l: list the installed packages 
@@ -264,15 +266,30 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 - apt-get
     
     -   apt-cache pkgnames: see installed packages 
+    
     -   apt-cache search 
+    
     -   apt-cache show [package-name]: information about a package
+    
     -   apt-cache stats: information about packages in the cache
-    -   apt-get autoclean: clean the package cache
+    
+    -   apt-get build-dep [package-name]: attempt to build deps for a package
+
+    -   apt-get clean: clean up the apt cache
+        
+        -   /var/cache/apt/archives/ and /var/cache/apt/archives/partial/
+
+    -   apt-get autoclean: clean any partial  package
         
         -   /var/cache/apt/archives: contain cached .deb files
-      
+        -   Like clean, autoclean clears out the local repository of retrieved package files. The difference is that it only removes package files that can no longer be downloaded, and are largely useless
+
+    -   apt-get autoremove: remove any unused deps
+
     - /etc/apt/sources.list: list of repos
+    
     -   apt-get update && apt-get upgrade: to upgrade
+    
     -   apt-get dist-upgrade: upgrade the distro
 
         -   will determine which packages are compatible or which are not
@@ -281,18 +298,20 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
         -   apt-get purge [package-name]: is an option, but not the best 
 
-    -   apt-get download [package name]
+    -   apt-get --download-only [package name]
         
         -   Will download to the pwd 
         -   Make sure that all deps are there (the distro will tell what is needed)
         -   dpkg -i [depfile.deb]
+    
+    -   apt-get --reinstall [package-name]: attempt to reinstall a package
 
     -   apt-get changelog [packag name]
+    
     -   apt-get check: let us know which deps may be broken
 
         -   apt-get build-dep [package name]: grab and build deps packages for a give package
-
-
+    
 -   aptitude is a fronted for dpkg. Similar to ncurses 
 
 
@@ -377,3 +396,51 @@ for this in 1 2 3 4 5; do
 
 done
 ```
+
+## User & Group Management 
+
+### Create, Delete, and Modify Local User Accounts 
+
+-   useradd [username]: add a user
+
+    -   useradd -m -d /home/[username] -s /bin/bash -c "Full Name of User" [username]
+
+-   adduser [username]: works in newer OSs 
+
+    -   Gives more info about the user being created 
+    
+    **NOTE**: Nolonger included in Arch Linux
+
+-   userdel [username]: will not delete the home dir of the user
+
+-   userdel -r [username]: This will remove the user and the user's home dir
+
+-   Defaults for `useradd` can be found: `/etc/defaults/useradd`
+
+-   chage -d 0 [username]: force the user to change their password on next login
+
+
+### Create, Delete, and Modify Local Groups
+
+-   groupadd [group-name]
+
+-   Can edit the `/etc/group` file directly.
+
+-   gpasswd [group-name]: to edit the password for a group
+
+-   newgrp [group-name]: to set permissions to a new group. 
+
+    -   There will be a password 
+
+-   chgrp [group-name] [filename]: to change the group ownership for a file
+
+
+### Use sudo to Access the root Account
+
+-   visudo: This will check syntax to make sure that nothing has been done that will prevent system login. 
+
+-   sudo su -: From a logging perspective, this is the best way to become the root user.
+
+-   Edit the `/etc/group` file directly and add the user to the *sudo* group.
+
+
