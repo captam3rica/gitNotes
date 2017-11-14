@@ -275,15 +275,13 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
     
     -   apt-cache stats: information about packages in the cache
     
-    -   apt-get build-dep [package-name]: attempt to build deps for a package
-
     -   apt-get clean: clean up the apt cache
         
         -   /var/cache/apt/archives/ and /var/cache/apt/archives/partial/
 
     -   apt-get autoclean: clean any partial  package
         
-        -   /var/cache/apt/archives: contain cached .deb files
+        -   /var/cache/apt/archives and /var/cache/apt/archives/partial/
         -   Like clean, autoclean clears out the local repository of retrieved package files. The difference is that it only removes package files that can no longer be downloaded, and are largely useless
 
     -   apt-get autoremove: remove any unused deps
