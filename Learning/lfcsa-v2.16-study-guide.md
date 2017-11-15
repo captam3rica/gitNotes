@@ -25,6 +25,14 @@ Mon Nov  6 15:45:45 EST 2017
 -   sed 's/[[:regex:]]/{1, } filename.txt
 
 
+### ls 
+
+-   ls -l file1 file2 file3
+-   ls -l $(tty) same as ls -l /dev/pts/1 
+
+        crw--w----. 1 tux tty 136, 1 Dec 27 14:56 /dev/pts/1
+
+
 ### du
 
 -   `du -sch /some/dir`
@@ -250,7 +258,12 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
     
 
     -   /etc/systemd/system: service runlevel targets
+    
     -   --now: when used with "enable", will start the process as well
+    
+    -   set-default graphical.target: make the graphical interface the default target
+
+    -   isolate graphical.target: this will cause the graphical interface to start immediately 
 
 
 ### Package Management (Debian/Ubuntu)
