@@ -278,113 +278,127 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
     -   dpkg -L [package names]: list all of the files and dirs created after a packages is installed
     
 
-- apt-get
+#### apt-get
     
-    -   apt-cache pkgnames: see installed packages 
+-   apt-cache pkgnames: see installed packages 
+   
+-   apt-cache show [package-name]: information about a package
     
-    -   apt-cache search 
+-   apt-cache stats: information about packages in the cache
     
-    -   apt-cache show [package-name]: information about a package
-    
-    -   apt-cache stats: information about packages in the cache
-    
-    -   apt-get clean: clean up the apt cache
+-   apt-get clean: clean up the apt cache
         
-        -   /var/cache/apt/archives/ and /var/cache/apt/archives/partial/
+    -   /var/cache/apt/archives/ and /var/cache/apt/archives/partial/
 
-    -   apt-get autoclean: clean any partial  package
+-   apt-get autoclean: clean any partial  package
         
-        -   /var/cache/apt/archives and /var/cache/apt/archives/partial/
-        -   Like clean, autoclean clears out the local repository of retrieved package files. The difference is that it only removes package files that can no longer be downloaded, and are largely useless
+    -   /var/cache/apt/archives and /var/cache/apt/archives/partial/
+    -   Like clean, autoclean clears out the local repository of retrieved package files. The difference is that it only removes package files that can no longer be downloaded, and are largely useless
 
-    -   apt-get autoremove: remove any unused deps
+-   apt-get autoremove: remove any unused deps
 
-    - /etc/apt/sources.list: list of repos
+- /etc/apt/sources.list: list of repos
     
-    -   apt-get update && apt-get upgrade: to upgrade
+-   apt-get update && apt-get upgrade: to upgrade
     
-    -   apt-get dist-upgrade: upgrade the distro
+-   apt-get dist-upgrade: upgrade the distro
 
-        -   will determine which packages are compatible or which are not
+    -   will determine which packages are compatible or which are not
 
-    -   apt-get remove --purge [package-name]
+-   apt-get remove --purge [package-name]
 
-        -   apt-get purge [package-name]: is an option, but not the best 
+    -   apt-get purge [package-name]: is an option, but not the best 
     
-    -   apt-get --download-only [package name] or apt-get download [package name]
+-   apt-get --download-only [package name] or apt-get download [package name]
         
-        -   Will download to the pwd 
-        -   Make sure that all deps are there (the distro will tell what is needed)
-        -   dpkg -i [depfile.deb]
+    -   Will download to the pwd 
+    -   Make sure that all deps are there (the distro will tell what is needed)
+    -   dpkg -i [depfile.deb]
     
-    -   apt-get --reinstall [package-name]: attempt to reinstall a package
+-   apt-get --reinstall [package-name]: attempt to reinstall a package
 
-    -   apt-get changelog [packag name]
+-   apt-get changelog [packag name]
     
-    -   apt-get check: let us know which deps may be broken
+-   apt-get check: let us know which deps may be broken
 
-        -   apt-get build-dep [package name]: grab and build deps packages for a give package
+    -   apt-get build-dep [package name]: grab and build deps packages for a give package
     
--   aptitude is a fronted for dpkg. Similar to ncurses 
+#### aptitude is a fronted for dpkg. Similar to ncurses 
 
 
 ### Package Management (CentOS & RHEL)
 
--   yum (yellow dog updater) - from Yellow Dog Linux
+#### yum (yellow dog updater) - from Yellow Dog Linux
     
-    -   What should you do the first time you login to a newly installed system - yum check-update && yum update
-    -   yum list [packag]: get version information and whether or not the package is accepting updates 
-    -   yum search [package] and yum list | grep [package] are synonymous 
-    -   yum info [package]
-    -   yum-utils: extra utilities revolving around yum
+-   What should you do the first time you login to a newly installed system - yum check-update && yum update
+
+-   yum list [packag]: get version information and whether or not the package is accepting updates 
+
+-   yum search [package] and yum list | grep [package] are synonymous 
+
+-   yum info [package]
+
+-   yum-utils: extra utilities revolving around yum
         
-        -   yumdownloader [package]: to get the .rpm only
+    -   yumdownloader [package]: to get the .rpm only
 
-    -   yum list | less: see a list of available packages in the yum db, the versions, and the repos that they belong to.
-    -   yum list installed: see a list of locally installed packages 
-    -   yum grouplist: see a list of group packages 
+-   yum list | less: see a list of available packages in the yum db, the versions, and the repos that they belong to.
+
+-   yum list installed: see a list of locally installed packages 
+
+-   yum grouplist: see a list of group packages 
         
-        -   yum groupinstall ['group name']
-        -   yum groupupdate
-        -   yum groupremove ['group name']
+    -   yum groupinstall ['group name']
+    -   yum groupupdate
+    -   yum groupremove ['group name']
 
-    -   yum repolist
+-   yum repolist
         
-        -   yum repolist all
-        -   yum --enablerepo=[repo-name] install [package-name]
+    -   yum repolist all
+    -   yum --enablerepo=[repo-name] install [package-name]
 
-    -   yum clean all
-    -   yum history
-    -   yum remove [package-name]: will only remove the specified package. It will not remove the deps.
+-   yum clean all
+
+-   yum history
+
+-   yum remove [package-name]: will only remove the specified package. It will not remove the deps.
 
 
--   rpm (RedHat Package Manager)
+#### rpm (RedHat Package Manager)
 
-    -   rpm -ivh
-    -   rpm -Uvh: if the package exists, upgrade it. Otherwise, install it. 
-    -   rpm *will not* install deps for a particular package
+-   rpm -ivh
+
+-   rpm -Uvh: if the package exists, upgrade it. Otherwise, install it. 
+
+-   rpm *will not* install deps for a particular package
         
-        -   can use **yum** to get deps
-        -   `yum install [package]`
-        -   `yum remove [package`
-        -   yum should have only removed the specified [package] and left the deps behind to be utilized by rpm or saved for later. 
+    -   can use **yum** to get deps
+    -   `yum install [package]`
+    -   `yum remove [package`
+    -   yum should have only removed the specified [package] and left the deps behind to be utilized by rpm or saved for later. 
 
-    -   rpm -q [package]: search to see if a particular package is installed and the version 
-    -   rpm -ql [package]: will query and list the files and folders associated with a given package
-    -   rpm -qa --last: will show the packages that were last installed or upgraded
+-   rpm -q [package]: search to see if a particular package is installed and the version 
+
+-   rpm -ql [package]: will query and list the files and folders associated with a given package
+
+-   rpm -qa --last: will show the packages that were last installed or upgraded
     
-        -   rmp -qa: will show everything 
+    -   rmp -qa: will show everything 
 
-    -   rpm -evv [package]: to remove individual package files.
-    -   rpm -qdf [/dir/location/for/package/documentation/]: list locations for documentation that has the [package] name mentioned in it.
-    -   rpm -Va: verify rpm packages 
-    -   rpm --import: to import keys
-    -   rpm --qa  gpg-pubkey*: to show the gpg-public keys that have been imported
-    -   If receive a message stating that the **rpm** db has been corrupted, do the following ...
+-   rpm -evv [package]: to remove individual package files.
 
-        -   `cd /var/lib`
-        -   remove offending dbs 
-        -   `rpm --rebuilddb`: rebuild the rpm DB
+-   rpm -qdf [/dir/location/for/package/documentation/]: list locations for documentation that has the [package] name mentioned in it.
+
+-   rpm -Va: verify rpm packages 
+
+-   rpm --import: to import keys
+
+-   rpm --qa  gpg-pubkey*: to show the gpg-public keys that have been imported
+
+-   If receive a message stating that the **rpm** db has been corrupted, do the following ...
+
+    -   remove offending dbs 
+    -   `rpm --rebuilddb`: rebuild the rpm DB
 
 
 ### Set File Permission & Ownership
