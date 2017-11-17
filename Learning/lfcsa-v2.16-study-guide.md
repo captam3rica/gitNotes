@@ -328,19 +328,40 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 ### Package Management (CentOS & RHEL)
 
+[Tips & Tricks](https://wiki.centos.org/TipsAndTricks/YumAndRPM)
+
 #### yum (yellow dog updater) - from Yellow Dog Linux
-    
+
+Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
+
+[man yum](https://www.unix.com/man-page/centos/8/yum/)
+
 -   What should you do the first time you login to a newly installed system - yum check-update && yum update
 
--   yum list [packag]: get version information and whether or not the package is accepting updates 
-
 -   yum search [package] and yum list | grep [package] are synonymous 
+    
+    -   yum search all [package]: find all results containing the package name.
+
+-   yum provides [file-name]: look for a package that provides a specific file or feature. 
 
 -   yum info [package]
 
--   yum-utils: extra utilities revolving around yum
+-   yum updateinfo [category]: get info about available updates 
+
+    -   you udateinfo security: get info about security updates.
+
+-   yum update-to [package-version]: update to a particular package version
+
+-   yum downgrade [package-version]: downgrade a package to a previous version
+
+-   yum install --downloadonly --downloaddir=[/dir/path/] [package]: download but do not install and put in the specified directory.
+
+-   yum localinstall [local-rpm-package]: install a local package
+
+-   yum install yum-utils: extra utilities revolving around yum
         
     -   yumdownloader [package]: to get the .rpm only
+    -   needs-restarting: see which recently updated processes that need to be restarted. 
 
 -   yum list | less: see a list of available packages in the yum db, the versions, and the repos that they belong to.
 
@@ -357,11 +378,17 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
     -   yum repolist all
     -   yum --enablerepo=[repo-name] install [package-name]
 
--   yum clean all
+-   yum clean all: removes ... plugins, rpmdb, dbcache, metadata, headers, packages, expire-cache
+
+    -   yum clean packages: clean up cached packages 
 
 -   yum history
 
 -   yum remove [package-name]: will only remove the specified package. It will not remove the deps.
+
+    -   yum erase [package]: does the same as "yum remove"
+    -   yum autoremove [package]: same as "remove" plus gets rid of unneeded packages (RHEL7)
+
 
 
 #### rpm (RedHat Package Manager)
@@ -370,6 +397,10 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 -   rpm -Uvh: if the package exists, upgrade it. Otherwise, install it. 
 
+-   rpm2cpio [package-and-version] | cpio -ivd /download/location: extract a file from a package
+
+    -   cpio: copy files to and from archives 
+
 -   rpm *will not* install deps for a particular package
         
     -   can use **yum** to get deps
@@ -377,9 +408,11 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
     -   `yum remove [package`
     -   yum should have only removed the specified [package] and left the deps behind to be utilized by rpm or saved for later. 
 
+-   rpm -q --changelog [package] | less: see the change logs for a package
+
 -   rpm -q [package]: search to see if a particular package is installed and the version 
 
--   rpm -ql [package]: will query and list the files and folders associated with a given package
+-   rpm -ql [package]: will query and list the files and folders associated with a given package (no sudo required)
 
 -   rpm -qa --last: will show the packages that were last installed or upgraded
     
@@ -387,7 +420,9 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 -   rpm -evv [package]: to remove individual package files.
 
--   rpm -qdf [/dir/location/for/package/documentation/]: list locations for documentation that has the [package] name mentioned in it.
+-   rpm -qd [package]: list documentation file locations for a package
+
+    -   rpm -qdf [/path/to/file]: list documentation containing a [filename].
 
 -   rpm -Va: verify rpm packages 
 
