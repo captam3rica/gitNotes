@@ -10,3 +10,5 @@
 - grep -w or --word-regexp - expression is searched for as a word i.e. `[[:<:]]` and `[[:>:]]`
 - grep -z or -Z or --decompress - force grep to act as zgrep
 - -x, --line-regexp - Only input lines selected against an entire fixed string or regular expression are considered to be matching lines.q:
+- "--" denotes the end of command options. Allows for doing things such as the following
+  - grep -- -v to look for only "-v" in the file
