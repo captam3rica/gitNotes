@@ -2,7 +2,6 @@
 
 Mon Nov  6 15:45:45 EST 2017
 
-
 ## Essentials
 
 ### touch
@@ -11,7 +10,6 @@ Mon Nov  6 15:45:45 EST 2017
 -   Change modification date
 -   Change access date
 -   can use strings like '1 year from now'
-
 
 ### sed (stream editor)
 
@@ -24,14 +22,12 @@ Mon Nov  6 15:45:45 EST 2017
 -   sed -n "1 ! p" filename.txt
 -   sed 's/\[\[:regex:]]/{1, } filename.txt
 
-
 ### ls
 
 -   ls -l file1 file2 file3
 -   ls -l $(tty) same as ls -l /dev/pts/1
 
         crw--w----. 1 tux tty 136, 1 Dec 27 14:56 /dev/pts/1
-
 
 ### du
 
@@ -40,66 +36,60 @@ Mon Nov  6 15:45:45 EST 2017
 -   `s`: summarize
 -   `h`: human-readable
 
-
 ### sort
 
 -   `-h`: human-readable numeric sort (ascending)
--   -r: reverse order
-
+-   \-r: reverse order
 
 ### uniq
 
 -   `-c`: count the uniq number of occurences
--   `-w \[n]` - the first \\[n\] characters in a line
-
+-   `-w \[n]` - the first \\\[n] characters in a line
 
 ### fmt - format text
 
 -   fmt filename.txt > newfilename.txt
 
-
 ### cut
 
 -   cut -d 'delemiter' -f1 filename.txt
--   -f1-n: this is the column number for the text input
-
+-   \-f1-n: this is the column number for the text input
 
 ### Searching ...
 
 #### find
 
 -   search with the -name of the "file"
--   -iname: search ignoring case
--   -not: search for every thing execept
+-   \-iname: search ignoring case
+-   \-not: search for every thing execept
 -   c: find character devices (dev)
--   -executable; -readable; writeable
--   -perm \[mode]: files permissions are exactly (octal or symbolic) - ie 700, 644, etc.
--   -type l: for symbolic links
--   -type f: file
--   -type d: directory
--   -d, -depth: process the contents of the directory before the directory itself
--   -maxdepth \[level] or mindepth \[level]
--   -size: find the size of files (less than or greater than)
+-   \-executable; -readable; writeable
+-   \-perm \[mode]: files permissions are exactly (octal or symbolic) - ie 700, 644, etc.
+-   \-type l: for symbolic links
+-   \-type f: file
+-   \-type d: directory
+-   \-d, -depth: process the contents of the directory before the directory itself
+-   \-maxdepth \[level] or mindepth \[level]
+-   \-size: find the size of files (less than or greater than)
 
     -   1M, 24000c, 1K, 1G
 
--   -group \[group-name]: find files with a given group name
+-   \-group \[group-name]: find files with a given group name
 -   find  -atime -1:  access less than a day ago
--   -mtime: modification time
+-   \-mtime: modification time
 
 Full Command Lines ...
 
 -   find / -user syslog: all files owned by syslog
 -   find / -perm 755: find all files with permissions 755
--   find / -type f -name "some-file.txt" -exec ls -lth {} \; - only look for files name "some-file.txt" then execute the "ls" command.
--   sudo find / -type f -name "myTesT.txt" -exec chmod 707 {} \; -exec ls -l {} \; - find the file named "myTesT.txt", change the permissions, then list the file with a long listing.
-
+-   find / -type f -name "some-file.txt" -exec ls -lth {} \\; - only look for files name "some-file.txt" then execute the "ls" command.
+-   sudo find / -type f -name "myTesT.txt" -exec chmod 707 {} \\; -exec ls -l {} \\; - find the file named "myTesT.txt", change the permissions, then list the file with a long listing.
 
 **Fun fact**
 
 -   The following command will  will you to look a each line individually until complete. I broke my shell doing this by accident ... :)
 
-    -   sudo find / -type f -name "\*.txt" -exec less {} \;
+    -   sudo find / -type f -name "\*.txt" -exec less {} \\;
 
 #### locate
 
@@ -109,9 +99,7 @@ Full Command Lines ...
     -   locate filename filename filename ...
     -   must know the exact name, including case, inorder to use locate.
 
-
 ### Data Backups
-
 
 #### tar & gzip
 
@@ -119,16 +107,15 @@ Full Command Lines ...
 -   gzip filename.tar.gz filename.tar
 -   tar -zcvf filename_back_gzip.tar.gz filename.txt
 -   tar -xzvf filename.tar.gz .
--   --exclude=filname.txt: put this at the end of the cammand to add exclusions.
--   -p: will preserve ownership and file permissions
+-   \--exclude=filname.txt: put this at the end of the cammand to add exclusions.
+-   \-p: will preserve ownership and file permissions
 -   tar -tvf: look at the contents of the archive without unpacking
 -   tar -rvf file.tar file.txt or dir/file.txt: append a file to an archive.
 -   tar -zvcf exclusion.tar.gz mybkup/ --exclude 'mybkup/ssh': this will exclude the ssh directory within the mybkup directory
 
-
 ### File Attributes
 
--   -rw**s**-xr-x: the "s" signifies a setuid. The file can be executed against other users by the owner of the file, but all others can only execute the file on themselves..
+-   \-rw**s**-xr-x: the "s" signifies a setuid. The file can be executed against other users by the owner of the file, but all others can only execute the file on themselves..
 -   setuid is used in a very limieted manor for system level users
 
     -   chmod u+s
@@ -153,7 +140,6 @@ Full Command Lines ...
     -   i: immutable: cannot delete a file, even as root
     -   a: append mode
 
-
 ### Transfer Files Securely
 
 For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master/Linux/generating-ssh-keys.md" target="external" titl="ienerating SSH Keys">generating-shh-keys</a>
@@ -163,59 +149,58 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 -   scp file-to-copy user@hostname:/location/to/copy/to
 -   scp user@hostname:/location/to/pull/file/from /location/to/pull/file/to
 
-
 #### SFTP
 
 -   Able to view and see the remote file system before transferring files
 -   Look for sftp in /etc/ssh/sshd_config
--   sftp user@hostname \\[press enter\]. Then, enter password
+-   sftp user@hostname \\\[press enter]. Then, enter password
 -   get filename /dir/to/put/file
 -   lcd - local change directory
-
 
 ### Monitoring Security & Conduct Audits
 
 -   top
+
 -   htop (install after the fact)
--   free: see memory utilzation
 
-    -   cache aka paging: used to speedup i/o if memory space allows
+#### free: see memory utilzation
 
--   df: disk space usage
+-   cache aka paging: used to speedup i/o if memory space allows
+
+#### df: disk space usage
 
     -   df -hTi: check inodes - file system reference
 
         -   Can find and delete empty inodes
 
--   du: disk utilization
+#### du: disk utilization
 
-    -   du -sch /dir/\*: summary of space utilized
+-   du -sch /dir/\*: summary of space utilized
 
+#### ps : process management
 
--   ps : process management
+> The use of BSD-style options will add process state **(stat=STAT)** to the default display and show the comma nd args **(args=COMMAND)** instead of the executable name. You can override this with the PS_FORMAT environment variable. The use of BSD-style options will also change the process selection to **include processes on other terminals (TTYs) that are owned by you**; alternately, this may be described as setting the selection to be the set of all processes filtered to exclude processes owned by other users or not on a terminal.
 
-    -   ps -e: list all processes (same as -A)
+-   ps -e: list all processes (same as -A)
 
-    -   ps -ef: every process, full format listing
-    -   ps -ef | grep -i \[search\] | grep -v \[what you want to omit\]
-    -   ps -axjf: running processes in a tree view (similar to ps -ejH)
-    -   ps -eLf: see thread information
-    -   ps -U \[username] -u \[username] u: see all process owned by a user
-    -   ps -aux: see all process regarless of user
-    -   ps aux: see all processes (BSD style)
-    -   ps au: list all process belonging to a terminal regardless of user (will list username)
-    -   ps t \[tty#]: select based on tty#
-    -   ps -d: select all but session leaders
-    -   ps r: select only the **running** processes
-    -   ps -p \[pid]: select based on process id (same as p & --pid, also -\[pid #] ie -1234)
+-   ps -ef: every process, full format listing
+-   ps -ef | grep -i \[search] | grep -v \[what you want to omit]
+-   ps -axjf: running processes in a tree view (similar to ps -ejH)
+-   ps -eLf: see thread information
+-   ps -U \[username] -u \[username] u: see all process owned by a user
+-   ps -aux: see all process regarless of user
+-   ps aux: see all processes (BSD style)
+-   ps au: list all process belonging to a terminal regardless of user (will list username)
+-   ps t \[tty#]: select based on tty#
+-   ps -d: select all but session leaders
+-   ps r: select only the **running** processes
+-   ps -p \[pid]: select based on process id (same as p & --pid, also -\[pid #] ie -1234)
 
-    The use of BSD-style options will add process state **(stat=STAT)** to the default display and show the comma nd args **(args=COMMAND)** instead of the executable name. You can override this with the PS_FORMAT environment variable. The use of BSD-style options will also change the process selection to **include processes on other terminals (TTYs) that are owned by you**; alternately, this may be described as setting the selection to be the set of all processes filtered to exclude processes owned by other users or not on a terminal.
+#### log files
 
--   log files
+-   dmesg: print or control kernel ring buffer
 
-    -   dmesg: print or control kernel ring buffer
-    -   journalctl: query the systemd journal
-
+-   journalctl: query the systemd journal
 
 ## Operating on Running Systems
 
@@ -236,40 +221,39 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 -   renice -n \[priority] -g|-p|-u \[id-of-process]: alter the priority of an already running process
 
-
 ### Manage Startup Process and Services
 
--   upstart: debian and Ubuntu < 14.04
+#### upstart: Debian and Ubuntu &lt; 14.04
 
-    -   /etc/init/: process configuration files
-    -   echo "manual" | tee /etc/init/\[service-name].override: this will put a process in a "stopped" or "waiting" state on boot as long as this file is in place. The name must be exactly as the service name.
-    -   status \[process-name]
+-   /etc/init/: process configuration files
 
+-   echo "manual" | tee /etc/init/\[service-name].override: this will put a process in a "stopped" or "waiting" state on boot as long as this file is in place. The name must be exactly as the service name.
 
--   systemd: Ubuntu 14.04 up, RHEL, CentOS, Arch, Fedora ...
+-   status \[process-name]
 
-    -   Ubuntu
+#### systemd: Ubuntu 14.04 up, RHEL, CentOS, Arch, Fedora ...
 
-        -   /etc/init
-        -   systemctl 16.04
+-   Ubuntu
 
-    -   CentOS
+    -   /etc/init
+    -   systemctl 16.04
 
-        -   /etc/rc.d
-        -   /etc/rc.d/init.d: All of the runlevels
+-   CentOS
 
-    -   /etc/systemd/system: service runlevel targets
+    -   /etc/rc.d
+    -   /etc/rc.d/init.d: All of the runlevels
 
-    -   --now: when used with "enable", will start the process as well
+-   /etc/systemd/system: service runlevel targets
 
-    -   set-default graphical.target: make the graphical interface the default target
+-   \--now: when used with "enable", will start the process as well
 
-    -   isolate graphical.target: this will cause the graphical interface to start immediately
+-   set-default graphical.target: make the graphical interface the default target
 
+-   isolate graphical.target: this will cause the graphical interface to start immediately
 
 ### Package Management (Debian/Ubuntu)
 
-**NOTE**: If you are a regular user remember to use *sudo* in front of these commands.
+**NOTE**: If you are a regular user remember to use _sudo_ in front of these commands.
 
 Information regarding the .deb repo source list can be found [HERE](https://manpages.debian.org/stretch/apt/sources.list.5.en.html)
 
@@ -285,7 +269,6 @@ All of the **APTs** man pages can be found [HERE](https://manpages.debian.org/st
 
     Show a list of installed packages.
 
-
 #### apt-cache
 
 [man apt-cache](https://manpages.debian.org/stretch/apt/apt-cache.8.en.html)
@@ -299,7 +282,6 @@ All of the **APTs** man pages can be found [HERE](https://manpages.debian.org/st
 -   apt-cache depends \[package-name]: show a list of deps for a particular package and the packages that could fulfill those deps.
 
     -   apt-cache depends --installed \[package-name]: limit the output to deps that are currently installed.
-
 
 #### apt-get
 
@@ -347,20 +329,19 @@ All of the **APTs** man pages can be found [HERE](https://manpages.debian.org/st
 
     -   apt-get build-dep \[package name]: grab and build deps packages for a give package
 
-
 #### dpkg - install **.deb** packages
 
 The following commands will only work on locally installed packages and files.
 
-    -   dpkg -l: list the installed packages
+-   `dpkg -l`: list the installed packages
 
-    -   dpkg -L \[package names]:
+-   `dpkg -L [package names]`:
 
-        List all of the files and dirs created after a packages is installed.
+    List all of the files and dirs created after a packages is installed.
 
-    -   dpkg -S [packagename.version]:
+-   `dpkg -S [packagename.version]`:
 
-        Find out which package provides a particular file.  
+    Find out which package provides a particular file.  
 
 #### apt-file
 
@@ -371,12 +352,9 @@ Before using **apt-file** it must be installed & the DB updated
       apt-get install apt-file
       apt-file update
 
-
 -   apt-file search \[filename or packagename]
 
-
 #### aptitude is a fronted for dpkg. Similar to ncurses
-
 
 ### Package Management (CentOS & RHEL)
 
@@ -388,60 +366,86 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
 
 [man yum](https://www.unix.com/man-page/centos/8/yum/)
 
--   What should you do the first time you login to a newly installed system - yum check-update && yum update
+-   `yum check-update && yum update`
 
--   yum search \[package] and yum list | grep \[package] are synonymous
+-   **`yum list | grep [package]`**
 
-    -   yum search all \[package]: find all results containing the package name.
+    Is  used  to  list  various  information  about available packages, package groups, and repos.
 
--   yum provides \[file-name]: look for a package that provides a specific file or feature.
+    **NOTE**: Can use wildcards (globs), or pipe to grep, to find all packages containing a particular name.
 
--   yum info \[package]
+    -   `yum search [packagename]`: same as above _list_ command. (Name and summary matches only)
+    -   `yum search all [package]`: find all results containing the package name.
+    -   `yum list all`: list all installed and available packages
+    -   `yum list installed`: list out all installed packages
+    -   `yum list available`: list all available packages in all enabled repos
+    -   `yum provides [filename or packagename]`: 
+        look for a package that provides a specific file or feature.
 
--   yum updateinfo \[category]: get info about available updates
+-   **`yum grouplist`**: see a list of group packages
+
+    -   `yum groupinstall ['group name']`
+    -   `yum groupupdate`
+    -   `yum groupremove ['group name']`
+
+-   **`yum repolist`**
+
+    -   `yum repolist all`
+    -   `yum --enablerepo=\[repo-name] install \[package-name]`
+
+-   **`yum info [package]`**
+
+    To lookup information about one or packages (wildcards welcome aka globs)
+
+    -   `yumdb info [packagname]`: query the yum db for alternate info.
+
+-   **`repoquery --list [packagename]`**
+
+    List the contents of a particular package.
+
+    -   `rpm -ql [package]`: same as above _repoquery --list_ command
+
+-   **`yum install`**
+
+    -   `yum install --downloadonly --downloaddir=\[/dir/path/] \[package]`:
+
+        download but do not install and put in the specified directory.
+
+    -   `yum localinstall [local-rpm-package]`: install a local package
+
+    -   `yum install yum-utils`: extra utilities revolving around yum
+
+        -   `yumdownloader [package]`: to get the .rpm only
+        -   `needs-restarting`:
+
+            see which recently updated processes that need to be restarted.
+
+-   `yum updateinfo [category]`: get info about available updates
 
     -   you udateinfo security: get info about security updates.
 
--   yum update-to \[package-version]: update to a particular package version
+-   `yum update-to [package-version]`: update to a particular package version
 
--   yum downgrade \[package-version]: downgrade a package to a previous version
+-   `yum downgrade [package-version]`: downgrade a package to a previous version
 
--   yum install --downloadonly --downloaddir=\[/dir/path/] \[package]: download but do not install and put in the specified directory.
+-   `yum clean all`: removes ... plugins, rpmdb, dbcache, metadata, headers, packages, expire-cache
 
--   yum localinstall \[local-rpm-package]: install a local package
+    -   `Yum clean packages`: clean up cached packages
 
--   yum install yum-utils: extra utilities revolving around yum
+-   `yum history`
 
-    -   yumdownloader \[package]: to get the .rpm only
-    -   needs-restarting: see which recently updated processes that need to be restarted.
+-   **`yum remove [package-name]`**:
 
--   yum list | less: see a list of available packages in the yum db, the versions, and the repos that they belong to.
+    will only remove the specified package. It will not remove the deps.
 
--   yum list installed: see a list of locally installed packages
+    -   `yum erase [package]`: does the same as "yum remove"
+    -   `yum autoremove [package]`:
 
--   yum grouplist: see a list of group packages
+        same as "remove" plus gets rid of unneeded packages (RHEL7)
 
-    -   yum groupinstall \['group name']
-    -   yum groupupdate
-    -   yum groupremove \['group name']
+    -   `yum remove @groupname` or `yum groupremove [groupname]`
 
--   yum repolist
-
-    -   yum repolist all
-    -   yum --enablerepo=\[repo-name] install \[package-name]
-
--   yum clean all: removes ... plugins, rpmdb, dbcache, metadata, headers, packages, expire-cache
-
-    -   yum clean packages: clean up cached packages
-
--   yum history
-
--   yum remove \[package-name]: will only remove the specified package. It will not remove the deps.
-
-    -   yum erase \[package]: does the same as "yum remove"
-    -   yum autoremove \[package]: same as "remove" plus gets rid of unneeded packages (RHEL7)
-
-
+        > When you tell yum to remove a package group, it will remove every package in that group, even if those packages are members of other package groups or dependencies of other installed packages. However, you can instruct yum to remove only those packages which are not required by any other packages or groups by adding the `groupremove_leaf_only=1` directive to the \[main] section of the _/etc/yum.conf_ configuration file. For more information on this directive, see Section 8.4.1, “Setting \[main] Options”.
 
 #### rpm (RedHat Package Manager)
 
@@ -453,7 +457,7 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
 
     -   cpio: copy files to and from archives
 
--   rpm *will not* install deps for a particular package
+-   rpm _will not_ install deps for a particular package
 
     -   can use **yum** to get deps
     -   `yum install \[package]`
@@ -480,29 +484,26 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
 
 -   rpm --import: to import keys
 
--   rpm --qa  gpg-pubkey*: to show the gpg-public keys that have been imported
+-   rpm --qa  gpg-pubkey\*: to show the gpg-public keys that have been imported
 
 -   If receive a message stating that the **rpm** db has been corrupted, do the following ...
 
     -   remove offending dbs
     -   `rpm --rebuilddb`: rebuild the rpm DB
 
-
 ### Shell Scripting
 
-  ```sh
-  while read HOST; do
-    ping -c 3 $HOST
-  done < myhosts
-  ```
+```sh
+while read HOST; do
+  ping -c 3 $HOST
+done < myhosts
+```
 
-
-  ```sh
-  for this in 1 2 3 4 5; do
-    echo "This is line # $this"
-  done
-  ```
-
+```sh
+for this in 1 2 3 4 5; do
+  echo "This is line # $this"
+done
+```
 
 -   `export PATH=$PATH:/your/scripts`
 
@@ -528,7 +529,6 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
 
 -   chage -d 0 \[username]: force the user to change their password on next login
 
-
 ### Create, Delete, and Modify Local Groups
 
 -   groupadd \[group-name]
@@ -541,8 +541,7 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
 
     -   There will be a password
 
--   chgrp \[group-name\] \[filename\]: to change the group ownership for a file
-
+-   chgrp \[group-name] \[filename]: to change the group ownership for a file
 
 ### Use sudo to Access the root Account
 
@@ -550,4 +549,4 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
 
 -   sudo su -: From a logging perspective, this is the best way to become the root user.
 
--   Edit the `/etc/group` file directly and add the user to the *sudo* group.
+-   Edit the `/etc/group` file directly and add the user to the _sudo_ group.
