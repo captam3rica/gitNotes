@@ -271,21 +271,39 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 **NOTE**: If you are a regular user remember to use *sudo* in front of these commands.
 
-[man apt-get](https://manpages.debian.org/stretch/apt/apt-get.8.en.html "Manual pages for apt-get")
+Information regarding the .deb repo source list can be found [HERE](https://manpages.debian.org/stretch/apt/sources.list.5.en.html)
 
--   dpkg - .deb
+-   /etc/apt/sources.list: list of repos
 
-    -   dpkg -l: list the installed packages
-    -   dpkg -L \[package names]: list all of the files and dirs created after a packages is installed
+All of the **APTs** man pages can be found [HERE](https://manpages.debian.org/stretch/apt/index.html)
+
+#### apt
+
+**APT** man page [HERE](https://manpages.debian.org/stretch/apt/apt.8.en.html)
+
+-   apt --installed list:
+
+    Show a list of installed packages.
 
 
-#### apt-get
+#### apt-cache
 
--   apt-cache pkgnames: see installed packages
+[man apt-cache](https://manpages.debian.org/stretch/apt/apt-cache.8.en.html)
+
+-   apt-cache pkgnames: See a list of packages that **APT** knows about.
 
 -   apt-cache show \[package-name]: information about a package
 
 -   apt-cache stats: information about packages in the cache
+
+-   apt-cache depends \[package-name]: show a list of deps for a particular package and the packages that could fulfill those deps.
+
+    -   apt-cache depends --installed \[package-name]: limit the output to deps that are currently installed.
+
+
+#### apt-get
+
+[man apt-get](https://manpages.debian.org/stretch/apt/apt-get.8.en.html "Manual pages for apt-get")
 
 -   apt-get clean: clean up the apt cache
 
@@ -294,21 +312,26 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 -   apt-get autoclean: clean any partial  package
 
     -   /var/cache/apt/archives and /var/cache/apt/archives/partial/
-    -   Like clean, autoclean clears out the local repository of retrieved package files. The difference is that it only removes package files that can no longer be downloaded, and are largely useless
 
--   apt-get autoremove: remove any unused deps
+    Like clean, autoclean clears out the local repository of retrieved package files. The difference is that it only removes package files that can no longer be downloaded, and are largely useless
 
--   /etc/apt/sources.list: list of repos
-
--   apt-get update && apt-get upgrade: to upgrade
+-   apt-get update && apt-get upgrade: to update and install package updates
 
 -   apt-get dist-upgrade: upgrade the distro
 
     -   will determine which packages are compatible or which are not
 
--   apt-get remove --purge \[package-name]
+-   apt-get autoremove:
 
-    -   apt-get purge \[package-name]: is an option, but not the best
+    autoremove is used to remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed.
+
+-   apt-get remove \[package name]: will remove the package, but not fully
+
+    -   apt-get remove --purge \[package-name]: Completely delete package
+
+    -   apt-get remove --autoremove \[package-name]:
+
+        Like **autoremove**, will uninstall unused deps associated with a given package.
 
 -   apt-get --download-only \[package name] or apt-get download \[package name]
 
@@ -323,6 +346,34 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 -   apt-get check: let us know which deps may be broken
 
     -   apt-get build-dep \[package name]: grab and build deps packages for a give package
+
+
+#### dpkg - install **.deb** packages
+
+The following commands will only work on locally installed packages and files.
+
+    -   dpkg -l: list the installed packages
+
+    -   dpkg -L \[package names]:
+
+        List all of the files and dirs created after a packages is installed.
+
+    -   dpkg -S [packagename.version]:
+
+        Find out which package provides a particular file.  
+
+#### apt-file
+
+**apt-file** is a software package that indexes the contents of packages in your available repositories and allows you to search for a particular file among all available packages. (ABSOLUTELY EVERYTHING!!!!!!!!!!!)
+
+Before using **apt-file** it must be installed & the DB updated
+
+      apt-get install apt-file
+      apt-file update
+
+
+-   apt-file search \[filename or packagename]
+
 
 #### aptitude is a fronted for dpkg. Similar to ncurses
 
@@ -445,7 +496,6 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
   done < myhosts
   ```
 
----
 
   ```sh
   for this in 1 2 3 4 5; do
@@ -453,9 +503,8 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
   done
   ```
 
----
 
--   export PATH=$PATH:/your/scripts
+-   `export PATH=$PATH:/your/scripts`
 
 ## User & Group Management
 
