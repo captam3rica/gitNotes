@@ -261,9 +261,7 @@ Information regarding the .deb repo source list can be found [HERE](https://manp
 
 All of the **APTs** man pages can be found [HERE](https://manpages.debian.org/stretch/apt/index.html)
 
-#### apt
-
-**APT** man page [HERE](https://manpages.debian.org/stretch/apt/apt.8.en.html)
+#### apt - man page [HERE](https://manpages.debian.org/stretch/apt/apt.8.en.html)
 
 -   apt --installed list:
 
@@ -379,7 +377,7 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
     -   `yum list all`: list all installed and available packages
     -   `yum list installed`: list out all installed packages
     -   `yum list available`: list all available packages in all enabled repos
-    -   `yum provides [filename or packagename]`: 
+    -   `yum provides [filename or packagename]`:
         look for a package that provides a specific file or feature.
 
 -   **`yum grouplist`**: see a list of group packages
