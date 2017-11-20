@@ -3,32 +3,32 @@
 Mon Nov  6 15:45:45 EST 2017
 
 
-## Essentials 
+## Essentials
 
 ### touch
 
--   Change time 
--   Change modification date 
--   Change access date 
+-   Change time
+-   Change modification date
+-   Change access date
 -   can use strings like '1 year from now'
 
 
 ### sed (stream editor)
 
--   `sed 's/oldtext/newtext/g' \[textfile.txt\]`
+-   `sed 's/oldtext/newtext/g' \\[textfile.txt\]`
 -   sed -n "p" filename.txt
 -   sed -n "1p" filename.txt
 -   sed -n "4,7" filename.txt
 -   sed -n "3+7p" filename.txt
 -   sed -n "4~1" filename.txt
 -   sed -n "1 ! p" filename.txt
--   sed 's/[[:regex:]]/{1, } filename.txt
+-   sed 's/\[\[:regex:]]/{1, } filename.txt
 
 
-### ls 
+### ls
 
 -   ls -l file1 file2 file3
--   ls -l $(tty) same as ls -l /dev/pts/1 
+-   ls -l $(tty) same as ls -l /dev/pts/1
 
         crw--w----. 1 tux tty 136, 1 Dec 27 14:56 /dev/pts/1
 
@@ -36,7 +36,7 @@ Mon Nov  6 15:45:45 EST 2017
 ### du
 
 -   `du -sch /some/dir`
--   `c` or `--total`: total size 
+-   `c` or `--total`: total size
 -   `s`: summarize
 -   `h`: human-readable
 
@@ -44,47 +44,47 @@ Mon Nov  6 15:45:45 EST 2017
 ### sort
 
 -   `-h`: human-readable numeric sort (ascending)
--   -r: reverse order 
+-   -r: reverse order
 
 
-###  uniq
+### uniq
 
 -   `-c`: count the uniq number of occurences
--   `-w [n]` - the first \[n\] characters in a line
-    
-    
+-   `-w \[n]` - the first \\[n\] characters in a line
+
+
 ### fmt - format text
-    
+
 -   fmt filename.txt > newfilename.txt
 
 
 ### cut
-    
+
 -   cut -d 'delemiter' -f1 filename.txt
 -   -f1-n: this is the column number for the text input
-  
+
 
 ### Searching ...
-    
+
 #### find
 
 -   search with the -name of the "file"
--   -iname: search ignoring case 
--   -not: search for every thing execept 
+-   -iname: search ignoring case
+-   -not: search for every thing execept
 -   c: find character devices (dev)
 -   -executable; -readable; writeable
--   -perm [mode]: files permissions are exactly (octal or symbolic) - ie 700, 644, etc.
--   -type l: for symbolic links 
+-   -perm \[mode]: files permissions are exactly (octal or symbolic) - ie 700, 644, etc.
+-   -type l: for symbolic links
 -   -type f: file
 -   -type d: directory
 -   -d, -depth: process the contents of the directory before the directory itself
--   -maxdepth [level] or mindepth [level]
+-   -maxdepth \[level] or mindepth \[level]
 -   -size: find the size of files (less than or greater than)
-        
+
     -   1M, 24000c, 1K, 1G
 
--   -group [group-name]: find files with a given group name
--   find  -atime -1:  access less than a day ago 
+-   -group \[group-name]: find files with a given group name
+-   find  -atime -1:  access less than a day ago
 -   -mtime: modification time
 
 Full Command Lines ...
@@ -95,58 +95,61 @@ Full Command Lines ...
 -   sudo find / -type f -name "myTesT.txt" -exec chmod 707 {} \; -exec ls -l {} \; - find the file named "myTesT.txt", change the permissions, then list the file with a long listing.
 
 
-Fun fact
+**Fun fact**
 
-- The following command will  will you to look a each line individually until complete. I broke my shell doing this by accident ... :)
+-   The following command will  will you to look a each line individually until complete. I broke my shell doing this by accident ... :)
 
-    -   sudo find / -type f -name "*.txt" -exec less {} \;
+    -   sudo find / -type f -name "\*.txt" -exec less {} \;
 
 #### locate
 
--   locate 
-        
-    -   sudo updatedb 
+-   locate
+
+    -   sudo updatedb
     -   locate filename filename filename ...
-    -   must know the exact name, including case, inorder to use locate. 
+    -   must know the exact name, including case, inorder to use locate.
 
 
 ### Data Backups
 
 
 #### tar & gzip
-    
+
 -   tar -cvf filename_back.tar filename.txt
 -   gzip filename.tar.gz filename.tar
 -   tar -zcvf filename_back_gzip.tar.gz filename.txt
 -   tar -xzvf filename.tar.gz .
 -   --exclude=filname.txt: put this at the end of the cammand to add exclusions.
--   -p: will preserve ownership and file permissions 
--   tar -tvf: look at the contents of the archive without unpacking 
--   tar -rvf file.tar file.txt or dir/file.txt: append a file to an archive. 
+-   -p: will preserve ownership and file permissions
+-   tar -tvf: look at the contents of the archive without unpacking
+-   tar -rvf file.tar file.txt or dir/file.txt: append a file to an archive.
 -   tar -zvcf exclusion.tar.gz mybkup/ --exclude 'mybkup/ssh': this will exclude the ssh directory within the mybkup directory
 
 
 ### File Attributes
 
 -   -rw**s**-xr-x: the "s" signifies a setuid. The file can be executed against other users by the owner of the file, but all others can only execute the file on themselves..
--   setuid is used in a very limieted manor for system level users 
-    
+-   setuid is used in a very limieted manor for system level users
+
     -   chmod u+s
 
 -   **setgid**: any user can access the directory with the permissions of the group owner
 
-    -   Anything under the parent directory will also get the permissions of the group when the **setgid** option (chmod g+s)is specified on the group 
-    -   Usually when members of a group need access to all files in a directory regarless of who owns the primary group 
+    -   Anything under the parent directory will also get the permissions of the group when the **setgid** option (chmod g+s)is specified on the group
+    -   Usually when members of a group need access to all files in a directory regarless of who owns the primary group
 
-- chmod 2755
-- Sticky bits
-    
+-   chmod 2755
+
+-   Sticky bits
+
     -   Denoted by a "t" in the permissions info
-    -   Usually set on directories that a "world" write able. 
+    -   Usually set on directories that a "world" write able.
     -   Prevents a user from removing a file that they do not own inspite of the permissions that are set.
 
-- lsattr: show special attributes if they exist
-- chattr 
+-   lsattr: show special attributes if they exist
+
+-   chattr
+
     -   i: immutable: cannot delete a file, even as root
     -   a: append mode
 
@@ -163,53 +166,53 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 #### SFTP
 
--   Able to view and see the remote file system before transferring files 
+-   Able to view and see the remote file system before transferring files
 -   Look for sftp in /etc/ssh/sshd_config
--   sftp user@hostname \[press enter\]. Then, enter password
+-   sftp user@hostname \\[press enter\]. Then, enter password
 -   get filename /dir/to/put/file
--   lcd - local change directory 
-    
+-   lcd - local change directory
 
-### Monitoring Security & Conduct Audits 
+
+### Monitoring Security & Conduct Audits
 
 -   top
 -   htop (install after the fact)
 -   free: see memory utilzation
-    
+
     -   cache aka paging: used to speedup i/o if memory space allows
 
--   df: disk space usage 
-    
+-   df: disk space usage
+
     -   df -hTi: check inodes - file system reference
-    
-        -   Can find and delete empty inodes 
+
+        -   Can find and delete empty inodes
 
 -   du: disk utilization
-        
-    -   du -sch /dir/*: summary of space utilized 
+
+    -   du -sch /dir/\*: summary of space utilized
 
 
-- ps : process management 
+-   ps : process management
 
     -   ps -e: list all processes (same as -A)
-    
-    -   ps -ef: every process, full format listing 
+
+    -   ps -ef: every process, full format listing
     -   ps -ef | grep -i \[search\] | grep -v \[what you want to omit\]
     -   ps -axjf: running processes in a tree view (similar to ps -ejH)
-    -   ps -eLf: see thread information 
-    -   ps -U [username] -u [username] u: see all process owned by a user
+    -   ps -eLf: see thread information
+    -   ps -U \[username] -u \[username] u: see all process owned by a user
     -   ps -aux: see all process regarless of user
     -   ps aux: see all processes (BSD style)
     -   ps au: list all process belonging to a terminal regardless of user (will list username)
-    -   ps t [tty#]: select based on tty#
-    -   ps -d: select all but session leaders 
-    -   ps r: select only the **running** processes 
-    -   ps -p [pid]: select based on process id (same as p & --pid, also -[pid #] ie -1234)
+    -   ps t \[tty#]: select based on tty#
+    -   ps -d: select all but session leaders
+    -   ps r: select only the **running** processes
+    -   ps -p \[pid]: select based on process id (same as p & --pid, also -\[pid #] ie -1234)
 
-    The use of BSD-style options will add process state **(stat=STAT)** to the default display and show the comma nd args **(args=COMMAND)** instead of the executable name. You can override this with the PS_FORMAT environment variable. The use of BSD-style options will also change the process selection to **include processes on other terminals (TTYs) that are owned by you**; alternately, this may be described as setting the selection to be the set of all processes filtered to exclude processes owned by other users or not on a terminal. 
-    
--   log files 
-    
+    The use of BSD-style options will add process state **(stat=STAT)** to the default display and show the comma nd args **(args=COMMAND)** instead of the executable name. You can override this with the PS_FORMAT environment variable. The use of BSD-style options will also change the process selection to **include processes on other terminals (TTYs) that are owned by you**; alternately, this may be described as setting the selection to be the set of all processes filtered to exclude processes owned by other users or not on a terminal.
+
+-   log files
+
     -   dmesg: print or control kernel ring buffer
     -   journalctl: query the systemd journal
 
@@ -220,27 +223,27 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 -   pgrep: find a process id for a process
 
--   kill [options] [pid]
+-   kill \[options] \[pid]
 
     -   kill -KILL: another way to send a kill signal. Given to the OS to shutdown the process instead of directly to the process. (same as -9)
-    -   kill -SIGHUP: hangup the process 
+    -   kill -SIGHUP: hangup the process
 
 
 -   nice: run process with modified scheduling priority
 
-    -   nice -n [priority -20 to 20]
+    -   nice -n \[priority -20 to 20]
 
 
--   renice -n [priority] -g|-p|-u [id-of-process]: alter the priority of an already running process
+-   renice -n \[priority] -g|-p|-u \[id-of-process]: alter the priority of an already running process
 
 
-### Manage Startup Process and Services 
+### Manage Startup Process and Services
 
 -   upstart: debian and Ubuntu < 14.04
 
     -   /etc/init/: process configuration files
-    -   echo "manual" | tee /etc/init/[service-name].override: this will put a process in a "stopped" or "waiting" state on boot as long as this file is in place. The name must be exactly as the service name.
-    -   status [process-name]
+    -   echo "manual" | tee /etc/init/\[service-name].override: this will put a process in a "stopped" or "waiting" state on boot as long as this file is in place. The name must be exactly as the service name.
+    -   status \[process-name]
 
 
 -   systemd: Ubuntu 14.04 up, RHEL, CentOS, Arch, Fedora ...
@@ -250,20 +253,18 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
         -   /etc/init
         -   systemctl 16.04
 
-
     -   CentOS
 
         -   /etc/rc.d
         -   /etc/rc.d/init.d: All of the runlevels
-    
 
     -   /etc/systemd/system: service runlevel targets
-    
+
     -   --now: when used with "enable", will start the process as well
-    
+
     -   set-default graphical.target: make the graphical interface the default target
 
-    -   isolate graphical.target: this will cause the graphical interface to start immediately 
+    -   isolate graphical.target: this will cause the graphical interface to start immediately
 
 
 ### Package Management (Debian/Ubuntu)
@@ -272,58 +273,58 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 [man apt-get](https://manpages.debian.org/stretch/apt/apt-get.8.en.html "Manual pages for apt-get")
 
--   dpkg - .deb 
+-   dpkg - .deb
 
-    -   dpkg -l: list the installed packages 
-    -   dpkg -L [package names]: list all of the files and dirs created after a packages is installed
-    
+    -   dpkg -l: list the installed packages
+    -   dpkg -L \[package names]: list all of the files and dirs created after a packages is installed
+
 
 #### apt-get
-    
--   apt-cache pkgnames: see installed packages 
-   
--   apt-cache show [package-name]: information about a package
-    
+
+-   apt-cache pkgnames: see installed packages
+
+-   apt-cache show \[package-name]: information about a package
+
 -   apt-cache stats: information about packages in the cache
-    
+
 -   apt-get clean: clean up the apt cache
-        
+
     -   /var/cache/apt/archives/ and /var/cache/apt/archives/partial/
 
 -   apt-get autoclean: clean any partial  package
-        
+
     -   /var/cache/apt/archives and /var/cache/apt/archives/partial/
     -   Like clean, autoclean clears out the local repository of retrieved package files. The difference is that it only removes package files that can no longer be downloaded, and are largely useless
 
 -   apt-get autoremove: remove any unused deps
 
-- /etc/apt/sources.list: list of repos
-    
+-   /etc/apt/sources.list: list of repos
+
 -   apt-get update && apt-get upgrade: to upgrade
-    
+
 -   apt-get dist-upgrade: upgrade the distro
 
     -   will determine which packages are compatible or which are not
 
--   apt-get remove --purge [package-name]
+-   apt-get remove --purge \[package-name]
 
-    -   apt-get purge [package-name]: is an option, but not the best 
-    
--   apt-get --download-only [package name] or apt-get download [package name]
-        
-    -   Will download to the pwd 
+    -   apt-get purge \[package-name]: is an option, but not the best
+
+-   apt-get --download-only \[package name] or apt-get download \[package name]
+
+    -   Will download to the pwd
     -   Make sure that all deps are there (the distro will tell what is needed)
-    -   dpkg -i [depfile.deb]
-    
--   apt-get --reinstall [package-name]: attempt to reinstall a package
+    -   dpkg -i \[depfile.deb]
 
--   apt-get changelog [packag name]
-    
+-   apt-get --reinstall \[package-name]: attempt to reinstall a package
+
+-   apt-get changelog \[packag name]
+
 -   apt-get check: let us know which deps may be broken
 
-    -   apt-get build-dep [package name]: grab and build deps packages for a give package
-    
-#### aptitude is a fronted for dpkg. Similar to ncurses 
+    -   apt-get build-dep \[package name]: grab and build deps packages for a give package
+
+#### aptitude is a fronted for dpkg. Similar to ncurses
 
 
 ### Package Management (CentOS & RHEL)
@@ -338,56 +339,56 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
 
 -   What should you do the first time you login to a newly installed system - yum check-update && yum update
 
--   yum search [package] and yum list | grep [package] are synonymous 
-    
-    -   yum search all [package]: find all results containing the package name.
+-   yum search \[package] and yum list | grep \[package] are synonymous
 
--   yum provides [file-name]: look for a package that provides a specific file or feature. 
+    -   yum search all \[package]: find all results containing the package name.
 
--   yum info [package]
+-   yum provides \[file-name]: look for a package that provides a specific file or feature.
 
--   yum updateinfo [category]: get info about available updates 
+-   yum info \[package]
+
+-   yum updateinfo \[category]: get info about available updates
 
     -   you udateinfo security: get info about security updates.
 
--   yum update-to [package-version]: update to a particular package version
+-   yum update-to \[package-version]: update to a particular package version
 
--   yum downgrade [package-version]: downgrade a package to a previous version
+-   yum downgrade \[package-version]: downgrade a package to a previous version
 
--   yum install --downloadonly --downloaddir=[/dir/path/] [package]: download but do not install and put in the specified directory.
+-   yum install --downloadonly --downloaddir=\[/dir/path/] \[package]: download but do not install and put in the specified directory.
 
--   yum localinstall [local-rpm-package]: install a local package
+-   yum localinstall \[local-rpm-package]: install a local package
 
 -   yum install yum-utils: extra utilities revolving around yum
-        
-    -   yumdownloader [package]: to get the .rpm only
-    -   needs-restarting: see which recently updated processes that need to be restarted. 
+
+    -   yumdownloader \[package]: to get the .rpm only
+    -   needs-restarting: see which recently updated processes that need to be restarted.
 
 -   yum list | less: see a list of available packages in the yum db, the versions, and the repos that they belong to.
 
--   yum list installed: see a list of locally installed packages 
+-   yum list installed: see a list of locally installed packages
 
--   yum grouplist: see a list of group packages 
-        
-    -   yum groupinstall ['group name']
+-   yum grouplist: see a list of group packages
+
+    -   yum groupinstall \['group name']
     -   yum groupupdate
-    -   yum groupremove ['group name']
+    -   yum groupremove \['group name']
 
 -   yum repolist
-        
+
     -   yum repolist all
-    -   yum --enablerepo=[repo-name] install [package-name]
+    -   yum --enablerepo=\[repo-name] install \[package-name]
 
 -   yum clean all: removes ... plugins, rpmdb, dbcache, metadata, headers, packages, expire-cache
 
-    -   yum clean packages: clean up cached packages 
+    -   yum clean packages: clean up cached packages
 
 -   yum history
 
--   yum remove [package-name]: will only remove the specified package. It will not remove the deps.
+-   yum remove \[package-name]: will only remove the specified package. It will not remove the deps.
 
-    -   yum erase [package]: does the same as "yum remove"
-    -   yum autoremove [package]: same as "remove" plus gets rid of unneeded packages (RHEL7)
+    -   yum erase \[package]: does the same as "yum remove"
+    -   yum autoremove \[package]: same as "remove" plus gets rid of unneeded packages (RHEL7)
 
 
 
@@ -395,36 +396,36 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
 
 -   rpm -ivh
 
--   rpm -Uvh: if the package exists, upgrade it. Otherwise, install it. 
+-   rpm -Uvh: if the package exists, upgrade it. Otherwise, install it.
 
--   rpm2cpio [package-and-version] | cpio -ivd /download/location: extract a file from a package
+-   rpm2cpio \[package-and-version] | cpio -ivd /download/location: extract a file from a package
 
-    -   cpio: copy files to and from archives 
+    -   cpio: copy files to and from archives
 
 -   rpm *will not* install deps for a particular package
-        
+
     -   can use **yum** to get deps
-    -   `yum install [package]`
-    -   `yum remove [package`
-    -   yum should have only removed the specified [package] and left the deps behind to be utilized by rpm or saved for later. 
+    -   `yum install \[package]`
+    -   `yum remove \[package`
+    -   yum should have only removed the specified \[package] and left the deps behind to be utilized by rpm or saved for later.
 
--   rpm -q --changelog [package] | less: see the change logs for a package
+-   rpm -q --changelog \[package] | less: see the change logs for a package
 
--   rpm -q [package]: search to see if a particular package is installed and the version 
+-   rpm -q \[package]: search to see if a particular package is installed and the version
 
--   rpm -ql [package]: will query and list the files and folders associated with a given package (no sudo required)
+-   rpm -ql \[package]: will query and list the files and folders associated with a given package (no sudo required)
 
 -   rpm -qa --last: will show the packages that were last installed or upgraded
-    
-    -   rmp -qa: will show everything 
 
--   rpm -evv [package]: to remove individual package files.
+    -   rmp -qa: will show everything
 
--   rpm -qd [package]: list documentation file locations for a package
+-   rpm -evv \[package]: to remove individual package files.
 
-    -   rpm -qdf [/path/to/file]: list documentation containing a [filename].
+-   rpm -qd \[package]: list documentation file locations for a package
 
--   rpm -Va: verify rpm packages 
+    -   rpm -qdf \[/path/to/file]: list documentation containing a \[filename].
+
+-   rpm -Va: verify rpm packages
 
 -   rpm --import: to import keys
 
@@ -432,77 +433,72 @@ Yum cheat sheet [here](/gitMyNotes/Linux/rhel_yum_cheatsheet.pdf)
 
 -   If receive a message stating that the **rpm** db has been corrupted, do the following ...
 
-    -   remove offending dbs 
+    -   remove offending dbs
     -   `rpm --rebuilddb`: rebuild the rpm DB
-
-
-### Set File Permission & Ownership
 
 
 ### Shell Scripting
 
+  ```sh
+  while read HOST; do
+    ping -c 3 $HOST
+  done < myhosts
+  ```
+
+---
+
+  ```sh
+  for this in 1 2 3 4 5; do
+    echo "This is line # $this"
+  done
+  ```
+
+---
+
 -   export PATH=$PATH:/your/scripts
 
-```sh
-while read HOST; do
+## User & Group Management
 
-    ping -c 3 $HOST
+### Create, Delete, and Modify Local User Accounts
 
-done < myhosts
-```
+-   useradd \[username]: add a user
 
-```sh
-for this in 1 2 3 4 5; do
+    -   useradd -m -d /home/\[username] -s /bin/bash -c "Full Name of User" \[username]
 
-    echo "This is line # $this"
+-   adduser \[username]: works in newer OSs
 
-done
-```
+    -   Gives more info about the user being created
 
-## User & Group Management 
-
-### Create, Delete, and Modify Local User Accounts 
-
--   useradd [username]: add a user
-
-    -   useradd -m -d /home/[username] -s /bin/bash -c "Full Name of User" [username]
-
--   adduser [username]: works in newer OSs 
-
-    -   Gives more info about the user being created 
-    
     **NOTE**: Nolonger included in Arch Linux
 
--   userdel [username]: will not delete the home dir of the user
+-   userdel \[username]: will not delete the home dir of the user
 
--   userdel -r [username]: This will remove the user and the user's home dir
+-   userdel -r \[username]: This will remove the user and the user's home dir
 
 -   Defaults for `useradd` can be found: `/etc/defaults/useradd`
 
--   chage -d 0 [username]: force the user to change their password on next login
+-   chage -d 0 \[username]: force the user to change their password on next login
 
 
 ### Create, Delete, and Modify Local Groups
 
--   groupadd [group-name]
+-   groupadd \[group-name]
 
 -   Can edit the `/etc/group` file directly.
 
--   gpasswd [group-name]: to edit the password for a group
+-   gpasswd \[group-name]: to edit the password for a group
 
--   newgrp [group-name]: to set permissions to a new group. 
+-   newgrp \[group-name]: to set permissions to a new group.
 
-    -   There will be a password 
+    -   There will be a password
 
--   chgrp [group-name] [filename]: to change the group ownership for a file
+-   chgrp \[group-name\] \[filename\]: to change the group ownership for a file
 
 
 ### Use sudo to Access the root Account
 
--   visudo: This will check syntax to make sure that nothing has been done that will prevent system login. 
+-   visudo: This will check syntax to make sure that nothing has been done that will prevent system login.
 
 -   sudo su -: From a logging perspective, this is the best way to become the root user.
 
 -   Edit the `/etc/group` file directly and add the user to the *sudo* group.
-
-
