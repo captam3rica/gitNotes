@@ -41,9 +41,9 @@
       ## Try to connect to GitHub over SSH
       $ ssh -v git@github.com
 
-      The authenticity of host 'github.com (192.30.253.113)' can't be established.  
-      RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.  
-      Are you sure you want to continue connecting (yes/no)? yes
+    > The authenticity of host 'github.com (192.30.253.113)' can't be established. 
+    > RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.  
+    > Are you sure you want to continue connecting (yes/no)? yes
 
 
 -   Make sure that the SHA256 key matches the above and type "yes"
