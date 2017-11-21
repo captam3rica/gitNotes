@@ -7,13 +7,28 @@
     $ git config --global color.ui auto
     $ git config --global core.editor "/bin/vim"
 
-**This can be done per directory or per local repo by doing the following:**
+This can be done per directory or per local repo by doing the following:
 
 -   `git config user.name "your-username" && git config user.email "your-email"`
 
 **Print rep .git/config to stdout**
 
 -   `git config -l`
+
+**Update Repo URL**
+
+-   `git remote set-url origin git@github.com:[your-username]/[your-repo].git`
+
+**Switch the protocol that the repo is using**
+
+-   `git config remote.origin.url git@github.com:[repo]/[yourproject.git]`
+-   You can also edit the _config_ file directly
+        
+        cd /your/repo/directory
+        vim .git/config
+
+        Change the line: remote.origin.url=https://github.com/[repo]/[yourproject.git]
+        To: remote.origin.url=git@github.com/[repo]/[yourproject.git]
 
 ## Generate an SSH Key for GitHub
 
@@ -112,10 +127,6 @@ remote changes: `$ git pull --rebase`
 
 -   `git cone [username]@[servername]:[reponame] /destination/location/`
 -   Enter the ssh password
-
-## Update Repo URL
-
-`git remote set-url origin git@github.com:[your-username]/[your-repo].git`
 
 ## Logging
 
