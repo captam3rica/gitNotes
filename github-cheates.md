@@ -27,8 +27,8 @@ This can be done per directory or per local repo by doing the following:
         cd /your/repo/directory
         vim .git/config
 
-        Change the line: remote.origin.url=https://github.com/[repo]/[yourproject.git]
-        To: remote.origin.url=git@github.com/[repo]/[yourproject.git]
+        Change the line: remote.origin.url=https://github.com:[repo]/[yourproject.git]
+        To: remote.origin.url=git@github.com:[repo]/[yourproject.git]
 
 ## Generate an SSH Key for GitHub
 
