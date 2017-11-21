@@ -75,7 +75,7 @@
 
 -   Change the name of a file or directory: 
 
-    `git mv [filename.old] [filename.new]`
+    `git mv [filename.old] [filename.new]`  
     `git commit -m "note about change"
 
 -   Initial push of commits to remote repo: `$ git push origin [main_branch_name]`
