@@ -71,7 +71,7 @@
 
 -   Commit a change: `$ git commit -m "Some note about the commit"`
     
-    -   `git commit -a`: add this that have already been commit and nothing new.
+    -   `git commit -a`: add changes that have already been commit and nothing new.
 
 -   Initial push of commits to remote repo: `$ git push origin [main_branch_name]`
 
