@@ -11,6 +11,10 @@
 
 -   `git config user.name "your-username" && git config user.email "your-email"`
 
+**Print rep .git/config to stdout**
+
+-   `git config -l`
+
 ## Generate an SSH Key for GitHub
 
 -   Go to **Terminal**
