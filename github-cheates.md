@@ -52,6 +52,8 @@
 
 ## Create an Empty Repo & Push Remotely to GitHub
 
+**Note:** Change `[username]` to your *GitHub* user, and change `[repo_name_here]` to the name of the repository being created.
+    
     $ mkdir [repo_name_here]
     $ cd [repo_name_here]
     $ echo "# [repo_name_here]" >> README.md
@@ -60,8 +62,6 @@
     $ curl -u '[username]' https://api.github.com/user/repos -d '{"name":"[repo_name_here]"}'
     $ git remote add origin https://github.com/[username]/[repo_name_here].git
     $ git push --set-upstream origin master
-
-**Note:** Change `[username]` to your *GitHub* user, and change `[repo_name_here]` to the name of the repository being created.
 
 ## Basics
 
