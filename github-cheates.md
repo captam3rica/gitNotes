@@ -96,8 +96,8 @@ remote changes: `$ git pull --rebase`
 
 **From github or bitbucket**
 
-    $ git clone [url]
-    $ git remote add origin https://github.com/captam3rica/[gitRepoName]
+-   `git clone [url]`
+-   `git clone https://github.com/[user]/[reponame].git /destination/directory/[dirname].git`
 
 **Clone via SSH**
 
