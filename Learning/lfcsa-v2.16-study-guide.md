@@ -296,11 +296,11 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 #### Power Management 
 
-`$ systemctl reboot`
-`$ systemctl poweroff`
-`$ systemctl suspend`
-`$ systemctl hibernate`
-`$ systemctl hybrid-sleep`
+`$ systemctl reboot` 
+`$ systemctl poweroff` 
+`$ systemctl suspend` 
+`$ systemctl hibernate` 
+`$ systemctl hybrid-sleep` 
 
 ### Package Management (Debian/Ubuntu)
 
