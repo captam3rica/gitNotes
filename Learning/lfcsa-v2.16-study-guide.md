@@ -7,9 +7,14 @@ Mon Nov  6 15:45:45 EST 2017
 ### touch
 
 -   Change time
+
 -   Change modification date
+
 -   Change access date
+
 -   can use strings like '1 year from now'
+
+-   `touch filename{1..n}.txt`: generate multiple files at once
 
 ### sed (stream editor)
 
@@ -115,31 +120,69 @@ Full Command Lines ...
 
 ### File Attributes
 
--   \-rw**s**-xr-x: the "s" signifies a setuid. The file can be executed against other users by the owner of the file, but all others can only execute the file on themselves..
--   setuid is used in a very limieted manor for system level users
+-   ugoa
 
-    -   chmod u+s
+    -   user
+    -   group
+    -   others
+    -   all
 
--   **setgid**: any user can access the directory with the permissions of the group owner
+-   setuid & setgid
 
-    -   Anything under the parent directory will also get the permissions of the group when the **setgid** option (chmod g+s)is specified on the group
-    -   Usually when members of a group need access to all files in a directory regarless of who owns the primary group
+    -   This means that any file or directory can be accessed by any user as if they had the permissions of the owner or group owner.
 
--   chmod 2755
+-   `chmod 2755`: set the SUID
 
--   Sticky bits
+        -rwxr-sr-x
 
-    -   Denoted by a "t" in the permissions info
-    -   Usually set on directories that a "world" write able.
+-   `chmod 1xxx filename`: Set the Sticky-Bit
+
+    -   Denoted by a "t" in the "others" permissions info
+    -   Usually set on directories that are "world" write able.
     -   Prevents a user from removing a file that they do not own inspite of the permissions that are set.
 
--   lsattr: show special attributes if they exist
+        drwx---r--T
 
--   chattr
+-   `chmod 3xxx filename`: set both the sticky bit(T or t) and the SUID (S or s)
 
-    -   i: immutable: cannot delete a file, even as root
+        -rwxr-sr-t
+
+-   `chmod 4xxx filename`: set SGID
+
+        --sr-xr-x
+
+-   `chmod 5xxx filename`: set both the sticky bit and the SGID
+
+        dr-Sr-x-r-T
+
+-   `chmod 6xxx filename`: set both SUID and SGID
+
+        dr-sr-Sr--
+
+-   `chmod 7xxx filename`: set all extra bits
+
+        -rwS--s--T
+
+-   `chmod 0xxx filname`: _remove_ any extra bits that are set
+
+-   `lsattr`: show special attributes if they exist
+
+-   `chattr +- [attribute] [filename]`
+
+    **NOTE**: c, s, and u are not honored by ext2, ext3, and ext4 FS
+
+    -   u: if deleted the file contents are saved allowing the user to ask for the files undeletion.
+    -   i: immutable: cannot delete, modify, or rename a file , even as root
     -   a: append mode
 
+        `vim 0_APPEND [filename]`: open in append mode
+        `less 0_APPEND [filename]`
+
+    -   A: if the file is accessed, the atime record is not altered
+    -   c: compress the file by default
+    -   h: file is storing its blocks in the units of the filesystem block size instead of unit sectors, and this means that the file is (was) larger that 2TB. Cannot be set or unset by **chattr** but can be listed by **lsattr**
+    -   j: file data is written to **ext3** and **ext4** journal before being written to the file, if the FS is mounted with the "data=ordered" or "data=writeback" options. 
+    **NOTE**: If FS is mounted with the "data=journal" option all data is journaled anyway
 ### Transfer Files Securely
 
 For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master/Linux/generating-ssh-keys.md" target="external" titl="ienerating SSH Keys">generating-shh-keys</a>
@@ -263,7 +306,7 @@ All of the **APTs** man pages can be found [HERE](https://manpages.debian.org/st
 
 #### apt - man page [HERE](https://manpages.debian.org/stretch/apt/apt.8.en.html)
 
--   apt --installed list:
+-   `apt list --installed`:
 
     Show a list of installed packages.
 
@@ -271,61 +314,61 @@ All of the **APTs** man pages can be found [HERE](https://manpages.debian.org/st
 
 [man apt-cache](https://manpages.debian.org/stretch/apt/apt-cache.8.en.html)
 
--   apt-cache pkgnames: See a list of packages that **APT** knows about.
+-   `apt-cache pkgnames`: See a list of packages that **APT** knows about.
 
--   apt-cache show \[package-name]: information about a package
+-   `apt-cache show \[package-name]`: information about a package
 
--   apt-cache stats: information about packages in the cache
+-   `apt-cache stats`: information about packages in the cache
 
--   apt-cache depends \[package-name]: show a list of deps for a particular package and the packages that could fulfill those deps.
+-   `apt-cache depends \[package-name]`: show a list of deps for a particular package and the packages that could fulfill those deps.
 
-    -   apt-cache depends --installed \[package-name]: limit the output to deps that are currently installed.
+    -   `apt-cache depends --installed \[package-name]`: limit the output to deps that are currently installed.
 
 #### apt-get
 
 [man apt-get](https://manpages.debian.org/stretch/apt/apt-get.8.en.html "Manual pages for apt-get")
 
--   apt-get clean: clean up the apt cache
+-   `apt-get clean`: clean up the apt cache
 
     -   /var/cache/apt/archives/ and /var/cache/apt/archives/partial/
 
--   apt-get autoclean: clean any partial  package
+-   `apt-get autoclean`: clean any partial  package
 
     -   /var/cache/apt/archives and /var/cache/apt/archives/partial/
 
     Like clean, autoclean clears out the local repository of retrieved package files. The difference is that it only removes package files that can no longer be downloaded, and are largely useless
 
--   apt-get update && apt-get upgrade: to update and install package updates
+-   `apt-get update && apt-get upgrade`: to update and install package updates
 
--   apt-get dist-upgrade: upgrade the distro
+-   `apt-get dist-upgrade`: upgrade the distro
 
     -   will determine which packages are compatible or which are not
 
--   apt-get autoremove:
+-   `apt-get autoremove`:
 
     autoremove is used to remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed.
 
--   apt-get remove \[package name]: will remove the package, but not fully
+-   `apt-get remove \[package name]`: will remove the package, but not fully
 
-    -   apt-get remove --purge \[package-name]: Completely delete package
+    -   `apt-get remove --purge \[package-name]`: Completely delete package
 
-    -   apt-get remove --autoremove \[package-name]:
+    -   `apt-get remove --autoremove \[package-name]`:
 
         Like **autoremove**, will uninstall unused deps associated with a given package.
 
--   apt-get --download-only \[package name] or apt-get download \[package name]
+-   `apt-get --download-only \[package name] or apt-get download \[package name]`
 
     -   Will download to the pwd
     -   Make sure that all deps are there (the distro will tell what is needed)
-    -   dpkg -i \[depfile.deb]
+    -   `dpkg -i \[depfile.deb]`
 
--   apt-get --reinstall \[package-name]: attempt to reinstall a package
+-   `apt-get --reinstall \[package-name]`: attempt to reinstall a package
 
--   apt-get changelog \[packag name]
+-   `apt-get changelog \[packag name]`
 
--   apt-get check: let us know which deps may be broken
+-   `apt-get check`: let us know which deps may be broken
 
-    -   apt-get build-dep \[package name]: grab and build deps packages for a give package
+    -   `apt-get build-dep \[package name]`: grab and build deps packages for a give package
 
 #### dpkg - install **.deb** packages
 
@@ -333,14 +376,13 @@ The following commands will only work on locally installed packages and files.
 
 -   `dpkg -l`: list the installed packages
 
--   `dpkg -L [package names]`:
+-   `dpkg -L (--listfiles) [package names]`:
 
     List all of the files and dirs created after a packages is installed.
 
--   `dpkg -S [packagename.version]`:
+-   `dpkg -S (--search) [packagename.version]`:
 
-    Find out which package provides a particular file.  
-
+    Search for a filename from installed packages 
 #### apt-file
 
 **apt-file** is a software package that indexes the contents of packages in your available repositories and allows you to search for a particular file among all available packages. (ABSOLUTELY EVERYTHING!!!!!!!!!!!)
@@ -350,7 +392,7 @@ Before using **apt-file** it must be installed & the DB updated
       apt-get install apt-file
       apt-file update
 
--   apt-file search \[filename or packagename]
+-   `apt-file search \[filename or packagename]`
 
 #### aptitude is a fronted for dpkg. Similar to ncurses
 
@@ -548,3 +590,34 @@ done
 -   sudo su -: From a logging perspective, this is the best way to become the root user.
 
 -   Edit the `/etc/group` file directly and add the user to the _sudo_ group.
+
+### Managing User Accounts 
+
+-   /etc/passwd: users are listed here 
+-   /etc/shadow: encrypted passwords if they are set
+-   /etc/skel (skeleton): files that populate in a new user's profile
+-   /etc/profile: place to put things that all user's will get access to when they login
+
+#### Manually add users
+
+-   `vipw`: used to manually edit the /etc/passwd file 
+
+-   `vigr`: manually edit the /etc/group file
+
+-   copy the info from /etc/skel to the new user's directory
+
+-   Change home directory ownership to the new user 
+
+-   Update the password for the new user 
+    
+    -   `passwd [username]`
+    -   `chage -d 0 [username]`: force the user to change their password at next login
+
+### User Account Attributes
+
+-   `chfn --full-name`: Edit a user's full name (finger information)
+-   `chsh`: change the default shell env for a user
+    
+    -   `chsh [username] /bin/false`: will not allow access to a user shell. If the shell is already started, a user that has access to the account will be able to `su - [username]` to the account without a problem. 
+    -   `chsh [username] /usr/sbin/nologin`: will stop this user from being accessed. Even if a shell has already been started on the system.
+   
