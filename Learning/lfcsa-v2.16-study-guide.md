@@ -294,6 +294,14 @@ For ssh setup see <a href="https://github.com/captam3rica/gitMyNotes/blob/master
 
 -   isolate graphical.target: this will cause the graphical interface to start immediately
 
+#### Power Management 
+
+`$ systemctl reboot`
+`$ systemctl poweroff`
+`$ systemctl suspend`
+`$ systemctl hibernate`
+`$ systemctl hybrid-sleep`
+
 ### Package Management (Debian/Ubuntu)
 
 **NOTE**: If you are a regular user remember to use _sudo_ in front of these commands.
@@ -541,6 +549,7 @@ done < myhosts
 
 ```sh
 for this in 1 2 3 4 5; do
+for this in 1 2 3 4 5; do
   echo "This is line # $this"
 done
 ```
@@ -600,9 +609,9 @@ done
 
 #### Manually add users
 
--   `vipw`: used to manually edit the /etc/passwd file 
+-   vipw: used to manually edit the /etc/passwd file 
 
--   `vigr`: manually edit the /etc/group file
+-   vigr: manually edit the /etc/group file
 
 -   copy the info from /etc/skel to the new user's directory
 
@@ -613,11 +622,7 @@ done
     -   `passwd [username]`
     -   `chage -d 0 [username]`: force the user to change their password at next login
 
-### User Account Attributes
+### Managing User Processes 
 
--   `chfn --full-name`: Edit a user's full name (finger information)
--   `chsh`: change the default shell env for a user
-    
-    -   `chsh [username] /bin/false`: will not allow access to a user shell. If the shell is already started, a user that has access to the account will be able to `su - [username]` to the account without a problem. 
-    -   `chsh [username] /usr/sbin/nologin`: will stop this user from being accessed. Even if a shell has already been started on the system.
-   
+-   Anything that a user starts 
+-   
