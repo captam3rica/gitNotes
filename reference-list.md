@@ -22,9 +22,13 @@
     -   [jampPro Admin Admin Guide](http://docs.jamf.com)  
     -   [jamf Developer](http://developer.jamf.com/index "jamf Developter portal")
     -   [jamf Marketplace](marketplac.jamf.com "jamf curated apps")
+    -   [jamfPro v VMware
+    AirWatch](https://www.itcentralstation.com/products/comparisons/jamf-pro_vs_vmware-airwatch)
 
 -   [NoMAD](https://nomad.menu/downloads/ "No More Active Directory")
+
 -   [Backblaze](https://www.backblaze.com "Data backup solution")
+
 -   [DeployStudio](https://deploystudio.wikispaces.com "DeployStudio Wiki")
 
 \[[top](#top)]
@@ -210,8 +214,6 @@ atom-text-editor::shadow .cursor {
 
 -   [Learn Sed](http://www.grymoire.com/Unix/Sed.html)
 
-\[[top](#top)]
-
 ## Software
 
 -   Borg Backup - (<http://borgbackup.readthedocs.io/en/stable/>)
@@ -222,20 +224,23 @@ atom-text-editor::shadow .cursor {
 -   Synology NAS - <http://www.synology.com/en-us/products/compare_products/DS214+/DS412+>
 -   Qnap NAS servers - <http://www.staples.com/office/supplies/StaplesProductDisplay?storeId=10001&catalogIdentifier=2&partNumber=IM1PK7895&langid=-1&cid=PS:GooglePLAs:IM1PK7895&srccode=cii_17588969&cpncode=35-172700112-2>
 
-\[[top](#top)]
-
 ### Web Browser Settings
 
--   Chrome, Chromium, and Vivaldi Autofill Settings - `chrome://settings/search#autofill`
+-   Chrome, Chromium, and Vivaldi Autofill Settings: `chrome://settings/search#autofill`
+-   Opera flag settings: `opera://flags/`
 
-\[[top](#top)]
-
+    -   Smooth Scrolling: Disabled
+    -   Experimental QUIC (Similar to TCP but over UDP): Enabled
 ## Certifications
 
 -   GIAC Certified Incident Handler - <http://www.giac.org/certification/certified-incident-handler-gcih>
 -   GIAC Certified Forensic Examiner - <http://www.giac.org/certification/certified-forensic-examiner-gcfe>
-
-\[[top](#top)]
+-   Apple Certified Macintosh Technician
+-   macOS Certified Technician 
+-   Certified Security Analyst 
+-   Security Plus ce
+-   Linux Foundation Certified System Administrator 
+-   Red Hat Certified System Administrator
 
 ## Security Tools & Info ...
 
