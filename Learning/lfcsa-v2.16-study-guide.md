@@ -726,3 +726,38 @@ REJECT`
     -   a: both listening and non-listening
     -   l: only listening 
 
+### Configure Net Services to start at boot - sysvinit
+
+-   RHEL 5 or 6 & CentOS 5 or 6
+-   `chkconfig`: check service configurations 
+-   `chkconfig [service-name] on`: turn the service on
+-   `service [service-name] start`: start the service
+
+### Monitor Network Performance
+
+-   Socket Statistics 
+
+-   `ss -t -a`: list all tcp connections open and closed.
+
+-   `ss -t -o`: list by connection time
+
+-   `ss -t -n sport= :22`:  list listening TCP ports and do not resolve service names.
+
+-   `nmap -A -sS localhost`: aggressive, tcp syn scan on localhost. Will not show up in the target computer's logs
+
+-   `iptraf`: look at what is happening on your system.
+
+-   `dstat`: see system resource utilization in real time 
+
+    -   `--battery`
+    -   `--battery-remain`
+    -   `--disk-util`
+    
+### Statically Route IP Traffic
+
+-   `ip route show`: show the ip address routes
+
+-   `ip route add [ip address or subnet range] via [gateway address] dev [device-name]`
+
+-   `route add -net 172.17.0.0 netmask 255.255.255.0 gw 192.168.1.131 dev [device-name]` -- **deprecated command**
+-   
