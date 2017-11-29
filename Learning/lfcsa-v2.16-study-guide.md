@@ -752,12 +752,79 @@ REJECT`
     -   `--battery`
     -   `--battery-remain`
     -   `--disk-util`
-    
-### Statically Route IP Traffic
+
+### Statically Route IP Address Traffic
 
 -   `ip route show`: show the ip address routes
 
--   `ip route add [ip address or subnet range] via [gateway address] dev [device-name]`
+-   `ip route add [ip address or subnet range] via [chosen gateway address] dev [device-name]`
+
+-   `ip route delete [ip address or range]`
 
 -   `route add -net 172.17.0.0 netmask 255.255.255.0 gw 192.168.1.131 dev [device-name]` -- **deprecated command**
--   
+
+### Dynamically Routing IP Address Traffic
+
+-   Turn your system into a dynamic router (smart router)
+
+#### `quagga` (fork or the defunked Zebra package)
+
+-   `/etc/quagga/`
+
+-   daemons file
+    zebra=1
+    ripd=1
+
+-   zebra.conf  
+    service quagga restart   
+    hostname [your hostname]   
+    password [enter a password]   
+
+-   ripd.conf
+    add the same configs from abov   
+
+-   restart the quagga service 
+-   chmod on the config files `quagga:quaggaavty`
+
+**quagga config**
+
+```
+ssh localhost:2601 
+password: [enter password from config file]
+> enable
+password: [enter password from config file]
+configure terminal
+(config)# inter [interface name]
+(config-if)# ip addr [ip address for router]/24
+(config-if)# exit
+(config-if)# write
+(config)# quit
+exit
+```
+**ripd config**
+
+```
+ssh localhost:2602
+password:
+> enable
+# configure terminal
+(config)# router rip
+(config-router)# version 2
+(config-router)# network [ip address]/24
+(config-router)# exit
+(config)# write
+(config)# exit
+exit
+```
+
+**client config**
+
+-   `ip route add default via [ip of router(server)]`: tell the client to use
+    the newly configured server as the the default gateway. 
+
+-   `ip route show`: to confirm configs are applied
+
+
+
+
+
