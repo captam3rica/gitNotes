@@ -746,10 +746,9 @@ REJECT`
 
 -   --ipv6
 
--   All  standard  TCP  states:  **established**,  **syn-sent**, **syn-recv**, **fin-wait-1**, 
-    **fin-wait-2**, **time-wait**, **closed**, **close-wait**, **last-ack**, **listen and closing**.
-
-**Command Lines**
+-   All  standard  TCP  states:  **established**,  **syn-sent**, **syn-recv**, 
+    **fin-wait-1**, **fin-wait-2**, **time-wait**, **closed**, **close-wait**, 
+    **last-ack**, **listen and closing**.
 
 -   `ss --ipv4 state all`: all IPv4 address and all states
 
