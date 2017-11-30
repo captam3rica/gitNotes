@@ -16,7 +16,7 @@ Mon Nov  6 15:45:45 EST 2017
 
 -   `touch filename{1..n}.txt`: generate multiple files at once
 
-### sed (stream editor)
+**sed (stream editor)**
 
 -   `sed 's/oldtext/newtext/g' [textfile.txt]`
 -   `sed -n "p" [filename.txt]`: print the contents of the file to stdout
