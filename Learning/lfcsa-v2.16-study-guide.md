@@ -716,16 +716,6 @@ REJECT`
 
 -   `iptablse-restore < /etc/sysconfig/iptables`
 
-### Configure Network Services to Start on Boot - systemd
-
--  `ss -tuna`: 
-
-    -   n: numeric. do not resolve services names
-    -   t: tcp
-    -   u: udp
-    -   a: both listening and non-listening
-    -   l: only listening 
-
 ### Configure Net Services to start at boot - sysvinit
 
 -   RHEL 5 or 6 & CentOS 5 or 6
@@ -735,23 +725,72 @@ REJECT`
 
 ### Monitor Network Performance
 
--   Socket Statistics 
+**`ss -tuna`**: 
 
--   `ss -t -a`: list all tcp connections open and closed.
+-   n: numeric. do not resolve services names
+
+-   t: tcp
+
+-   u: udp
+
+-   a: both listening and non-listening (listening, time-wait, established,
+    unconnected)
+
+-   l: only listening connections aka open connections 
+
+-   p: show processes using the socket (open by socket)
+
+-   Z: process security context 
+
+-   --ipv4
+
+-   --ipv6
+
+-   All  standard  TCP  states:  **established**,  **syn-sent**, **syn-recv**, **fin-wait-1**, 
+    **fin-wait-2**, **time-wait**, **closed**, **close-wait**, **last-ack**, **listen and closing**.
+
+**Command Lines**
+
+-   `ss --ipv4 state all`: all IPv4 address and all states
+
+-   `ss -4 state established`: only show IPv4 addresses with established
+    connections 
+
+-   `ss -4 state listening`: show IPv4 address in a listening state
+
+-   `ss -t -a`: list all tcp connections
 
 -   `ss -t -o`: list by connection time
 
 -   `ss -t -n sport= :22`:  list listening TCP ports and do not resolve service names.
 
+-   `ss -o state established '( dport = :ssh or sport =:ssh )'`: show all
+    established ssh connections.
+
+**nmap**
+
 -   `nmap -A -sS localhost`: aggressive, tcp syn scan on localhost. Will not show up in the target computer's logs
 
+**iptraf**
+
 -   `iptraf`: look at what is happening on your system.
+
+**dstat**
 
 -   `dstat`: see system resource utilization in real time 
 
     -   `--battery`
     -   `--battery-remain`
     -   `--disk-util`
+
+-   `dstat -c -d -g -n -m -y -p`: display info about cpu, disk, paging, network, memory, 
+     system, and processes
+
+-   `dstat --all`: same as default -cdngy
+
+-   `dstat 5 10`: run dstat at 5 second intervals and a total of 10 times
+
+-   `dstat -n 2 5`: show network stats every 2 seconds for a total of 5 times.
 
 ### Statically Route IP Address Traffic
 
@@ -823,6 +862,8 @@ exit
     the newly configured server as the the default gateway. 
 
 -   `ip route show`: to confirm configs are applied
+
+## Service Configuration 
 
 
 
