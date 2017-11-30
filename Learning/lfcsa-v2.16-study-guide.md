@@ -4,7 +4,7 @@ Mon Nov  6 15:45:45 EST 2017
 
 ## Essentials
 
-### touch
+**touch**
 
 -   Change time
 
@@ -18,44 +18,44 @@ Mon Nov  6 15:45:45 EST 2017
 
 ### sed (stream editor)
 
--   `sed 's/oldtext/newtext/g' \\[textfile.txt\]`
--   sed -n "p" filename.txt
--   sed -n "1p" filename.txt
--   sed -n "4,7" filename.txt
--   sed -n "3+7p" filename.txt
--   sed -n "4~1" filename.txt
--   sed -n "1 ! p" filename.txt
--   sed 's/\[\[:regex:]]/{1, } filename.txt
+-   `sed 's/oldtext/newtext/g' [textfile.txt]`
+-   `sed -n "p" [filename.txt]`: print the contents of the file to stdout
+-   `sed -n "1p" [filename.txt]`: print the first line of the file to stdout
+-   `sed -n "4,7p" [filename.txt]`: print lines 4 through 7 to stdout
+-   `sed -n "3+7p" [filename.txt]`
+-   `sed -n "4~1" [filename.txt]`
+-   `sed -n "1 ! p" [filename.txt]`: print every line except line 1
+-   `sed 's/\[\[:regex:]]/{1, } [filename.txt]`
 
-### ls
+**ls**
 
 -   ls -l file1 file2 file3
 -   ls -l $(tty) same as ls -l /dev/pts/1
 
         crw--w----. 1 tux tty 136, 1 Dec 27 14:56 /dev/pts/1
 
-### du
+**du**
 
 -   `du -sch /some/dir`
 -   `c` or `--total`: total size
 -   `s`: summarize
 -   `h`: human-readable
 
-### sort
+**sort**
 
 -   `-h`: human-readable numeric sort (ascending)
 -   \-r: reverse order
 
-### uniq
+**uniq**
 
 -   `-c`: count the uniq number of occurences
 -   `-w \[n]` - the first \\\[n] characters in a line
 
-### fmt - format text
+**fmt** - format text
 
 -   fmt filename.txt > newfilename.txt
 
-### cut
+**cut**
 
 -   cut -d 'delemiter' -f1 filename.txt
 -   \-f1-n: this is the column number for the text input
@@ -65,42 +65,42 @@ Mon Nov  6 15:45:45 EST 2017
 #### find
 
 -   search with the -name of the "file"
--   \-iname: search ignoring case
--   \-not: search for every thing execept
+-   -iname: search ignoring case
+-   -not: search for every thing execept
 -   c: find character devices (dev)
--   \-executable; -readable; writeable
--   \-perm \[mode]: files permissions are exactly (octal or symbolic) - ie 700,
+-   -executable; -readable; writeable
+-   -perm [mode]: files permissions are exactly (octal or symbolic) - ie 700,
 644, etc.
--   \-type l: for symbolic links
--   \-type f: file
--   \-type d: directory
--   \-d, -depth: process the contents of the directory before the directory
+-   -type l: for symbolic links
+-   -type f: file
+-   -type d: directory
+-   -d, -depth: process the contents of the directory before the directory
 itself
--   \-maxdepth \[level] or mindepth \[level]
--   \-size: find the size of files (less than or greater than)
+-   -maxdepth \[level] or mindepth \[level]
+-   -size: find the size of files (less than or greater than)
 
     -   1M, 24000c, 1K, 1G
 
--   \-group \[group-name]: find files with a given group name
+-   -group [group-name]: find files with a given group name
 -   find  -atime -1:  access less than a day ago
--   \-mtime: modification time
+-   -mtime: modification time
 
-Full Command Lines ...
+**Full Command Lines ...**
 
--   find / -user syslog: all files owned by syslog
--   find / -perm 755: find all files with permissions 755
--   find / -type f -name "some-file.txt" -exec ls -lth {} \\; - only look for
+-   `find / -user syslog`: all files owned by syslog
+-   `find / -perm 755`: find all files with permissions 755
+-   `find / -type f -name "some-file.txt" -exec ls -lth {} \\;`:- only look for
 files name "some-file.txt" then execute the "ls" command.
--   sudo find / -type f -name "myTesT.txt" -exec chmod 707 {} \\; -exec ls -l
-{} \\; - find the file named "myTesT.txt", change the permissions, then list
+-   `sudo find / -type f -name "myTesT.txt" -exec chmod 707 {} \\; -exec ls -l
+{} \\;`: find the file named "myTesT.txt", change the permissions, then list
 the file with a long listing.
 
 **Fun fact**
 
--   The following command will  will you to look a each line individually until
-complete. I broke my shell doing this by accident ... :)
+-   The following command will force you to look at each line individually until
+    you have reached the end of the output. I broke my shell doing this by accident ... :)
 
-    -   sudo find / -type f -name "\*.txt" -exec less {} \\;
+    -   `sudo find / -type f -name "\*.txt" -exec less {} \\;`
 
 #### locate
 
