@@ -9,7 +9,7 @@ Tue Nov 14 10:49:08 EST 2017
 
 -   Enroll in DEP, VPP, and ASM (Apple School Manager)
 
-    -   MDM through the Apple setup process
+    -   MDM through the Apple Setup Assistant
 
     -   [DEP Program](https://deploy.apple.com)
 

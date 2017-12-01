@@ -4,63 +4,81 @@ Precursors to using some of the commands below. **PLEASE** be sure to make a bac
 
 ## Terminal Hacks
 
-#### OS Version
+### OS Version
 
 `$ sw_vers`
 
-#### Show Hidden Files & Folders
+### Show Hidden Files & Folders
 
 `$ defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder`
 
-#### Unhide ~/Library
+### Unhide ~/Library
 
 `chflags nohidden ~/Library`
 `chflags hiddent ~/Library` - to hide it again
 
-#### Edit Your '$PATH'
+### Edit Your '$PATH'
 
 `sudo launchctl config user path "/usr/local/bin:$PATH" && sudo launchctl reboot`
 
-#### Turn on "Install from Anywhere" in GateKeeper.
+### Turn on "Install from Anywhere" in GateKeeper.
 
 - This is a setting that Apple decided to remove with the release of Mac OS Sierra.
 
 `sudo spctl --master-disable`
 
-#### Allow Keyboard Keys to repeat
+### Allow Keyboard Keys to repeat
 
 `defaults write -g ApplePressAndHoldEnabled -bool false`
 
-#### Change ScreenShot File Type to PDF
+### Change ScreenShot File Type to PDF
 
 `defaults write com.apple.screencapture type PDF`
 
-#### Remove Smooth Scrolling
+### Remove Smooth Scrolling
 
 When you hit spacebar in a browser, the page will automatically scroll with a smooth transition effect. Sometimes this animation can be clunky. To remove this setting use the following.
 
 `defaults write -g NSScrollAnimationEnabled -bool NO`
 
-#### Remove the Bouncy Elastic Effect in Finder and Other Apps
+### Remove the Bouncy Elastic Effect in Finder and Other Apps
 
 `defaults write -g NSScrollViewRubberbanding -int 0`
 
-#### Force Empty Trash
+### Force Empty Trash
 
 `$ rm -rf ~/.Trash/*`
 
-#### Convert Plist to xml and binary
+### Convert Plist to xml and binary
 
 `plutil -convert xml1 </path/to/property/list>`  
 `plutil -convert binary </path/to/property/list>`
 
-#### Remove a Package Receipt
+### Remove a Package Receipt
 
 `sudo pkgutil --forget [com.name.of.package.pck]`  
 
 or   
 
 `sudo rm -rf /var/db/receipts/[name of receipt]`
+
+### Force Apple Setup Assistant to launch again
+
+1. Boot to single user mode
+
+`left shft + S`
+
+2. Before mounting the file system we need to run an FS check
+
+`/sbin/fsck -fy`
+
+3. Now mount the file system
+
+`/sbin/mount -uw /`
+
+4. Remove the following file to force Setup Assistant to come back
+
+`rm /var/db/.AppleSetupDone`
 
 ## Application Specific ...
 
@@ -84,12 +102,12 @@ input their login credentials.
 
 ## User Modifications
 
-#### For the username to be an admin & add that user to the admin group wheel
+### For the username to be an admin & add that user to the admin group wheel
 
 `sudo dseditgroup -o edit -a $username_to_add -t user admin`  
 `sudo dseditgroup -o edit -a $username_to_add -t user wheel`  
 
-#### Change the shortname (username) of a particular user
+### Change the shortname (username) of a particular user
 
 - Backup the current username to something like [username.old]
 
@@ -106,20 +124,20 @@ input their login credentials.
     $ dscl . -passwd /Users/whitsongordon [new password here]
 
 
-#### Manipulate User Accounts & Passwords
+### Manipulate User Accounts & Passwords
 
   `pwpolicy [-v] [-a authenticator] [-p password] [-u username | -c computername]
                 [-n nodename] command command-arg`
 
-#### Enable the root user
+### Enable the root user
 
 `dsenableroot -d`
 
-#### Force the user to be admin  
+### Force the user to be admin  
 
 `$ sudo dseditgroup -o edit -a jwils156 admin`
 
-#### Mount User's ***Something*** folder to ***Scan*** folder
+### Mount User's ***Something*** folder to ***Scan*** folder
 
     sudo -u $user -H sh -c "mount_smbfs
     //'your.computer.domain;$user@something.server.name/location/of/folder"
@@ -209,22 +227,22 @@ The fsck_apfs utility verifies and repairs APFS containers and volumes.
 `sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin`  
 `sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefpane`
 
-#### Find Java Version
+### Find Java Version
 
 `./Library/Internet\
 Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
 
 ## Diagnostics & Testing
 
-#### Local Diagnostics
+### Local Diagnostics
 
 - Hold `cmd+D` at boot
 
-#### Target Disk Mode
+### Target Disk Mode
 
 - Hold the T key while the system is booting.
 
-#### System Management Controller (SMC) Reset
+### System Management Controller (SMC) Reset
 
 - **For MacBook Air, MacBook Pro Retina, and MacBook Pros with non-removable batteries**
   - Press and hold `shft + opt + ctrl + power button` with the MagSafe adapter connected.
@@ -249,7 +267,7 @@ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
   - Video and/or external video issues
   - General performance and functionality issues concerning hardware
 
-#### PRAM aka NVRAM Reset
+### PRAM aka NVRAM Reset
 
 - Press and hold `cmd + opt + P + R`
 
@@ -262,33 +280,33 @@ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
 
 ## Installers & Install media
 
-#### Convert DMG to installosx
+### Convert DMG to installosx
 
 `hdiutil convert apple.dmg -format UDTO -o apple.iso`
 
-#### Create OS X install media:
+### Create OS X install media:
 
     sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/[usb device] --applicationpath /Applications/Install\ macOS\ High\ Sierra.app/ –nointeraction
 
 ## Munki related
 
-#### Path to *Munki* Files
+### Path to *Munki* Files
 
 /usr/local/munki
 
-#### Sal Client Setup
+### Sal Client Setup
 
 `$ defaults write /Library/Preferences/com.github.salopensource.sal ServerURL http://something.com`  
 
 `$ defaults write /Library/Preferences/com.github.salopensource.sal key [yourreallyreallylongkey]`
 
-#### Removing All-in-one Puppet Scripts
+### Removing All-in-one Puppet Scripts
 
     rm /Library/LaunchDaemons/com.puppetlabs.mcollective.plist
     rm /Library/LaunchDaemons/com.puppetlabs.puppet.plist
     rm /Library/LaunchDaemons/com.puppetlabs.pxp-agent.plist
 
-#### If the OS X upgrade package fails to install:
+### If the OS X upgrade package fails to install:
 
 `com.googlecode.installosx.pkg.plist`
 `com.googlecode.installosx.pkg.bom`
