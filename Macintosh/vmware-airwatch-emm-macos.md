@@ -11,7 +11,7 @@ Tue Nov 14 10:49:08 EST 2017
 
     -   MDM through the Apple setup process
 
-    -   [DEP Program](deploy.app.com)
+    -   [DEP Program](deploy.apple.com)
 
     -   Generate a link between AirWatch and Apple
 
