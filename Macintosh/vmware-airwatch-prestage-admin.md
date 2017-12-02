@@ -9,8 +9,8 @@ used for troubleshooting.
 
 **To set up a typical workflow, perform the following:**
 
--   Click `**Devices > Profiles & Resources > Profiles > Add > Add Profile > macOS > 
-    Device Profile**`
+-   Click **`Devices > Profiles & Resources > Profiles > Add > Add Profile > macOS > 
+    Device Profile`**
 
 -   Configure a profile with a Directory payload and assign it to assignment groups
     that will contain your DEP-enrolled devices.
@@ -18,7 +18,7 @@ used for troubleshooting.
 -   This payload binds the macOS device to your directory. Information about this 
     payload can be found in the macOS Platform Guide in MyAirWatch.
 
--   Click `**Devices > Device Settings > Apple > Device Enrollment Program**`
+-   Click **`Devices > Device Settings > Apple > Device Enrollment Program`**
 
 -   Click **Add Profile**
 
