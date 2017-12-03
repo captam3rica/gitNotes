@@ -1,38 +1,46 @@
 # Arch Linux Install Guide
 
-The following steps are what I did to install Arch linux on my Asus laptop and many other devices. The [Beginners Install Guide](dex.php/Beginners%27_guide#Boot_the_installation_medium) is much more in-depth and explains some other features like MBR installs, full and partial disk encryption, and the GRUB boot loader.
+The following steps are what I did to install Arch linux on my Asus laptop and 
+many other devices. The 
+[Beginners Install Guide](dex.php/Beginners%27_guide#Boot_the_installation_medium) 
+is much more in-depth and explains some other features like MBR installs, 
+full and partial disk encryption, and the GRUB boot loader.
 
 ## Installation:
 
 ### Bootable Arch Media:
 
-You can grab the latest ISO from [here](https://www.archlinux.org/download/). I always grab one from one of the US mirrors, but they have a Torrent file as well.
+Grab the latest ISO from [here](https://www.archlinux.org/download/). I always 
+grab one from one of the US mirrors, but they have a Torrent file as well.
 
 Now lets create the install media:
 
-    # sudo dd bs=512 if=/location/of/your/iso_file of=/dev/sdx && sync
+    sudo dd bs=512 if=/location/of/your/iso_file of=/dev/sdx && sync
 
 * This will take about 5 minutes to complete, but it will depend on the quality of the flash media.
 
 ### Install Arch:
 
-Boot to the USB drive that you just created, and select the first boot option.  
+Boot to the USB drive, and select the first boot option.  
 
 After the OS environment boots, take a look at the connected devices and determine where you will be installing Arch. If you know how large your target drive is, determining which device to use should be fairly straight forward.
 
-    # lsblk
+       lsblk -afm
 
 #### Network Setup:
 
 If you are connect to your network via Ethernet, then downloading packages shouldn't be a problem, but if you need to connect to a wifi network, here are the commands to get you going:
 
-Run *ip addr* to get the name of the wireless interface. It will be something like "wlp2s0"
+Run `ip addr` to get the name of the wireless interface. It will be something like "wlp2s0"
 
     # ip addr
 
 Next, use the following command to list the available wifi networks:   
 
-    # wifi-menu -o <wireless_nic_id>
+    # wifi-menu -o [wireless_nic_id]
+    # ip addr
+
+You should now be connected 
 
 #### Update the System Clock:
 
@@ -42,7 +50,13 @@ Update the system clock to ensure that it is up-to-date:
 
 ### Partition Setup:
 
-Recall the device name that you found from the *lsblk* command from earlier. We are now going to partition the hard drive to get it ready for the file system that we will be creating. I will be creating a *GPT* partition table with 2 partitions. One for boot drive that will be formatted with *FAT32* for UEFI BIOS setup and another larger drive that will be formatted with *ext4*. The larger partition will be used to create 3 Logical volumes or *LVMs*. One for Root, one for swap, and the last for the home directory.
+Recall the device name that you found from the *lsblk* command from earlier. 
+We are now going to partition the hard drive to get it ready for the file system 
+that we will be creating. I will be creating a *GPT* partition table with 2 
+partitions. One for boot drive that will be formatted with *FAT32* for UEFI BIOS 
+setup and another larger drive that will be formatted with *ext4*. The larger 
+partition will be used to create 3 Logical volumes or *LVMs*. One for Root, 
+one for swap, and the last for the home directory.
 
     # parted /dev/sdx
 
@@ -61,6 +75,8 @@ Create the *Physical Volume* using the following command:
 
     # pvcreate /dev/sdax
 
+**Note**: Do not write over the boot partition by accident 
+
 Create the *Volume Group* with the following command:
 
     # vgcreate <VolumeName_of_your_choice> /dev/sdax
@@ -70,6 +86,14 @@ Create the logical volumes that we mentioned earlier (root, swap, and home):
     # lvcreate -L 30G examplevg -n rootlv
     # lvcreate -L 4G examplevg -n swaplv
     # lvcreate -l +100%FREE examplevg -n homelv
+
+-   To rename an logicl volume use the following command
+
+    `lvrename [volumegroup-name] [lvoldname] [lvnewname]`
+
+    or 
+
+    `lvrename /path/to/vgroup-name/lvoldname /path/to/vgroup-name/lvnewname`
 
 If you want to display the different volumes that you just created:
 
@@ -117,11 +141,12 @@ The mirror list is how Arch knows where to look for packages and updates to inst
 
 #### Install the Base Packages:
 
-Now we get to install the base system packages to the root filesystem that we created:
+Now we get to install the base system packages to the root filesystem that 
+was created earlier:
 
     # pacstrap -i /mnt base base-devel (Yes, there is a space between base and base-devel)
 
-Just press enter when prompted to install packages.
+Press enter when prompted to install packages.
 
 ### Configuring Arch:
 
@@ -188,7 +213,7 @@ Run the following command to build the initial RAM filesystem:
 
     # mkinitcpio -p linux
     or
-    # mkinitcpio -p linux-lts (You must download the lts kernel first)
+    # mkinitcpio -p linux-lts (You must download the lts kernel and lts-headers first)
 
 ### Install the Boot Loader
 
@@ -233,34 +258,40 @@ If you setup the Wifi network with *wifi-menu*, repeat the same steps
 
 #### Create your user
 
-    # useradd -m -g wheel -d /home/captam3rica -s /bin/bash -n captam3rica
-    (replace my username with one of your own)
-    # passwd captam3rica
+    # useradd -m -g wheel -d /home/captam3rica -s /bin/bash -c "[Long Name Here]" [username]
+    # passwd [username]
     (it is best to make this password something other than the root password)
+    # chage -d 0 [username] (This will force a password change upon first log
+    on)
 
 #### Sudoers File
 
-Edit the */etc/sudorers* file so that you will be able to use the sudo command to install packages and edit other files as necessary.
+Edit the */etc/sudorers* file so that you will be able to run commands as root to install packages and edit other files as necessary.
 
     Find the line looks like this "# %wheel" and uncomment it.
 
-After you save the file, you will be able to use your user to perform commands as root.
+After save the file, you will be able to use your user to perform commands as root.
 
 ### Desktop Environment
 
 #### Gnome3
 
-I am installing Gnome3 as my desktop environment, but there are many others to choose from. I recommend playing around with a few until you find one that you like. [Other Desktops](https://wiki.archlinux.org/index.php/Desktop_environment)
+I am installing Gnome3 as my desktop environment, but there are many others to choose 
+from. I recommend playing around with a few until you find one that you like. 
+[Other Desktops](https://wiki.archlinux.org/index.php/Desktop_environment)
 
-    # pacman gnome gdm gome-tweak-tool
+    # pacman -S gnome gome-tweak-tool
 
 Here are some extra packages that I like to install along with gnome3
 
-    # exfat-utils util-linux fuse-expat (for creating and mont exfat file system types)
-    # gedit (A really nice text editor)
-    # gnome-remote-desktop (I think it's obvious)
-    # gnome-documents (Document and ebook reader for Gnome)
-    # aspell-en (Spell checker for LibreOffice)
+-   exfat-utils util-linux fuse-expat (for creating and mont exfat file system types)
+-   gedit (A really nice text editor)
+-   gnome-remote-desktop (I think it's obvious)
+-   gnome-documents (Document and ebook reader for Gnome)
+-   aspell-en (Spell checker for LibreOffice)
+-   Chromium
+-   inkscape
+-   gimp
 
 #### Enabe the gdm service
 
@@ -269,6 +300,9 @@ After the Gnome installation completes, enable the desktop manager service
     # systemctl enable gdm
 
 #### Start the NetworkManager service
+
+**Note**: If you are already connected to Wi-Fi there is no need to use the `ip
+link` command below.
 
     ip link set <your NIC> up
     systemctl enable NetworkManager
