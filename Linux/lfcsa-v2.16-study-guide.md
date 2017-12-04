@@ -872,16 +872,16 @@ exit
 -   `mkdir /var/share`
 -   set permissions appropriately 
 -   `man exports`
-    -   `/etc/exports`
+-   `vim /etc/exports`
 
-            /home   [ip address, ranges, or 0.0.0.0 (any)](rw,no_root_squash) 
-            -   stops directory mapping as root by mapping to the anonymous user.
-            /var/share[ip address, ranges, or 0.0.0.0(any)](ro)
-            -   read only
-            :x
+        /home   [ip address, ranges, or 0.0.0.0 (any)](rw,no_root_squash) 
+        -   stops directory mapping as root by mapping to the anonymous user.
+        var/share[ip address, ranges, or 0.0.0.0(any)](ro)
+        -   read only
+        :x
 
-    -   `exportfs -a`
-    -   `service nfs restart` (CentOS 6)
+-   `exportfs -a`
+-   `service nfs restart` (CentOS 6)
 
 ### 
 
