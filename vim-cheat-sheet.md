@@ -17,7 +17,7 @@ Mon Dec  4 16:04:56 EST 2017
 | b | move back one word | 
 | ctrl-d | move one page down |
 | ctrl-b | move one page up | 
-| ---------- | --------- |
+| -----Copy, paste, delete----- | --------- |
 | ni | insert (n) lines |
 | a | insert to right of cursor |
 | A | insert at end of line |
@@ -26,7 +26,6 @@ Mon Dec  4 16:04:56 EST 2017
 | #rn | replace (n) chars | 
 | x | delete a single char |
 | nx | delete (n) chars |
-| ---------- | --------- | 
 | yy | copy the entire line |
 | v(isual) | mark lines visually |
 | p or P | paste below or Above the cursor |
@@ -38,13 +37,13 @@ Mon Dec  4 16:04:56 EST 2017
 | dis or das | delete a sentence | 
 |:noh | remove hightlight search words | 
 | 4. | copy previous line 4 times | 
-| ---------- | --------- |
+| -----shell commands from vim----- | --------- |
 | :! [your shell command here] | run a shell command from within vim |
 | :r! [your shell command here] | run a shell command and insert output to vim |
 | 1,5 ! `sort -r` | sort lines 1 - 5 in reverse order | 
 | :! git add [filename] && git commit -m "comment" && git push | add, commit,
 and push to github without leaving vim | 
-| ---------- | --------- | 
+| -----window manipulation----- | --------- | 
 | shift-zz | write (save) & exit |
 | :saveas [filename.txt] | save file as |
 | :badd | add a file to the buffer |
