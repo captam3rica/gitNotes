@@ -31,18 +31,20 @@
 
 -   DEP for macOS
 
-    -   Await configuration - hold the user in Setup Assistant until the device is completely setup.
+    -   Await configuration - hold the user in Setup Assistant until the device is completely set
+        up
+        .
     -   Admin account creation - hidden admin account 
     -   Users will not be prompted to create a local account through the Setup Assistant
     -   Separate user account creation utilizing network credentials (AD, LDAP, etc)
 
-        **Network accounts are required**
+**Network accounts are required**
 
-    -   How does this handle auth over wifi? 
-        
-        -   First use? 
-        -   After being away from the network for some amount of time? 
-        -   How is KeyChain syncing handled?
+-   How does this handle auth over wifi? 
+
+    -   First use? 
+    -   After being away from the network for some amount of time? 
+    -   How is KeyChain syncing handled?
 
 ### Pre-Staged Admin Accounts for macOS in AirWatch
 
