@@ -36,8 +36,14 @@
 
 -   [IBM SPSS Documentation](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/ "Documentation for IBM SPSS")
 
--   [My
+-   **AirWatch**
+
+    -   [My
     AirWatch](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
+    -   [9.1 Release
+        Notes](https://my.air-watch.com/help/9.1/en/Content/Release_Notes/Help_Release_Notes.htm)
+    -   [9.1 Product Documentation
+        Links](https://my.air-watch.com/help/9.1/en/Content/Release_Notes/Doc_List_PDFs.htm)
 
 -   [Jamf](jamf.com "jamf Mac administration")
 
