@@ -17,14 +17,6 @@
 
 ### App Stuff ...
 
--   [Jamf](jamf.com "jamf Mac administration")
-
-    -   [jampPro Admin Admin Guide](http://docs.jamf.com)  
-    -   [jamf Developer](http://developer.jamf.com/index "jamf Developter portal")
-    -   [jamf Marketplace](marketplac.jamf.com "jamf curated apps")
-    -   [jamfPro v VMware
-    AirWatch](https://www.itcentralstation.com/products/comparisons/jamf-pro_vs_vmware-airwatch)
-
 -   [NoMAD](https://nomad.menu/downloads/ "No More Active Directory")
 
 -   [Backblaze](https://www.backblaze.com "Data backup solution")
@@ -43,6 +35,17 @@
     -   [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
 
 -   [IBM SPSS Documentation](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/ "Documentation for IBM SPSS")
+
+-   [My
+    AirWatch](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
+
+-   [Jamf](jamf.com "jamf Mac administration")
+
+    -   [jampPro Admin Admin Guide](http://docs.jamf.com)  
+    -   [jamf Developer](http://developer.jamf.com/index "jamf Developter portal")
+    -   [jamf Marketplace](marketplac.jamf.com "jamf curated apps")
+    -   [jamfPro v VMware
+    AirWatch](https://www.itcentralstation.com/products/comparisons/jamf-pro_vs_vmware-airwatch)
 
 \[[top](#top)]
 
