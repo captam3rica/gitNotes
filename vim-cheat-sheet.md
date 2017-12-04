@@ -4,7 +4,8 @@ Mon Dec  4 16:04:56 EST 2017
 | Command  | Definition |
 | :------  | :--------- |
 | gg or :0 | go to top of file from anywhere |
-| :$ | go to end of file |
+| G | go to end of file |
+| :$ | go to end of last line |
 | $ | go to end of line | 
 | shift-[] | Move from paragraph to paragraph |
 | n[ or  ] | Move (n) paragraphs up or down |
