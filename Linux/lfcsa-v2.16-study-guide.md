@@ -864,7 +864,25 @@ exit
 
 ## Service Configuration 
 
+### Network Shares via NFS/CIFS - Server
 
+-   install `nfs-utils nfs-utils-lib rpcbind`
+-   `chkconfig nfs on`
+-   `service nfs start`
+-   `mkdir /var/share`
+-   set permissions appropriately 
+-   `man exports`
+    -   `/etc/exports`
 
+        /home   [ip address, ranges, or 0.0.0.0 (any)](rw,no_root_squash) 
+        -   stops directory mapping as root by mapping to the anonymous user.
+        /var/share[ip address, ranges, or 0.0.0.0(any)](ro)
+        -   read only
+        :x
+
+    -   `exportfs -a`
+    -   `service nfs restart`
+
+### 
 
 
