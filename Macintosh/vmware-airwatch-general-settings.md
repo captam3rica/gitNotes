@@ -90,7 +90,7 @@ The settings are, for the most part, platform agnostic
         in the world and a radius in kilometers or miles. 
 
         Geofence: **`Devices > Profiles & Resources > Profile Settings >
-        Areas **> Select **Geofencing Area`**
+        Areas > Select Geofencing Area`**
 
     -   **Enable Scheduling and install only during selected time periods**
 
