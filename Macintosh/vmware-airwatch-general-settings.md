@@ -71,9 +71,14 @@ The settings are, for the most part, platform agnostic
 
 -   **Assigned Groups**
 
+    **`Groups & Settings > Groups > Assignment Groups`**
+
     The device group takes precidence of the smart group. (ie if the preference
     only applies to iOS devices, Android devices will not get the setting even
     if they are in the same smart group)
+
+    _List View_ can be used to assign multiple org groups, smart groups, and
+    user groups to one or more profiles, public apps, and policies.
 
 -   **Exclusions**: choose groups to exclude
 
@@ -83,6 +88,9 @@ The settings are, for the most part, platform agnostic
 
     -   **Install only on devices in selected areas**: enter an address anywhere
         in the world and a radius in kilometers or miles. 
+
+        Geofence: **`Devices > Profiles & Resources > Profile Settings >
+        Areas **> Select **Geofencing Area`**
 
     -   **Enable Scheduling and install only during selected time periods**
 
