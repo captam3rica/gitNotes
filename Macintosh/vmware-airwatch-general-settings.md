@@ -37,18 +37,18 @@ The settings are, for the most part, platform agnostic
 
 -   Assignment Type: How the profile will be assigned to the device
 
-    -   Auto: deploy to all devices automatically
+    -   **Auto**: deploy to all devices automatically
 
-    -   Optional: user can choose to install. The admin can choose to push to a
+    -   **Optional**: user can choose to install. The admin can choose to push to a
         device. Payload can be displayed in the **App Catalog** as well.
 
-    -   Interactive (not on iOS or Android for Work): End Users install through
+    -   **Interactive (not on iOS or Android for Work)**: End Users install through
         the SSP. These profiles interact with external systems.
 
         Configure by going to `Groups & Settings > All Settings > Devices &
         Users > Advanced > Profile Options.
 
-    -   Compliance: Implemented when the End User does not take necessary
+    -   **Compliance**: Implemented when the End User does not take necessary
         actions to make their device(s) compliant
 
         Compliance profiles serve as the security gate protecting corporate
@@ -60,4 +60,34 @@ The settings are, for the most part, platform agnostic
         See [Compliance Policies
         Overview](https://my.air-watch.com/help/9.1/en/Content/Core_Guides/MDM/C/CompliancePoliciesOverview.htm)
 
+-   **Allow Removal** (iOS 7 & below only): 
 
+    -   **Always**
+    -   **With Authorization**: With auth from the amdmin and adds a
+        **password** field to the account,
+    -   **Never**
+
+-   **Managed By**
+
+-   **Assigned Groups**
+
+    The device group takes precidence of the smart group. (ie if the preference
+    only applies to iOS devices, Android devices will not get the setting even
+    if they are in the same smart group)
+
+-   **Exclusions**: choose groups to exclude
+
+-   **View Device Assignments**
+
+-   **Additional Assignment Criteria**: 
+
+    -   **Install only on devices in selected areas**: enter an address anywhere
+        in the world and a radius in kilometers or miles. 
+
+    -   **Enable Scheduling and install only during selected time periods**
+
+-   **Removal Date**: must be future date. Format: MM/DD/YYYY
+
+5.  Configure **Payload**. 
+
+6.  **Save & Publish**
