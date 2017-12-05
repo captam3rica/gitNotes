@@ -64,7 +64,6 @@ This can be done per directory or per local repo by doing the following:
     > RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.  
     > Are you sure you want to continue connecting (yes/no)? yes
 
-
 -   Make sure that the SHA256 key matches the above and type "yes"
 
 -   Done!!!!!
@@ -86,7 +85,7 @@ This can be done per directory or per local repo by doing the following:
 
 -   Initialize a directory: `git init`
 
--   Add entire contents local directory: `$ git add .`
+-   Add entire contents of local directory: `$ git add .`
 
 -   Commit a change: `$ git commit -m "Some note about the commit"`
     
@@ -115,6 +114,32 @@ remote changes: `$ git pull --rebase`
 -   Show what revision and author last modified each line of a file: `$ git blame [file]`
 
 -   See change logs: `git log`
+
+## Ignoring Content
+
+-   `git config --global core.excludesfile`: check to see if a global ignore
+    file is present
+
+-   `git config --global core.excludesfile '/etc/gitignore'`: use this file to
+    ignore other files
+
+-   `vim .gitignore`: create an ignore file locally
+
+## Branching 
+
+**Note**: make sure to tell `git` who you are.
+
+-   **`dev > qa > review > prod`**
+-   `git branch`: see current branch
+-   `git branch dev`: create a new branch "dev"
+-   `git checkout dev`: checkout the "dev" branch 
+-   `git checkout -b dev`: create and move to branch "dev"
+
+## Merging 
+
+-   `git push origin dev`: push "dev" repo on github
+-   `git push --all`: update and push all branches 
+-   `git merge dev`: merge "dev" with current active branch
 
 ## Create a local git repository from a clone, either local or remote.
 
