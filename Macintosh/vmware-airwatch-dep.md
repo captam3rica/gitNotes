@@ -118,7 +118,65 @@ Program`**
         note the device as configured and skip the awaiting configuration screen
         during enrollment.
 
-5.  Choose
+5.  Choose items to be seen by end users during the Apple **Setup Assistant**
+    workflow. For Apple School Manager, skip Setup Assistant options
+
+    -   **Passcode**: **Don't Skip** to allow users to set a passcode. If an MDM
+        profile for passcodes is being used skip this step.
+    -   **Touch ID**
+    -   **Location Services**
+
+    -   **Restoring From Backup**: **Don't Skip** if users are allowed to
+        transfer data from another device.
+
+    -   **Move from Android**: If **Don't Skip** is selected in the previous
+        setting, Select **Don't Skip** here to prompt users to move accounts and
+        data.
+
+    -   **Sing in with Apple ID and iCloud**
+    -   **Siri**
+    -   **Diagnostics**
+    -   **Registration**
+    -   **Apple pay**: If not skipped, Apple Pay is disabled for enrolled
+        accounts.
+    -   **Zoom**
+    -   **FileVault 2**
+    -   **Account Setup**: Only if **Auth** set to **Off**.
+        
+        Configure the admin account for this selection in the **Admin Account
+        Creation** area.
+
+    -   **Account Type**: Only if **Auth** set to **Off** and **Account Setup**
+        set to **Don't Skip**
+
+        If **Standard** is selected, an **admin** account must also be created
+        to manage the device.
+
+6.  For certain settings in **Setup Assistant**, use the **Admin Account
+    Creation** section to create an admin for local and remote macOS device
+    admin actions.
+
+    -   **Username**
+    -   **Full Name**
+    -   **Password**
+    -   **Hidden**
+
+        **Enable** to hide. This can enhance sec and user exp.
+
+7.  Select **Save** to view a **Summary** page and review settings. Assign to
+    devices registered in DEP.
+
+    -   **Sync Now & Assign to All Devices**: Selecting **No** does save the
+        settings but does not deploy them.
+
+    -   **Auto Assign Default Profile**: **Yes** to push DEP profile to all
+        current registerd devices as soon as the checking with AW and any
+        devices as they become enrolled in the future.
+
+        **No** to stop newly registered devices from getting teh DEP profile. Do
+        this if you entended to have multple DEP profiles.
+
+8.  Once deployment options are configured, select **Save**. 
 
 
 ## DEP Security Features 
