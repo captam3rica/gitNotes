@@ -65,7 +65,60 @@ Program`**
         In this case, only non-staging users are available as _Default
         Enrollment User Options_.
 
-        -   **Mutli-User**: 
+        -   **Single-User**: Stages devices for a single, known user. Only
+        staging users are available as _Default Enrollment User_ options. Once
+        the end users open the AW Agent, they must enter their creds to enroll
+        the staged device. Then the device details update in the AW Console and
+        the device is associated with that end user.
+
+        -   **Mutli-User**: Places device into _Shared Device Mode_. Shared
+        Device Mode stages the device for multiple, unknown users. Only staging
+        users are available as Default Enrollment User options. When the end
+        users open the AW Agent, they must enter their creds to check out the
+        device for use. 
+
+    -   **Default Staging User**: Determines enrollment user assigned to device.
+
+    -   **Device Ownership Type**: Corp dedicated, Corp shared, or Employee-Owned.
+
+    -   **Device Organization Group**: Select the org group that end users with auth
+        to. Depending on your setup, end users can auth via AD or AirWatch creds. 
+
+4.  Configure **MDM features** of the device.
+
+    -   **Profile Name**
+    -   **Department**
+    -   **Support Number**
+    -   **Require MDM Enrollment**: This can be used to ensure end user devices
+        cannot be enrolled unless enrolled in AW MDM.
+    -   **Supervision**: Enable to configure _Supervised Mode_, which is an
+        alternative to configuring _Supervised_ devices using _Apple
+        Configurator_.
+
+        Supervision is requrire for shared devices.
+
+    -   **Shared Devices**: Enable for shared devices with edu functionality.
+        Required for **Apple School Manager**
+
+    -   **Lock MDM Profile**: Prevent end user unenrollment.
+
+        Only in _Supervisor Mode_
+
+    -   **Device pairing**: Enable syncing with iTunes, Configurator, and iPCU. 
+
+        Set to **Disable** when deploying edu functionality, and **Upload** a
+        **Device Pairing Cert** for supervised identities. 
+
+    -   **Await Configuration**: 
+
+        If enable, more options will appear in the **Setup Assistant** section.
+
+        To override this setting, go to **`Device > Details View`** and select
+        the device to override. Select **`More Actions > Device Configured`** to
+        note the device as configured and skip the awaiting configuration screen
+        during enrollment.
+
+5.  Choose
 
 
 ## DEP Security Features 
