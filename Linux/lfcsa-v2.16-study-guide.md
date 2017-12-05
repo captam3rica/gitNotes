@@ -883,6 +883,49 @@ exit
 -   `exportfs -a`
 -   `service nfs restart` (CentOS 6)
 
-### 
+### Network Shares via NFS/CIFS - Client
 
+-   Install the following packages: `nfs-utils nfs-utils-lib rpcbind`
+
+-   cd /mnt
+-   mkdir nfs_home 
+-   mkdir nfs_share
+-   mount [server-address]:/home /mnt/nfs_home/
+-   mount [server-address]:/var/share /mnt/nfs_share/
+
+**Edit fstab**
+
+        [server-address]:/path/to/shared/dir    /local/mount/location  nfs
+        rw,sync,hard,intr 0 0
+
+-   `mount -a`: mounts anything specified in `/etc/fstab` local and remote.
+
+### Configure SMTP
+
+-   Handled by POSTFIX: `postfix`
+-   `/etc/postfix`
+-   `main.cf`
+
+    myorgin = $myhostname
+    mydestination = $myhostname, localhost.$mydomain, localhost
+
+-   `transport` file
+
+    -   Put the following at the end of the file
+
+    hostname    local:
+    hostname.domain     local:
+    .hostname   local:
+    .hostname.domain    local: 
+
+-   edit `/etc/hosts` with the IP address and host info for the mail server
+
+-   `postmap /etc/postfix/transport`: Reads the config (main.cf) to create an
+    internal db for routing mail.
+
+    -   `transport.db`
+
+-   mynetworks
+-   relay_domains
+-   inet_interfaces 
 
