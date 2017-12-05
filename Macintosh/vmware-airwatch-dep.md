@@ -36,7 +36,7 @@ Program`**
         single user account, and extra config options appear on the _Settings_
         page to accommodate this option. 
 
-    If you set Auth to **On**, then configure:
+    **If you set Auth to On, then configure:**
 
     -   **Device Ownership Type**: Corp dedicated, Corp shared, or Employee-Owned.
 
@@ -51,8 +51,21 @@ Program`**
     -   **Message Template**: Choose a message template to send as a custom prompt
         (only in English). Not available if **Custom Prompt** is off.
 
-    If you turn Auth **Off**, then config:
+    **If you turn Auth Off, then config:**
 
+    -   **Staging Mode**: Choose _None, Multi-User, or Single User_ after
+        determining whether or not this device is staged (Single or Mutli-User)
+        or not staged: 
+
+        For Apple School Manager, choose to configure either single user or
+        multi-user devices with education functionality.
+
+        -   **None**: Does not stage device for other users. For non-registerd
+        devices, all devices are enrolled under the _Default Enrollment User_.
+        In this case, only non-staging users are available as _Default
+        Enrollment User Options_.
+
+        -   **Mutli-User**: 
 
 
 ## DEP Security Features 
