@@ -1,6 +1,6 @@
 # VMware Fusion | vmrun
 
-*   [vmware support](https://www.vmware.com/support/developer/vix-api/vix112_vmrun_command.pdf)
+- [vmware support](https://www.vmware.com/support/developer/vix-api/vix112_vmrun_command.pdf)
 
 *   Fusion must be installed
 
