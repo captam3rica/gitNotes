@@ -11,7 +11,7 @@ Below is a list of Arch **pacman** commands that I have found useful and worth r
 | **pacman -Rns $(pacman -Qdtq)**       | Recursively remove orphaned packages and their config files       |
 | **pacman --needed** | Only install packages that are needed, can be used with other options as well, Will tell *pacman* not to reinstall packages that are already up-to-date |
 | **pacman -Rs** | Remove a package by name |
-| **pacman -Scc** | Automatically remove unneeded, obsolete information |
+| **pacman -Scc** | Automatically clean pacman cache |
 | **man pacman** | Manual pages for *pacman*|
 | **cat /var/log/pacman.log** | View logs |
 
