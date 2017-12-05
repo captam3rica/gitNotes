@@ -38,18 +38,18 @@ Program`**
 
     If you set Auth to **On**, then configure:
 
--   **Device Ownership Type**: Corp dedicated, Corp shared, or Employee-Owned.
+    -   **Device Ownership Type**: Corp dedicated, Corp shared, or Employee-Owned.
 
--   **Device Organization Group**: Select the org group that end users with auth
-    to. Depending on your setup, end users can auth via AD or AirWatch creds. 
+    -   **Device Organization Group**: Select the org group that end users with auth
+        to. Depending on your setup, end users can auth via AD or AirWatch creds. 
 
--   **Custom Prompt**: Enable custom text to appear on the screen during the
-    Setup Assistant. 
+    -   **Custom Prompt**: Enable custom text to appear on the screen during the
+        Setup Assistant. 
 
-    Turn this off if you are using Apple School Manager for iPads.
+        Turn this off if you are using Apple School Manager for iPads.
 
--   **Message Template**: Choose a message template to send as a custom prompt
-    (only in English). Not available if **Custom Prompt** is off.
+    -   **Message Template**: Choose a message template to send as a custom prompt
+        (only in English). Not available if **Custom Prompt** is off.
 
     If you turn Auth **Off**, then config:
 
