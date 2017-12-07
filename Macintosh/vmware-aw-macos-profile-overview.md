@@ -9,9 +9,11 @@ Start
 -   [Configure a Network Access Profile
     (macOS)](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/T/MacProfileWiFi.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____2)
 
--   Configure a VPN Profile (macOS)
+-   [Configure a VPN Profile
+    (macOS)](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/T/MacProfileVPN.htm?tocpath=PROFILES%7CmacOS%C2%A0Device%20Profiles%7C_____3)
 
--   Configure a VPN On Demand Profile (macOS)
+-   [Configure a VPN On Demand Profile
+    (macOS)](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/T/MacProfileVPNOnDemand.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____4)
 
 -   Configure an Email Profile (macOS)
 
@@ -25,7 +27,8 @@ Start
 
 -   Configure a SCEP/Credentials Profile (macOS)
 
-Configure a Dock Profile (macOS)
+-   [Configure a Dock Profile
+    (macOS)](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/T/MacProfileDock.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____11)
 
 Configure a Restrictions Profile (macOS)
 
