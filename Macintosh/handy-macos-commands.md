@@ -194,13 +194,20 @@ input their login credentials.
 
 **Using the hfs_convert_apfs tool**
 
-`apfs_hfs_convert -x -v --efi --dry-run /usr/standalone/i386.apfs.efi /dev/disk0s2`
+`hfs_convert_apfs -x -v --efi --dry-run /usr/standalone/i386.apfs.efi /dev/disk0s2`
 
 **Using diskutil**
 
 `diskutil APFS convert /dev/[disk#]`
 
+`diskutil apfs createContainer /dev/disk1s1`
+`diskutil apfs addVolume disk1s1 APFS`
+
 - This will call **hfs_convert_apfs** during the conversion process
+
+**hdiutil**
+
+`hdiutil create -fs APFS -size 1GB for.sparseimage`
 
 **APFS Disk Check**
 
