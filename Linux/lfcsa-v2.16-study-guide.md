@@ -327,6 +327,8 @@ target
 -   isolate graphical.target: this will cause the graphical interface to start
 immediately
 
+-   `systemctl list-unit-files`: to see a list of services on your system.
+
 #### Power Management 
 
 `$ systemctl reboot`  
@@ -900,32 +902,80 @@ exit
 
 -   `mount -a`: mounts anything specified in `/etc/fstab` local and remote.
 
+### Configure Email Aliases
+
+-   By default, message only go to implicitly specified users. Messaged will not
+    go to every user by default.
+
+-   Users are assumed to be on the system 
+
+-   Create an `aliases` file in `/etc/postfix`
+
+        [alias-name]: [user], [user2]   
+        admin: user    
+        secretary: user2    
+
+-   `postalias /ext/postfix/aliases`: so that the system knows that there is an
+    alias file.
+
+-   Restart the `postfix` service to commit changes 
+
 ### Configure SMTP
 
 -   Handled by POSTFIX: `postfix`
--   `/etc/postfix`
--   `main.cf`
+-   Directory location: `/etc/postfix`
+-   Edit the following config file: `main.cf`
 
-    myorgin = $myhostname
-    mydestination = $myhostname, localhost.$mydomain, localhost
+        myorgin = [your-server-hostname]    
+        mydestination = $myhostname, localhost.$mydomain, localhost
+        [your-server-hostname], [your-server-domainname]   
 
--   `transport` file
+-   Edit the `transport` file
 
     -   Put the following at the end of the file
 
-    hostname    local:
-    hostname.domain     local:
-    .hostname   local:
-    .hostname.domain    local: 
+        [your-hostname]    local:   
+        [your-hostname.domain]     local:   
+        .[your-hostname]   local:   
+        .[your-hostname.domain]    local:    
 
 -   edit `/etc/hosts` with the IP address and host info for the mail server
 
--   `postmap /etc/postfix/transport`: Reads the config (main.cf) to create an
-    internal db for routing mail.
+        [server-ip-address]     [your-server-domainname]
+        [your-server-hostname]
 
-    -   `transport.db`
+-   Before committing changes, it is a good idea to backup the current config
+    files.
 
--   mynetworks
--   relay_domains
--   inet_interfaces 
+-   `postmap /etc/postfix/transport`: Reads the config (main.cf) and the
+    `transport` file from above to create an internal db for routing mail.
 
+    -   File that is created: `transport.db`
+
+-   Make sure to restart the `postfix` service after make any configuration
+    changes.
+
+-   mynetworks: the subnets being used for sending mail
+-   relay_domains: destination specifications 
+-   inet_interfaces: which interfaces that the mail process will be bound to. By
+    default set to **all**.
+
+### Restrict access to SMTP service 
+
+-   `/etc/postfix/main.cf`
+
+    -   smtp_helo required = yes: Require HELO or EHLO when beginning
+        conversation
+
+    -   smtpd_sender_restrictions = permit_mynetworks
+
+    -   reject_unknown_sender_domain: Reject any non local dest from sender address
+
+    -   smtpd_helo_restrictions = permit_mynetworks,
+        reject_invalid_helo_hostname: reject anything with bad domain or sender
+        address
+
+    -   smtpd_recipient_restrictions permit_mynetworks, reject_unauth_destination: reject anything for mail formwarding and unauthorized destinations 
+
+-   Once the configs are set, run the following command `postmap /etc/postfix/trasport`
+-   Then, restart the `postfix` service
