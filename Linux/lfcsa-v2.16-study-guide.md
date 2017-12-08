@@ -979,3 +979,75 @@ exit
 
 -   Once the configs are set, run the following command `postmap /etc/postfix/trasport`
 -   Then, restart the `postfix` service
+
+### Configure an IMAP/IMAPS Service
+
+-   install `dovecot`: opensource light weight IMAP and POP3 server.
+-   `cat /etc/mail | grep postfix`: find the group name used for email.
+-   Change to the following dir: `/etc/dovecot/conf.d`
+
+    -   edit the following config file: `10-mail.configuration`
+    -   Inside of the `10-mail.configuration` file search for and add the following configs:
+
+        mail_location = mbox:~/mail:INBOX=/var/mail/%u: mail dir in the user's
+        home dirctory. Mail is going to be delivered `/var/mail/[username]`
+
+        mail_privileged_group = mail
+
+-   `ls /var/mail`: check to see if a mail dir exists in `/var`
+
+-   Edit the following config file: `/etc/dovecot/dovecot.conf`
+
+    -   Define protocols
+        /protocols
+
+            protocols = imap pop3 (optionally pop3s imaps)
+
+-   Check to see if certs are installed and configured. Could be in
+    `/etc/dovecot/conf.d` or `/etc/pki/dovecot` depending on the distro.
+
+            certs/dovecot/pem
+            private/dovcot/pem
+
+-   Edit the following file: `/etc/dovecot/conf.d/10-ssl.conf`
+
+    -   make sure that the **ssl_cert** and **ssl_key** are pointing to the
+        correct place.
+
+        `ssl_cert = /etc/pki/dovecot/certs/[certname].pem`
+        `ssl_key = /etc/pki/dovecot/private/[certname].pem`
+
+        **Note**: if the location or name of the files are changed, make sure
+        that the change is reflected here.
+
+-   Restart dovecot: `systemctl enable --now dovecot`
+-   Make sure that dovecot is running: `ps -aux | grep dove`
+-   Check to make sure that dovecot is listening on the proper ports: `ss -tuna
+    | grep dovecot`
+
+    Should be:
+
+        -   pop3: 110
+        -   imap: 143
+        -   pop3s: 995
+        -   imaps: 993
+
+### Testing the SMTP Config
+
+Mutt configuration [here](https://wiki.archlinux.org/index.php/Mutt) 
+
+-   Install `mutt`: terminal email client
+-   `mutt -s "this is a test" [username]@[servername]`
+-   Check email inbox by typing the following: `mutt`
+-   Send an attachment: `mutt -s "[your subject]" [username]@[server-domain] -a
+    [path/to/attachment]`
+-   Use `telnet` command to send an email.
+
+        telnet [localhost] smtp
+        HELO [your-hostname]
+        mail from: [username]@[server]: (server can be anything)
+        rcpt to: [username]@[server]
+        data
+        [type your message now]
+        .
+
