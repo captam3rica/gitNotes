@@ -34,6 +34,10 @@ Mon Nov  6 15:45:45 EST 2017
 
         crw--w----. 1 tux tty 136, 1 Dec 27 14:56 /dev/pts/1
 
+**grep**
+
+-   `grep -Eiv '(^#|^$)' /path/to/file`: remove lines that start with `#` or `$`
+
 **du**
 
 -   `du -sch /some/dir`
@@ -982,6 +986,8 @@ exit
 
 ### Configure an IMAP/IMAPS Service
 
+Dovecot configuration - [here](https://wiki.archlinux.org/index.php/Dovecot)
+
 -   install `dovecot`: opensource light weight IMAP and POP3 server.
 -   `cat /etc/mail | grep postfix`: find the group name used for email.
 -   Change to the following dir: `/etc/dovecot/conf.d`
@@ -1050,4 +1056,78 @@ Mutt configuration [here](https://wiki.archlinux.org/index.php/Mutt)
         data
         [type your message now]
         .
+
+### Configure HTTP Proxy
+
+-   Install: `sqid` & `squidGuard` (Debian based `sqid-guard`): proxy and proxy
+    list software
+
+-   ACLs are checked from top to bottom
+-   Once the first match is made the ACL stops
+
+-   Got to the squid dir: `/etc/squid/`
+
+    -   `squid.conf`
+        **Note**: remember that these rules are executed top down, and once a
+        rule is satisfied the rules below will not be executed.
+
+        `acl localhost src 127.0.0.1/32 ::1`
+        `acl localnet src 192.168.0.0/16`
+
+        Change your config to fit the closest IP address range.
+
+        `acl localnet src 192.168.1.0/24`
+
+        Ports set in `squid.conf` are allowed to be redirected. Other ports can
+        be added or taken away as needed. Use this section to filter protocols
+        by commond port number here as well.
+
+        `http_port 3121`: default port for squid. This can be changed.
+
+-   Restart the sqid service
+
+    -   `chkconfig sqid on && service sqid start`: sysvinit systems (RHEL &
+        CentOS 6 and lower)
+    -   `systemctl enable --now squid`: enable and start the squid service
+
+### Config an HTTP Client to Automatically Use a Proxy Server
+
+-   Configure the client web browser settings to use the proxy server. This can
+    be broadcast over the network, setup as a system configuration, or manually
+    in the browser settings.
+
+-   Can redirect DNS calls as well.
+
+-   Squid logs: `/var/log/squid/`
+
+    access.log
+    cache.log
+    squidGuard.log (sym link to `/etc/squid/squidGuard/squidGuard.log`)
+    squid.out
+
+### Restrict Access to the HTTP Proxy
+
+-   Restrict access to a specific IP address.
+-   Edit the squid config file: `vim /etc/squid/squid.conf`
+
+         acl [custom-name] [ip-address] [#comment comment comment]
+         http_access allow localnet ![custom-name]: this will allow every
+         address except for the one that we have blocked.
+
+### HTTP Proxy Server Blacklist
+
+-   Configuring squidGuard
+-   You can download a blacklist file from the internet (list of bad doms)
+-   Change to sqid-guard dir: `cd /var/lib/squidGuard/`
+
+    -   Create a blacklist dir: `mkdir blacklists`
+    -   Copy the blacklists here that you want to block
+    -   Change ownership so that the squid user and group on the blacklists
+        dir: `chown -R squid:squid blacklists/`
+    -   Run the following command to create/update the squidGuard db:
+        `squidGuard -C all`
+    -   Check the squidGard conf file: `vim /etc/squid/squidGuard.conf` to make
+        sure that the filename.db name is the same as the domainlist in the
+        Destination classes section.
+
 
