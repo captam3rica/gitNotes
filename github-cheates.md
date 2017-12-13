@@ -7,10 +7,6 @@
     $ git config --global color.ui auto
     $ git config --global core.editor "/bin/vim"
 
-This can be done per directory or per local repo by doing the following:
-
--   `git config user.name "your-username" && git config user.email "your-email"`
-
 **Print rep .git/config to stdout**
 
 -   `git config -l`
@@ -22,6 +18,7 @@ This can be done per directory or per local repo by doing the following:
 **Switch the protocol that the repo is using**
 
 -   `git config remote.origin.url git@github.com:[repo]/[yourproject.git]`
+
 -   You can also edit the _config_ file directly
         
         cd /your/repo/directory
@@ -34,20 +31,20 @@ This can be done per directory or per local repo by doing the following:
 
 -   Go to **Terminal**
 
-      ## Check to see if you already have an SSH key pair
-      $ ls ~/.ssh
+        ## Check to see if you already have an SSH key pair
+        $ ls ~/.ssh
           id_rsa
           id_rsa.pub
-      ## Generate a new SSH key pair
-      $ ssh-keygen -t rsa 4096 -C "[your-github-email@email.com]"
-      ## Add the ssh key to the ssh Agent
-      $ eval "$(ssh-agent -s)"
-      $ ssh-add ~/.ssh/[ssh-key-name]
-      ## List the contents of your .pub key
-      $ less ~/.ssh/[ssh-key-name].pub
-          ssh-rsa ...
+        ## Generate a new SSH key pair
+        $ ssh-keygen -t rsa 4096 -C "[your-github-email@email.com]"
+        ## Add the ssh key to the ssh Agent
+        $ eval "$(ssh-agent -s)"
+        $ ssh-add ~/.ssh/[ssh-key-name]
+        ## List the contents of your .pub key
+        $ less ~/.ssh/[ssh-key-name].pub
+            ssh-rsa ...
 
--   Copy the contents of your *.pub* ssh key  
+-   Copy the contents of your _.pub_ ssh key  
 
 -   Go to your GitHub page. Then, Top-right **Click your photo > Settings > SSH and GPG keys > click New SSH key**
 
@@ -57,12 +54,12 @@ This can be done per directory or per local repo by doing the following:
 
 -   Go back to the **Terminal**
 
-      ## Try to connect to GitHub over SSH
-      $ ssh -v git@github.com
+        ## Try to connect to GitHub over SSH
+        $ ssh -v git@github.com
 
-    > The authenticity of host 'github.com (192.30.253.113)' can't be established. 
-    > RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.  
-    > Are you sure you want to continue connecting (yes/no)? yes
+> The authenticity of host 'github.com (192.30.253.113)' can't be established. 
+> RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.  
+> Are you sure you want to continue connecting (yes/no)? yes
 
 -   Make sure that the SHA256 key matches the above and type "yes"
 
