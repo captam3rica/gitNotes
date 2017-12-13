@@ -1130,4 +1130,52 @@ Mutt configuration [here](https://wiki.archlinux.org/index.php/Mutt)
         sure that the filename.db name is the same as the domainlist in the
         Destination classes section.
 
+### HTTP Server Configuration - RHEL/CentOS
+
+-   Installing Apache2 
+
+-   Install the following: `http`
+
+-   Enable the service: `systemctl enable httpd`
+
+-   Start the service: `systemctl start httpd`
+
+-   Test the default settings using **telnet**
+
+    -   `telnet localhost 80`
+
+-   vhosts control the web sites that the system response to.
+
+-   Change to the following directory: `cd /etc/httpd/conf/`
+
+    -   Edit the `conf.d` file
+
+            IncludeOptional vhost.d/*.conf
+
+    -   Create the following dir: `mkdir vhost.d`
+    -   Virtual hosting allows for multple websites to be served from a single
+        IP address or server. Based on the domain name, the server will
+        serve up the directory content for that site without the user knowing
+        that the server is also managing other web sites. Each vhost is stored
+        in its own dir structure. 
+
+-   Restart the service when a configuration file is changed: `systemctl restart
+    httpd`
+
+### HTTP Server Configuration - Debian based
+
+-   Sysvinit system (ubuntu 14.04)
+
+-   Install the following packages: `apt-get install apache2`
+
+-   Go to the following dir: `cd /etc/apache2`
+ 
+    -   vhosts are already located in `sites-available` & `sites-enabled`
+    -   `conf-available`
+    -   `conf-enabled`
+    -   `mods-available`
+    -   `mods-enabled`
+
+-   `a2uenmod`, `a2uensite`, & `a2uenconf`
+-   `a2dismod`, `a2dissite`, $ `a2disconf`
 
