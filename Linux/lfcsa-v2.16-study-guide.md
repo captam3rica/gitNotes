@@ -1150,6 +1150,8 @@ Mutt configuration [here](https://wiki.archlinux.org/index.php/Mutt)
 
     -   Edit the `conf.d` file
 
+        Anything with the `.conf` file extention will be read by Apache
+
             IncludeOptional vhost.d/*.conf
 
     -   Create the following dir: `mkdir vhost.d`
@@ -1178,4 +1180,74 @@ Mutt configuration [here](https://wiki.archlinux.org/index.php/Mutt)
 
 -   `a2uenmod`, `a2uensite`, & `a2uenconf`
 -   `a2dismod`, `a2dissite`, $ `a2disconf`
+
+### HTTP Server Log Configs
+
+-   Configuring Apache logs
+
+-   Services should be running at this time.
+
+-   Logs can be changed per vhost if desired
+
+-   `vim /etc/httpd/conf/httpd.conf`
+
+    `log_config_module`
+    `LogFormat "Host: %h - Connecting User: %u  - Date & Time: %t - What
+    Requested: %r mycombine`
+
+-   error_log & access_log
+
+-   Restart the httpd (Apache) service if any configs were changed.
+
+### Configure SSL with HTTP Server - Cert & Key Creation
+
+-   CentOS install the following: `yum install mod_ssl`
+-   Ubuntu, run the following comand to enable SSL: `a2enmod`
+-   Change to `cd /etc/httpd/` and create the following dir:
+
+    `mkdir ssl-certs`
+
+-   Generate a key & certificate 
+
+    `openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout
+    /etc/httpd/ssl-certs/[certname.key] -out /etc/httpd/ssl-cert/[certname].crt`
+
+    -   req: key type
+    -   `-nodes`: do not encrypt the key locally
+    -   `-days`:  number of days that the key will be valid
+    -   `-newkey rsa:4096`: key length
+    -   `-keyout /location/of/key.key`: where the key will be stored
+    -   `-out /location/of/crt.crt`: name and location of certificate
+    -   Fill in prompted information
+
+### Configure SSL with HTTP Server - Server Setup
+
+-   Create a vhost configuration so that Apache will know to listen on port 443.
+-   place site vhost configuraton in `/etc/httpd/vhost.d` for consistency 
+-   Example conf file
+
+```http
+NameVirtualHost *:80
+NameVirtualHost *:443
+    <VirtualHost *:80>
+       ServerAlias [alias-name]
+       DocumentRoot /var/www/html
+       ServerName [server-name].[domain-name].com
+    </VirtualHost>
+
+    <VirtualHost *:443>
+       ServerAlias [alias-name]
+       DocumentRoot /var/www/html
+       ServerName [server-name].[domain-name].com
+
+       SSLEngine on
+       SSLCertificateFile /etc/httpd/ssl-certs/[cert-name].crt
+       SSLCertificateKeyFile /etc/httpd/ssl-certs/[key-name].key
+   </VirtualHost>
+```
+-   Restart the `httpd.service`
+-   Test with telnet
+
+    `telnet localhost 80` 
+    `telnet localhost 443`
 
