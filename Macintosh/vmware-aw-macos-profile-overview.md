@@ -21,11 +21,13 @@ Start
 
 -   Configure an LDAP Profile (macOS)
 
--   Configure a CalDAV or CardDAV Profile (macOS)
+-   [Configure a CalDAV or CardDAV Profile
+    (macOS)](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/T/MacProfileDAV.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____8)
 
 -   Configure a Web Clips Profile (macOS)
 
--   Configure a SCEP/Credentials Profile (macOS)
+-   [Configure a SCEP/Credentials Profile
+    (macOS)](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/T/MacProfileCredentials.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____10)
 
 -   [Configure a Dock Profile
     (macOS)](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/T/MacProfileDock.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____11)
@@ -60,7 +62,8 @@ Configure a Finder Profile (macOS)
 
 Configure an Accessibility Profile (macOS)
 
-Configure a Printer Configuration Profile (macOS)
+-   [Configure a Printer Configuration Profile
+    (macOS)](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/T/MacProfilePrinting.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____24)
 
 Configure a Messages Profile (macOS)
 

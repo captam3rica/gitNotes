@@ -70,7 +70,7 @@ for auth instead of passcodes.
 2.  Make 3rd party VPN of choose available to end users by pushing to devices or
     through the App Catalog.
 
-3.  Go to **`Devices >? Profile & Resources > Profiles > select Add > select
+3.  Go to **`Devices > Profile & Resources > Profiles > select Add > select
     Apple macOS`**
 
     Choose if profile is going to apple to User Profiles or Device Profiles.
