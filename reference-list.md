@@ -13,17 +13,36 @@
 -   [HP Printer Driver FTP](ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
 -   [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
 
-\[[top](#top)]
+### Tools
 
-### App Stuff ...
+-   [Packages](https://www.macupdate.com/app/mac/34613/packages/download):
+    Package creator
 
--   [NoMAD](https://nomad.menu/downloads/ "No More Active Directory")
+-   [Suspicious
+    Package](http://www.mothersruin.com/software/SuspiciousPackage/get.html):
+    look inside of packages. 
 
--   [Backblaze](https://www.backblaze.com "Data backup solution")
+-   [Payload-Free-Package-Creator](https://github.com/rtrouton/Payload-Free-Package-Creator): when
+    you want to just dumb a script somewhere.
+
+-   [Dock Master](https://github.com/Error-freeIT/Dock-Master)
 
 -   [DeployStudio](https://deploystudio.wikispaces.com "DeployStudio Wiki")
 
-\[[top](#top)]
+-   [mas](https://github.com/mas-cli/mas): App Store from the CLI    
+
+-   [NoMAD](https://nomad.menu/downloads/ "No More Active Directory"): Active
+    Directory broker client. OpenSource alt to Apple's Enterprise Connect
+    service
+
+-   [AutoDMG](https://github.com/MagerValp/AutoDMG)
+
+-   [precache](https://github.com/krypted/precache): Pull updates down top the
+    Apple macOS Server Caching service.
+
+### App Stuff
+
+-   [Backblaze](https://www.backblaze.com "Data backup solution")
 
 ### Documentation
 
@@ -206,6 +225,10 @@ atom-text-editor::shadow .cursor {
 -   Bypass Execution Policies - <https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/>
 
 \[[top](#top)]
+
+### AppleScript
+
+-   [Tutorial](https://macosxautomation.com/applescript/firsttutorial/index.html)
 
 ### Python
 
