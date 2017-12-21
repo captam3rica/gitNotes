@@ -53,6 +53,11 @@ an option as of Thu Dec 21 16:50:10 EST 2017
 
 [iOS server config](https://docs.wso2.com/display/IoTS310/iOS+Server+Configurations)
 
+**Download the Server Files**
+
+Place the files in a location or your choosing. This contains the binaries
+necessary to configure and run the WSO2 IoT server.
+
 **Starting the Services** 
 
 -   `cd /bin`
@@ -68,8 +73,18 @@ an option as of Thu Dec 21 16:50:10 EST 2017
 **URLs to access the IoT server components once configured (via HTTPS)**
 
 -   **Device Management Console**: `https://[ip-address/hostname]:9443/devicemgt` 
--   **DAS (data analytics)**: `https://<[ip-address/hostname]:9443/carbon`
+
+    [click here](https://docs.wso2.com/display/IoTS310/Accessing+the+WSO2+IoT+Server+Consoles#AccessingtheWSO2IoTServerConsoles-AccessingtheDeviceManagementConsole)
+
+-   **Server Mgmt Console**: `https://<[ip-address/hostname]:9443/carbon`
+
+    [click
+    here](https://docs.wso2.com/display/IoTS310/Accessing+the+WSO2+IoT+Server+Consoles#AccessingtheWSO2IoTServerConsoles-AccessingtheWSO2IoTServerManagementConsole)
+
 -   **Device Monitoring Dashboard**: `https://[ip-address/hostname]:9443/portal`
+
+    [click
+    her](https://docs.wso2.com/display/IoTS310/Accessing+the+WSO2+IoT+Server+Consoles#AccessingtheWSO2IoTServerConsoles-AccessingtheDataAnalyticsServerConsole)
 
 ### iOS Application support 
 
