@@ -51,8 +51,7 @@ an option as of Thu Dec 21 16:50:10 EST 2017
 
  -   Get an APNS cert from the [APNS Portal](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) 
 
-###  [iOS server
-    config](https://docs.wso2.com/display/IoTS310/iOS+Server+Configurations)
+[iOS server config](https://docs.wso2.com/display/IoTS310/iOS+Server+Configurations)
 
 **Starting the Services** 
 
