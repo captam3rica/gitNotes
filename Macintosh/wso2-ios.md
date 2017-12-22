@@ -1,24 +1,12 @@
 # WSO2 iOS WSO2 Server
-<<<<<<< HEAD
-
-## Quick Start - WSO2 Cloud
-
-[cloudmgt](https://cloudmgt.cloud.wso2.com/cloudmgt/site/pages/signup.jag)
-
-## iOS References 
-=======
 Last update: Thu Dec 21 16:50:42 EST 2017
 
-[Documentation](https://wso2.com/wso2-documentation)
->>>>>>> ecbd3a5af2bb53f6ae1ab7d2a86f9dd6830113f0
+-   [Documentation](https://wso2.com/wso2-documentation)
 
 -   [wso2 ios part 1](https://wso2.com/library/articles/2014/03/managing-ios-devices-with-wso2-enterprise-mobility-manager-part-1-0/)
 
 -   [wso2 ios part 2](https://wso2.com/library/articles/2014/03/managing-ios-devices-with-wso2-emm-part-2/#top) 
 
-<<<<<<< HEAD
-## Prereqs
-=======
 ## Quick Start - WSO2 Cloud
 
 [click here](https://docs.wso2.com/display/IoTS310/iOS+Device)
@@ -27,7 +15,6 @@ Although, the cloud management server for devices and apps does not seem to be
 an option as of Thu Dec 21 16:50:10 EST 2017
 
 ## Server Prereqs
->>>>>>> ecbd3a5af2bb53f6ae1ab7d2a86f9dd6830113f0
 
 [github](https://github.com/wso2/product-iots)
 
@@ -60,15 +47,6 @@ an option as of Thu Dec 21 16:50:10 EST 2017
 
 ---
 
-<<<<<<< HEAD
-## Setup
-
- -   Get an APNS cert from the [APNS Portal](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) 
-
-###  [iOS server
-    config](https://docs.wso2.com/display/IoTS310/iOS+Server+Configurations)
-
-=======
 ## Server Setup
 
  -   Get an APNS cert from the [APNS Portal](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) 
@@ -80,7 +58,6 @@ an option as of Thu Dec 21 16:50:10 EST 2017
 Place the files in a location or your choosing. This contains the binaries
 necessary to configure and run the WSO2 IoT server.
 
->>>>>>> ecbd3a5af2bb53f6ae1ab7d2a86f9dd6830113f0
 **Starting the Services** 
 
 -   `cd /bin`
@@ -94,15 +71,6 @@ necessary to configure and run the WSO2 IoT server.
 -   `ctrl-C` in the CLI window
 
 **URLs to access the IoT server components once configured (via HTTPS)**
-<<<<<<< HEAD
-
--   **Device Management Console**: `https://[ip-address/hostname]:9443/devicemgt` 
--   **DAS (data analytics)**: `https://<[ip-address/hostname]:9443/carbon`
--   **Device Monitoring Dashboard**: `https://[ip-address/hostname]:9443/portal`
-
-### iOS Application support 
-
-=======
 
 -   **Device Management Console**: `https://[ip-address/hostname]:9443/devicemgt` 
 
@@ -120,7 +88,6 @@ necessary to configure and run the WSO2 IoT server.
 
 ### iOS Application support 
 
->>>>>>> ecbd3a5af2bb53f6ae1ab7d2a86f9dd6830113f0
 **HTTPS is required for Apple MDM interaction**
 
 -   `vim [iots-home]/conf/app-manager.xml` and add **%httsp%**
