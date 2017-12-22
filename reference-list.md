@@ -13,17 +13,36 @@
 -   [HP Printer Driver FTP](ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
 -   [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
 
-\[[top](#top)]
+### Tools
 
-### App Stuff ...
+-   [Packages](https://www.macupdate.com/app/mac/34613/packages/download):
+    Package creator
 
--   [NoMAD](https://nomad.menu/downloads/ "No More Active Directory")
+-   [Suspicious
+    Package](http://www.mothersruin.com/software/SuspiciousPackage/get.html):
+    look inside of packages. 
 
--   [Backblaze](https://www.backblaze.com "Data backup solution")
+-   [Payload-Free-Package-Creator](https://github.com/rtrouton/Payload-Free-Package-Creator): when
+    you want to just dumb a script somewhere.
+
+-   [Dock Master](https://github.com/Error-freeIT/Dock-Master)
 
 -   [DeployStudio](https://deploystudio.wikispaces.com "DeployStudio Wiki")
 
-\[[top](#top)]
+-   [mas](https://github.com/mas-cli/mas): App Store from the CLI    
+
+-   [NoMAD](https://nomad.menu/downloads/ "No More Active Directory"): Active
+    Directory broker client. OpenSource alt to Apple's Enterprise Connect
+    service
+
+-   [AutoDMG](https://github.com/MagerValp/AutoDMG)
+
+-   [precache](https://github.com/krypted/precache): Pull updates down top the
+    Apple macOS Server Caching service.
+
+### App Stuff
+
+-   [Backblaze](https://www.backblaze.com "Data backup solution")
 
 ### Documentation
 
@@ -110,6 +129,8 @@
 ### VMware AirWatch
 
 -   [start here - AirWatch Leaning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
+
+-   [My AirWatch](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
 
 \[[top](#top)]
 <a name="scripting-and-languages"></a>
@@ -237,43 +258,63 @@ atom-text-editor::shadow .cursor {
 
     -   Smooth Scrolling: Disabled
     -   Experimental QUIC (Similar to TCP but over UDP): Enabled
+
 ## Certifications
 
--   GIAC Certified Incident Handler - <http://www.giac.org/certification/certified-incident-handler-gcih>
--   GIAC Certified Forensic Examiner - <http://www.giac.org/certification/certified-forensic-examiner-gcfe>
--   Apple Certified Macintosh Technician
--   macOS Certified Technician 
+-   GIAC Certified Incident Handler
+-   GIAC Certified Forensic Examiner
+-   Apple Certified Macintosh Technician (done)
+-   Apple Certified Support Professional (pending)
+-   Apple Certified Technical Coordinator
+-   macOS Itegration Basics 10.13 (done)
+-   macOS Certified Technician (done)
+-   Certified Ethical Hacker
 -   Certified Security Analyst 
--   Security Plus ce
--   Linux Foundation Certified System Administrator 
+-   Security Plus ce (done)
+-   Linux Foundation Certified System Administrator (pending) 
 -   Red Hat Certified System Administrator
+-   jamfPro 100 (done)
+-   jamfPro 200 (pending)
 
 ## Security Tools & Info ...
 
 -   Anonymous Web browsing - <http://lifehacker.com/150074/anonymous-web-browsing-20>
+
 -   WikiLeaks DarkMatter -  <https://wikileaks.org/vault7/darkmatter/document/SonicScrewdriver_1p0/page-3/#pagination>
+
 -   Pentesterlab.com - <http://pentesterlab.com/exercises/>
+
 -   Rescator[dot]cc - underground black market where stolen cc were first seen to
     be for sale
+
 -   Synolocker: <http://www.f-secure.com/weblog/archives/00002733.html>
+
 -   Netflix and Security Monkey - <http://techblog.netflix.com/2014/06/announcing-security-monkey-aws-security.html>
+
 -   Critical Security Controls: <http://www.sans.org/critical-security-controls/>
+
 -   NIST Cyber Security Framework - <http://www.nist.gov/cyberframework/upload/cybersecurity-framework-021214-final.pdf>
+
 -   Using Google to DDoS any Website - <http://chr13.com/2014/03/10/using-google-to-ddos-any-website/>
--   2014.05.27 - Using Facebook to DDoS any Website - <http://chr13.com/2014/04/20/using-facebook-notes-to-ddos-any-website/>
+
+-   Using Facebook to DDoS any Website - <http://chr13.com/2014/04/20/using-facebook-notes-to-ddos-any-website/>
+
 -   Fishing for hackers Analysis of a Linux server attack - <http://draios.com/fishing-for-hackers/>
--   2014.04.24 - Show passwords hidden by asterisks or stars - <http://www.tweakandtrick.com/2011/04/asterisk-password-star-show-view-reveal.html>
--   2014.04.24 - Cloud fogger - <http://thehackernews.com/2014/01/how-to-encrypt-your-files-before.html>
--   2014.03.11 - Password Protecting the BIOS - <http://security.blogoverflow.com/2014/02/qotw-50-does-password-protecting-the-bios-help-in-securing-sensitive-data/>
+
+-   Show passwords hidden by asterisks or stars - <http://www.tweakandtrick.com/2011/04/asterisk-password-star-show-view-reveal.html>
+
+-   Cloud fogger - <http://thehackernews.com/2014/01/how-to-encrypt-your-files-before.html>
+
+-   Password Protecting the BIOS - <http://security.blogoverflow.com/2014/02/qotw-50-does-password-protecting-the-bios-help-in-securing-sensitive-data/>
 
 \[[top](#top)]
 
 ### Security Tools
 
-#### ClamAV
+**ClamAV**
 
 -   sudo freshclam: update the av databases
--   sudo clamscan --recursion --infected --bell --suppress-ok-results --log=[your-file.log] / :
+-   sudo clamscan --recursion --infected --bell --suppress-ok-results --log=[your-file.log] /
 
     -   scan the entire system
     -   Scan through directories as well as subdirectories  
@@ -282,36 +323,77 @@ atom-text-editor::shadow .cursor {
     -   Suppress the output of files with the "OK" status
     -   log the output to a file
 
-Other useful flags ...
+-   Other useful flags
 
     -   --cross-fs-[yes/no]: tell clam to traverse other file systems
     -   --file-list=[file]: scan the listed files line by line
     -   --move=[DIRECTORY]: move files into the specified directory
-    -   --detect-structured=[yes/no]: Use the **DLP** module to SSN and CC inside of docs and txt files.
-    -   --scan-mail=[yes/no]: if turned off, the file will still be scanned, but will not parse messages and attachments.
-    -   --scan-pdf=[yes/no]: scan within PDF docs. If turned off, decoding and extra processing will not happen
+    -   --detect-structured=[yes/no]: Use the **DLP** module to SSN and CC inside of docs an 
+        txt files.
+    -   --scan-mail=[yes/no]: if turned off, the file will still be scanned, but will not 
+        parse messages and attachments.
+    -   --scan-pdf=[yes/no]: scan within PDF docs. If turned off, decoding and extra 
+        processig will not happen
     -   --scan-html=[yes/no]
     -   --scan-xmldocs=[yes/no]
 
-Supports data streaming
+-   Supports data streaming
 
     -   `cat textfile.txt | clamscan -`
 
 * * *
 
--   07.13.2017 - AngryIP - (<https://github.com/angryip/ipscan>
--   OpenVAS: <http://www.openvas.org/>
--   Fail2ban Documentation: <http://www.fail2ban.org/wiki/index.php/MANUAL_0_8>
--   2014.08.08- Vulnhub.com - vulnerable virtual machines
+-   **opensnoop**
+
+    Tracks file opens. As a process issues a file open, details such as UID,
+    PID and pathname are printed out.
+
+-   **nmap**
+
+-   **[tcpdump](http://www.tcpdump.org/)**
+ 
+    -   `src`, `dest`, `tcp`, `udp`
+
+    `sudo tcpdump -v -n -i any port 53`: take a look a DNS traffic on the
+    current machine. (80, 8080, 2040, 443, 21, 22, 23, 25, 110, 143, 123) The
+    `-n` will tell `tcpdump` not do port and name resolution.
+
+    `-n`: no name resolution for ports or IP addresses
+
+    `-c [number]`: how many packets to capture before quitting. 
+
+    `-i`: interface type 
+
+    `-e`: ethernet info. Show source MAC
+
+    `-A`: will show all packet contents
+
+    `-w`: write output to a file instead of stdout.
+
+    `sudo tcpdump port [number] and host [IP Address]`: see packets incoming
+    from a specific IP address and on a specific port.
+
+    `sudo tcpdump udp[11]&0xf==3`: see failed DNS queries 
+
+    `sudo tcpdump -w [name].pcap`: capture packets to a file using `tcpdump`
+    then analyze the `.pcap` files with `Wireshark` or `tshark` (CLI)
+
+    `ssh [some-remote-host] tcpdump -pni any -w --sO -U port 8888 | wireshark -k
+    -i -`: stream `tcpdump` output to `Wireshark`
+
+-   `ngrep`: network grep
+-   wireshark
+-   AngryIP
+-   OpenVAS
+-   Fail2ban Documentation
+-   Vulnhub.com
 -   <http://www.openbl.org/>
--   How to generate OpenSSL keys - <http://openssl.6102.n7.nabble.com/Machine-certificate-td906.html>
--   Blowfish particulars - <https://www.schneier.com/paper-blowfish-fse.html>
 -   Hack this Site - <https://www.hackthissite.org/>
 -   John the Ripper Password Cracker
 -   OWASP - <https://www.owasp.org/index.php/Main_Page>
 -   Lynis Enterprise Suite: vulnerability scanner for arch linux (Rootkit.nl)
--   -   deft: digital forensics for Linux (deftlinux.net)
--   **Done** - Arch Assault: security software (Because of rolling release)
+-   deft: digital forensics for Linux (deftlinux.net)
+-   Arch Assault: security software (Because of rolling release)
 -   ssl stripper - pulls the ssl cert off and runs the site through http so that
     they can read the content.
 -   Tortilla, whonix, **Done** - tails
@@ -323,24 +405,27 @@ Supports data streaming
 -   mimicats
 -   OSSIM, OSSEC - created by alien vault. h
 -   IDS: AIDE, OSSEC, Snort
--   Metasploit, Set, Dsploit, Etercap
--   wifighter, evil ip, reverse shell
--   Rever and Patty brute forcers, AirCrack
+-   Metasploit, 
+-   Set, 
+-   Dsploit, 
+-   Etercap
+-   wifighter, 
+-   evil ip, 
+-   Rever and Patty brute forcers, 
+-   AirCrack
 -   iperf - wireless trouble shooting
--   Hack this Site - <https://www.hackthissite.org/>
 -   RAM Scraper
 -   Power Top
-
-\[[top](#top)]
 
 ### Encryption & Cryptography
 
 -   [Hashing vs Encryption](http://www.darkreading.com/safely-storing-user-passwords-hashing-vs-encrypting/a/d-id/1269374)
-
-\[[top](#top)]
 
 ## Networking
 
 -   [IPv6 Crash Course](https://www.linux.com/learn/ipv6-crash-course-linux)
 -   [OpenWRT](<http://wiki.openwrt.org/toh/netgear/wnr1000 - OS router firmware>)
 -   [Packet Life](http://packetlife.net/)
+
+\[[top](#top)]
+
