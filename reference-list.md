@@ -228,6 +228,10 @@ atom-text-editor::shadow .cursor {
 
 \[[top](#top)]
 
+### AppleScript
+
+-   [Tutorial](https://macosxautomation.com/applescript/firsttutorial/index.html)
+
 ### Python
 
 -   For **pycodestyle** - PEP8 linter for _Atom_
