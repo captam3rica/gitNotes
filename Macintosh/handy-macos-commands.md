@@ -12,10 +12,10 @@ Precursors to using some of the commands below. **PLEASE** be sure to make a bac
 
 `$ defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder`
 
-### Unhide ~/Library
+### Unhide and Hide ~/Library directory
 
 `chflags nohidden ~/Library`
-`chflags hiddent ~/Library` - to hide it again
+`chflags hidden ~/Library` - to hide it again
 
 ### Edit Your '$PATH'
 
