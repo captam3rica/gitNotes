@@ -14,7 +14,7 @@ Precursors to using some of the commands below. **PLEASE** be sure to make a bac
 
 ### Unhide and Hide ~/Library directory
 
-`chflags nohidden ~/Library`
+`chflags nohidden ~/Library`   
 `chflags hidden ~/Library` - to hide it again
 
 ### Edit Your '$PATH'
