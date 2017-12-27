@@ -1,5 +1,5 @@
 # Apple Certified Support Professional
-Last Updated: Fri Dec 22 15:33:01 EST 2017
+Last Updated: Wed Dec 27 16:26:01 EST 2017
 
 -   On a Apple Fusion drive, the boot partition is keep on the SSD while the macOS
     recovery partition is kept on the HDD.
@@ -40,3 +40,51 @@ Last Updated: Fri Dec 22 15:33:01 EST 2017
 -   The difference between partitions and volumes. Partitions are logical divisions,
     and volumes define how files and folders are saved to storage.
 
+## Data Management 
+
+-   Hide a flag by enabling the hidden flag or adding a (.) at the font of the
+    file or folder. 
+
+    `sudo chflags nohidden [file or dir name]`   
+    `sudo chflags hidden [file or dir name]`
+
+-   The user's Library folder can be made visible in finder through **View
+    Options**
+
+-   Pkgs can also be called **Opaque Packages**
+
+-   An **Alias** is made of the UID, the path, and the file name it links to. If
+    the original item is deleted, the alias breaks. An **Alias** cannot be
+    created from a Terminal and do not work from the Terminal.
+
+-   **Symbolic links** will break if the file is move, renamed, or deleted. Can
+    only be created from CLI.
+
+-   **Hard links** are an actual additional address or reference to inode address
+    of a file, but it is not another copy of said file. It is possible to have
+    multiple hard links with unique names that will point to the same file.
+
+    **Time Machine** uses hard links to point to files that have not changed since
+    the previous backup.
+
+-   Cannot create a DMG from the currently running volume. DMG images can be
+    modified and converted through the **Disk Utility**.
+
+-   The System Library contains startup and other files needed for the system to
+    function. `/System/Library/User Template` is the only folder in System Library that is
+    not protected by SIP.
+
+-   **Extensions (kernel extensions) aka Kext** is a dynamically loaded bundle
+    of executable code that runs in the kernel space. driver, network filters,
+    and file system. 
+
+    Primarily for driver support for hardware, peripherals, and networking.
+
+-   **Frameworks** are additional resource for apps and other system processes
+    to utilize. Located in the `/Library`. See currently loaded frameworks in
+    the **Console** menu.
+
+-   **Preference Panes** are use to provide interfaces for system configuration.
+    Located in `/Library`.
+
+-   
