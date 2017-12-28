@@ -87,4 +87,57 @@ Last Updated: Wed Dec 27 16:26:01 EST 2017
 -   **Preference Panes** are use to provide interfaces for system configuration.
     Located in `/Library`.
 
--   
+-   Domain priority
+
+    User > Local > Network > System
+
+-   App containers at `~/Library/Containers`
+
+-   Fonts
+
+    -   bitmap, TrueType, OpenType, PostScript, etc
+    -   Font Book
+    -   `/Library/Fonts \Removed` and `~/Library/Fonts \Removed`
+
+## File System Metadata & Search
+
+-   Darwin kernel
+-   BSD - Berkeley Software Distribution
+-   NeXTSTEP
+-   Stationary pad - creates a separate copy of the original file for editing
+-   Lock - stops the file from being deleted
+-   Edit tags from Finder preferences 
+-   **Spotlight Search**
+
+    -   Local and shared files
+    -   Servers
+    -   AirDisk volumes 
+    -   Time Machine backups
+    -   iCloud drive
+    -   Internet Searching
+    -   History
+    -   Location info
+    -   User info
+    -   Not the contents of other user document folders
+
+-   **Spotlight** index file: `~/.Spotlight-V100`
+-   Mail data is index at: `~/Library/Mail/V2/MailData/Envelope \Index`
+-   Spotlight will not index readonly systems and files
+
+##Time Machine
+
+-   backupd
+
+-   Ignores tmp files, spotlight indexes, Trash, Log files, cache, & Exempted
+    items
+
+-   Keeps hourlies for 24hrs, Dailies for 7 days, and Monthlies until the backup
+    drive is full.
+
+-   Local snapshots are taken if the backup disk is not present. Then, sent to
+    the backup disk when it is connected. `~/.MobileBackups`
+
+-   Powernap will allow the system to backup after sleeping.
+
+-   Network backup locations cannot be encrypted by Time Machine
+
