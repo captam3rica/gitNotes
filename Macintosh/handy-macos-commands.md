@@ -2,59 +2,61 @@
 
 Precursors to using some of the commands below. **PLEASE** be sure to make a backup copy of any files before altering them.
 
-## Terminal Hacks
+## Terminal Foo
 
-### OS Version
+**OS Version**
 
 `$ sw_vers`
 
-### Show Hidden Files & Folders
+**Show Hidden Files & Folders**
 
 `$ defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder`
 
-### Unhide and Hide ~/Library directory
+**Unhide and Hide ~/Library directory**
 
 `chflags nohidden ~/Library`   
 `chflags hidden ~/Library` - to hide it again
 
-### Edit Your '$PATH'
+**Edit Your '$PATH'**
 
 `sudo launchctl config user path "/usr/local/bin:$PATH" && sudo launchctl reboot`
 
-### Turn on "Install from Anywhere" in GateKeeper.
+**Turn on "Install from Anywhere" in GateKeeper**
 
 - This is a setting that Apple decided to remove with the release of Mac OS Sierra.
 
 `sudo spctl --master-disable`
 
-### Allow Keyboard Keys to repeat
+**Allow Keyboard Keys to repeat**
 
 `defaults write -g ApplePressAndHoldEnabled -bool false`
 
-### Change ScreenShot File Type to PDF
+**Change ScreenShot File Type to PDF**
 
 `defaults write com.apple.screencapture type PDF`
 
-### Remove Smooth Scrolling
+**Remove Smooth Scrolling**
 
-When you hit spacebar in a browser, the page will automatically scroll with a smooth transition effect. Sometimes this animation can be clunky. To remove this setting use the following.
+When you hit spacebar in a browser, the page will automatically scroll with a 
+smooth transition effect. Sometimes this animation can be clunky. To remove 
+this setting use the following.
 
 `defaults write -g NSScrollAnimationEnabled -bool NO`
 
-### Remove the Bouncy Elastic Effect in Finder and Other Apps
+**Remove the Bouncy Elastic Effect in Finder and Other Apps**
 
 `defaults write -g NSScrollViewRubberbanding -int 0`
 
-### Force Empty Trash
+**Force Empty Trash**
 
 `$ rm -rf ~/.Trash/*`
 
-### Convert Plist to xml and binary
+**Convert Plist to xml and binary**
 
 `plutil -convert xml1 </path/to/property/list>`  
 `plutil -convert binary </path/to/property/list>`
 
-### Remove a Package Receipt
+**Remove a Package Receipt**
 
 `sudo pkgutil --forget [com.name.of.package.pck]`  
 
@@ -80,7 +82,16 @@ or
 
 `rm /var/db/.AppleSetupDone`
 
-## Application Specific ...
+### ls commands
+
+-   List full time output(hh:mm:ss): `ls -lT` 
+-   Check to see if a file is restricted (aka SIP protected): `ls -lO`
+-   List user & group numerically: `ls -ln`
+-   Delimite the output with a comma: `ls -m`
+-   Sort by file access time: `ls -lu`
+-   Sort by file created: `ls -lU`
+
+## Application Specific
 
 ### Issues with DropBox Starting Up
 
