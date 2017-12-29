@@ -124,7 +124,7 @@ Last Updated: Wed Dec 27 16:26:01 EST 2017
 -   Mail data is index at: `~/Library/Mail/V2/MailData/Envelope \Index`
 -   Spotlight will not index readonly systems and files
 
-##Time Machine
+### Time Machine
 
 -   backupd
 
@@ -140,4 +140,95 @@ Last Updated: Wed Dec 27 16:26:01 EST 2017
 -   Powernap will allow the system to backup after sleeping.
 
 -   Network backup locations cannot be encrypted by Time Machine
+
+## Apps & Processes
+
+-   Carbon (outdated), Cocoa, and Java 
+
+-   X11 is no longer included with macOS - must be downloaded separately 
+
+-   Open source: 
+
+    -   macports.org
+    -   developer.apple.com/opensource
+
+-   apple.com/business/vpp
+
+-   Can create a new Apple ID that does not require a CC through iTunes.
+
+-   Payment options: CC, debit, content codes, store credit (gift cards),
+    Alipay, mobile phone billing, Bank cards (CN only)
+
+-   Mac App Store can be disabled fro standard accounts through Parental
+    Controls.
+
+    -   Browsers would need to be restricted to stop 3rd party app installation
+        as well. 
+    -   Software blacklists
+    -   Restricted software entry
+
+-   iCloud Family share (managed in icloud sys prefs)
+
+    -   Up 6 apple IDs
+    -   Must have a payment option setup 
+    -   13 years or older
+    -   music, books, apps, and movies
+    -   Adults must authorize any apps in the app store
+
+-   Uninstall: LaunchPad, Trash, or Custom Uninstaller 
+
+### App Security 
+
+-   All apps from the app store must use sandboxing 
+
+-   Mac app store apps must be code signed
+
+-   Developer ID can be used to sign apps outside of the app store
+
+-   **Quarantine**: scans apps before installation is allowed to continue.
+
+    -   Remove the quarantine message: `xattr -d com.apple.quarantine [app path]`
+    -   Also: `xattr -dr com.apple.quarantine [dir path]`
+    -   Quarantine functionality may not be available for some 3rd party apps or
+        for apps that are copied from removable media.
+
+-   A **Deny** list is used to block malicious software (Xprotect):
+    `/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/XProtect.plist`
+
+-   Turn off Safari plugins from **`Preferences > Security > uncheck Allow
+    Plugins`**
+
+-   **Gatekeeper**
+
+    -   Mac App Store apps only
+    -   Mac app store and identified devs (default)
+    -   Anywhere
+
+-   To install an unidentified 3rd party app: **`Go to App location in Finder >
+    Right click the app > select Open > select Open in the dialogue window`**
+    (if this does not work thne the **Anywhere** option will need to be set in
+    **Gatekeeper**)
+
+### Doc Management
+
+-   Per user, you can set the app that you want to open a file through the **Get
+    Info** menu for the file.
+
+-   Auto Save - supported apps will auto save docs every so often. Auto save
+    occurs when making significant changes to a file, closing the doc, closing
+    the app, selecting **Finder**, Accessing the doc from another app, every 5
+    minutes
+
+    To turn off Auto Save: **`System Prefs > General > check the box "Ask to
+    keep changes when closing documents"`**
+
+-   **Versioning** is utilized for apps that support this feature.
+
+    **`File > "Rever To" or "Last Saved" or "Browse Saved Versions"`**
+
+    -   Versioning may not work with File Shares and shared file locations 
+
+-   **Automatic Resume** during loss of power or inappropriately closing the app
+
+-   **iCloud**: `~/Library/Mobile \Documents`
 
