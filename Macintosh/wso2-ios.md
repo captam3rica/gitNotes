@@ -29,29 +29,34 @@ an option as of Thu Dec 21 16:50:10 EST 2017
     -   Perform the ring operation.
     -   Perform notification operations by sending messages to the device.
 
----
-
-**iOS features (optional)**
-
--   Obtain CSR file and P2 repo from WSO2
-    [here](https://wso2.com/products/iot-server/ios/)
-
-    -   Source code can be modified if desired
-
--   Register with Apple Dev Enterprise Program'
-
--   Get an APNS cert from the [APNS Portal](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2)
-
--   [MDM APNS
-    Cert](https://docs.wso2.com/display/IoTS310/Generating+an+MDM+APNS+Certificate)
-
----
-
 ## Server Setup
 
- -   Get an APNS cert from the [APNS Portal](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) 
+Online docs for server setup, click 
+[here](https://docs.wso2.com/display/IoTS310/iOS+Server+Configurations)
 
-[iOS server config](https://docs.wso2.com/display/IoTS310/iOS+Server+Configurations)
+---
+
+**iOS feature Installation**
+
+Online documentation, click
+[here](https://docs.wso2.com/display/IoTS310/Installing+iOS+Features)
+
+Get CSR file and P2 repo from WSO2 [here](https://wso2.com/products/iot-server/ios/)
+
+-   Source code can be modified if desired
+
+Get an Apple Push Notifications cert from the 
+[APNS Portal](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) 
+
+1.  Extract the **ios-features-deployer** from the received email, and copy the
+    contents to the iot server home directory.
+
+2.  From a terminal, use the following commands to install the ios-features.
+
+    `cd ios-features-deployer`    
+    `mvn clean install -f ios-features-deploy.xml`
+
+---
 
 **Download the Server Files**
 
