@@ -230,6 +230,8 @@ atom-text-editor::shadow .cursor {
 
 ### AppleScript
 
+-
+[Introduction](https://developer.apple.com/library/content/documentation/AppleScript/Conceptual/AppleScriptX/AppleScriptX.html#//apple_ref/doc/uid/10000156-BCICHGIE)
 -   [Tutorial](https://macosxautomation.com/applescript/firsttutorial/index.html)
 
 ### Python
