@@ -232,3 +232,73 @@ Last Updated: Wed Dec 27 16:26:01 EST 2017
 
 -   **iCloud**: `~/Library/Mobile \Documents`
 
+## App Processes & Extensions 
+
+### Memory
+
+-   Virtual memory is dynamically allocated
+
+-   Compression optimization 
+
+-   Protected memory for apps 
+
+-   64-bit mode allows apps to potentially access more than 4GB or RAM
+
+### App Extensions 
+
+-   Preview is an example of an extension 
+
+-   File provider Extensions allow other apps to access other areas through
+    finder
+
+-   Actions Extensions - add other buttons for special features 
+
+-   Finder sync extensions - allow the addtions of file syncing to apps like
+    Dropbox
+
+-   Notifications center 
+
+### Monitoring 
+
+-   through the Activity Monitor 
+-   CPU, Mem, Energy, Netork, Disk
+-   Change the **VIEW** to see different processes and their owners 
+
+## Troubleshooting
+
+-   **Steps** 
+
+    1.  Restart the app   
+    2.  Try another known good working document   
+    3.  Try another user account   
+    4.  Check log files   
+
+    5.  Delete cache files - `/Library/Caches`, `~/Library/Caches`, or
+    `~/Library/Saved \Application \State`
+
+        Font cache can be cleared from within **Safe Boot**
+
+    6.  Replace preference files   
+    7.  Replace app resources
+
+### Preference Files 
+
+-   **Preference File Locations**
+
+    -   `/System/Library/Preferences`
+    -   `/Library/Preferences`
+    -   `~/Library/Preferences`
+    -   `~/Library/Containers/[bundleID]/Data/Library/Preferences`
+    -   `~/Library/Group \Containers/[BundleID]/Library/Preferences`
+
+-   `cfprefsd` - provides preferences services for the CFPreferences and
+    NSUserDefaults APIs. This process can be restarted after making a change to
+    a preference file to clear the cache. Make sure to quit to process owned by
+    the appropriate user.
+
+### Diagnostics
+
+-   through the **Console**
+-   User diagnostics: `~/Library/Logs/DiagnosticReports`
+-   System diagnostics: `/Library/Logs/DiagnosticsReports`
+
