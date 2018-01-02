@@ -1,7 +1,9 @@
 # WSO2 iOS WSO2 Server
-Last update: Thu Dec 21 16:50:42 EST 2017
+Last update: Tue Jan  2 10:14:42 EST 2018
 
--   [Documentation](https://wso2.com/wso2-documentation)
+-   Online [Documentation](https://wso2.com/wso2-documentation)
+
+-   WSO2 on [github](https://github.com/wso2/product-iots)
 
 -   [wso2 ios part 1](https://wso2.com/library/articles/2014/03/managing-ios-devices-with-wso2-enterprise-mobility-manager-part-1-0/)
 
@@ -12,11 +14,9 @@ Last update: Thu Dec 21 16:50:42 EST 2017
 [click here](https://docs.wso2.com/display/IoTS310/iOS+Device)
 
 Although, the cloud management server for devices and apps does not seem to be
-an option as of Thu Dec 21 16:50:10 EST 2017
+an option any longer as of Thu Dec 21 16:50:10 EST 2017
 
-## Server Prereqs
-
-[github](https://github.com/wso2/product-iots)
+## Server Prerequisites
 
 -   Need the following if you are build the WSO2 iOS Agent for development (optional)
 
@@ -55,8 +55,6 @@ Get an Apple Push Notifications cert from the
 
     `cd ios-features-deployer`    
     `mvn clean install -f ios-features-deploy.xml`
-
----
 
 **Download the Server Files**
 
