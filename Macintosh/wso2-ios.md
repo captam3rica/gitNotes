@@ -66,11 +66,13 @@ _Steps_
     /[iots-server-home]/wso2/components/default/configuration/org.eclipse/
     equinox.simpleconfigurator/bundles.info`
 
-    `...ios.api.utils, ...true`   
-    `...ios.apns, ..., true`   
-    `...ios.core, ..., true`   
-    `...ios.payload, ..., true`   
-    `...ios.plugin, ..., true`
+    ```
+    ...ios.api.utils, ...true   
+    ...ios.apns, ..., true   
+    ...ios.core, ..., true 
+    ...ios.payload, ..., true   
+    ...ios.plugin, ..., true
+    ```
 
 3.  Uncomment `APNSBasedPushNotificationProvider` under the
     `PushNotificationProviders` configuration in the
