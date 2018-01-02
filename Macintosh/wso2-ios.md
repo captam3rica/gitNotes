@@ -38,23 +38,52 @@ Online docs for server setup, click
 
 **iOS feature Installation**
 
-Online documentation, click
+-   Online documentation, click
 [here](https://docs.wso2.com/display/IoTS310/Installing+iOS+Features)
 
-Get CSR file and P2 repo from WSO2 [here](https://wso2.com/products/iot-server/ios/)
+-   Get CSR file and P2 repo from WSO2 [here](https://wso2.com/products/iot-server/ios/)
 
--   Source code can be modified if desired
+    -   Source code can be modified if desired
 
-Get an Apple Push Notifications cert from the 
+-   Get an Apple Push Notifications cert from the 
 [APNS Portal](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) 
+
+_Steps_
 
 1.  Extract the **ios-features-deployer** from the received email, and copy the
     contents to the iot server home directory.
 
-2.  From a terminal, use the following commands to install the ios-features.
+2.  From a terminal, got to the ios-features-deployer use the following commands
+    to install the ios-features.
 
     `cd ios-features-deployer`    
     `mvn clean install -f ios-features-deploy.xml`
+
+    To verify that the features have been installed and configured, check the
+    iOS properties in the following file to see if they are `true`.
+
+    `less
+    /[iots-server-home]/wso2/components/default/configuration/org.eclipse/
+    equinox.simpleconfigurator/bundles.info`
+
+    `...ios.api.utils, ...true`   
+    `...ios.apns, ..., true`   
+    `...ios.core, ..., true`   
+    `...ios.payload, ..., true`   
+    `...ios.plugin, ..., true`
+
+3.  Uncomment `APNSBasedPushNotificationProvider` under the
+    `PushNotificationProviders` configuration in the
+    `[iots-server-home]/conf/cdm-config.xml` file.
+
+```   
+<PushNotificationProviders>             
+    <Provider>org.wso2.carbon.device.mgt.extensions.push.notification.provider.mqtt.MQTTBasedPushNotificationProvider</Provider>
+    <Provider>org.wso2.carbon.device.mgt.extensions.push.notification.provider.xmpp.XMPPBasedPushNotificationProvider</Provider>
+    <Provider>org.wso2.carbon.device.mgt.extensions.push.notification.provider.gcm.GCMBasedPushNotificationProvider</Provider>
+    <Provider>org.wso2.carbon.device.mgt.mobile.impl.ios.apns.APNSBasedPushNotificationProvider</Provider>
+</PushNotificationProviders>
+```
 
 **Download the Server Files**
 
