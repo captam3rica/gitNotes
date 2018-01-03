@@ -55,8 +55,8 @@ Select Apple Mac > macOS`**
 
         ...
 
-        </dict>
-        ```
+    </dict>
+    ```
 
 8.  Remove the original payload you configured by selecting the base payload
     section and selecting the minus [-] button. You can now edit the profile by adding 
