@@ -1,5 +1,45 @@
 # DEP in VMware AirWatch
 
+## Associate Devices in Apple DEP Portal
+
+1.  Go to [Apple DEP Portal](https://deploy.apple.com "Apple DEP Portal")
+2.  Select **`Device Enrollment Program > Manage Devices`** in the left panel to
+    assign DEP-enabled devices to the MDM server you created.
+3.  Select method for associating devices and **Choose Devices By**
+
+-   **Assign Devices by Serial Number**
+-   **Assign by order number**
+-   **Upload `.csv` file**
+
+4.  Choose **Assign to server** as the _Action_ and select the MDM server group.
+
+5.  Click **OK**
+
+## Alternate DEP Device Enrollment Flows
+
+Combining the Apple DEP portal with the AW Self-Service Portal (SSP)
+
+### Alt Enrollments
+
+-   User generated tokens through the SSP.
+
+    -   SSP must be enabled.
+    -   The token is valid for the time set in the **Token Enrollment Settings**
+        in the Admin portal.
+
+-   The admin can generate a token from the DEP portal without inputing a device
+    SN. 
+
+    -   Admin or end-user can use this token to enroll a device.
+    -   Token is valid for time specified in Admin Portal.
+    -   Useful for cases where devices are not preassigned to users.
+
+-   Admin generates a token via bulk upload in the Apple DEP Portal. Must
+    specify device SN.
+
+    -   Admin or end user enrolls device using token.
+    -   No expiry date
+
 ## DEP Enrollemnt Profile
 
 After enrolling devices with Apple, use the DEP profile wizard in AirWatch to
@@ -177,4 +217,24 @@ Program`**
         this if you entended to have multple DEP profiles.
 
 8.  Once deployment options are configured, select **Save**. 
+
+## DEP Security Features 
+
+What happens when device enrolled in DEP are lost or stolen. 
+
+**Max App Passcode Attempts**
+
+**`Groups & Settings > All Settings > Apps > Security Policiesi`** 
+
+-   Can require passcode for to enter SDK apps on the device
+
+-   Can set a max number of passcode attempts before the device goes into **Lost
+    Mode**. Can only be unlocked from the AirWatch Console.
+
+**Agent Unenroll Protection**
+
+-   If someone tries to unenroll a supervised DEP device through the AW agent,
+    the device will go into **Lost Mode**.
+
+-   Can only be unlocked through the AW console.
 
