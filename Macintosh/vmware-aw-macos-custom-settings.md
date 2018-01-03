@@ -40,6 +40,10 @@ Select Apple Mac > macOS`**
 
     Example `xml` code:   
     ```xml
+    <?xml version="1.0" encoding="utf-8"?>  
+    <!doctype plist public "-//apple//dtd plist 1.0//en" 
+    "http://www.apple.com/dtds/propertylist-1.0.dtd">
+    <plist version="1.0">
     <dict>
         <key>Label</key>
         <string>com.[something].[plist-name]</string>
@@ -51,8 +55,8 @@ Select Apple Mac > macOS`**
 
         ...
 
-    </dict>
-    ```
+        </dict>
+        ```
 
 8.  Remove the original payload you configured by selecting the base payload
     section and selecting the minus [-] button. You can now edit the profile by adding 
