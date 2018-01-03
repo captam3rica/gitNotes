@@ -20,6 +20,21 @@ Select Apple Mac > macOS`**
 
 2.  Configure the appropriate payload (for example, Restrictions or Passcode).
 
+    Alternatively, if you have a Mac handy (running the most recent macOS) you can
+    configure the preference file locally on the Mac. Typically, the preferences
+    that you are looking for will be in `/Library/Preferences` or
+    `~/Library/Preferences`. Once you find the preference file that you need,
+    make your tweaks then convert it to a custom plist via **MCXToProfile** (on
+    github) or by using the following command:
+
+    `plutil -convert xml1 /path/to/preference.plist`
+
+    A benefit to using **MCXToProfile** is that you can define how you would
+    like the profile to be applied. For example, you can have the profile apply
+    only once, often, or always.
+
+    Once this process is complete, you can then skip to step 7.
+
 3.  **Save**, but do not publish, your profile.
 
 4.  Select the profile using the radio button next to the name. Menu buttons
@@ -29,8 +44,8 @@ Select Apple Mac > macOS`**
     customize.
 
 6.  Find and copy the section of text starting with `<dict> ... </dict>` that you
-    configured previously. See Restrictions or Passcode as an example. This section
-    contains a configuration type identifying its purpose, such as the name Restrictions.
+    configured previously. This section contains a configuration type 
+    identifying its purpose, such as the name Restrictions.
 
     This is so that you get the correct syntax layout for the custom settings
     payload.
@@ -58,7 +73,7 @@ Select Apple Mac > macOS`**
     </dict>
     ```
 
-8.  Remove the original payload you configured by selecting the base payload
-    section and selecting the minus [-] button. You can now edit the profile by adding 
+8.  Remove the original template payload that you configured by selecting the base payload
+    section and selecting the minus `[-]` button. You can now edit the profile by adding 
     custom XML code for the new functionality.
 
