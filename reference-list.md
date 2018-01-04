@@ -8,7 +8,7 @@
     1.  [Atom](#atom)
     2.  [Markdown](#markdown)
 
-## Related to Mac OS Support & Administration
+## Related to Apple Macintosh Support & Administration
 
 -   [HP Printer Driver FTP](ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
 -   [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
@@ -40,26 +40,38 @@
 -   [precache](https://github.com/krypted/precache): Pull updates down top the
     Apple macOS Server Caching service.
 
+-   MCXToProfile: convert `.plist` configuration files to `.mobileconfig` files for
+    deployment through **Profile Manager**
+
 ### App Stuff
 
 -   [Backblaze](https://www.backblaze.com "Data backup solution")
 
 ### Documentation
 
--   **Apple**
+**Apple**
 
-    -   APFS [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
-    -   [macOS Builds](https://support.apple.com/en-us/HT201260)
-    -   [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
-    -   [Mac Startup Cmd Options](https://support.apple.com/en-us/HT201255)
-    -   [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
+-   APFS [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
+
+-   [macOS Builds](https://support.apple.com/en-us/HT201260)
+
+-   [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
+
+-   [Mac Startup Cmd Options](https://support.apple.com/en-us/HT201255)
+
+-   [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
 
 -   [IBM SPSS Documentation](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/ "Documentation for IBM SPSS")
 
--   **Apple & AirWatch**
+-   [Profile
+    Manager](http://help.apple.com/profilemanager/mac/5.4/#/apd5BD57F16-A2BF-43B9-AB4B-24948FB52C1E)
 
-    -   [My
+**Apple & AirWatch**
+
+-   [My
     AirWatch](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
+
+**jamfPro**
 
 -   [Jamf](jamf.com "jamf Mac administration")
 
