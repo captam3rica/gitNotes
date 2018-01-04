@@ -1,5 +1,5 @@
 # Apple Certified Support Professional
-Last Updated: Wed Dec 27 16:26:01 EST 2017
+Last Updated: Tue Jan  2 15:35:46 EST 2018
 
 -   On a Apple Fusion drive, the boot partition is keep on the SSD while the macOS
     recovery partition is kept on the HDD.
@@ -39,6 +39,22 @@ Last Updated: Wed Dec 27 16:26:01 EST 2017
 
 -   The difference between partitions and volumes. Partitions are logical divisions,
     and volumes define how files and folders are saved to storage.
+
+## User Accounts
+
+### Types
+
+**Standard Account**
+
+-   Default account type
+-   Member of staff group
+-   Read access to most items, preferences, and applications
+-   Full control of its `Home` folder
+-   Can install apps and updates from the App Store
+-   Cannot make changes that will affect other users
+-   Cannot manually modify the `/Applications` folder
+-   Cannot install many of the 3rd party apps offered outside of the App Store
+
 
 ## Data Management 
 
