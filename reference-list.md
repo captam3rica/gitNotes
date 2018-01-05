@@ -146,6 +146,8 @@
 
 -   [My AirWatch](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
 
+-   [Documentation](https://resources.air-watch.com/documentation?sort=newest)
+
 \[[top](#top)]
 <a name="scripting-and-languages"></a>
 
