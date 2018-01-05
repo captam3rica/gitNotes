@@ -54,7 +54,108 @@ Last Updated: Tue Jan  2 15:35:46 EST 2018
 -   Cannot make changes that will affect other users
 -   Cannot manually modify the `/Applications` folder
 -   Cannot install many of the 3rd party apps offered outside of the App Store
+-   Cannot change account photo
+-   Cannot access Advanced account settings
 
+**admin**
+
+-   Must be at least one
+
+-   Part of staff and admin local accounts 
+
+-   By default does not have access to documents and folders owned by other
+    users.
+
+**guest user**
+
+-   The guest home folder is deleted upon logout.
+-   Can restart and shutdown computer.
+
+**Sharing Only**
+
+-   No access to terminal
+-   No home folder
+-   Primarily for file sharing 
+
+**root**
+
+-   Unlimited access to everything 
+-   Generally disabled by default
+-   No password by default
+
+**group accounts**
+
+-   staff: everyone
+-   admin: admins
+-   wheel: root
+
+### Account Attributes 
+
+-   `/var/db/dslocal/nodes/Default/users`: accessible only by root
+
+-   user id, group, account name, full name, home dir, login shell, uuid, alias
+    name.
+
+-   Staff if primary group for all local users 
+
+-   User ID is unique locally only
+
+-   Users cannot have the same full name
+
+-   /bin/bash is the default share
+
+-   uuid aka guid (globally unique identifier)
+
+-   The alias name is used to associate the user account with services like
+    iCloud.
+
+### Parental Controls
+
+**apps**
+
+-   built-in camera
+-   game center
+-   mail
+-   specific apps
+
+**web**
+
+-   Safari with content filtering 
+-   list of allowed websites 
+-   a combination of both
+
+**stores**
+
+-   itunes 
+-   ibooks 
+-   explicit music
+-   explicit content
+-   use age ratings
+
+**time**
+
+-   weekdays 
+-   weekends
+-   bedtime
+
+**privacy**
+
+-   privacy changes
+
+**other**
+
+- dictation
+- printers
+- scanners 
+- cds/dvd
+- profanity
+- dock
+- simplified ui
+
+### Login
+
+-   Fast user switching is enabled by default when multiple users exist on the
+    system. Not recommended when network accounts are in use.
 
 ## Data Management 
 
