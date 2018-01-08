@@ -18,8 +18,7 @@
 -   [DEPNotify](https://gitlab.com/Mactroll/DEPNotify): Simple tool to display
     what is happening during DEP enrollment on the Mac.
 
-    -
-    [cannonball](http://cannonball.tombridge.com/2017/04/27/getting-started-with-installapplication-depnotify-and-simplemdm/)
+    -   [cannonball](http://cannonball.tombridge.com/2017/04/27/getting-started-with-installapplication-depnotify-and-simplemdm/)
 
 -   [InstallApplications](https://github.com/erikng/installapplications):
     dynamically download packages for use with `InstallApplication`. Greatly
