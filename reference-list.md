@@ -10,7 +10,7 @@
 
 ## Related to Apple Macintosh Support & Administration
 
--   [HP Printer Driver FTP](ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
+-   HP Printer Driver FTP: ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
 -   [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
 
 ### Tools
