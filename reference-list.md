@@ -68,10 +68,10 @@
 
 -   [Apple Configurator 2](http://help.apple.com/configurator/mac/2.0/)
 
--   [Profile
+-   [Apple Profile
     Manager](http://help.apple.com/profilemanager/mac/5.4/#/apd5BD57F16-A2BF-43B9-AB4B-24948FB52C1E)
 
--   APFS [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
+-   [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
 
 -   [macOS Builds](https://support.apple.com/en-us/HT201260)
 
