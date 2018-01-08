@@ -15,6 +15,19 @@
 
 ### Tools
 
+-   [DEPNotify](https://gitlab.com/Mactroll/DEPNotify): Simple tool to display
+    what is happening during DEP enrollment on the Mac.
+
+    -
+    [cannonball](http://cannonball.tombridge.com/2017/04/27/getting-started-with-installapplication-depnotify-and-simplemdm/)
+
+-   [InstallApplications](https://github.com/erikng/installapplications):
+    dynamically download packages for use with `InstallApplication`. Greatly
+    reduces initial packages sizes. 
+
+-   [ManagedMac](http://dayglojesus.github.io/managedmac/): puppet plugin for
+    managing mac.
+
 -   [Packages](https://www.macupdate.com/app/mac/34613/packages/download):
     Package creator
 
@@ -50,6 +63,9 @@
 ### Documentation
 
 **Apple**
+
+-   [Apple MDM
+    Documentation](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2)
 
 -   [Apple Configurator 2](http://help.apple.com/configurator/mac/2.0/)
 
