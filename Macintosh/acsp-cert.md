@@ -157,6 +157,85 @@ Last Updated: Tue Jan  2 15:35:46 EST 2018
 -   Fast user switching is enabled by default when multiple users exist on the
     system. Not recommended when network accounts are in use.
 
+### Managing User Folders 
+
+-   Data can be transferred between two Macs via firewire, thunderbolt, or
+    ethernet. 
+
+-   The User's home folder can be copied to a new Mac. Then, in System
+    Preferences a new user can be created with the same name as the home folder
+    that was transferred. 
+
+    -   This can also be done via termial commands.
+
+-   To restore a user account
+
+    Note: Take a screen shot of the account attributes under the `Advanced`
+    section of the user account.
+
+    1.  Delete the user account but choose to save the account in a `dmg`
+    2.  Go to the `Deleted Users` folder and copy the account to the desktop
+    3.  Duplicate the `dmg` so that a folder is created with the account
+        contents inside.
+    4.  Drag the user's account folder to the `Users` folder
+    5.  Create a user account with the same name as the copied user folder
+    6.  Make sure that the `Advanced` information is the same and the UUIDs are
+        different. 
+
+### Passwords & System Security
+
+-   Apple ID password may be used to reset a local account password even if the
+    local account is not linked to an apple ID.
+
+-   System Passwords: 
+
+    **Master password**: reset standard, legacy, and administrative filevault
+    accounts. It is separate from any user account. It is not set in new
+    installation. If a master password has not been set, then It is most 
+    likely the same as password used for the admin account. If the master
+    password was set then the profile was migrated, the master password is
+    transferred to the new profile.
+
+    **Fireware password**: saved to firmware chip and not linked to any user
+    accounts. All startup options are disabled if fireware password is set. 
+
+-   Other Passwords:
+
+    **Keychain**: Apple's password vault
+
+    **Resource passwords**
+
+-   Local account passwords can be changed from **Security & Privacy**, **Users
+    & Groups**, or from the **Terminal**.
+
+-   If an account is linked to an Apple ID and the password for said ID is
+    updated, the user will not be affected until the logout and back in to the
+    account that is linked to that ID.
+
+-   The master password can be managed from **Users & Groups**
+
+-   The **Firmware** password can be set from **Recovery**
+
+-   Resetting a local user account password: Users & Groups, Master password,
+    Apple ID, Apple ID at login if legacy file vault is not used, a previous
+    login to iCloud, and the local password is different from the Apple ID,
+    FileVault recovery key at startup, and From Mac Recovery useing
+    `resetpassword` in a Terminal window.
+
+    If FileVault is in use, local user passwords cannot be changed using the
+    Master password or Apple ID.
+
+    For legacy FileVautl: If neither the Legacy FV password or the master
+    password are known, there is no way to recover the user's data.
+
+    Upon next login, the user will be prompted to update or create a new
+    Keychain password. If a new keychain is created, the old data will no longer
+    be accessible.
+
+    The Master password can be reset by deleting the master keychain files:
+    `/Library/Keychains/FileVaultMaster.cer` & `FileVaultMaster.keychain`. A new
+    master password can be set through **System Preferences**
+
 ## Data Management 
 
 -   Hide a flag by enabling the hidden flag or adding a (.) at the font of the
