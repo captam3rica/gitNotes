@@ -33,9 +33,10 @@ Mon Dec  4 16:04:56 EST 2017
 | `shft >> or <<` | indent or undent |
 | :%s/old/new/gc | find, replace, and confirm | 
 | d0 | delete from cursor to beginning of line |
-| d$ | delete from cursor to the end of the line |
-| dd | delete entire line |
-| d[ or ] | delete paragraph above or below cursor |
+| dG         | delete from cursor to end of page |
+| dg or d$   | delete from cursor to the end of the line |
+| dd         | delete entire line |
+| d[ or d]   | delete paragraph above or below cursor |
 | dop or dip | delete a paragraph |
 | dis or das | delete a sentence | 
 |:noh | remove hightlight search words | 
