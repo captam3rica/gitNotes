@@ -91,6 +91,50 @@ or
 -   Sort by file access time: `ls -lu`
 -   Sort by file created: `ls -lU`
 
+### Directory Utiltiy Commands
+
+**Bind Command**
+
+-   `dsconfigad -preferred [adserver.example.com] -a [computer-name] -domain
+    [your-domain.com] -u [admin-user] -p [password]`
+
+-   The plain text password must be provided here if used in a script. It is best
+    to have a user who's only purpose is AD binding. It is also a good idea to
+    have the script remove itself after completion.
+
+**Set admin options**
+
+-   `dsconfigad -alldomains enable -groups domain [amdins@yourdomain.com],
+    enterprise [amdins@yourdomain.com]`
+
+**Computer object password interval**
+
+-   Setting this to '0' will stop the Mac from changing the computer account
+    password automatically in the keychain: 
+    
+    `dsconfigad -passinterval 0`
+
+**Namspace support**
+
+-   Allows different users with the same username on different domains to login
+    with that user name as long as it is preceeded by the domain.
+
+    `dsconfigad -namespace [forest name]`
+
+**SSL support for LDAP connections to AD**
+
+-   `dsconfigad -packetencrypt ssl`
+
+-   If you need to install certs, you can do it through a config profile,
+    Keychain Access app, or the following command:
+
+    `/usr/bin/security add-trusted-cert -d -p basic -k
+    /Library/Keychains/System.keychain [path/to/cert/file]`
+
+**Restrict Dynamic DNS**
+
+-   `dsconfigad -listallhardwareports`
+
 ## Application Specific
 
 ### Issues with DropBox Starting Up
@@ -180,10 +224,11 @@ input their login credentials.
 
 - Move the **NetworkInterfaces.plist** file to the trash or rename it just encase removing it does not solve the problem.
 -
-**Edit Hostname**
+**Edit Hostname, Computer Name, & and Local Hostname (Bonjour)**
 
-`$ sudo scutil --set HostName [new-hostname]`  
-`$ sudo scutil --set ComputerName [new computer name]`
+`sudo scutil --set HostName [new hostname]`  
+`sudo scutil --set ComputerName [new computer name]`   
+`sudo scutil --set LocalHostName [new local hostname]`
 
 **Neighbor Discovery Cache**
 
@@ -226,7 +271,7 @@ The fsck_apfs utility verifies and repairs APFS containers and volumes.
 
   `fsck_apfs`
 
-### Boot Options
+## Boot Options
 
 **To disable AutoBoot features use the following command from Terminal**
 
