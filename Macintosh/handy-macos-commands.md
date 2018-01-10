@@ -224,7 +224,7 @@ input their login credentials.
 
 - Move the **NetworkInterfaces.plist** file to the trash or rename it just encase removing it does not solve the problem.
 -
-**Edit Hostname, Computer Name, & and Local Hostname (Bonjour)**
+**Edit Hostname, Computer Name, & Local Hostname (Bonjour)**
 
 `sudo scutil --set HostName [new hostname]`  
 `sudo scutil --set ComputerName [new computer name]`   
