@@ -157,45 +157,50 @@ input their login credentials.
 
 ## User Modifications
 
-### For the username to be an admin & add that user to the admin group wheel
+**Modify the primary group fro a user**
+
+Get a list of available groups.
+
+`dscacheutil -g group`
+
+Change the primary group ID.
+
+`dscl . -create /Users/[username] PrimaryGroupID 20`
+
+**For the username to be an admin & add that user to the admin group wheel**
 
 `sudo dseditgroup -o edit -a $username_to_add -t user admin`  
 `sudo dseditgroup -o edit -a $username_to_add -t user wheel`  
 
-### Change the shortname (username) of a particular user
+**Change the shortname (username) of a particular user**
 
-- Backup the current username to something like [username.old]
+Backup the current username to something like [username.old]
 
   `sudo chown -R [newshortname] /Users/[newshortname]`
 
-- Reset a User Password from Single User Mode
+**Reset a User Password from Single User Mode**
 
-  - `cmd + S ` to enter single user Mode
+`cmd + S ` to enter single user Mode
 
+```sh
+$ /sbin/fsck -fy
+$ /sbin/mount -uw /
+$ launchctl load /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
+$ dscl . -passwd /Users/whitsongordon [new password here]
+```
 
-    $ /sbin/fsck -fy
-    $ /sbin/mount -uw /
-    $ launchctl load /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
-    $ dscl . -passwd /Users/whitsongordon [new password here]
-
-
-### Manipulate User Accounts & Passwords
+**Manipulate User Accounts & Passwords**
 
   `pwpolicy [-v] [-a authenticator] [-p password] [-u username | -c computername]
                 [-n nodename] command command-arg`
 
-### Enable the root user
+**Enable the root user**
 
 `dsenableroot -d`
 
-### Force the user to be admin  
+**Mount User’s ***Something*** folder to ***Scan*** folder**
 
-`$ sudo dseditgroup -o edit -a jwils156 admin`
-
-### Mount User's ***Something*** folder to ***Scan*** folder
-
-    sudo -u $user -H sh -c "mount_smbfs
-    //'your.computer.domain;$user@something.server.name/location/of/folder"
+`sudo -u $user -H sh -c mount_smbf // your.computer.domain;$user@something.server.name/location/of/foldere`
 
 **Connect to shares using a different user**
 
@@ -285,23 +290,23 @@ The fsck_apfs utility verifies and repairs APFS containers and volumes.
 
 ## Java ...
 
-#### Removing Java
+**Removing Java**
 
 `sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin`  
 `sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefpane`
 
-### Find Java Version
+**Find Java Version**
 
 `./Library/Internet\
 Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
 
-## Diagnostics & Testing
+## Diagnostics & Troubleshooting
 
-### Local Diagnostics
+**Local Diagnostics**
 
 - Hold `cmd+D` at boot
 
-### Target Disk Mode
+**Target Disk Mode**
 
 - Hold the T key while the system is booting.
 
@@ -351,43 +356,25 @@ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
 
     sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/[usb device] --applicationpath /Applications/Install\ macOS\ High\ Sierra.app/ –nointeraction
 
-## Munki related
+## Munki
 
-### Path to *Munki* Files
+**Path to *Munki* Files**
 
 /usr/local/munki
 
-### Sal Client Setup
+**Sal Client Setup**
 
 `$ defaults write /Library/Preferences/com.github.salopensource.sal ServerURL http://something.com`  
 
 `$ defaults write /Library/Preferences/com.github.salopensource.sal key [yourreallyreallylongkey]`
 
-### Removing All-in-one Puppet Scripts
+**Removing All-in-one Puppet Scripts**
 
     rm /Library/LaunchDaemons/com.puppetlabs.mcollective.plist
     rm /Library/LaunchDaemons/com.puppetlabs.puppet.plist
     rm /Library/LaunchDaemons/com.puppetlabs.pxp-agent.plist
 
-### If the OS X upgrade package fails to install:
+**If the OS X upgrade package fails to install:**
 
 `com.googlecode.installosx.pkg.plist`
 `com.googlecode.installosx.pkg.bom`
-
-## SSH Keys
-
-Generate Keys
-
-- ssh-keygen -t rsa -b 4096 -C "Label the key here"
-
-Push Keys
-
-- cat ~/.ssh/shhkey.pub | ssh user@remoteserver "mkdir -p ~/.ssh/ && cat >> ~/.ssh/authorized_keys"
-
-## File Locations
-
-- /Library/Printers/guestqueue
-- /Library/Preferences/ManagedInstalls.plist
-- Printer Drivers: /Library/Printers/PPDs/Contents/Resources
-- munki downloads that have not yet been installed - /Library/Managed\
-Installs/Cache
