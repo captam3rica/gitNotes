@@ -20,6 +20,8 @@
 
     -   [cannonball](http://cannonball.tombridge.com/2017/04/27/getting-started-with-installapplication-depnotify-and-simplemdm/)
 
+-   [SplashBuddy](https://github.com/Shufflepuck/SplashBuddy)
+
 -   [InstallApplications](https://github.com/erikng/installapplications):
     dynamically download packages for use with `InstallApplication`. Greatly
     reduces initial packages sizes. 
@@ -62,6 +64,8 @@
 ### Documentation
 
 **Apple**
+
+-   [keyboard shortcuts](http://support.apple.com/kb/HT1343 )
 
 -   [Apple MDM
     Documentation](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2)
