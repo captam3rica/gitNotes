@@ -29,7 +29,7 @@
 
 ## Generate an SSH Key for GitHub
 
--   Go to **Terminal**
+1.  Go to **Terminal**
 
         ## Check to see if you already have an SSH key pair
         $ ls ~/.ssh
@@ -70,10 +70,8 @@
 1.  Run the following command to list the keys for which you have a public and
     private key.
 
-    `gpg --list-secret-keys --keyid-format LONG`
-
     ```sh
-    gpg --list-secret-keys --keyid-format LONG
+    $ gpg --list-secret-keys --keyid-format LONG
     /Users/captam3rica/.gnupg/pubring.kbx
     -------------------------------------
     sec   rsa4096/40DFE59EF3007E52 2017-11-08
