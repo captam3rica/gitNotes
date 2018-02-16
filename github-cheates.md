@@ -44,15 +44,15 @@
         $ less ~/.ssh/[ssh-key-name].pub
             ssh-rsa ...
 
--   Copy the contents of your _.pub_ ssh key  
+2.  Copy the contents of your _.pub_ ssh key  
 
--   Go to your GitHub page. Then, Top-right **Click your photo > Settings > SSH and GPG keys > click New SSH key**
+3.  Go to your GitHub page. Then, Top-right **Click your photo > Settings > SSH and GPG keys > click New SSH key**
 
--   Give the new key a **Title**
+4.  Give the new key a **Title**
 
--   Paste your *SSH Key* in the box labeled **Key**
+5.  Paste your *SSH Key* in the box labeled **Key**
 
--   Go back to the **Terminal**
+6.  Go back to the **Terminal**
 
         ## Try to connect to GitHub over SSH
         $ ssh -v git@github.com
@@ -61,9 +61,9 @@
 > RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.  
 > Are you sure you want to continue connecting (yes/no)? yes
 
--   Make sure that the SHA256 key matches the above and type "yes"
+7.  Make sure that the SHA256 key matches the above and type "yes"
 
--   Done!!!!!
+8.  Done!!!!!
 
 ## Import GPG key to GitHub
 
