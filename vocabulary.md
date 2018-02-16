@@ -18,6 +18,20 @@
 
 ## Technology Concepts 
 
+-   **Representational state transfer (REST)** or **RESTful web services**
+
+    Are a way of providing interoperability between computer systems on the 
+    Internet. REST-compliant Web services allow requesting systems to access and 
+    manipulate textual representations of Web resources using a uniform and 
+    predefined set of stateless operations.
+
+-   **iBeacon**
+
+    Broadcast a low energy bluetooth signal to nearby electronic devices. Allows
+    devices to perform certain actions when in close prox to an iBeacon. Track
+    customers, device locations, or trigger a location-based action such as app
+    check in or push notification.
+
 -   **Link Layer Discovery Protocol (LLDP)** 
 
     Used by network devices for advertising their id, capabilities, and neighbors 
@@ -33,11 +47,11 @@
 
 -   **RealTime Linux Kernel Scheduler (rtkit)**
 
-    A real-time system is one that provides guaranteed system response times for events and 
-    transactions--that is, every operation is expected to be completed within a certain rigid
-    time period. A system is classified as hard real-time if missed deadlines cause 
-    system failure and soft real-time if the system can tolerate some missed time 
-    constraints.
+    A real-time system is one that provides guaranteed system response times 
+    for events and transactions--that is, every operation is expected to be 
+    completed within a certain rigid time period. A system is classified as hard 
+    real-time if missed deadlines cause system failure and soft real-time if the 
+    system can tolerate some missed time constraints.
 
 -   **socket**: 
 
