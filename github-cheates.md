@@ -65,6 +65,38 @@
 
 -   Done!!!!!
 
+## Import GPG key to GitHub
+
+1.  Run the following command to list the keys for which you have a public and
+    private key.
+
+    `gpg --list-secret-keys --keyid-format LONG`
+
+    ```sh
+    gpg --list-secret-keys --keyid-format LONG
+    /Users/captam3rica/.gnupg/pubring.kbx
+    -------------------------------------
+    sec   rsa4096/40DFE59EF3007E52 2017-11-08
+        97D75C441D64BA19EE5B606440DFE59EF3007E52
+    uid                 captam3rica
+    ssb   rsa4096/59100F5B3480D347 2017-11-08
+    ```
+
+2.  Copy the GPG key ID that you would like to use. For me, it was
+    `40DFE59EF3007E52`
+
+3.  Paste the key ID into the following command.
+
+    `gpg --armor --export 40DFE59EF3007E52`
+
+    This will print the public key ID in ASCII armor format
+
+4.  Copy your GPG key, starting at `-----BEGIN PGP PUBLIC KEY BLOCK-----` to
+    `-----END GPG PUBLIC KEY BLOCK-----`
+
+5.  Add the GPG key to your GitHUB account under the `Settings > SSH and GPG
+    keys`
+
 ## Create an Empty Repo & Push Remotely to GitHub
 
 **Note:** Change `[username]` to your *GitHub* user, and change `[repo_name_here]` to the name of the repository being created.
@@ -85,12 +117,12 @@
 -   Add entire contents of local directory: `$ git add .`
 
 -   Commit a change: `$ git commit -m "Some note about the commit"`
-    
+ 
     -   `git commit -a`: add changes that have already been commit and nothing new.
 
 -   Change the name of a file or directory: 
 
-    `git mv [filename.old] [filename.new]`  
+    `git mv [filename.old] [filename.new]`
     `git commit -m "note about change"`
 
 -   Initial push of commits to remote repo: `$ git push origin [main_branch_name]`
@@ -99,14 +131,14 @@
 
 -   Push commits to remote repo: `$ git push`
 
--   Download bookmarked history from remote repo and incorporates changes: `$ git pull`  
+-   Download bookmarked history from remote repo and incorporates changes: `$ git pull`
 
 -   Downloads bookmark history and incorporates your changes on top of
-remote changes: `$ git pull --rebase`  
+remote changes: `$ git pull --rebase`
 
 -   Check repo status: `git status`
 
--   Revert a commit: `$ git revert -n <sha>`  
+-   Revert a commit: `$ git revert -n <sha>`
 
 -   Show what revision and author last modified each line of a file: `$ git blame [file]`
 
