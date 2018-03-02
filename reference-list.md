@@ -196,6 +196,74 @@ atom-text-editor::shadow .cursor {
 .minimap .cursor-line {
     background: #EA4760;
 }
+
+// add or import these into your Atom styles.less
+
+/******************  VIM MODE STATUS BAR ****************************************/
+
+// green
+@normal-bg: rgb(105, 238, 103);
+// blue
+@insert-bg: rgb(7, 193, 242);
+// yellowish
+@visual-bg: rgb(255, 206, 98);
+
+
+// change the current cursor-line background color
+// based on vim mode
+atom-text-editor.is-focused.editor {
+  .cursor-line {
+    // background: rgba(64, 64, 37, 5);
+    background: fadeout(@normal-bg, 80%);
+  }
+  &.insert-mode {
+    .cursor-line {
+      background: fadeout(@insert-bg, 90%);
+    }
+  }
+}
+
+
+// vim mode in the status bar at the bottom
+// make it nice and big so you can see it out of the corner of your eye
+// without thinking about it.
+.status-bar-vim-mode-normal,
+.status-bar-vim-mode-insert,
+.status-bar-vim-mode-visual {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5em;
+  width: 18rem;
+  text-transform: uppercase;
+}
+
+
+.status-bar-vim-mode-normal {
+  background: @normal-bg;
+  color: rgb(4, 111, 11);
+}
+
+.status-bar-vim-mode-insert {
+  background: @insert-bg;
+  color: white;
+}
+
+.status-bar-vim-mode-visual {
+  background: @visual-bg;
+  color: rgb(168, 117, 5);
+}
+
+// change cursor color in normal mode
+atom-text-editor.vim-mode.normal-mode.is-focused.editor {
+  .cursor {
+    background-color: @normal-bg;
+  }
+}
+
+// visual mode and selected text
+atom-text-editor.editor .selection .region {
+  background-color: fadeout(@visual-bg, 75%);
+}
 ```
 
 <a name="markdown"></a>
@@ -272,9 +340,14 @@ atom-text-editor::shadow .cursor {
 ### Python
 
 -   For **pycodestyle** - PEP8 linter for _Atom_
+    
     -   `pip (or pip2) install pycodestyle && apm install pycodestyle`
+
 -   Python for InfoSec: <http://strategicsec.com/python-for-infosec-pros-2015/>
+
 -   Python Naming Conventions: <http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html>
+
+-   [Built-in Exceptions](https://docs.python.org/3/library/exceptions.html#os-exceptions)
 
 \[[top](#top)]
 
