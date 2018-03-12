@@ -57,6 +57,10 @@
 -   MCXToProfile: convert `.plist` configuration files to `.mobileconfig` files for
     deployment through **Profile Manager**
 
+-   **Automator**
+
+    -   [ConfigAutomation](https://configautomation.com/attach-workflow.html)
+
 ### App Stuff
 
 -   [Backblaze](https://www.backblaze.com "Data backup solution")
@@ -86,10 +90,6 @@
 -   [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
 
 -   [IBM SPSS Documentation](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/ "Documentation for IBM SPSS")
-
--   **Automator**
-
-    -   [ConfigAutomation](https://configautomation.com/attach-workflow.html)
 
 **Apple & AirWatch**
 
