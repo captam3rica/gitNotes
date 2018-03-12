@@ -87,6 +87,10 @@
 
 -   [IBM SPSS Documentation](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/ "Documentation for IBM SPSS")
 
+-   **Automator**
+
+    -   [ConfigAutomation](https://configautomation.com/attach-workflow.html)
+
 **Apple & AirWatch**
 
 -   [My
@@ -167,10 +171,16 @@
 
 -   [Documentation](https://resources.air-watch.com/documentation?sort=newest)
 
+-	[AW REST APIs]()
+
+	-	[Get devices from AW](https://macadminsdoc.readthedocs.io/en/master/MDM/AirWatch/AirWatch-API.html)
+
 \[[top](#top)]
 <a name="scripting-and-languages"></a>
 
 ## Related to Scripting & Computer Languages
+
+-   [HTTPS Status Code Explainations](https://httpstatuses.com/)
 
 ### Vim Customization
 
@@ -339,6 +349,10 @@ atom-text-editor.editor .selection .region {
 
 ### Python
 
+-	Install `pip` python package manager MacOS - **P**ip **I**nstalls **P**ackages
+
+	`sudo easy_install pip`
+
 -   For **pycodestyle** - PEP8 linter for _Atom_
     
     -   `pip (or pip2) install pycodestyle && apm install pycodestyle`
@@ -348,6 +362,10 @@ atom-text-editor.editor .selection .region {
 -   Python Naming Conventions: <http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html>
 
 -   [Built-in Exceptions](https://docs.python.org/3/library/exceptions.html#os-exceptions)
+
+-	[Requests Module](http://docs.python-requests.org/en/master/user/quickstart/#more-complicated-post-requests) - API calls from Python
+
+	`sudo pip install requests`
 
 \[[top](#top)]
 
