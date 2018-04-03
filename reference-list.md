@@ -156,6 +156,9 @@
 
 \[[top](#top)]
 
+### Microsoft Office
+
+-   [Completely Uninstall Office 2016](https://support.office.com/en-us/article/troubleshoot-office-2016-for-mac-issues-by-completely-uninstalling-before-you-reinstall-ec3aa66e-6a76-451f-9d35-cba2e14e94c0?ui=en-US&rs=en-US&ad=US)
 ### Driver Resources
 
 -   [ Microsoft Surface Drivers](https://docs.microsoft.com/en-us/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices#a-href-idsurface-pro-3-asurface-pro-3)
