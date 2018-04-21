@@ -64,3 +64,10 @@ and push to github without leaving vim |
 | ctrl-w v | split screen vertically | 
 | ctrl-w s | split screen horizontally | 
 
+## Tips
+
+-   If you should find yourself stuck in `Ex` mode, type `Ctrl-c` or just type a single `.` then
+    press **Enter** to get back to a `:` prompt.
+
+-   To enter `Ex` mode in `vim` type `:i` then a space and press enter.
+

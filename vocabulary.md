@@ -8,8 +8,9 @@
 
 -   **paginate**
 
-    To indicate the sequence of pages in a book, manuscript, etc. by placing numbers or other 
-    character on each leaf. To divide an electronic document into pages, as for printing.
+    To indicate the sequence of pages in a book, manuscript, etc. by placing
+    numbers or other character on each leaf. To divide an electronic document
+    into pages, as for printing.
 
 -   **disparate**
 
@@ -17,6 +18,28 @@
     opposing elements.
 
 ## Technology Concepts 
+
+-  **Why `__name__`** 
+
+    iOne reason for doing this is that sometimes you write a module (a .py file)
+    where it can be executed directly. Alternatively, it can also be imported
+    and used in another module. By doing the main check, you can have that code
+    only execute when you want to run the module as a program and not have it
+    execute when someone just wants to import your module and call your 
+    functions themselves.
+
+-   **Dynamic Linker (dylb or `.dylib`)**
+
+    The dynamic linker not only links the target executable to the shared
+    libraries but also places machine code functions at specific address
+    points in memory that the target executable knows about at link time.
+    When an executable wishes to interact with the dynamic linker, it simply
+    executes the machine-specific call or jump instruction to one of those 
+    well-known address points. The executables on the macOS and iOS platforms
+    often interact with the dynamic linker during the execution of the process;
+    it is even known that an executable might interact with the dynamic linker,
+    causing it to load more libraries and resolve more symbols, hours after it
+    initially launches. 
 
 -   **Representational state transfer (REST)** or **RESTful web services**
 

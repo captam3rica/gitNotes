@@ -65,9 +65,15 @@
 
 -   [Backblaze](https://www.backblaze.com "Data backup solution")
 
+-   [Vendor KEXT
+    Info](https://docs.google.com/spreadsheets/d/1IWrbE8xiau4rU2mtXYji9vSPWDqb56luh0OhD5XS0AM/edit#gid=0)
+
 ### Documentation
 
 **Apple**
+
+-   [Sudoers
+    Modification](https://derflounder.wordpress.com/2016/07/11/editing-etcsudoers-to-manage-sudo-rights-for-users-and-groups/)
 
 -   [keyboard shortcuts](http://support.apple.com/kb/HT1343 )
 
