@@ -4,9 +4,22 @@
 
 ## TOC
 
+1.	Administration
+
+	1.	[Apple  ](#macintosh)
+	1.	[Unix & GNU/Linux](#unix_linux)
+    1. 	[Windows](#windows)
+
+1. 	[MDM](#mdm)
+
 1.  [Related to Scripting & Computer Languages](#scripting-and-languages)
+
     1.  [Atom](#atom)
-    2.  [Markdown](#markdown)
+    1.  [Markdown](#markdown)
+
+---
+
+<a name=“macintosh”></a>
 
 ## Related to Apple Macintosh Support & Administration
 
@@ -102,18 +115,9 @@
 -   [My
     AirWatch](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
 
-**jamfPro**
-
--   [Jamf](jamf.com "jamf Mac administration")
-
-    -   [jampPro Admin Admin Guide](http://docs.jamf.com)  
-    -   [jamf Developer](http://developer.jamf.com/index "jamf Developter portal")
-    -   [jamf Marketplace](marketplac.jamf.com "jamf curated apps")
-    -   [jamfPro v VMware
-    AirWatch](https://www.itcentralstation.com/products/comparisons/jamf-pro_vs_vmware-airwatch)
-
 \[[top](#top)]
 
+<a name=“unix_linux”></a>
 ## Unix & GNU/Linux
 
 -   [Sane scanner](https://wiki.archlinux.org/index.php/SANE)
@@ -136,6 +140,7 @@
 
 \[[top](#top)]
 
+<a name=“windows”></a>
 ## Related to Windows Administration
 
 -   List of WMIC CSProduct Get Name Results - <http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/>
@@ -165,12 +170,15 @@
 ### Microsoft Office
 
 -   [Completely Uninstall Office 2016](https://support.office.com/en-us/article/troubleshoot-office-2016-for-mac-issues-by-completely-uninstalling-before-you-reinstall-ec3aa66e-6a76-451f-9d35-cba2e14e94c0?ui=en-US&rs=en-US&ad=US)
+
 ### Driver Resources
 
 -   [ Microsoft Surface Drivers](https://docs.microsoft.com/en-us/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices#a-href-idsurface-pro-3-asurface-pro-3)
 -   HP Drivers - <http://www8.hp.com/us/en/ads/clientmanagement/overview.html#manageability-tools>
 
-## VMare
+<a name=“mdm”></a>
+
+## MDM
 
 ### VMware AirWatch
 
@@ -183,6 +191,16 @@
 -	[AW REST APIs]()
 
 	-	[Get devices from AW](https://macadminsdoc.readthedocs.io/en/master/MDM/AirWatch/AirWatch-API.html)
+
+### Jamf
+
+-	[API Support](http://developer.jamf.com/apis/jamf-pro-api/index)
+- 	[Documentation](docs.jamf.com)
+-  	[Jamf-Nation](jamf.com/jamf-nation)
+
+### MS Azure
+
+-	[REST API](https://docs.microsoft.com/en-us/rest/api/azure/)
 
 \[[top](#top)]
 <a name="scripting-and-languages"></a>
@@ -284,6 +302,8 @@ atom-text-editor.editor .selection .region {
   background-color: fadeout(@visual-bg, 75%);
 }
 ```
+\[[top](#top)]
+<a name="scripting-and-languages"></a>
 
 <a name="markdown"></a>
 
@@ -298,9 +318,9 @@ atom-text-editor.editor .selection .region {
 -   [vim wiki](http://vim.wikia.com/wiki)
 -   [vim-markdownfmt](https://github.com/moorereason/vim-markdownfmt)
 
--   Table of contents
+-   Build a table of contents
 
-    ```md
+    ```markdown
     # Markdown syntax
 
       # Table of contents
