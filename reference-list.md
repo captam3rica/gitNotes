@@ -4,10 +4,10 @@
 
 ## TOC
 
-1.	Administration
+1.	[Administration]()
 
     1.	[Apple  ](#macintosh)
-	1.	[Unix & GNU/Linux](#unix_linux)
+    1.	[Unix & GNU/Linux](#unix_linux)
     1. 	[Windows](#windows)
 
 1. 	[MDM](#mdm)
