@@ -16,6 +16,8 @@
 
     1.  [Atom](#atom)
     1.  [Markdown](#markdown)
+    1.  [Python](#python)
+    1.  [Bah](#bash)
 
 ---
 
@@ -192,6 +194,8 @@
 
 -   [Munki Integration](https://support.air-watch.com/articles/360000721788)
 
+    -   [Munki teardown](http://www.aarondavidpolley.com/vmware-airwatch-munki-teardown/)
+
 -	[AW REST APIs]()
 
 	-	[Get devices from AW](https://macadminsdoc.readthedocs.io/en/master/MDM/AirWatch/AirWatch-API.html)
@@ -306,6 +310,7 @@ atom-text-editor.editor .selection .region {
   background-color: fadeout(@visual-bg, 75%);
 }
 ```
+
 \[[top](#top)]
 <a name="scripting-and-languages"></a>
 
@@ -349,6 +354,30 @@ atom-text-editor.editor .selection .region {
 
 \[[top](#top)]
 
+<a name="python"></a>
+
+### Python
+
+-	Install `pip` python package manager MacOS - **P**ip **I**nstalls **P**ackages
+
+	`sudo easy_install pip`
+
+-   For **pycodestyle** - PEP8 linter for _Atom_
+
+    -   `pip (or pip2) install pycodestyle && apm install pycodestyle`
+
+-   Python for InfoSec: <http://strategicsec.com/python-for-infosec-pros-2015/>
+
+-   Python Naming Conventions: <http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html>
+
+-   [Built-in Exceptions](https://docs.python.org/3/library/exceptions.html#os-exceptions)
+
+-	[Requests Module](http://docs.python-requests.org/en/master/user/quickstart/#more-complicated-post-requests) - API calls from Python
+
+	`sudo pip install requests`
+
+<a name="bash"></a>
+
 ### Bash
 
 -   [bashoneliners.com](http://www.bashoneliners.com/oneliners/oneliner/popular/)
@@ -379,26 +408,6 @@ atom-text-editor.editor .selection .region {
 -   [Introduction](https://developer.apple.com/library/content/documentation/AppleScript/Conceptual/AppleScriptX/AppleScriptX.html#//apple_ref/doc/uid/10000156-BCICHGIE)
 
 -   [Tutorial](https://macosxautomation.com/applescript/firsttutorial/index.html)
-
-### Python
-
--	Install `pip` python package manager MacOS - **P**ip **I**nstalls **P**ackages
-
-	`sudo easy_install pip`
-
--   For **pycodestyle** - PEP8 linter for _Atom_
-    
-    -   `pip (or pip2) install pycodestyle && apm install pycodestyle`
-
--   Python for InfoSec: <http://strategicsec.com/python-for-infosec-pros-2015/>
-
--   Python Naming Conventions: <http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html>
-
--   [Built-in Exceptions](https://docs.python.org/3/library/exceptions.html#os-exceptions)
-
--	[Requests Module](http://docs.python-requests.org/en/master/user/quickstart/#more-complicated-post-requests) - API calls from Python
-
-	`sudo pip install requests`
 
 \[[top](#top)]
 
