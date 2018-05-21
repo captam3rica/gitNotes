@@ -182,11 +182,13 @@
 
 ### VMware AirWatch
 
--   [start here - AirWatch Leaning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
+-   [AirWatch Leaning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
 
--   [My AirWatch](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
+-   [MacOS Platform guide 9.1](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
 
 -   [Documentation](https://resources.air-watch.com/documentation?sort=newest)
+
+-   [Munki Integration](https://support.air-watch.com/articles/360000721788)
 
 -	[AW REST APIs]()
 
