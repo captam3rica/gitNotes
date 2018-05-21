@@ -17,7 +17,7 @@
     1.  [Atom](#atom)
     1.  [Markdown](#markdown)
     1.  [Python](#python)
-    1.  [Bah](#bash)
+    1.  [Bash](#bash)
 
 ---
 
