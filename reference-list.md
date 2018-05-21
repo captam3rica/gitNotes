@@ -6,7 +6,7 @@
 
 1.	Administration
 
-	1.	[Apple  ](#macintosh)
+    1.	[Apple  ](#macintosh)
 	1.	[Unix & GNU/Linux](#unix_linux)
     1. 	[Windows](#windows)
 
@@ -118,6 +118,7 @@
 \[[top](#top)]
 
 <a name=“unix_linux”></a>
+
 ## Unix & GNU/Linux
 
 -   [Sane scanner](https://wiki.archlinux.org/index.php/SANE)
@@ -141,6 +142,7 @@
 \[[top](#top)]
 
 <a name=“windows”></a>
+
 ## Related to Windows Administration
 
 -   List of WMIC CSProduct Get Name Results - <http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/>
@@ -184,7 +186,7 @@
 
 -   [AirWatch Leaning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
 
--   [MacOS Platform guide 9.1](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
+-   [MacOS Profile Guide](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
 
 -   [Documentation](https://resources.air-watch.com/documentation?sort=newest)
 
