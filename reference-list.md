@@ -4,9 +4,11 @@
 
 ## TOC
 
-1.	[Apple  ](#macintosh)
-1.	[Unix & GNU/Linux](#unix_linux)
-1. 	[Windows](#windows)
+1.  Administration
+
+    1.	[Apple  ](#macintosh)
+    1.	[Unix & GNU/Linux](#unix_linux)
+    1. 	[Windows](#windows)
 
 1. 	[MDM](#mdm)
 
@@ -17,7 +19,7 @@
 
 ---
 
-<a name=“macintosh”></a>
+<a name="macintosh"></a>
 
 ## Related to Apple Macintosh Support & Administration
 
@@ -115,7 +117,7 @@
 
 \[[top](#top)]
 
-<a name=“unix_linux”></a>
+<a name="unix_linux"></a>
 
 ## Unix & GNU/Linux
 
@@ -139,7 +141,7 @@
 
 \[[top](#top)]
 
-<a name=“windows”></a>
+<a name="windows"></a>
 
 ## Related to Windows Administration
 
@@ -176,7 +178,7 @@
 -   [ Microsoft Surface Drivers](https://docs.microsoft.com/en-us/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices#a-href-idsurface-pro-3-asurface-pro-3)
 -   HP Drivers - <http://www8.hp.com/us/en/ads/clientmanagement/overview.html#manageability-tools>
 
-<a name=“mdm”></a>
+<a name="mdm"></a>
 
 ## MDM
 
