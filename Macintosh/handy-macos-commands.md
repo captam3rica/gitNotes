@@ -354,7 +354,7 @@ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
 
 ### Create OS X install media:
 
-    sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/[usb device] --applicationpath /Applications/Install\ macOS\ High\ Sierra.app/ –nointeraction
+    sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/[usb device] --applicationpath /Applications/Install\ macOS\ High\ Sierra.app/ -–nointeraction
 
 ## Munki
 
