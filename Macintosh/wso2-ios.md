@@ -36,19 +36,19 @@ Online docs for server setup, click
 
 ---
 
-**iOS feature Installation**
+### iOS feature Installation
 
 -   Online documentation, click
 [here](https://docs.wso2.com/display/IoTS310/Installing+iOS+Features)
 
--   Get CSR file and P2 repo from WSO2 [here](https://wso2.com/products/iot-server/ios/)
+-   Get the ios-feature-deployer and P2 repo from WSO2 [here](https://wso2.com/products/iot-server/ios/)
 
     -   Source code can be modified if desired
 
 -   Get an Apple Push Notifications cert from the 
 [APNS Portal](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2) 
 
-_Steps_
+**Steps**
 
 1.  Extract the **ios-features-deployer** from the received email, and copy the
     contents to the iot server home directory.
@@ -124,15 +124,17 @@ necessary to configure and run the WSO2 IoT server.
 
 **HTTPS is required for Apple MDM interaction**
 
--   `vim [iots-home]/conf/app-manager.xml` and add **%httsp%**
+-   `vim [iots-home]/conf/app-manager.xml` and add **%https%**
 
-        <Config name="AppDownloadURLHost">%https%</Config>    
+    `<Config name="AppDownloadURLHost">%https%</Config>`    
 
-### DEP enrollment
+### Cert Creation
 
-**Create the APNS Cert**
+**Create the MDM APNS Cert**
 
 [click here](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=3fbfc9ad8dfedeb78be1d37f6458e72adc3160d1ad5b323a9e5c5eb2f8e7e3e2&rv=2)
+
+-   CSR how to [here](https://www.youtube.com/watch?v=0iLtDb2ZKAE)
 
 **Developer APNS Cert**
 

@@ -97,6 +97,8 @@
 
 ## Create an Empty Repo & Push Remotely to GitHub
 
+### GitHub
+
 **Note:** Change `[username]` to your *GitHub* user, and change `[repo_name_here]` to the name of the repository being created.
     
     $ mkdir [repo_name_here]
@@ -107,6 +109,14 @@
     $ curl -u '[username]' https://api.github.com/user/repos -d '{"name":"[repo_name_here]"}'
     $ git remote add origin https://github.com/[username]/[repo_name_here].git
     $ git push --set-upstream origin master
+
+### GitLab
+
+```
+$ curl --request POST --header "PRIVATE-TOKEN: my token" -d "name=[project_name]" "https://gitlab.com/api/v4/projects/user/:captam3rica"
+```
+
+[Documentation](https://gitlab.com/help/api/projects.md#create-project)
 
 ## Basics
 
@@ -205,6 +215,15 @@ remote changes: `$ git pull --rebase`
 
 -   `$ git rm --cached -r [dir name]`
 -   `$ git rm --cached [file name]`
+
+**If you already commited changes, then**
+
+-	`git reset (--hard) HEAD~1`
+
+**If not then:**
+
+-	`git reset`
+-	`git checkout -- $(git ls-files -d)`
 
 
 ## Notes

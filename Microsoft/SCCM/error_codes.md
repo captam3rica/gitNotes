@@ -19,6 +19,7 @@
 **Documentation**
 
 - [UEFI task sequence fails to apply operating system image](https://social.technet.microsoft.com/Forums/en-US/f6d6d07c-bc10-4395-96e7-5c199d70d4e1/uefi-task-sequence-fails-to-apply-operating-system-image?forum=configmanagerosd)
+
   - The reason for this is SCCM (without MDT) does not have the ability to correctly state images in UEFI mode.
 
 - [ConfigMgr 2012: Staging of WinPE Is Not Fully Supported in UEFI-GPT Deployment Scenarios](https://social.technet.microsoft.com/Forums/en-US/d39d36d9-8177-4a37-8fbc-b7ecfaaa7929/configmgr-2012-staging-of-winpe-is-not-fully-supported-in-uefigpt-deployment-scenarios?forum=configmanagerosd)
@@ -29,6 +30,7 @@
 
 - Use SCCM Deployment with MDT to build UEFI functionality into the boot media
 - Make sure the correct image (i.e. 1-1, 2-2, ...) is being applied to the TS.
+- Check to see if RAID is selected in BIOS under the SATA settings
 
 ## 0x80070032
 

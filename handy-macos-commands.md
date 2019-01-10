@@ -2,7 +2,7 @@
 
 Precursors to using some of the commands below. **PLEASE** be sure to make a backup copy of any files before altering them.
 
-## Terminal Foo
+# Terminal Foo
 
 **OS Version**
 
@@ -64,7 +64,7 @@ or
 
 `sudo rm -rf /var/db/receipts/[name of receipt]`
 
-### Force Apple Setup Assistant to launch again
+## Force Apple Setup Assistant to launch again
 
 1. Boot to single user mode
 
@@ -82,7 +82,7 @@ or
 
 `rm /var/db/.AppleSetupDone`
 
-### ls commands
+## ls commands
 
 -   List full time output(hh:mm:ss): `ls -lT` 
 -   Check to see if a file is restricted (aka SIP protected): `ls -lO`
@@ -91,7 +91,7 @@ or
 -   Sort by file access time: `ls -lu`
 -   Sort by file created: `ls -lU`
 
-### Directory Utiltiy Commands
+## Directory Utility Commands
 
 **Bind Command**
 
@@ -135,27 +135,30 @@ or
 
 -   `dsconfigad -listallhardwareports`
 
-## Application Specific
+# Application Specific
 
-### Issues with DropBox Starting Up
+## Issues with DropBox Starting Up
 
 - There is a hidden folder, under the Users folder, called ".dropbox".
 Remove that folder then try to launch DB again. It should allow the user
 input their login credentials.
 
-### Microsoft Word Hacks
 
-#### Find Unsaved Word Docs
+## Microsoft Word Hacks
+
+
+### Find Unsaved Word Docs
 
 `~/Library/Containers/com.microsoft.Word/Data/Library/Preferences/AutoRecovery/`
 
 - May need to rename .docx to .doc if the file does not open  
 
-#### UserTemplates Location
+### UserTemplates Location
 
 - Word Templates Location: `/Users/$username/Library/Application Support/Microsoft/Office/UserTemplates/`
 
-## User Modifications
+
+# User Modifications
 
 **Modify the primary group fro a user**
 
@@ -206,9 +209,9 @@ $ dscl . -passwd /Users/whitsongordon [new password here]
 
 `smb://<username>:*@<servername>`
 
-## Security
+# Security
 
-### XProtect and Gatekeeper
+## XProtect and Gatekeeper
 
 - *XProtect* is technically a feature builtin to *File Quarantine*
 - Just sits between you and the Web.
@@ -221,7 +224,7 @@ $ dscl . -passwd /Users/whitsongordon [new password here]
 
 - Come through the *App Store* in the form of security updates
 
-## Network Stuff
+# Network Stuff
 
 **Reset Network configs**
 
@@ -243,9 +246,9 @@ $ dscl . -passwd /Users/whitsongordon [new password here]
 
 `sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder`
 
-## Storage ...
+# Storage ...
 
-### Convert to APFS
+## Convert to APFS
 
 [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
 
@@ -276,7 +279,7 @@ The fsck_apfs utility verifies and repairs APFS containers and volumes.
 
   `fsck_apfs`
 
-## Boot Options
+# Boot Options
 
 **To disable AutoBoot features use the following command from Terminal**
 
@@ -288,7 +291,7 @@ The fsck_apfs utility verifies and repairs APFS containers and volumes.
 
 **NOTE**: MacBook Pro 2016 with Thunderbolt 3 will startup automatically while opening the lid or connecting the power adapter.
 
-## Java ...
+# Java ...
 
 **Removing Java**
 
@@ -300,7 +303,7 @@ The fsck_apfs utility verifies and repairs APFS containers and volumes.
 `./Library/Internet\
 Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
 
-## Diagnostics & Troubleshooting
+# Diagnostics & Troubleshooting
 
 **Local Diagnostics**
 
@@ -310,7 +313,7 @@ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
 
 - Hold the T key while the system is booting.
 
-### System Management Controller (SMC) Reset
+## System Management Controller (SMC) Reset
 
 - **For MacBook Air, MacBook Pro Retina, and MacBook Pros with non-removable batteries**
   - Press and hold `shft + opt + ctrl + power button` with the MagSafe adapter connected.
@@ -335,7 +338,7 @@ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
   - Video and/or external video issues
   - General performance and functionality issues concerning hardware
 
-### PRAM aka NVRAM Reset
+## PRAM aka NVRAM Reset
 
 - Press and hold `cmd + opt + P + R`
 
@@ -346,17 +349,17 @@ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java -version`
   - Clear RAM
   - Help to resolve boot issues
 
-## Installers & Install media
+# Installers & Install media
 
-### Convert DMG to installosx
+## Convert DMG to installosx
 
 `hdiutil convert apple.dmg -format UDTO -o apple.iso`
 
-### Create OS X install media:
+## Create OS X install media:
 
     sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/[usb device] --applicationpath /Applications/Install\ macOS\ High\ Sierra.app/ -–nointeraction
 
-## Munki
+# Munki
 
 **Path to *Munki* Files**
 
