@@ -94,6 +94,8 @@
 
 -   [Apple MDM
     Documentation](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2)
+    
+- [Apple Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
 
 -   [Apple Configurator 2](http://help.apple.com/configurator/mac/2.0/)
 
