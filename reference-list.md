@@ -91,18 +91,9 @@
 - [keyboard shortcuts](http://support.apple.com/kb/HT1343 )
 - [Apple MDM
     Documentation](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2)
-<<<<<<< HEAD
 - [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
 - [Apple Configurator 2](http://help.apple.com/configurator/mac/2.0/)
 - [Apple Profile
-=======
-    
-- [Apple Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
-
--   [Apple Configurator 2](http://help.apple.com/configurator/mac/2.0/)
-
--   [Apple Profile
->>>>>>> ed66844054e8c6aaf7804010de07c796a926f705
     Manager](http://help.apple.com/profilemanager/mac/5.4/#/apd5BD57F16-A2BF-43B9-AB4B-24948FB52C1E)
 - [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
 - [macOS Builds](https://support.apple.com/en-us/HT201260)
@@ -228,7 +219,7 @@
 ## Related to Scripting & Development
 
 -   [HTTPS Status Code Explainations](https://httpstatuses.com/)
--   [shields.io](shilds.io)
+-   [shields.io](https://shields.io)
 
 ### Vim Customization
 
