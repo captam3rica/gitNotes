@@ -11,9 +11,9 @@
     1. 	[Windows](#windows)
 
 1. 	[MDM](#mdm)
-2. 	[Virtualization](#virtualization)
+1. 	[Virtualization](#virtualization)
 
-1.  [Related to Scripting & Computer Languages](#scripting-and-languages)
+1.  [Related to Scripting & Development](#scripting-and-languages)
 
     1.  [Atom](#atom)
     1.  [Markdown](#markdown)
@@ -83,34 +83,27 @@
 
 ### Documentation
 
+- [Port Specifications for Apple Services](https://support.apple.com/en-us/HT202944)
 - [Apple Document Style Guide](https://help.apple.com/applestyleguide/#/apsg3acde405)
-
--   [Apple Open Source Documentation](https://opensource.apple.com/)
-
--   [Sudoers
+- [Apple Open Source Documentation](https://opensource.apple.com/)
+- [Sudoers
     Modification](https://derflounder.wordpress.com/2016/07/11/editing-etcsudoers-to-manage-sudo-rights-for-users-and-groups/)
-
--   [keyboard shortcuts](http://support.apple.com/kb/HT1343 )
-
--   [Apple MDM
+- [keyboard shortcuts](http://support.apple.com/kb/HT1343 )
+- [Apple MDM
     Documentation](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2)
-
--   [Apple Configurator 2](http://help.apple.com/configurator/mac/2.0/)
-
--   [Apple Profile
+- [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
+- [Apple Configurator 2](http://help.apple.com/configurator/mac/2.0/)
+- [Apple Profile
     Manager](http://help.apple.com/profilemanager/mac/5.4/#/apd5BD57F16-A2BF-43B9-AB4B-24948FB52C1E)
-
--   [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
-
--   [macOS Builds](https://support.apple.com/en-us/HT201260)
-
--   [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
-
--   [Mac Startup Cmd Options](https://support.apple.com/en-us/HT201255)
-
--   [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
-
--   [IBM SPSS Documentation](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/InstallationDocuments/MacOS/ "Documentation for IBM SPSS")
+- [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
+- [macOS Builds](https://support.apple.com/en-us/HT201260)
+- [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
+- [Mac Startup Cmd Options](https://support.apple.com/en-us/HT201255)
+- [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
+- PPPC
+	- https://derflounder.wordpress.com/2018/08/31/creating-privacy-preferences-policy-control-profiles-for-macos/
+- [802.1x](https://www.esecurityplanet.com/views/article.php/3899996/How-to-Use-Enterprise-WiFi-Encryption-and-8021X-in-Mac-OS-X.htm)
+- [Disabled Accounts](https://www.jamf.com/jamf-nation/discussions/18243/password-policy-profile-disables-user-account)
 
 
 \[[top](#top)]
@@ -139,62 +132,45 @@
 
 \[[top](#top)]
 
-<a name="windows"></a>
-
-## Related to Windows Administration
-
--   List of WMIC CSProduct Get Name Results - <http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/>
-
--   [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
-
--   [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
-
-\[[top](#top)]
-
-### SCCM Administration
-
--   [SCCM Queries with PowerShell](http://blog.ctglobalservices.com/powershell/kaj/working-with-queries-in-configmgr-with-powershell/)
-
--   [WMI SCCM Queries](https://www.andersrodland.com/ultimate-sccm-querie-collection-list/)
-
--   Convert from BIOS to UEFI Using SCCM - <https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence>
-
-    -   Another Article regarding Bios to UEFI conversion - <https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion>
-
--   Deploy Windows from Captured Media -  <https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/>
-
--   Driver management - <https://technet.microsoft.com/en-us/library/hh301101.aspx>
-
-\[[top](#top)]
-
-### Microsoft Office
-
--   [Completely Uninstall Office 2016](https://support.office.com/en-us/article/troubleshoot-office-2016-for-mac-issues-by-completely-uninstalling-before-you-reinstall-ec3aa66e-6a76-451f-9d35-cba2e14e94c0?ui=en-US&rs=en-US&ad=US)
-
-### Driver Resources
-
--   [ Microsoft Surface Drivers](https://docs.microsoft.com/en-us/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices#a-href-idsurface-pro-3-asurface-pro-3)
--   HP Drivers - <http://www8.hp.com/us/en/ads/clientmanagement/overview.html#manageability-tools>
 
 <a name="mdm"></a>
 
 ## MDM
 
-### VMware WSO
+- [MacOS WiFi Login Window Profile]( https://ntsystems.it/post/joining-wifi-before-login-on-mac-os-x-108)
 
--   [AirWatch Leaning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
+### Jamf
 
--   [MacOS Profile Guide](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
+- [API Support](http://developer.jamf.com/apis/jamf-pro-api/index)
+- [Documentation](docs.jamf.com)
+- [Jamf-Nation](jamf.com/jamf-nation)
+- [Service Status](status.jamf.com)
+- [Ports Used](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro)
+- [JamfCloud IP Addresses](https://www.jamf.com/jamf-nation/articles/409/permitting-inbound-outbound-traffic-with-jamf-cloud)
+- Okta SSO Integration
+	- https://www.jamf.com/jamf-nation/articles/435/configuring-single-sign-on-with-okta
+	- https://www.jamf.com/jamf-nation/discussions/23156/integrating-jss-with-okta-sso
+- AzureAD LDAPS
+	- https://www.jamf.com/jamf-nation/discussions/25876/a-guide-to-jss-azure-ad-integration-ldap-+-sso
 
--   [Documentation](https://resources.air-watch.com/documentation?sort=newest)
 
--   [Munki Integration](https://support.air-watch.com/articles/360000721788)
+### Workspace ONE
 
-    -   [Munki teardown](http://www.aarondavidpolley.com/vmware-airwatch-munki-teardown/)
+- [AirWatch Leaning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
 
--	[AW REST APIs]()
+- [MacOS Profile Guide](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
 
-	-	[Get devices from AW](https://macadminsdoc.readthedocs.io/en/master/MDM/AirWatch/AirWatch-API.html)
+- [Documentation](https://resources.air-watch.com/documentation?sort=newest)
+
+- [Munki Integration](https://support.air-watch.com/articles/360000721788)
+    - [Munki teardown](http://www.aarondavidpolley.com/vmware-airwatch-munki-teardown/)
+
+- [AW REST APIs]()
+	- [Get devices from AW](https://macadminsdoc.readthedocs.io/en/master/MDM/AirWatch/AirWatch-API.html)
+	- your_console.com/api/help
+	- Reserved REST Chars
+		- Reserved: & ( ) {} [] " <>
+		- Allowed: ! @ $ % ^ *  - + | \ ' ?
 
 - [MacOS](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
 
@@ -202,16 +178,19 @@
 
 - [VMware Code](https://code.vmware.com/home)
 
-### Jamf
+#### Tools
 
--	[API Support](http://developer.jamf.com/apis/jamf-pro-api/index)
-- 	[Documentation](docs.jamf.com)
--  	[Jamf-Nation](jamf.com/jamf-nation)
+- [Workspace ONE Validation Analyzer](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/9.4/vmware-airwatch-guides-94/GUID-AW94-ValidationTool.html)
 
 
 ### MS Azure
 
--	[REST API](https://docs.microsoft.com/en-us/rest/api/azure/)
+- [REST API](https://docs.microsoft.com/en-us/rest/api/azure/)
+
+
+### Mobile Iron
+
+- 
 
 \[[top](#top)]
 <a name="scripting-and-languages"></a>
@@ -223,9 +202,24 @@
 -	[VMware vSphere 6.5 Hosted Resources Deep Dive](https://www.amazon.com/gp/product/1540873064/ref=ox_sc_act_title_3?smid=ATVPDKIKX0DER&psc=1) | Frank Denneman
 
 
-## Related to Scripting & Computer Languages
+### VMware Horizon
+
+- Carl Stalhood - [www.carlstalhood.com/](http://www.carlstalhood.com/)
+- 10,000 VDI - https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-view-atlantis-ilio-diskless-vdi-10000-reference-implementation-white-paper.pdf
+- Software - https://my.vmware.com/web/vmware/details?downloadGroup=VIEW-770-STD&productId=828&rPId=29905
+- Linked clone worksheet - https://docs.vmware.com/en/VMware-Horizon-7/7.7/horizon-console-administration/GUID-F336E9DA-EC69-440A-A1B8-28E4FDC1784B.html
+- 50 Articles to fix everything - https://blogs.vmware.com/kb/2015/03/50-kbs-fix-everything-horizon-view.html
+
+
+#### View Composer Database
+
+- Prepare View Composer DB - https://docs.vmware.com/en/VMware-Horizon-7/7.0/com.vmware.horizon-view.installation.doc/GUID-4CF63F93-8AEC-4840-9EEF-2D60F3E6C6D1.html
+- Event DB Sizing - http://myvirtualcloud.net/vmware-view-database-sizing/
+
+## Related to Scripting & Development
 
 -   [HTTPS Status Code Explainations](https://httpstatuses.com/)
+-   [shields.io](shilds.io)
 
 ### Vim Customization
 
@@ -444,4 +438,33 @@ atom-text-editor.editor .selection .region {
 -   [Hashing vs Encryption](http://www.darkreading.com/safely-storing-user-passwords-hashing-vs-encrypting/a/d-id/1269374)
 
 [[top](#top)]
+
+<a name="windows"></a>
+
+
+## Related to Windows Administration
+
+-   List of WMIC CSProduct Get Name Results - <http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/>
+
+-   [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
+
+-   [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
+
+\[[top](#top)]
+
+### SCCM Administration
+
+-   [SCCM Queries with PowerShell](http://blog.ctglobalservices.com/powershell/kaj/working-with-queries-in-configmgr-with-powershell/)
+
+-   [WMI SCCM Queries](https://www.andersrodland.com/ultimate-sccm-querie-collection-list/)
+
+-   Convert from BIOS to UEFI Using SCCM - <https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence>
+
+    -   Another Article regarding Bios to UEFI conversion - <https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion>
+
+-   Deploy Windows from Captured Media -  <https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/>
+
+-   Driver management - <https://technet.microsoft.com/en-us/library/hh301101.aspx>
+
+\[[top](#top)]
 
