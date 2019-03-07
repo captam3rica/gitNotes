@@ -225,6 +225,57 @@
 -   [HTTPS Status Code Explainations](https://httpstatuses.com/)
 -   [shields.io](https://shields.io)
 
+
+### Git
+
+- [GitHub Repo API](https://developer.github.com/v3/repos/#create)
+
+
+<a name="python"></a>
+
+### Python
+
+-	Install `pip` python package manager MacOS - **P**ip **I**nstalls **P**ackages
+
+	`sudo easy_install pip`
+
+-   For **pycodestyle** - PEP8 linter for _Atom_
+
+    -   `pip (or pip2) install pycodestyle && apm install pycodestyle`
+
+-   Python for InfoSec: <http://strategicsec.com/python-for-infosec-pros-2015/>
+
+-   Python Naming Conventions: <http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html>
+
+-   [Built-in Exceptions](https://docs.python.org/3/library/exceptions.html#os-exceptions)
+
+-	[Requests Module](http://docs.python-requests.org/en/master/user/quickstart/#more-complicated-post-requests) - API Manipulation
+
+	`sudo pip install requests`
+	
+	- [HTTP Status codes](https://github.com/requests/requests/blob/master/requests/status_codes.py)
+	
+-	[python ldap module](https://www.python-ldap.org/en/latest/bytes_mode.html#porting-recommendations)
+
+	`pip install python-ldap`
+	
+- [Send emails](https://realpython.com/python-send-email/)
+
+<a name="bash"></a>
+
+### Bash
+
+-   [bashoneliners.com](http://www.bashoneliners.com/oneliners/oneliner/popular/)
+-   Shell Variables - <https://www.gnu.org/software/bash/manual/bash.html#Shell-Variables>
+-   User input with a while loop - <http://alvinalexander.com/linux-unix/shell-script-how-prompt-read-user-input-bash>
+-   8 examples of Bash if statements - <http://bencane.com/2014/01/27/8-examples-of-bash-if-statements-to-get-you-started/>
+-   07.18.2017 - [25 Simple Find commands](http://www.binarytides.com/linux-find-command-examples/)
+-   07.15.2017 - [The /sbin Directory](http://www.linfo.org/sbin.html)
+-   **08.01.2016** - [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
+
+\[[top](#top)]
+
+
 ### Vim Customization
 
 -   [vim wiki](http://vim.wikia.com/wiki)
@@ -359,50 +410,6 @@ atom-text-editor.editor .selection .region {
       ## Another paragraph
       The second paragraph text
     ```
-
-\[[top](#top)]
-
-<a name="python"></a>
-
-### Python
-
--	Install `pip` python package manager MacOS - **P**ip **I**nstalls **P**ackages
-
-	`sudo easy_install pip`
-
--   For **pycodestyle** - PEP8 linter for _Atom_
-
-    -   `pip (or pip2) install pycodestyle && apm install pycodestyle`
-
--   Python for InfoSec: <http://strategicsec.com/python-for-infosec-pros-2015/>
-
--   Python Naming Conventions: <http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html>
-
--   [Built-in Exceptions](https://docs.python.org/3/library/exceptions.html#os-exceptions)
-
--	[Requests Module](http://docs.python-requests.org/en/master/user/quickstart/#more-complicated-post-requests) - API Manipulation
-
-	`sudo pip install requests`
-	
-	- [HTTP Status codes](https://github.com/requests/requests/blob/master/requests/status_codes.py)
-	
--	[python ldap module](https://www.python-ldap.org/en/latest/bytes_mode.html#porting-recommendations)
-
-	`pip install python-ldap`
-	
-- [Send emails](https://realpython.com/python-send-email/)
-
-<a name="bash"></a>
-
-### Bash
-
--   [bashoneliners.com](http://www.bashoneliners.com/oneliners/oneliner/popular/)
--   Shell Variables - <https://www.gnu.org/software/bash/manual/bash.html#Shell-Variables>
--   User input with a while loop - <http://alvinalexander.com/linux-unix/shell-script-how-prompt-read-user-input-bash>
--   8 examples of Bash if statements - <http://bencane.com/2014/01/27/8-examples-of-bash-if-statements-to-get-you-started/>
--   07.18.2017 - [25 Simple Find commands](http://www.binarytides.com/linux-find-command-examples/)
--   07.15.2017 - [The /sbin Directory](http://www.linfo.org/sbin.html)
--   **08.01.2016** - [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
 
 \[[top](#top)]
 
