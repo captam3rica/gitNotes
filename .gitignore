@@ -1,0 +1,16 @@
+# .gitignore file
+
+
+#
+# Cruft
+#
+
+.DS_Store*
+
+#
+# Directories
+#
+
+Macintosh/*
+Linux/*
+Networking/*
