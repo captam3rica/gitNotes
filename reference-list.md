@@ -236,30 +236,17 @@
 ### Python
 
 -	Install `pip` python package manager MacOS - **P**ip **I**nstalls **P**ackages
-
-	`sudo easy_install pip`
-
+	- `sudo easy_install pip`
 -   For **pycodestyle** - PEP8 linter for _Atom_
-
-    -   `pip (or pip2) install pycodestyle && apm install pycodestyle`
-
--   Python for InfoSec: <http://strategicsec.com/python-for-infosec-pros-2015/>
-
--   Python Naming Conventions: <http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html>
-
--   [Built-in Exceptions](https://docs.python.org/3/library/exceptions.html#os-exceptions)
-
--	[Requests Module](http://docs.python-requests.org/en/master/user/quickstart/#more-complicated-post-requests) - API Manipulation
-
-	`sudo pip install requests`
-	
-	- [HTTP Status codes](https://github.com/requests/requests/blob/master/requests/status_codes.py)
-	
--	[python ldap module](https://www.python-ldap.org/en/latest/bytes_mode.html#porting-recommendations)
-
-	`pip install python-ldap`
-	
+    - `pip (or pip2) install pycodestyle && apm install pycodestyle`
+- [Python for InfoSec](http://strategicsec.com/python-for-infosec-pros-2015/)
+- [Python Naming Conventions](http://visualgit.readthedocs.io/en/latest/pages/naming_convention.html)
+- [Built-in Exceptions](https://docs.python.org/3/library/exceptions.html#os-exceptions)
+- [Requests Module](http://docs.python-requests.org/en/master/user/quickstart/#more-complicated-post-requests) - API Manipulation - `sudo pip install requests`
+	- [HTTP Status codes](https://github.com/requests/requests/blob/master/requests/status_codes.py)	
+- [python ldap module](https://www.python-ldap.org/en/latest/bytes_mode.html#porting-recommendations) - `pip install python-ldap`
 - [Send emails](https://realpython.com/python-send-email/)
+- [RealPython.com](https://realpython.com)
 
 <a name="bash"></a>
 
