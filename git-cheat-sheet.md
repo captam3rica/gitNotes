@@ -109,6 +109,8 @@
     $ curl -u '[username]' https://api.github.com/user/repos -d '{"name":"[repo_name_here]"}'
     $ git remote add origin https://github.com/[username]/[repo_name_here].git
     $ git push --set-upstream origin master
+    
+[Documentation](https://developer.github.com/v3/repos/#create) 
 
 ### GitLab
 
