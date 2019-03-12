@@ -84,6 +84,8 @@
 ### Documentation
 
 - [Port Specifications for Apple Services](https://support.apple.com/en-us/HT202944)
+- [Apple Developer - APNS - Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)
+- [Apple Developer - APNS - API](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html#//apple_ref/doc/uid/TP40008194-CH11-SW1)
 - [Apple Document Style Guide](https://help.apple.com/applestyleguide/#/apsg3acde405)
 - [Apple Open Source Documentation](https://opensource.apple.com/)
 - [Sudoers
@@ -101,9 +103,12 @@
 - [Mac Startup Cmd Options](https://support.apple.com/en-us/HT201255)
 - [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
 - PPPC
-	- https://derflounder.wordpress.com/2018/08/31/creating-privacy-preferences-policy-control-profiles-for-macos/
+	- [Derflounder](https://derflounder.wordpress.com/2018/08/31/creating-privacy-preferences-policy-control-profiles-for-macos/)
+- Approving KEXTs
+	- [Derflounder](https://derflounder.wordpress.com/2018/04/12/whitelisting-third-party-kernel-extensions-using-profiles/)
 - [802.1x](https://www.esecurityplanet.com/views/article.php/3899996/How-to-Use-Enterprise-WiFi-Encryption-and-8021X-in-Mac-OS-X.htm)
 - [Disabled Accounts](https://www.jamf.com/jamf-nation/discussions/18243/password-policy-profile-disables-user-account)
+
 
 ### Support
 
@@ -142,6 +147,9 @@
 ## MDM
 
 - [MacOS WiFi Login Window Profile]( https://ntsystems.it/post/joining-wifi-before-login-on-mac-os-x-108)
+- APNS URI
+	- api.push.apple.com | 443
+	- feedback.push.apple.com* | 2196
 
 ### Jamf
 
@@ -161,25 +169,18 @@
 ### Workspace ONE
 
 - [AirWatch Leaning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
-
 - [MacOS Profile Guide](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
-
 - [Documentation](https://resources.air-watch.com/documentation?sort=newest)
-
 - [Munki Integration](https://support.air-watch.com/articles/360000721788)
     - [Munki teardown](http://www.aarondavidpolley.com/vmware-airwatch-munki-teardown/)
-
 - [AW REST APIs]()
 	- [Get devices from AW](https://macadminsdoc.readthedocs.io/en/master/MDM/AirWatch/AirWatch-API.html)
 	- your_console.com/api/help
 	- Reserved REST Chars
 		- Reserved: & ( ) {} [] " <>
 		- Allowed: ! @ $ % ^ *  - + | \ ' ?
-
 - [MacOS](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
-
 - [vSphere SDK - Python](https://github.com/vmware/vsphere-automation-sdk-python/blob/master/README.md)
-
 - [VMware Code](https://code.vmware.com/home)
 
 #### Tools
