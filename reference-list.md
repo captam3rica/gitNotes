@@ -253,13 +253,14 @@
 
 ### Bash
 
--   [bashoneliners.com](http://www.bashoneliners.com/oneliners/oneliner/popular/)
--   Shell Variables - <https://www.gnu.org/software/bash/manual/bash.html#Shell-Variables>
--   User input with a while loop - <http://alvinalexander.com/linux-unix/shell-script-how-prompt-read-user-input-bash>
--   8 examples of Bash if statements - <http://bencane.com/2014/01/27/8-examples-of-bash-if-statements-to-get-you-started/>
--   07.18.2017 - [25 Simple Find commands](http://www.binarytides.com/linux-find-command-examples/)
--   07.15.2017 - [The /sbin Directory](http://www.linfo.org/sbin.html)
--   **08.01.2016** - [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
+- [Bash Cheat Sheet](https://devhints.io/bash)
+- [bashoneliners.com](http://www.bashoneliners.com/oneliners/oneliner/popular/)
+- Shell Variables - <https://www.gnu.org/software/bash/manual/bash.html#Shell-Variables>
+- User input with a while loop - <http://alvinalexander.com/linux-unix/shell-script-how-prompt-read-user-input-bash>
+- 8 examples of Bash if statements - <http://bencane.com/2014/01/27/8-examples-of-bash-if-statements-to-get-you-started/>
+- [25 Simple Find commands](http://www.binarytides.com/linux-find-command-examples/)
+- [The /sbin Directory](http://www.linfo.org/sbin.html)
+- [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
 
 \[[top](#top)]
 
