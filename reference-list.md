@@ -4,21 +4,27 @@
 
 ## TOC
 
-1.  Administration
+1. Administration
 
-    1.	[Apple  ](#macintosh)
-    1.	[Unix & GNU/Linux](#unix_linux)
-    1. 	[Windows](#windows)
+    1. [Apple  ](#macintosh)
+    1. [Unix & GNU/Linux](#unix_linux)
+    1.  [Windows](#windows)
 
-1. 	[MDM](#mdm)
-1. 	[Virtualization](#virtualization)
+1. [MDM](#mdm)
+	
+	1. [Jamf](#jamf)
+	2. [WorkspaceONE](#wso)
+	3. [MSFT Azure](#msft_azure)
+	3. [Mobile Iron](#MI)
 
-1.  [Related to Scripting & Development](#scripting-and-languages)
+1. [Virtualization](#virtualization)
 
-    1.  [Atom](#atom)
-    1.  [Markdown](#markdown)
-    1.  [Python](#python)
-    1.  [Bash](#bash)
+1. [Related to Scripting & Development](#scripting-and-languages)
+
+    1. [Atom](#atom)
+    1. [Markdown](#markdown)
+    1. [Python](#python)
+    1. [Bash](#bash)
 
 ---
 
@@ -26,58 +32,41 @@
 
 ## Related to Apple Macintosh Support & Administration
 
--   HP Printer Driver FTP: ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
--   [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
+- HP Printer Driver FTP: ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
+- [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
 
 ### Tools
 
--   [DEPNotify](https://gitlab.com/Mactroll/DEPNotify): Simple tool to display
+- [DEPNotify](https://gitlab.com/Mactroll/DEPNotify): Simple tool to display
     what is happening during DEP enrollment on the Mac.
-
-    -   [cannonball](http://cannonball.tombridge.com/2017/04/27/getting-started-with-installapplication-depnotify-and-simplemdm/)
-
--   [SplashBuddy](https://github.com/Shufflepuck/SplashBuddy)
-
--   [InstallApplications](https://github.com/erikng/installapplications):
+    - [cannonball](http://cannonball.tombridge.com/2017/04/27/getting-started-with-installapplication-depnotify-and-simplemdm/)
+- [SplashBuddy](https://github.com/Shufflepuck/SplashBuddy)
+- [InstallApplications](https://github.com/erikng/installapplications):
     dynamically download packages for use with `InstallApplication`. Greatly
     reduces initial packages sizes. 
-
--   [ManagedMac](http://dayglojesus.github.io/managedmac/): puppet plugin for
+- [ManagedMac](http://dayglojesus.github.io/managedmac/): puppet plugin for
     managing mac.
-
--   [Packages](https://www.macupdate.com/app/mac/34613/packages/download):
+- [Packages](https://www.macupdate.com/app/mac/34613/packages/download):
     Package creator
-
--   [Suspicious
+- [Suspicious
     Package](http://www.mothersruin.com/software/SuspiciousPackage/get.html):
     look inside of packages. 
-
--   [Payload-Free-Package-Creator](https://github.com/rtrouton/Payload-Free-Package-Creator): when
+- [Payload-Free-Package-Creator](https://github.com/rtrouton/Payload-Free-Package-Creator): when
     you want to just dumb a script somewhere.
-
--   [Dock Master](https://github.com/Error-freeIT/Dock-Master)
-
--   [DeployStudio](https://deploystudio.wikispaces.com "DeployStudio Wiki")
-
--   [mas](https://github.com/mas-cli/mas): App Store from the CLI    
-
--   [NoMAD](https://nomad.menu/downloads/ "No More Active Directory"): Active
+- [Dock Master](https://github.com/Error-freeIT/Dock-Master)
+- [DeployStudio](https://deploystudio.wikispaces.com "DeployStudio Wiki")
+- [mas](https://github.com/mas-cli/mas): App Store from the CLI    
+- [NoMAD](https://nomad.menu/downloads/ "No More Active Directory"): Active
     Directory broker client. OpenSource alt to Apple's Enterprise Connect
     service
-
--   [AutoDMG](https://github.com/MagerValp/AutoDMG)
-
--   [precache](https://github.com/krypted/precache): Pull updates down top the
+- [AutoDMG](https://github.com/MagerValp/AutoDMG)
+- [precache](https://github.com/krypted/precache): Pull updates down top the
     Apple macOS Server Caching service.
-
--   MCXToProfile: convert `.plist` configuration files to `.mobileconfig` files for
+- MCXToProfile: convert `.plist` configuration files to `.mobileconfig` files for
     deployment through **Profile Manager**
-
--   **Automator**
-
-    -   [ConfigAutomation](https://configautomation.com/attach-workflow.html)
-
--   [Vendor KEXT
+- **Automator**
+    - [ConfigAutomation](https://configautomation.com/attach-workflow.html)
+- [Vendor KEXT
     Info](https://docs.google.com/spreadsheets/d/1IWrbE8xiau4rU2mtXYji9vSPWDqb56luh0OhD5XS0AM/edit#gid=0)
 
 
@@ -122,21 +111,13 @@
 ## Unix & GNU/Linux
 
 -   [Sane scanner](https://wiki.archlinux.org/index.php/SANE)
-
--   Linux Journey - <https://linuxjourney.com/lesson/etc-group-file>
-
+-   [Linux Journey](https://linuxjourney.com/lesson/etc-group-file)
 -   netboot.xyz
-
 -   Banking with a live cd: <http://krebsonsecurity.com/2012/07/banking-on-a-live-cd/>
-
 -   SSH Tricks: <http://www.linuxjournal.com/article/6602>
-
 -   Rsync command examples - <http://www.thegeekstuff.com/2010/09/rsync-command-examples/>
-
 -   POSIX - <https://en.wikipedia.org/wiki/POSIX>
-
 -   Security Enhanced Linux: <http://selinuxproject.org/page/Main_Page>
-
 -   Cool old terminal - old looking terminal for linux: <http://linuxg.net/how-to-install-cool-old-term-0-9-on-ubuntu-14-04-debian-jessie>
 
 \[[top](#top)]
@@ -151,21 +132,35 @@
 	- api.push.apple.com | 443
 	- feedback.push.apple.com* | 2196
 
+<a name=“jamf”></a>
 ### Jamf
 
 - [API Support](http://developer.jamf.com/apis/jamf-pro-api/index)
-- [Documentation](docs.jamf.com)
-- [Jamf-Nation](jamf.com/jamf-nation)
 - [Service Status](status.jamf.com)
 - [Ports Used](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro)
 - [JamfCloud IP Addresses](https://www.jamf.com/jamf-nation/articles/409/permitting-inbound-outbound-traffic-with-jamf-cloud)
-- Okta SSO Integration
-	- https://www.jamf.com/jamf-nation/articles/435/configuring-single-sign-on-with-okta
-	- https://www.jamf.com/jamf-nation/discussions/23156/integrating-jss-with-okta-sso
-- AzureAD LDAPS
-	- https://www.jamf.com/jamf-nation/discussions/25876/a-guide-to-jss-azure-ad-integration-ldap-+-sso
+- [Single Sign-On](http://docs.jamf.com/10.10.0/jamf-pro/administrator-guide/Single_Sign-On.html)
+	- [Okta](https://www.jamf.com/jamf-nation/articles/435/configuring-single-sign-on-with-okta)
+	- [ADFS](https://www.jamf.com/jamf-nation/articles/436/)
+	- [Shibboleth](https://www.jamf.com/jamf-nation/articles/437/)
+	- [OneLogin](https://www.jamf.com/jamf-nation/articles/438/)
+	- [Ping Identity](https://www.jamf.com/jamf-nation/articles/439/)
+	- [G-Suite](https://www.jamf.com/jamf-nation/articles/440/)
+- [AzureAD LDAPS](https://www.jamf.com/jamf-nation/discussions/25876/a-guide-to-jss-azure-ad-integration-ldap-+-sso)
+- [All Product Documentation](https://www.jamf.com/resources/product-documentation/)
+- [Jamf Pro Security Overview](https://www.jamf.com/resources/product-documentation/jamf-pro-security-overview/)
 
+#### Tools
 
+- [JamfConnect Sync](docs.jamf.com/jamf-connect/1.0.0/sync/administrator-guide)
+	- [File Shares](https://docs.jamf.com/jamf-connect/1.0.0/sync/administrator-guide/File_Shares.html?)
+- [JamfConnect Verify](https://docs.jamf.com/jamf-connect/1.0.0/verify/administrator-guide/Overview.html)
+	- [Preference Keys](https://www.jamf.com/jamf-nation/articles/628/jamf-connect-verify-preference-keys)
+- [JamfConnect Login](https://docs.jamf.com/jamf-connect/1.0.1/login/administrator-guide/Overview.html)
+- [NoMAD Helper](https://www.youtube.com/watch?v=fQ4Epy1J7ZU)
+- [Composer User Guide](https://www.jamf.com/resources/product-documentation/composer-user-guide/)
+
+<a name=”wso”></a>
 ### Workspace ONE
 
 - [AirWatch Leaning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
@@ -188,11 +183,12 @@
 - [Workspace ONE Validation Analyzer](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/9.4/vmware-airwatch-guides-94/GUID-AW94-ValidationTool.html)
 
 
-### MS Azure
+<a name=“msft_azure”></a>
+### MSFT Azure
 
 - [REST API](https://docs.microsoft.com/en-us/rest/api/azure/)
 
-
+<a name=“MI”></a>
 ### Mobile Iron
 
 - 
