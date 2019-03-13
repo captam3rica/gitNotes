@@ -128,9 +128,11 @@
 ## MDM
 
 - [MacOS WiFi Login Window Profile]( https://ntsystems.it/post/joining-wifi-before-login-on-mac-os-x-108)
-- APNS URI
+- APNS URI (Jamf --> Apple APNS)
 	- api.push.apple.com | 443
 	- feedback.push.apple.com* | 2196
+- APNS URI (Mac Client --> Apple APNS)
+	- courier.push.apple.com | 5223
 
 <a name=“jamf”></a>
 ### Jamf
