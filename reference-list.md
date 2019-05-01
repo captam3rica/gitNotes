@@ -12,6 +12,7 @@
 
 1. [MDM](#mdm)
 	
+	1. [Apple](#apple_apns)
 	1. [Jamf](#jamf)
 	2. [WorkspaceONE](#wso)
 	3. [MSFT Azure](#msft_azure)
@@ -68,7 +69,14 @@
     - [ConfigAutomation](https://configautomation.com/attach-workflow.html)
 - [Vendor KEXT
     Info](https://docs.google.com/spreadsheets/d/1IWrbE8xiau4rU2mtXYji9vSPWDqb56luh0OhD5XS0AM/edit#gid=0)
+    
+    
+### Commands
 
+- Force unbind from AD domain
+
+
+	`sudo dsconfigad -force -remove -u johndoe -p nopasswordhere`
 
 ### Documentation
 
@@ -82,8 +90,10 @@
 - [keyboard shortcuts](http://support.apple.com/kb/HT1343 )
 - [Apple MDM
     Documentation](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2)
+- [MacOS Deployment Reference](https://help.apple.com/deployment/macos/#/ior5d40635d0)
 - [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
 - [Apple Configurator 2](http://help.apple.com/configurator/mac/2.0/)
+	- [Jamf Version](https://docs.jamf.com/technical-papers/casper-suite/deploying-ios-devices/9.82/Introduction.html)
 - [Apple Profile
     Manager](http://help.apple.com/profilemanager/mac/5.4/#/apd5BD57F16-A2BF-43B9-AB4B-24948FB52C1E)
 - [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
@@ -97,6 +107,12 @@
 	- [Derflounder](https://derflounder.wordpress.com/2018/04/12/whitelisting-third-party-kernel-extensions-using-profiles/)
 - [802.1x](https://www.esecurityplanet.com/views/article.php/3899996/How-to-Use-Enterprise-WiFi-Encryption-and-8021X-in-Mac-OS-X.htm)
 - [Disabled Accounts](https://www.jamf.com/jamf-nation/discussions/18243/password-policy-profile-disables-user-account)
+- [Setting Printer Options Via CLI](http://www.brunerd.com/blog/2012/03/13/getting-and-setting-ppd-options-via-command-line-for-use-with-lpadmin-in-os-x/)
+
+
+#### Encryption & FileVault
+
+- [Manage FileVault with `fdesetup`](https://derflounder.wordpress.com/2015/12/20/managing-el-capitans-filevault-2-with-fdesetup/)
 
 
 ### Support
@@ -123,9 +139,69 @@
 \[[top](#top)]
 
 
+## Related to Windows Administration
+
+- List of WMIC CSProduct Get Name Results - <http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/>
+- [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
+- [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
+- [Windows 10 Environment Variables](https://www.tenforums.com/tutorials/3234-environment-variables-windows-10-a.html)
+
+
+### Tools
+
+- [Windows ISO Downloader](https://heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool)
+- [GPO Migration Tool](https://code.vmware.com/samples/3527/airwatch-gpo-migration-tool?h=gpo%20migration%20tool)
+
+
+### MSFT Office
+
+- [Change Native Language](https://www.jamf.com/jamf-nation/discussions/25722/changing-languages-in-office-2016)
+
+	```shell
+	defaults write com.microsoft.Excel AppleLanguages ‘(“ES”)’
+	defaults write com.microsoft.Powerpoint AppleLanguages ‘(“ES”)’
+	defaults write com.microsoft.Word AppleLanguages ‘(“ES”)’
+	```
+	
+- [macadmins.software](https://macadmins.software)
+- [Mac Office 2011 Rem Tool](https://github.com/pbowden-msft/Remove2011/blob/master/Remove2011)
+- [Office One-click login - Jamf](https://www.jamf.com/blog/help-users-activate-microsoft-office-365-and-configure-outlook-in-one-click/)
+
+### Active Directory/LDAP
+
+- Objects
+	- CN = Common Name
+	- OU = Organizational Unit
+	- DC = Domain Component
+- Example Search Criteria
+	- ("CN=Dev-India,OU=Distribution Groups,DC=gp,DC=gl,DC=google,DC=com");
+
+
+\[[top](#top)]
+
+### SCCM Administration
+
+-   [SCCM Queries with PowerShell](http://blog.ctglobalservices.com/powershell/kaj/working-with-queries-in-configmgr-with-powershell/)
+
+-   [WMI SCCM Queries](https://www.andersrodland.com/ultimate-sccm-querie-collection-list/)
+
+-   Convert from BIOS to UEFI Using SCCM - <https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence>
+
+    -   Another Article regarding Bios to UEFI conversion - <https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion>
+
+-   Deploy Windows from Captured Media -  <https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/>
+
+-   Driver management - <https://technet.microsoft.com/en-us/library/hh301101.aspx>
+
+\[[top](#top)]
+
+
 <a name="mdm"></a>
 
 ## MDM
+
+<a name=“apple_apns”></a>
+### Apple
 
 - [MacOS WiFi Login Window Profile]( https://ntsystems.it/post/joining-wifi-before-login-on-mac-os-x-108)
 - APNS URI (Jamf --> Apple APNS)
@@ -133,11 +209,38 @@
 	- feedback.push.apple.com* | 2196
 - APNS URI (Mac Client --> Apple APNS)
 	- courier.push.apple.com | 5223
+	- [APNS Under the Hood](https://www.youtube.com/watch?v=E39aYd2RMdE&t=1568s)
+- [Set a Policy Banner at Login Window](https://support.apple.com/en-us/HT202277)
+
+
+#### DEP Debug
+
+https://jamf.it/dep-debug
+
+1. Start up the freshly-wiped Mac into single-user mode: at boot hold down CMD + S
+1. Mount the boot drive as read/write: /sbin/mount -uw /
+1. Enable opendirectory:
+1. launchctl load /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
+1. Ignore the error that is thrown and click Enter
+1. Enable root password: passwd root
+1. Reboot: reboot
+1. When Setup Assistant is up but we haven’t yet advanced to the Remote Management pane, launch Terminal by clicking CTL + OPTION + CMD + T, then run the following:
+
+	```bash
+	su root 
+	defaults write /Library/Preferences/com.apple.apsd EnableDetailedLogging -bool TRUE
+	defaults write /Library/Preferences/com.apple.MCXDebug debugOutput -2
+	defaults write /Library/Preferences/com.apple.MCXDebug collateLogs 1
+	touch /var/db/MDM_EnableDebug
+	```
+
+1. Run the Mac through the DEP prestage enrollment as normal, once booted to the Desktop, we should find the log written to: /Library/Logs/ManagedClient/ManagedClient.log
 
 <a name=“jamf”></a>
 ### Jamf
 
 - [API Support](http://developer.jamf.com/apis/jamf-pro-api/index)
+- [New Swagger API - https://[your_url].jamfcloud.com/uapi/doc](https://[your_url].jamfcloud.com/uapi/doc/#/departments)
 - [Service Status](status.jamf.com)
 - [Ports Used](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro)
 - [JamfCloud IP Addresses](https://www.jamf.com/jamf-nation/articles/409/permitting-inbound-outbound-traffic-with-jamf-cloud)
@@ -149,8 +252,12 @@
 	- [Ping Identity](https://www.jamf.com/jamf-nation/articles/439/)
 	- [G-Suite](https://www.jamf.com/jamf-nation/articles/440/)
 - [AzureAD LDAPS](https://www.jamf.com/jamf-nation/discussions/25876/a-guide-to-jss-azure-ad-integration-ldap-+-sso)
+- [Okta LDAP Integration](https://travellingtechguy.eu/integrating-okta-ldap-in-jamf-pro/)
 - [All Product Documentation](https://www.jamf.com/resources/product-documentation/)
 - [Jamf Pro Security Overview](https://www.jamf.com/resources/product-documentation/jamf-pro-security-overview/)
+- [JIM Install Guide](http://docs.jamf.com/infrastructure-manager/1.3.2/Installing_a_Jamf_Infrastructure_Manager_Instance.html)
+- [MacOS Security Checklist](https://resources.jamf.com/documents/products/documentation/macos-security-checklist.pdf)
+- [Conditional Access with Azure](https://resources.jamf.com/documents/white-papers/conditional-access-going-beyond-perimeter-based-security.pdf)
 
 #### Tools
 
@@ -162,7 +269,7 @@
 - [NoMAD Helper](https://www.youtube.com/watch?v=fQ4Epy1J7ZU)
 - [Composer User Guide](https://www.jamf.com/resources/product-documentation/composer-user-guide/)
 
-<a name=”wso”></a>
+<a name=“wso”></a>
 ### Workspace ONE
 
 - [AirWatch Leaning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
@@ -208,10 +315,46 @@
 ### VMware Horizon
 
 - Carl Stalhood - [www.carlstalhood.com/](http://www.carlstalhood.com/)
-- 10,000 VDI - https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-view-atlantis-ilio-diskless-vdi-10000-reference-implementation-white-paper.pdf
-- Software - https://my.vmware.com/web/vmware/details?downloadGroup=VIEW-770-STD&productId=828&rPId=29905
-- Linked clone worksheet - https://docs.vmware.com/en/VMware-Horizon-7/7.7/horizon-console-administration/GUID-F336E9DA-EC69-440A-A1B8-28E4FDC1784B.html
 - 50 Articles to fix everything - https://blogs.vmware.com/kb/2015/03/50-kbs-fix-everything-horizon-view.html
+
+
+#### vSphere (ESXi) Server
+
+- [Install and Setup - ESXi 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-671-installation-setup-guide.pdf)
+- [Install ESXi 6.7 on Workstation, VirtualBox, and Bare Metal](https://www.sysnettechsolutions.com/en/vmware/install-vmware-esxi-6-7/)
+- [Create a Customization Specification for Windows - vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-CAEB6A70-D1CF-446E-BC64-EC42CDB47117.html?hWord=N4IghgNiBcKEQEACA4gVwKYGcAuCDCLsB7AWwEsAvMLUwgOwQHcKwAnAExAF8g)
+
+
+#### vCenter Server
+
+- [Install and Setup - vCenter 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-vcenter-server-671-installation-guide.pdf)
+
+**Linked Clones**
+
+- [Linked Clone Worksheet - Horizon 7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-console-administration/GUID-F336E9DA-EC69-440A-A1B8-28E4FDC1784B.html)
+
+#### Unified Access Gateway
+
+- [Load Balancing](https://communities.vmware.com/docs/DOC-32792)
+
+
+#### View Connection Server
+
+- [Installation](https://www.carlstalhood.com/vmware-horizon-7-connection-server/)
+	- Does require load balancing for multiple View Connection Servers
+- Hardware
+	- 4 CPUs
+	- 10 GB MEM
+	- 100 GB Disk
+- Connections
+	- Horizon 7.2 and newer: 4000 connections
+	- Horizon 7.1 <= x < 7.2: 2000 connections
+- [Creating Single-User Desktop Pools](https://techzone.vmware.com/quick-start-tutorial-series-vmware-horizon-7/creating-single-user-desktop-pools#915877)
+
+
+#### Persona Management 
+
+- [Horizon 7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-virtual-desktops/GUID-F9F1320A-F6BC-4120-8A8D-2D5F73F79335.html)
 
 
 #### View Composer Database
@@ -219,10 +362,28 @@
 - Prepare View Composer DB - https://docs.vmware.com/en/VMware-Horizon-7/7.0/com.vmware.horizon-view.installation.doc/GUID-4CF63F93-8AEC-4840-9EEF-2D60F3E6C6D1.html
 - Event DB Sizing - http://myvirtualcloud.net/vmware-view-database-sizing/
 
+
+#### vSAN
+
+- [Design and Sizing - 2014](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/whitepaper/products/vsan/vmw-tmd-virt-san-dsn-szing-guid-horizon-view-white-paper.pdf)
+
+
+#### Active Directory
+
+- [Preparing AD for Horizon - Horizon 7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-F6075DF0-9614-4A81-B27A-7EE7C4CCB46F.html)
+- [Accounts and Permissions - Horizon 7](https://thevirtualhorizon.com/2016/08/08/horizon-7-0-part-6-service-accounts-and-databases/)
+
+
+#### Tools
+
+- [Horizon 7 Component Installers](https://my.vmware.com/web/vmware/info?slug=desktop_end_user_computing/vmware_horizon/7_0)
+- [ESXi Configuration Maximums](https://kb.vmware.com/s/article/1003497)
+
 ## Related to Scripting & Development
 
--   [HTTPS Status Code Explainations](https://httpstatuses.com/)
--   [shields.io](https://shields.io)
+- [HTTPS Status Code Explainations](https://httpstatuses.com/)
+- [shields.io](https://shields.io)
+- [Unicode Character DB](http://www.unicode.org/reports/tr44/#GC_Values_Table)
 
 
 ### Git
@@ -438,31 +599,3 @@ atom-text-editor.editor .selection .region {
 [[top](#top)]
 
 <a name="windows"></a>
-
-
-## Related to Windows Administration
-
--   List of WMIC CSProduct Get Name Results - <http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/>
-
--   [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
-
--   [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
-
-\[[top](#top)]
-
-### SCCM Administration
-
--   [SCCM Queries with PowerShell](http://blog.ctglobalservices.com/powershell/kaj/working-with-queries-in-configmgr-with-powershell/)
-
--   [WMI SCCM Queries](https://www.andersrodland.com/ultimate-sccm-querie-collection-list/)
-
--   Convert from BIOS to UEFI Using SCCM - <https://www.systemcenterdudes.com/sccm-bios-uefi-conversion-task-sequence>
-
-    -   Another Article regarding Bios to UEFI conversion - <https://docs.microsoft.com/en-us/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion>
-
--   Deploy Windows from Captured Media -  <https://blogs.technet.microsoft.com/configurationmgr/2010/04/12/how-to-set-up-a-task-sequence-to-deploy-windows-7-images-captured-via-an-sccm-2007-capture-cd/>
-
--   Driver management - <https://technet.microsoft.com/en-us/library/hh301101.aspx>
-
-\[[top](#top)]
-
