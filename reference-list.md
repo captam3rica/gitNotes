@@ -259,6 +259,13 @@ https://jamf.it/dep-debug
 - [MacOS Security Checklist](https://resources.jamf.com/documents/products/documentation/macos-security-checklist.pdf)
 - [Conditional Access with Azure](https://resources.jamf.com/documents/white-papers/conditional-access-going-beyond-perimeter-based-security.pdf)
 
+
+#### Packaging
+
+- [Re-packaging Installer Packages](https://derflounder.wordpress.com/2013/11/03/re-packaging-installer-packages-with-packages/)
+- [Package Management](https://docs.jamf.com/10.9.0/jamf-pro/administrator-guide/Managing_Packages.html)
+
+
 #### Tools
 
 - [JamfConnect Sync](docs.jamf.com/jamf-connect/1.0.0/sync/administrator-guide)
@@ -268,6 +275,7 @@ https://jamf.it/dep-debug
 - [JamfConnect Login](https://docs.jamf.com/jamf-connect/1.0.1/login/administrator-guide/Overview.html)
 - [NoMAD Helper](https://www.youtube.com/watch?v=fQ4Epy1J7ZU)
 - [Composer User Guide](https://www.jamf.com/resources/product-documentation/composer-user-guide/)
+- [Packages](http://s.sudre.free.fr/Software/Packages/about.html)
 
 <a name=“wso”></a>
 ### Workspace ONE
@@ -290,6 +298,7 @@ https://jamf.it/dep-debug
 #### Tools
 
 - [Workspace ONE Validation Analyzer](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/9.4/vmware-airwatch-guides-94/GUID-AW94-ValidationTool.html)
+- [Workspace ONE Provisioning Tool](https://labs.vmware.com/flings/vmware-workspace-one-provisioning-tool)
 
 
 <a name=“msft_azure”></a>
@@ -316,6 +325,12 @@ https://jamf.it/dep-debug
 
 - Carl Stalhood - [www.carlstalhood.com/](http://www.carlstalhood.com/)
 - 50 Articles to fix everything - https://blogs.vmware.com/kb/2015/03/50-kbs-fix-everything-horizon-view.html
+- [Interoperability Matrix](https://www.vmware.com/resources/compatibility/sim/interop_matrix.php)
+
+
+#### Upgrading
+
+- [Horizon 7-7.8 Upgrade Documentation](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-upgrades/GUID-E3607442-8936-49A8-97B4-722D012FDF1E.html)
 
 
 #### vSphere (ESXi) Server
@@ -329,9 +344,11 @@ https://jamf.it/dep-debug
 
 - [Install and Setup - vCenter 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-vcenter-server-671-installation-guide.pdf)
 
+
 *Linked Clones*
 
 - [Linked Clone Worksheet - Horizon 7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-console-administration/GUID-F336E9DA-EC69-440A-A1B8-28E4FDC1784B.html)
+
 
 #### Unified Access Gateway
 
@@ -340,7 +357,8 @@ https://jamf.it/dep-debug
 
 #### View Connection Server
 
-- [Installation](https://www.carlstalhood.com/vmware-horizon-7-connection-server/)
+- [Installation Pre Requisites - Horizon 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-68621B8E-F018-4BC4-811A-5CF76B55DB2C.html)
+- [Installation - Carl Stalhood](https://www.carlstalhood.com/vmware-horizon-7-connection-server/)
 	- Does require load balancing for multiple View Connection Servers
 - Hardware
 	- 4 CPUs
@@ -354,13 +372,19 @@ https://jamf.it/dep-debug
 
 #### Persona Management 
 
-- [Horizon 7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-virtual-desktops/GUID-F9F1320A-F6BC-4120-8A8D-2D5F73F79335.html)
+- [Configuring a Horizon Persona Management Deployment](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-virtual-desktops/GUID-E9411421-EE62-4870-98CA-ADEE7B70EB32.html)
+- [Best Practices for Configuring a Horizon Persona Management Deployment](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-virtual-desktops/GUID-574E2280-E796-4946-8CE4-6617683B5BE3.html)
+- [Providing User Personas in Horizon 7 - Horizon 7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-virtual-desktops/GUID-F9F1320A-F6BC-4120-8A8D-2D5F73F79335.html)
+- [Using Horizon Persona Management to Retain User Data and Settings - Horizon 7 7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-architecture-planning/GUID-05B1BE12-8DD2-4EAE-A3E2-B52CDB6DFC32.html)
+- [Horizon Persona Management and Windows Roaming Profiles](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-virtual-desktops/GUID-E158A9D4-5FCD-4A61-B987-D01622A96FBF.html)
 
 
-#### View Composer Database
+#### View Composer
 
-- Prepare View Composer DB - https://docs.vmware.com/en/VMware-Horizon-7/7.0/com.vmware.horizon-view.installation.doc/GUID-4CF63F93-8AEC-4840-9EEF-2D60F3E6C6D1.html
-- Event DB Sizing - http://myvirtualcloud.net/vmware-view-database-sizing/
+*View Composer Database*
+
+- [Prepare View Composer DB](https://docs.vmware.com/en/VMware-Horizon-7/7.0/com.vmware.horizon-view.installation.doc/GUID-4CF63F93-8AEC-4840-9EEF-2D60F3E6C6D1.html)
+- [Event DB Sizing](http://myvirtualcloud.net/vmware-view-database-sizing/)
 
 
 #### vSAN
@@ -378,6 +402,14 @@ https://jamf.it/dep-debug
 
 - [Horizon 7 Component Installers](https://my.vmware.com/web/vmware/info?slug=desktop_end_user_computing/vmware_horizon/7_0)
 - [ESXi Configuration Maximums](https://kb.vmware.com/s/article/1003497)
+
+
+#### User Information
+
+- [Horizon 7 User Accounts - 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-security/GUID-7C94B12F-0158-42EB-A011-00CC4912A435.html)
+- [vCenter Server User for Horizon 7 and View Composer - 7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-80D653FA-BCC0-45B9-AF84-5E0EEC2AD139.html)
+	- [vCenter Server Role Permissions - 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-A878F876-B359-42FC-9124-A1E34BFB3319.html#GUID-A878F876-B359-42FC-9124-A1E34BFB3319)
+- [View Composer and Instant Clone Privileges Required for the vCenter Server User - 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-467F552F-3034-4917-A985-B5E5FEC5C68F.html#GUID-467F552F-3034-4917-A985-B5E5FEC5C68F)
 
 ## Related to Scripting & Development
 
