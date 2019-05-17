@@ -113,6 +113,7 @@
 #### Encryption & FileVault
 
 - [Manage FileVault with `fdesetup`](https://derflounder.wordpress.com/2015/12/20/managing-el-capitans-filevault-2-with-fdesetup/)
+- [FileVault Institutional Recovery Keys - DerFlounder](https://derflounder.wordpress.com/2014/08/13/filevault-2-institutional-recovery-keys-creation-deployment-and-use/)
 
 
 ### Support
@@ -277,6 +278,7 @@ https://jamf.it/dep-debug
 - [Composer User Guide](https://www.jamf.com/resources/product-documentation/composer-user-guide/)
 - [Packages](http://s.sudre.free.fr/Software/Packages/about.html)
 
+
 <a name=“wso”></a>
 ### Workspace ONE
 
@@ -323,9 +325,10 @@ https://jamf.it/dep-debug
 
 ### VMware Horizon
 
+- [Horizon 7 Documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html)
 - Carl Stalhood - [www.carlstalhood.com/](http://www.carlstalhood.com/)
 - 50 Articles to fix everything - https://blogs.vmware.com/kb/2015/03/50-kbs-fix-everything-horizon-view.html
-- [Interoperability Matrix](https://www.vmware.com/resources/compatibility/sim/interop_matrix.php)
+- [WorkspaceONE Horizon Reference Arch](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture#horizon-seven-vmware-identity-manager-integration)
 
 
 #### Upgrading
@@ -402,6 +405,11 @@ https://jamf.it/dep-debug
 
 - [Horizon 7 Component Installers](https://my.vmware.com/web/vmware/info?slug=desktop_end_user_computing/vmware_horizon/7_0)
 - [ESXi Configuration Maximums](https://kb.vmware.com/s/article/1003497)
+- [Health Analyzer](https://vmware.my.salesforce.com/apex/page?name=sales.services.software.solutions)
+- [Interoperability Matrix](https://www.vmware.com/resources/compatibility/sim/interop_matrix.php)
+- [Digital Workspace Topology Tool](https://tools.techzone.vmware.com/static/topology/index.html#result)
+	- [Blog Post](https://blogs.vmware.com/euc/2019/02/introducing-the-vmware-digital-workspace-topology-tool.html?src=so_5a314d05e49f5&cid=70134000001SkJn)
+- [Digital Workspace Designer](https://code.vmware.com/group/dp/dwdesigner#)
 
 
 #### User Information
@@ -410,6 +418,8 @@ https://jamf.it/dep-debug
 - [vCenter Server User for Horizon 7 and View Composer - 7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-80D653FA-BCC0-45B9-AF84-5E0EEC2AD139.html)
 	- [vCenter Server Role Permissions - 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-A878F876-B359-42FC-9124-A1E34BFB3319.html#GUID-A878F876-B359-42FC-9124-A1E34BFB3319)
 - [View Composer and Instant Clone Privileges Required for the vCenter Server User - 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-467F552F-3034-4917-A985-B5E5FEC5C68F.html#GUID-467F552F-3034-4917-A985-B5E5FEC5C68F)
+- [Instant Clone Operations User Account - 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-E91881F4-F8C0-48A5-A1A4-61577E287E29.html)
+
 
 ## Related to Scripting & Development
 
