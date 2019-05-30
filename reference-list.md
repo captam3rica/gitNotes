@@ -6,9 +6,9 @@
 
 1. Administration
 
-    1. [Apple  ](#macintosh)
-    1. [Unix & GNU/Linux](#unix_linux)
-    1.  [Windows](#windows)
+	1. [Apple  ](#macintosh)
+	2. [Unix & GNU/Linux](#unix_linux)
+	3. [Windows](#windows)
 
 1. [MDM](#mdm)
 	
@@ -33,11 +33,12 @@
 
 ## Related to Apple Macintosh Support & Administration
 
-- HP Printer Driver FTP: ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
-- [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
+- [HP Printer Driver FTP](ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
+
 
 ### Tools
 
+- [Google Santa - Blacklisting](https://github.com/google/santa)
 - [DEPNotify](https://gitlab.com/Mactroll/DEPNotify): Simple tool to display
     what is happening during DEP enrollment on the Mac.
     - [cannonball](http://cannonball.tombridge.com/2017/04/27/getting-started-with-installapplication-depnotify-and-simplemdm/)
@@ -67,47 +68,76 @@
     deployment through **Profile Manager**
 - **Automator**
     - [ConfigAutomation](https://configautomation.com/attach-workflow.html)
-- [Vendor KEXT
-    Info](https://docs.google.com/spreadsheets/d/1IWrbE8xiau4rU2mtXYji9vSPWDqb56luh0OhD5XS0AM/edit#gid=0)
     
     
 ### Commands
 
 - Force unbind from AD domain
 
-
 	`sudo dsconfigad -force -remove -u johndoe -p nopasswordhere`
+	
+- Generate a random UUID
+
+	`uuidgen | tr "[:upper:]" "[:lower:]”`
+	
+- Sign a package with a developer ID installer cert
+
+	`productsign --sign “Developer ID Installer: Your Developer Name (1A2B3C4D5E)” ~/Desktop/example.pkg ~/Desktop/signed-example.pkg`
+	
+- Remove GateKeeper restrictions
+
+	`sudo spctl --master-disable`
+	
+- Clear passcode profile settings
+	
+	`sudo pwpolicy -clearallaccountpolicies`
+
 
 ### Documentation
 
-- [Port Specifications for Apple Services](https://support.apple.com/en-us/HT202944)
-- [Apple Developer - APNS - Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)
-- [Apple Developer - APNS - API](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html#//apple_ref/doc/uid/TP40008194-CH11-SW1)
 - [Apple Document Style Guide](https://help.apple.com/applestyleguide/#/apsg3acde405)
 - [Apple Open Source Documentation](https://opensource.apple.com/)
-- [Sudoers
-    Modification](https://derflounder.wordpress.com/2016/07/11/editing-etcsudoers-to-manage-sudo-rights-for-users-and-groups/)
 - [keyboard shortcuts](http://support.apple.com/kb/HT1343 )
-- [Apple MDM
-    Documentation](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2)
-- [MacOS Deployment Reference](https://help.apple.com/deployment/macos/#/ior5d40635d0)
-- [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
-- [Apple Configurator 2](http://help.apple.com/configurator/mac/2.0/)
-	- [Jamf Version](https://docs.jamf.com/technical-papers/casper-suite/deploying-ios-devices/9.82/Introduction.html)
-- [Apple Profile
-    Manager](http://help.apple.com/profilemanager/mac/5.4/#/apd5BD57F16-A2BF-43B9-AB4B-24948FB52C1E)
-- [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
+- APNS
+	- [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
+	- [Apple Developer - APNS - API](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html#//apple_ref/doc/uid/TP40008194-CH11-SW1)
+	- [Apple Developer - APNS - Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)
 - [macOS Builds](https://support.apple.com/en-us/HT201260)
-- [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
 - [Mac Startup Cmd Options](https://support.apple.com/en-us/HT201255)
 - [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
+- [Disabled Accounts](https://www.jamf.com/jamf-nation/discussions/18243/password-policy-profile-disables-user-account)
+- [Setting Printer Options Via CLI](http://www.brunerd.com/blog/2012/03/13/getting-and-setting-ppd-options-via-command-line-for-use-with-lpadmin-in-os-x/)
+
+
+#### MDM Protocol Related
+
+- [Apple MDM Documentation](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2)
+- [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
+- [Apple Profile Manager](http://help.apple.com/profilemanager/mac/5.4/#/apd5BD57F16-A2BF-43B9-AB4B-24948FB52C1E)
+- [Apple Configurator 2](http://help.apple.com/configurator/mac/2.0/)
+- [MacOS Deployment Reference](https://help.apple.com/deployment/macos/#/ior5d40635d0)
+
+
+#### Networking & Wi-Fi
+
+- [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
+- [802.1x](https://www.esecurityplanet.com/views/article.php/3899996/How-to-Use-Enterprise-WiFi-Encryption-and-8021X-in-Mac-OS-X.htm)
+- [Port Specifications for Apple Services](https://support.apple.com/en-us/HT202944)
+
+
+#### Security
+
+- [Sudoers Modification](https://derflounder.wordpress.com/2016/07/11/editing-etcsudoers-to-manage-sudo-rights-for-users-and-groups/)
 - PPPC
 	- [Derflounder](https://derflounder.wordpress.com/2018/08/31/creating-privacy-preferences-policy-control-profiles-for-macos/)
 - Approving KEXTs
 	- [Derflounder](https://derflounder.wordpress.com/2018/04/12/whitelisting-third-party-kernel-extensions-using-profiles/)
-- [802.1x](https://www.esecurityplanet.com/views/article.php/3899996/How-to-Use-Enterprise-WiFi-Encryption-and-8021X-in-Mac-OS-X.htm)
-- [Disabled Accounts](https://www.jamf.com/jamf-nation/discussions/18243/password-policy-profile-disables-user-account)
-- [Setting Printer Options Via CLI](http://www.brunerd.com/blog/2012/03/13/getting-and-setting-ppd-options-via-command-line-for-use-with-lpadmin-in-os-x/)
+	- [Vendor KEXT Info](https://docs.google.com/spreadsheets/d/1IWrbE8xiau4rU2mtXYji9vSPWDqb56luh0OhD5XS0AM/edit#gid=0)
+- [Making Changes to the authorizationdb](https://derflounder.wordpress.com/2014/02/16/managing-the-authorization-database-in-os-x-mavericks/) 
+	- `security authorizationdb read <system.preferences.[preferencez_setting_name>`
+	- `security authorizationdb read referenced.rights > /path/to/filename.plist`
+	- `security authorizationdb write system.preferences allow`
+	- `security authorizationdb write system.preferences.startupdisk allow`
 
 
 #### Encryption & FileVault
@@ -119,6 +149,11 @@
 ### Support
 
 - [ABM Support Numbers](https://help.apple.com/businessmanager/?lang=en-us#/apd098f3d709)
+
+
+#### MISC
+
+- [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
 
 
 \[[top](#top)]
@@ -168,7 +203,7 @@
 - [Mac Office 2011 Rem Tool](https://github.com/pbowden-msft/Remove2011/blob/master/Remove2011)
 - [Office One-click login - Jamf](https://www.jamf.com/blog/help-users-activate-microsoft-office-365-and-configure-outlook-in-one-click/)
 
-### Active Directory/LDAP
+### Active Directory/AzureAD/LDAP
 
 - Objects
 	- CN = Common Name
@@ -176,6 +211,21 @@
 	- DC = Domain Component
 - Example Search Criteria
 	- ("CN=Dev-India,OU=Distribution Groups,DC=gp,DC=gl,DC=google,DC=com");
+
+
+#### AzureAD
+
+- Password Hash Synchronization with AzureAD
+
+	- [What is password hash synchronization with Azure AD?](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-phs)
+	- [What is federation with Azure AD?](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-fed)
+
+
+### OIDC & Microsoft Identity Platform
+
+- [Identity Platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/about-microsoft-identity-platform)
+	- [2.0](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-overview)
+- [Microsoft identity platform and OpenID Connect protocol](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc)
 
 
 \[[top](#top)]
@@ -211,6 +261,12 @@
 - APNS URI (Mac Client --> Apple APNS)
 	- courier.push.apple.com | 5223
 	- [APNS Under the Hood](https://www.youtube.com/watch?v=E39aYd2RMdE&t=1568s)
+- Additional FQDNs
+	- albert.apple.com
+	- iprofiles.apple.com
+	- *.symcb.com
+	- evintl-ocsp.verisign.com
+	- evsecurer-oscp.verisign.com
 - [Set a Policy Banner at Login Window](https://support.apple.com/en-us/HT202277)
 
 
@@ -273,7 +329,9 @@ https://jamf.it/dep-debug
 	- [File Shares](https://docs.jamf.com/jamf-connect/1.0.0/sync/administrator-guide/File_Shares.html?)
 - [JamfConnect Verify](https://docs.jamf.com/jamf-connect/1.0.0/verify/administrator-guide/Overview.html)
 	- [Preference Keys](https://www.jamf.com/jamf-nation/articles/628/jamf-connect-verify-preference-keys)
+	- [Jamf Connect and ADFS Incorrect Password issue](https://travellingtechguy.eu/jamf-connect-and-adfs-incorrect-password/#comment-12953)
 - [JamfConnect Login](https://docs.jamf.com/jamf-connect/1.0.1/login/administrator-guide/Overview.html)
+	- [Jamf Connect Login with Azure](https://travellingtechguy.eu/jamf-connect-login-with-azure/)
 - [NoMAD Helper](https://www.youtube.com/watch?v=fQ4Epy1J7ZU)
 - [Composer User Guide](https://www.jamf.com/resources/product-documentation/composer-user-guide/)
 - [Packages](http://s.sudre.free.fr/Software/Packages/about.html)
@@ -282,7 +340,8 @@ https://jamf.it/dep-debug
 <a name=“wso”></a>
 ### Workspace ONE
 
-- [AirWatch Leaning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
+- [Airwatch Samples](https://github.com/vmware-samples/AirWatch-samples/tree/master/Windows-Samples/Sensors)
+- [AirWatch Learning Path](https://mylearn.vmware.com/mgrReg/plan.cfm?plan=47955&ui=www_edu)
 - [MacOS Profile Guide](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
 - [Documentation](https://resources.air-watch.com/documentation?sort=newest)
 - [Munki Integration](https://support.air-watch.com/articles/360000721788)
@@ -323,10 +382,20 @@ https://jamf.it/dep-debug
 -	[VMware vSphere 6.5 Hosted Resources Deep Dive](https://www.amazon.com/gp/product/1540873064/ref=ox_sc_act_title_3?smid=ATVPDKIKX0DER&psc=1) | Frank Denneman
 
 
+### VMware WSO Identity Manager
+
+#### Troubleshooting
+
+- Health API Endpoints for vIDM and On-Prmise implementations respectively.
+
+	`https://<idM_SERVER_NAME>/hc/API/1.0/REST/system/health?pretty`
+	`https:/</idm_server_name>/SAAS/API/1.0/REST/system/health`
+
 ### VMware Horizon
 
 - [Horizon 7 Documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html)
 - Carl Stalhood - [www.carlstalhood.com/](http://www.carlstalhood.com/)
+	- [7.7-8 - Installation](https://www.carlstalhood.com/vmware-horizon-7-configuration/#vcenter)
 - 50 Articles to fix everything - https://blogs.vmware.com/kb/2015/03/50-kbs-fix-everything-horizon-view.html
 - [WorkspaceONE Horizon Reference Arch](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture#horizon-seven-vmware-identity-manager-integration)
 
@@ -346,6 +415,7 @@ https://jamf.it/dep-debug
 #### vCenter Server
 
 - [Install and Setup - vCenter 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-vcenter-server-671-installation-guide.pdf)
+- [vCenter User Privilege Requirements - 7.7-8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-A878F876-B359-42FC-9124-A1E34BFB3319.html)
 
 
 *Linked Clones*
@@ -353,10 +423,17 @@ https://jamf.it/dep-debug
 - [Linked Clone Worksheet - Horizon 7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-console-administration/GUID-F336E9DA-EC69-440A-A1B8-28E4FDC1784B.html)
 
 
+*Configuration Specifications*
+
+- [Create a Customization Specification for Windows](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-CAEB6A70-D1CF-446E-BC64-EC42CDB47117.html?hWord=N4IghgNiBcKEQEACA4gVwKYGcAuCDCLsB7AWwEsAvMLUwgOwQHcKwAnAExAF8g)
+- [Guest Operating System Customization Requirements](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-E63B6FAA-8D35-428D-B40C-744769845906.html#GUID-E63B6FAA-8D35-428D-B40C-744769845906)
+
+
 #### Unified Access Gateway
 
 - [Load Balancing](https://communities.vmware.com/docs/DOC-32792)
-
+- [UAG 3.5 - Carl Stalhood](https://www.carlstalhood.com/vmware-unified-access-gateway/)
+- [Replace the Default TLS/SSL Server Certificate for Unified Access Gateway](https://docs.vmware.com/en/Unified-Access-Gateway/3.1/com.vmware.uag-31-deploy-config.doc/GUID-EDC244DD-07AB-4841-A893-84ADF8D59838.html)
 
 #### View Connection Server
 
@@ -371,6 +448,11 @@ https://jamf.it/dep-debug
 	- Horizon 7.2 and newer: 4000 connections
 	- Horizon 7.1 <= x < 7.2: 2000 connections
 - [Creating Single-User Desktop Pools](https://techzone.vmware.com/quick-start-tutorial-series-vmware-horizon-7/creating-single-user-desktop-pools#915877)
+
+
+#### Database Information
+
+- [Create the ViewEvent Database - Horizon 7.7-8](https://www.virtuallyboring.com/vmware-horizon-view-7-create-events-database/)
 
 
 #### Persona Management 
