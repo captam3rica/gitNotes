@@ -38,23 +38,19 @@
 
 ### Tools
 
-- [Google Santa - Blacklisting](https://github.com/google/santa)
+- [Packages](http://s.sudre.free.fr/Software/Packages/about.html): Awesome package creator
+- [Suspicious Package](http://www.mothersruin.com/software/SuspiciousPackage/get.html): look inside of packages. 
+- [PPPC Utility (Jamf)](https://github.com/jamf/PPPC-Utility)
+- [Profile Creator](https://github.com/ProfileCreator/ProfileCreator)
+- [Payload-Free-Package-Creator](https://github.com/rtrouton/Payload-Free-Package-Creator): when you want to just dumb a script somewhere.
+- [Google Santa](https://github.com/google/santa): Application blacklisting
 - [DEPNotify](https://gitlab.com/Mactroll/DEPNotify): Simple tool to display
     what is happening during DEP enrollment on the Mac.
     - [cannonball](http://cannonball.tombridge.com/2017/04/27/getting-started-with-installapplication-depnotify-and-simplemdm/)
 - [SplashBuddy](https://github.com/Shufflepuck/SplashBuddy)
-- [InstallApplications](https://github.com/erikng/installapplications):
-    dynamically download packages for use with `InstallApplication`. Greatly reduces initial packages sizes. 
 - [ManagedMac](http://dayglojesus.github.io/managedmac/): puppet plugin for managing mac.
-- [Packages](http://s.sudre.free.fr/Software/Packages/about.html)
-- [Suspicious
-    Package](http://www.mothersruin.com/software/SuspiciousPackage/get.html):
-    look inside of packages. 
-- [Payload-Free-Package-Creator](https://github.com/rtrouton/Payload-Free-Package-Creator): when
-    you want to just dumb a script somewhere.
 - [Dock Master](https://github.com/Error-freeIT/Dock-Master)
-- [DeployStudio](https://deploystudio.wikispaces.com "DeployStudio Wiki")
-- [mas](https://github.com/mas-cli/mas): App Store from the CLI    
+- [mas-cli](https://github.com/mas-cli/mas): App Store from the CLI    
 - [NoMAD](https://nomad.menu/downloads/ "No More Active Directory"): Active
     Directory broker client. OpenSource alt to Apple's Enterprise Connect
     service
@@ -66,6 +62,8 @@
 - **Automator**
     - [ConfigAutomation](https://configautomation.com/attach-workflow.html)
 - [EraseInstall](https://bitbucket.org/prowarehouse-nl/erase-install/src/master/)
+- [InstallApplications](https://github.com/erikng/installapplications):
+    dynamically download packages for use with `InstallApplication` 
     
     
 ### Commands
