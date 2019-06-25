@@ -44,12 +44,9 @@
     - [cannonball](http://cannonball.tombridge.com/2017/04/27/getting-started-with-installapplication-depnotify-and-simplemdm/)
 - [SplashBuddy](https://github.com/Shufflepuck/SplashBuddy)
 - [InstallApplications](https://github.com/erikng/installapplications):
-    dynamically download packages for use with `InstallApplication`. Greatly
-    reduces initial packages sizes. 
-- [ManagedMac](http://dayglojesus.github.io/managedmac/): puppet plugin for
-    managing mac.
-- [Packages](https://www.macupdate.com/app/mac/34613/packages/download):
-    Package creator
+    dynamically download packages for use with `InstallApplication`. Greatly reduces initial packages sizes. 
+- [ManagedMac](http://dayglojesus.github.io/managedmac/): puppet plugin for managing mac.
+- [Packages](http://s.sudre.free.fr/Software/Packages/about.html)
 - [Suspicious
     Package](http://www.mothersruin.com/software/SuspiciousPackage/get.html):
     look inside of packages. 
@@ -68,6 +65,7 @@
     deployment through **Profile Manager**
 - **Automator**
     - [ConfigAutomation](https://configautomation.com/attach-workflow.html)
+- [EraseInstall](https://bitbucket.org/prowarehouse-nl/erase-install/src/master/)
     
     
 ### Commands
@@ -202,6 +200,7 @@
 - [macadmins.software](https://macadmins.software)
 - [Mac Office 2011 Rem Tool](https://github.com/pbowden-msft/Remove2011/blob/master/Remove2011)
 - [Office One-click login - Jamf](https://www.jamf.com/blog/help-users-activate-microsoft-office-365-and-configure-outlook-in-one-click/)
+- [MacOS Excel Keyboard Shortcuts](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd)
 
 ### Active Directory/AzureAD/LDAP
 
@@ -244,6 +243,53 @@
 
 -   Driver management - <https://technet.microsoft.com/en-us/library/hh301101.aspx>
 
+
+### Image Creation
+
+- [ngen.exe](https://docs.microsoft.com/en-us/dotnet/framework/tools/ngen-exe-native-image-generator)
+- [DISM](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/what-is-dism)
+- [Win10 Sysprep](https://theitbros.com/sysprep-windows-10-machine-guide/)
+- [cleanmgr.exe](https://support.microsoft.com/en-us/help/253597/automating-disk-cleanup-tool-in-windows)
+- [Sdelete Tool](https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete)
+- [OS Optimization Tool](https://labs.vmware.com/flings/vmware-os-optimization-tool)
+
+
+### Handy Commands
+
+- Get windows version
+
+	`systeminfo | findstr /B /C:"OS Name" /C:"OS Version"`
+	
+
+- Import a Root Cert into Local Trusted CAs
+
+```
+Download and save the certificate.
+Open the Certificate Manager
+Hit Windows+R, or click on the Blue Vista icon in the lower left hand corner
+In the "Start Search" box, type "certmgr.msc" (no quotes).
+The certificate manager will open.
+Right click on "Trusted Root Certification Authorities" from the folder list on the left.
+In the pop-up menu, choose "All Tasks" >> "Import.."
+Click the "Next" button
+Click the "Browse" button
+Browse to the location where the certificate is saved, click on it then click the "Open" button
+Click the "Next" button
+Select "Place all certificates in the following store"
+Click the "Browse" button
+Put a checkmark beside "Show physical stores"
+Expand the "Trusted Root Certification Authorities" folder
+Click "Local Computer"
+Click the "OK" button.
+Click the "Next" button
+Click the "Finish" button
+```
+
+
+### Error Codes
+
+- 0x80070422 - restart the windows update service
+
 \[[top](#top)]
 
 
@@ -261,6 +307,7 @@
 - APNS URI (Mac Client --> Apple APNS)
 	- courier.push.apple.com | 5223
 	- [APNS Under the Hood](https://www.youtube.com/watch?v=E39aYd2RMdE&t=1568s)
+	- 17.0.0.0/8:5223
 - Additional FQDNs
 	- albert.apple.com
 	- iprofiles.apple.com
@@ -325,16 +372,13 @@ https://jamf.it/dep-debug
 
 #### Tools
 
-- [JamfConnect Sync](docs.jamf.com/jamf-connect/1.0.0/sync/administrator-guide)
+- [Jamf Connect 1.4.0](https://docs.jamf.com/jamf-connect/1.4.0/administrator-guide/Preface.html)
 	- [File Shares](https://docs.jamf.com/jamf-connect/1.0.0/sync/administrator-guide/File_Shares.html?)
-- [JamfConnect Verify](https://docs.jamf.com/jamf-connect/1.0.0/verify/administrator-guide/Overview.html)
-	- [Preference Keys](https://www.jamf.com/jamf-nation/articles/628/jamf-connect-verify-preference-keys)
+	- [Verify Preference Keys](https://www.jamf.com/jamf-nation/articles/628/jamf-connect-verify-preference-keys)
 	- [Jamf Connect and ADFS Incorrect Password issue](https://travellingtechguy.eu/jamf-connect-and-adfs-incorrect-password/#comment-12953)
-- [JamfConnect Login](https://docs.jamf.com/jamf-connect/1.0.1/login/administrator-guide/Overview.html)
 	- [Jamf Connect Login with Azure](https://travellingtechguy.eu/jamf-connect-login-with-azure/)
 - [NoMAD Helper](https://www.youtube.com/watch?v=fQ4Epy1J7ZU)
 - [Composer User Guide](https://www.jamf.com/resources/product-documentation/composer-user-guide/)
-- [Packages](http://s.sudre.free.fr/Software/Packages/about.html)
 
 
 <a name=“wso”></a>
@@ -384,6 +428,14 @@ https://jamf.it/dep-debug
 
 ### VMware WSO Identity Manager
 
+
+- [Product Documentation vIDM](https://docs.vmware.com/en/VMware-Identity-Manager/index.html)
+- [Upload a New Certificate Authority for SAML Signing Certificates](https://docs.vmware.com/en/VMware-AirWatch/9.1/com.vmware.idm-administrator_aw91/GUID-A31EDEF9-5819-4C06-9A91-6E3F67566A39.html)
+
+#### Identity Manager Connector
+
+- [Identity Manager Deployment v3.3](https://docs.vmware.com/en/VMware-Identity-Manager/3.3/com.vmware.vidm-dmz-deployment/GUID-570583AB-1B77-422F-9916-CB2337EE6140.html)
+
 #### Troubleshooting
 
 - Health API Endpoints for vIDM and On-Prmise implementations respectively.
@@ -398,6 +450,33 @@ https://jamf.it/dep-debug
 	- [7.7-8 - Installation](https://www.carlstalhood.com/vmware-horizon-7-configuration/#vcenter)
 - 50 Articles to fix everything - https://blogs.vmware.com/kb/2015/03/50-kbs-fix-everything-horizon-view.html
 - [WorkspaceONE Horizon Reference Arch](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture#horizon-seven-vmware-identity-manager-integration)
+- [Understanding Horizon Connections - Blog](https://techzone.vmware.com/blog/understanding-horizon-connections)
+- Cloud Connector Virtual Appliance - 7-7.8
+	- [Deployment](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-973234D9-000A-4732-957A-CA8BEA3D5D24.html)
+
+	
+#### Horizon Agent
+
+- [Supported versions of Windows 10 on Horizon Agent Including All VDI Clones (Full Clones, Instant Clones, and Linked Clones on Horizon 7) (2149393)](https://kb.vmware.com/s/article/2149393)
+
+
+#### Login Portals
+
+- https://cloud.horizon.vmware.com/login
+
+
+#### Certificate Information
+
+- [Build a Concatenated PEM File](https://kb.vmware.com/s/article/2046591)
+	- IDM Server PEM Cert
+
+- [Convert Certificate Files to One-Line PEM Format](https://docs.vmware.com/en/Unified-Access-Gateway/3.3.1/com.vmware.uag-331-deploy-config.doc/GUID-870AF51F-AB37-4D6C-B9F5-4BFEB18F11E9.html#GUID-870AF51F-AB37-4D6C-B9F5-4BFEB18F11E9)
+	- UAG SAML file signing
+	- IdM Appliance SAML Cert
+	- vRealize
+
+	`cat server_cert.cer key_filename.key cacerts.cer > multi_part.pem`
+
 
 
 #### Upgrading
@@ -409,13 +488,16 @@ https://jamf.it/dep-debug
 
 - [Install and Setup - ESXi 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-671-installation-setup-guide.pdf)
 - [Install ESXi 6.7 on Workstation, VirtualBox, and Bare Metal](https://www.sysnettechsolutions.com/en/vmware/install-vmware-esxi-6-7/)
-- [Create a Customization Specification for Windows - vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-CAEB6A70-D1CF-446E-BC64-EC42CDB47117.html?hWord=N4IghgNiBcKEQEACA4gVwKYGcAuCDCLsB7AWwEsAvMLUwgOwQHcKwAnAExAF8g)
+- [Adding vSphere CA Cert](https://www.techazine.com/2017/09/22/an-easy-fix-for-vsphere-6-5-web-client-and-certificates-to-keep-your-uploads-flowing/)
 
 
 #### vCenter Server
 
 - [Install and Setup - vCenter 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-vcenter-server-671-installation-guide.pdf)
 - [vCenter User Privilege Requirements - 7.7-8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-A878F876-B359-42FC-9124-A1E34BFB3319.html)
+- VCSA Sysprep file location
+	- `/etc/vmware-vpx/sysprep/`
+		- https://kb.vmware.com/s/article/1005593
 
 
 *Linked Clones*
@@ -428,12 +510,18 @@ https://jamf.it/dep-debug
 - [Create a Customization Specification for Windows](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-CAEB6A70-D1CF-446E-BC64-EC42CDB47117.html?hWord=N4IghgNiBcKEQEACA4gVwKYGcAuCDCLsB7AWwEsAvMLUwgOwQHcKwAnAExAF8g)
 - [Guest Operating System Customization Requirements](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-E63B6FAA-8D35-428D-B40C-744769845906.html#GUID-E63B6FAA-8D35-428D-B40C-744769845906)
 
+*Master VM Creation*
+
+- [Creating an Optimized Windows Image for a VMware Horizon Virtual Desktop](https://techzone.vmware.com/creating-optimized-windows-image-vmware-horizon-virtual-desktop#934148)
+
 
 #### Unified Access Gateway
 
 - [Load Balancing](https://communities.vmware.com/docs/DOC-32792)
 - [UAG 3.5 - Carl Stalhood](https://www.carlstalhood.com/vmware-unified-access-gateway/)
 - [Replace the Default TLS/SSL Server Certificate for Unified Access Gateway](https://docs.vmware.com/en/Unified-Access-Gateway/3.1/com.vmware.uag-31-deploy-config.doc/GUID-EDC244DD-07AB-4841-A893-84ADF8D59838.html)
+- [UAG SAML Metadata File](https://docs.vmware.com/en/Unified-Access-Gateway/3.3.1/com.vmware.uag-331-deploy-config.doc/GUID-2A689F41-0A6A-4F41-A898-C286DFD70C85.html)
+
 
 #### View Connection Server
 
@@ -448,7 +536,7 @@ https://jamf.it/dep-debug
 	- Horizon 7.2 and newer: 4000 connections
 	- Horizon 7.1 <= x < 7.2: 2000 connections
 - [Creating Single-User Desktop Pools](https://techzone.vmware.com/quick-start-tutorial-series-vmware-horizon-7/creating-single-user-desktop-pools#915877)
-
+- [Pool Creation - Carl Stalhood](https://www.carlstalhood.com/vmware-horizon-7-virtual-desktop-pools/#prep)
 
 #### Database Information
 
@@ -485,6 +573,7 @@ https://jamf.it/dep-debug
 
 #### Tools
 
+- [OS Optimization Tool](https://labs.vmware.com/flings/vmware-os-optimization-tool)
 - [Horizon 7 Component Installers](https://my.vmware.com/web/vmware/info?slug=desktop_end_user_computing/vmware_horizon/7_0)
 - [ESXi Configuration Maximums](https://kb.vmware.com/s/article/1003497)
 - [Health Analyzer](https://vmware.my.salesforce.com/apex/page?name=sales.services.software.solutions)
@@ -501,6 +590,11 @@ https://jamf.it/dep-debug
 	- [vCenter Server Role Permissions - 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-A878F876-B359-42FC-9124-A1E34BFB3319.html#GUID-A878F876-B359-42FC-9124-A1E34BFB3319)
 - [View Composer and Instant Clone Privileges Required for the vCenter Server User - 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-467F552F-3034-4917-A985-B5E5FEC5C68F.html#GUID-467F552F-3034-4917-A985-B5E5FEC5C68F)
 - [Instant Clone Operations User Account - 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-E91881F4-F8C0-48A5-A1A4-61577E287E29.html)
+
+
+#### Troubleshooting
+
+- [Provisioning View desktops fails due to customization timeout errors (2007319)](https://kb.vmware.com/s/article/2007319) - No longer required after 2018/12/17
 
 
 ## Related to Scripting & Development
