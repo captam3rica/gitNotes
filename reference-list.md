@@ -4,28 +4,24 @@
 
 ## TOC
 
-1. Administration
-
-	1. [Apple  ](#macintosh)
-	2. [Unix & GNU/Linux](#unix_linux)
-	3. [Windows](#windows)
-
+1. [Apple  ](#macintosh)
+	1. [Tools](#macos_tools)
+	1. [Handy Terminal Commands](#macos_terminal_commands)
+	1. [Documentation](#macos_documentation)
+2. [Unix & GNU/Linux](#unix_linux)
+3. [Windows](#windows)
 1. [MDM](#mdm)
-	
 	1. [Apple](#apple_apns)
 	1. [Jamf](#jamf)
 	2. [WorkspaceONE](#wso)
 	3. [MSFT Azure](#msft_azure)
 	3. [Mobile Iron](#MI)
-
 1. [Virtualization](#virtualization)
-
 1. [Related to Scripting & Development](#scripting-and-languages)
-
-    1. [Atom](#atom)
-    1. [Markdown](#markdown)
-    1. [Python](#python)
-    1. [Bash](#bash)
+	1. [Atom](#atom)
+	1. [Markdown](#markdown)
+	1. [Python](#python)
+	1. [Bash](#bash)
 
 ---
 
@@ -36,6 +32,7 @@
 - [HP Printer Driver FTP](ftp://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Installations/Essentials//)
 
 
+<a name="macos_tools"></a>
 ### Tools
 
 - [Packages](http://s.sudre.free.fr/Software/Packages/about.html): Awesome package creator
@@ -60,13 +57,28 @@
 - MCXToProfile: convert `.plist` configuration files to `.mobileconfig` files for
     deployment through **Profile Manager**
 - **Automator**
-    - [ConfigAutomation](https://configautomation.com/attach-workflow.html)
+    - [ConfigAutomation](https://configautomation.com/)
+    - [APU Doc](https://configautomation.com/apu)
+    - IPSW Download location
+		`$HOME/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Downloads/ACUDownloadFileOperation/`
+		`$HOME/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Firmware/`
 - [EraseInstall](https://bitbucket.org/prowarehouse-nl/erase-install/src/master/)
 - [InstallApplications](https://github.com/erikng/installapplications):
     dynamically download packages for use with `InstallApplication` 
     
+
+### Handy Sites
+
+- [http://www.getmacapps.com](http://www.getmacapps.com)
+- [macadmins.software](macadmins.software)
     
-### Commands
+
+<a name="macos_terminal_commands"></a>    
+### Handy Commands
+
+- Show all ARP table entries
+
+	`arp -a`
 
 - Force unbind from AD domain
 
@@ -74,7 +86,7 @@
 	
 - Generate a random UUID
 
-	`uuidgen | tr "[:upper:]" "[:lower:]”`
+	`uuidgen | tr "[:upper:]" "[:lower:]"`
 	
 - Sign a package with a developer ID installer cert
 
@@ -89,6 +101,7 @@
 	`sudo pwpolicy -clearallaccountpolicies`
 
 
+<a name="macos_documentation"></a>
 ### Documentation
 
 - [Apple Document Style Guide](https://help.apple.com/applestyleguide/#/apsg3acde405)
@@ -98,6 +111,14 @@
 	- [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
 	- [Apple Developer - APNS - API](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html#//apple_ref/doc/uid/TP40008194-CH11-SW1)
 	- [Apple Developer - APNS - Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)
+	- [APNS Support Doc - HT208643](https://support.apple.com/en-us/HT208643)
+- Launchd Documentation
+	- `man launchd.plist` - to see a full list of keys available to daemons/agents.
+	- ~/Library/LaunchAgents         Per-user agents provided by the user.
+	- /Library/LaunchAgents          Per-user agents provided by the administrator.
+	- /Library/LaunchDaemons         System-wide daemons provided by the administrator.
+	- /System/Library/LaunchAgents   Per-user agents provided by OS X.
+	- /System/Library/LaunchDaemons  System-wide daemons provided by OS X.
 - [macOS Builds](https://support.apple.com/en-us/HT201260)
 - [Mac Startup Cmd Options](https://support.apple.com/en-us/HT201255)
 - [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
@@ -145,9 +166,10 @@
 ### Support
 
 - [ABM Support Numbers](https://help.apple.com/businessmanager/?lang=en-us#/apd098f3d709)
+- [Check Apple Services](https://www.apple.com/support/systemstatus/)
 
 
-#### MISC
+### MISC
 
 - [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
 
@@ -168,6 +190,13 @@
 -   Security Enhanced Linux: <http://selinuxproject.org/page/Main_Page>
 -   Cool old terminal - old looking terminal for linux: <http://linuxg.net/how-to-install-cool-old-term-0-9-on-ubuntu-14-04-debian-jessie>
 
+
+### ZSH
+
+- Change the keybindings back to EMACS by adding the following to `.zshrc`
+
+	`bindkey -e`
+
 \[[top](#top)]
 
 
@@ -177,6 +206,7 @@
 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
 - [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
 - [Windows 10 Environment Variables](https://www.tenforums.com/tutorials/3234-environment-variables-windows-10-a.html)
+- [Install RSAT - Win10 1809](https://www.prajwaldesai.com/install-rsat-tools-on-windows-10-version-1809/)
 
 
 ### Tools
@@ -196,6 +226,8 @@
 	```
 	
 - [macadmins.software](https://macadmins.software)
+	- [Outlook Preferences](https://docs.microsoft.com/en-us/DeployOffice/mac/preferences-outlook)
+	- [OneDrive Preferences](https://docs.microsoft.com/en-us/onedrive/deploy-and-configure-on-macos)
 - [Mac Office 2011 Rem Tool](https://github.com/pbowden-msft/Remove2011/blob/master/Remove2011)
 - [Office One-click login - Jamf](https://www.jamf.com/blog/help-users-activate-microsoft-office-365-and-configure-outlook-in-one-click/)
 - [MacOS Excel Keyboard Shortcuts](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd)
@@ -216,6 +248,8 @@
 
 	- [What is password hash synchronization with Azure AD?](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-phs)
 	- [What is federation with Azure AD?](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-fed)
+
+- [AzureAD Error Codes](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes)
 
 
 ### OIDC & Microsoft Identity Platform
@@ -261,27 +295,26 @@
 
 - Import a Root Cert into Local Trusted CAs
 
-```
-Download and save the certificate.
-Open the Certificate Manager
-Hit Windows+R, or click on the Blue Vista icon in the lower left hand corner
-In the "Start Search" box, type "certmgr.msc" (no quotes).
-The certificate manager will open.
-Right click on "Trusted Root Certification Authorities" from the folder list on the left.
-In the pop-up menu, choose "All Tasks" >> "Import.."
-Click the "Next" button
-Click the "Browse" button
-Browse to the location where the certificate is saved, click on it then click the "Open" button
-Click the "Next" button
-Select "Place all certificates in the following store"
-Click the "Browse" button
-Put a checkmark beside "Show physical stores"
-Expand the "Trusted Root Certification Authorities" folder
-Click "Local Computer"
-Click the "OK" button.
-Click the "Next" button
-Click the "Finish" button
-```
+	1. Download and save the certificate.
+	1. Open the Certificate Manager
+	1. Hit Windows+R, or click on the Blue Vista icon in the lower left hand corner
+	1. In the "Start Search" box, type "certmgr.msc" (no quotes).
+	1. The certificate manager will open.
+	1. Right click on "Trusted Root Certification Authorities" from the folder list on the left.
+	1. In the pop-up menu, choose "All Tasks" >> "Import.."
+	1. Click the "Next" button
+	1. Click the "Browse" button
+	1. Browse to the location where the certificate is saved, click on it then click the "Open" button
+	1. Click the "Next" button
+	1. Select "Place all certificates in the following store"
+	1. Click the "Browse" button
+	1. Put a checkmark beside "Show physical stores"
+	1. Expand the "Trusted Root Certification Authorities" folder
+	1. Click "Local Computer"
+	1. Click the "OK" button.
+	1. Click the "Next" button
+	1. Click the "Finish" button
+
 
 
 ### Error Codes
@@ -295,7 +328,7 @@ Click the "Finish" button
 
 ## MDM
 
-<a name=“apple_apns”></a>
+<a name="apple_apns"></a>
 ### Apple
 
 - [MacOS WiFi Login Window Profile]( https://ntsystems.it/post/joining-wifi-before-login-on-mac-os-x-108)
@@ -338,14 +371,37 @@ https://jamf.it/dep-debug
 
 1. Run the Mac through the DEP prestage enrollment as normal, once booted to the Desktop, we should find the log written to: /Library/Logs/ManagedClient/ManagedClient.log
 
-<a name=“jamf”></a>
+
+<a name="jamf"></a> 
 ### Jamf
+
+*API Documentation*
 
 - [API Support](http://developer.jamf.com/apis/jamf-pro-api/index)
 - [New Swagger API - https://[your_url].jamfcloud.com/uapi/doc](https://[your_url].jamfcloud.com/uapi/doc/#/departments)
+
+
+*Maintenance URLs*
+
 - [Service Status](status.jamf.com)
+
+
+*Network Information*
+
 - [Ports Used](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro)
 - [JamfCloud IP Addresses](https://www.jamf.com/jamf-nation/articles/409/permitting-inbound-outbound-traffic-with-jamf-cloud)
+
+
+*Infrastructure*
+
+- [JIM Install Guide](http://docs.jamf.com/infrastructure-manager/1.3.2/Installing_a_Jamf_Infrastructure_Manager_Instance.html)
+- [AzureAD LDAPS](https://www.jamf.com/jamf-nation/discussions/25876/a-guide-to-jss-azure-ad-integration-ldap-+-sso)
+- [AzureAD Integration](https://marketplace.jamf.com/details/azure-active-directory/)
+- [Okta LDAP Integration](https://travellingtechguy.eu/integrating-okta-ldap-in-jamf-pro/)
+
+
+*Single-Sign-On*
+
 - [Single Sign-On](http://docs.jamf.com/10.10.0/jamf-pro/administrator-guide/Single_Sign-On.html)
 	- [Okta](https://www.jamf.com/jamf-nation/articles/435/configuring-single-sign-on-with-okta)
 	- [ADFS](https://www.jamf.com/jamf-nation/articles/436/)
@@ -353,13 +409,28 @@ https://jamf.it/dep-debug
 	- [OneLogin](https://www.jamf.com/jamf-nation/articles/438/)
 	- [Ping Identity](https://www.jamf.com/jamf-nation/articles/439/)
 	- [G-Suite](https://www.jamf.com/jamf-nation/articles/440/)
-- [AzureAD LDAPS](https://www.jamf.com/jamf-nation/discussions/25876/a-guide-to-jss-azure-ad-integration-ldap-+-sso)
-- [Okta LDAP Integration](https://travellingtechguy.eu/integrating-okta-ldap-in-jamf-pro/)
+
+
+*Conditional Access*
+
+- [Intune Integration - Traveling Tech Guy](https://travellingtechguy.eu/jamf-pro-and-ms-azure-intune-for-macos/)
+- [Conditional Access with Azure](https://resources.jamf.com/documents/white-papers/conditional-access-going-beyond-perimeter-based-security.pdf)
+
+
+*SCEP Proxy Configuration*
+
+- Port 443 or 80
+- [Enabling SCEP in Jamf Pro](https://docs.jamf.com/technical-papers/jamf-pro/scep-proxy/10.0.0/Enabling_Jamf_Pro_as_SCEP_Proxy_for_Configuration_Profiles.html)
+- [Jamf Pro SCEP Communication](https://www.jamf.com/jamf-nation/articles/488/communication-of-jamf-pro-as-scep-proxy)
+- [Obtaining a SCEP Proxy Signing Certificate from a Microsoft CA Using Terminal and Uploading the Certificate to Jamf Pro](https://www.jamf.com/jamf-nation/articles/538/obtaining-a-scep-proxy-signing-certificate-from-a-microsoft-ca-using-terminal-and-uploading-the-certificate-to-jamf-pro) - using an external SCEP cert during device enrollment.
+- [Video on Setting up Jamf as a SCEP Proxy](https://www.youtube.com/watch?v=jn0HTWKubFY)
+
+
+*Misc Documentation*
+
 - [All Product Documentation](https://www.jamf.com/resources/product-documentation/)
 - [Jamf Pro Security Overview](https://www.jamf.com/resources/product-documentation/jamf-pro-security-overview/)
-- [JIM Install Guide](http://docs.jamf.com/infrastructure-manager/1.3.2/Installing_a_Jamf_Infrastructure_Manager_Instance.html)
 - [MacOS Security Checklist](https://resources.jamf.com/documents/products/documentation/macos-security-checklist.pdf)
-- [Conditional Access with Azure](https://resources.jamf.com/documents/white-papers/conditional-access-going-beyond-perimeter-based-security.pdf)
 
 
 #### Packaging
@@ -370,11 +441,16 @@ https://jamf.it/dep-debug
 
 #### Tools
 
-- [Jamf Connect 1.4.0](https://docs.jamf.com/jamf-connect/1.4.0/administrator-guide/Preface.html)
+- [Jamf Connect 1.6.0](https://docs.jamf.com/jamf-connect/1.6.0/administrator-guide/About_this_Guide.html)
 	- [File Shares](https://docs.jamf.com/jamf-connect/1.0.0/sync/administrator-guide/File_Shares.html?)
 	- [Verify Preference Keys](https://www.jamf.com/jamf-nation/articles/628/jamf-connect-verify-preference-keys)
 	- [Jamf Connect and ADFS Incorrect Password issue](https://travellingtechguy.eu/jamf-connect-and-adfs-incorrect-password/#comment-12953)
 	- [Jamf Connect Login with Azure](https://travellingtechguy.eu/jamf-connect-login-with-azure/)
+	- Licensing
+		- Jamf Connect Verify preferences
+		- A .jamfconnectlicense file in /Library/Application Support/com.jamf.connect.verify
+		- A .jamfconnectlicense file in ~/Library/Application Support/com.jamf.connect.verify
+		- Note: To store the license in the preferences configuration profile, you must convert the license file to base64 format, and then use the LicenseFile key in your configuration profile.
 - [NoMAD Helper](https://www.youtube.com/watch?v=fQ4Epy1J7ZU)
 - [Composer User Guide](https://www.jamf.com/resources/product-documentation/composer-user-guide/)
 
@@ -397,6 +473,10 @@ https://jamf.it/dep-debug
 - [MacOS](https://my.air-watch.com/help/9.1/en/Content/Platform_Guides/macOS/C/Profiles_Overview.htm?TocPath=PROFILES|macOS%C2%A0Device%20Profiles|_____0)
 - [vSphere SDK - Python](https://github.com/vmware/vsphere-automation-sdk-python/blob/master/README.md)
 - [VMware Code](https://code.vmware.com/home)
+
+#### Documentation
+
+- [Workspace ONE UEM Docs](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/1907/rn/VMware-Workspace-ONE-UEM-Release-Notes-1907.html)
 
 #### Tools
 
@@ -456,7 +536,7 @@ https://jamf.it/dep-debug
 #### Horizon Agent
 
 - [Supported versions of Windows 10 on Horizon Agent Including All VDI Clones (Full Clones, Instant Clones, and Linked Clones on Horizon 7) (2149393)](https://kb.vmware.com/s/article/2149393)
-
+- [Configure Realtime Audio Video](https://docs.vmware.com/en/VMware-Horizon-7/7.6/horizon-remote-desktop-features/GUID-0923B4C2-16C7-4C45-BD6E-945858518798.html)
 
 #### Login Portals
 
@@ -496,6 +576,7 @@ https://jamf.it/dep-debug
 - VCSA Sysprep file location
 	- `/etc/vmware-vpx/sysprep/`
 		- https://kb.vmware.com/s/article/1005593
+- [Trust the VSCA Cert](https://tinkertry.com/how-to-get-rid-of-vsphere-browser-certificate-warnings-in-windows)
 
 
 *Linked Clones*
@@ -516,9 +597,11 @@ https://jamf.it/dep-debug
 #### Unified Access Gateway
 
 - [Load Balancing](https://communities.vmware.com/docs/DOC-32792)
+- [UAG 3.6 - Carl Stalhood](https://www.carlstalhood.com/vmware-unified-access-gateway/)
 - [UAG 3.5 - Carl Stalhood](https://www.carlstalhood.com/vmware-unified-access-gateway/)
 - [Replace the Default TLS/SSL Server Certificate for Unified Access Gateway](https://docs.vmware.com/en/Unified-Access-Gateway/3.1/com.vmware.uag-31-deploy-config.doc/GUID-EDC244DD-07AB-4841-A893-84ADF8D59838.html)
 - [UAG SAML Metadata File](https://docs.vmware.com/en/Unified-Access-Gateway/3.3.1/com.vmware.uag-331-deploy-config.doc/GUID-2A689F41-0A6A-4F41-A898-C286DFD70C85.html)
+- [UAG Multiple NICs](https://communities.vmware.com/docs/DOC-32926)
 
 
 #### View Connection Server
@@ -535,6 +618,22 @@ https://jamf.it/dep-debug
 	- Horizon 7.1 <= x < 7.2: 2000 connections
 - [Creating Single-User Desktop Pools](https://techzone.vmware.com/quick-start-tutorial-series-vmware-horizon-7/creating-single-user-desktop-pools#915877)
 - [Pool Creation - Carl Stalhood](https://www.carlstalhood.com/vmware-horizon-7-virtual-desktop-pools/#prep)
+- [Allow HTML Access Through a Gateway](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-FE26A9DE-E344-42EC-A1EE-E1389299B793.html?hWord=N4IghgNiBcIQ9gYwNYFMAmA6ADgJ3tqrgC4CWqAzgAQDmYxqA7mAJ4gC+QA)
+- [Modify the listed domains in Horizon Console, HTML Access, and Horizon Client](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-administration/GUID-3E9924EC-1554-43E5-A812-84F9711909A5.html)
+	- List the domain configuration  
+		`vdmadmin -N -domains -list`
+	
+	- Add a domain to the include list
+		`vdmadmin -N -domains -include -domain <your_domain> -add`
+		
+	- Make sure to go back into the Horizon Admin (Console) and enable the check box `Send Domain List` under **View Configuration > Global Settings > General**
+		- This option will not show up if at least one domain is not in the list.
+- VDI Machine Naming
+	- [Provide a List of names and user assignments](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-virtual-desktops/GUID-F9A7022F-6CB0-482E-9D72-C912F117C240.html)
+
+*Errors*
+
+- [Accessing the Horizon View Administrator page displays a blank error window in Horizon 7 (2144768)](https://kb.vmware.com/s/article/2144768)
 
 #### Database Information
 
@@ -785,8 +884,12 @@ atom-text-editor.editor .selection .region {
 
 ### PowerShell
 
--   [Memory and Handle Quotas in the WMI Provider Ser](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/)
--   Bypass Execution Policies - <https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/>
+- [Memory and Handle Quotas in the WMI Provider Ser](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/)
+- Bypass Execution Policies - <https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/>
+- [Passing Credentials](https://gallery.technet.microsoft.com/scriptcenter/Execute-PowerShell-Script-38881dce)
+- [Get AD Computer Info](https://4sysops.com/archives/get-adcomputer-display-computers-in-ou-or-ad-group-with-powershell/)
+	- [MSFT Doc](https://www.akaplan.com/blog/2014/02/get-computers-distinguished-name-in-powershell/)
+- [Get Distinguished Computer Name](https://www.akaplan.com/blog/2014/02/get-computers-distinguished-name-in-powershell/)
 
 \[[top](#top)]
 
