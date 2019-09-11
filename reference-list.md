@@ -17,6 +17,7 @@
 	3. [MSFT Azure](#msft_azure)
 	3. [Mobile Iron](#MI)
 1. [Virtualization](#virtualization)
+2. [Google Enterprise](#google_enterprise)
 1. [Related to Scripting & Development](#scripting-and-languages)
 	1. [Atom](#atom)
 	1. [Markdown](#markdown)
@@ -36,6 +37,8 @@
 ### Tools
 
 - [Packages](http://s.sudre.free.fr/Software/Packages/about.html): Awesome package creator
+- [AutoPkg](https://autopkg.github.io/autopkg/)
+	- [recipe-robot](https://github.com/homebysix/recipe-robot): help create AutoPkg recipes.
 - [Suspicious Package](http://www.mothersruin.com/software/SuspiciousPackage/get.html): look inside of packages. 
 - [PPPC Utility (Jamf)](https://github.com/jamf/PPPC-Utility)
 - [Profile Creator](https://github.com/ProfileCreator/ProfileCreator)
@@ -76,6 +79,15 @@
 <a name="macos_terminal_commands"></a>    
 ### Handy Commands
 
+- Read & Write Apple language preferences
+
+	`defaults read -g AppleLocale`
+	`defaults read -g AppleLanguages`
+	`defaults read NSGlobalDomain AppleLanguages`
+	`defaults write NSGlobalDomain AppleLanguages "(en-AU)"`
+	
+	[Retrieving the languages in Terminal](https://developer.apple.com/library/archive/qa/qa1391/_index.html)
+
 - Show all ARP table entries
 
 	`arp -a`
@@ -98,7 +110,7 @@
 	
 - Clear passcode profile settings
 	
-	`sudo pwpolicy -clearallaccountpolicies`
+	`sudo pwpolicy -clearaccountpolicies`
 
 
 <a name="macos_documentation"></a>
@@ -202,6 +214,7 @@
 
 ## Related to Windows Administration
 
+- [sway.office.com](https://sway.office.com/leB5lmZDQsxnrMAv?ref=Link)
 - List of WMIC CSProduct Get Name Results - <http://faqshop.com/misc/list-of-wmic-csproduct-get-name-results/>
 - [Troubleshooting Slow Logons via PowerShell](https://www.citrix.com/blogs/2015/08/05/troubleshooting-slow-logons-via-powershell/)
 - [Logon GPO Analysis via PowerShell](https://www.controlup.com/blog/logon-gpo-analysis-via-powershell/)
@@ -230,7 +243,12 @@
 	- [OneDrive Preferences](https://docs.microsoft.com/en-us/onedrive/deploy-and-configure-on-macos)
 - [Mac Office 2011 Rem Tool](https://github.com/pbowden-msft/Remove2011/blob/master/Remove2011)
 - [Office One-click login - Jamf](https://www.jamf.com/blog/help-users-activate-microsoft-office-365-and-configure-outlook-in-one-click/)
+- [MacOS Word Keyboard Shortcuts](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Word-for-Mac-3256d48a-7967-475d-be81-a6e3e1284b25)
+	- Page Break - `⌘ + Return`
+	- Paste and Match Style - `⌘ + ⌥ + ⇧ + V`
 - [MacOS Excel Keyboard Shortcuts](https://support.office.com/en-us/article/Keyboard-shortcuts-in-Excel-for-Mac-acf5419e-1f87-444d-962f-4e951a658ccd)
+	- AutoFit Width - `⌥ + H + O + I` - in sequence. Not at the same time
+	- AutoFit Height - `⌥ + H + O + A` - in sequence. Not at the same time
 
 ### Active Directory/AzureAD/LDAP
 
@@ -378,7 +396,7 @@ https://jamf.it/dep-debug
 *API Documentation*
 
 - [API Support](http://developer.jamf.com/apis/jamf-pro-api/index)
-- [New Swagger API - https://[your_url].jamfcloud.com/uapi/doc](https://[your_url].jamfcloud.com/uapi/doc/#/departments)
+- [New Swagger API - https://[your_url].jamfcloud.com/uapi/doc](https://[your_url].jamfcloud.com/uapi/doc/#)
 
 
 *Maintenance URLs*
@@ -441,7 +459,7 @@ https://jamf.it/dep-debug
 
 #### Tools
 
-- [Jamf Connect 1.6.0](https://docs.jamf.com/jamf-connect/1.6.0/administrator-guide/About_this_Guide.html)
+- [Jamf Connect 1.6.2](https://docs.jamf.com/jamf-connect/1.6.2/administrator-guide/About_this_Guide.html)
 	- [File Shares](https://docs.jamf.com/jamf-connect/1.0.0/sync/administrator-guide/File_Shares.html?)
 	- [Verify Preference Keys](https://www.jamf.com/jamf-nation/articles/628/jamf-connect-verify-preference-keys)
 	- [Jamf Connect and ADFS Incorrect Password issue](https://travellingtechguy.eu/jamf-connect-and-adfs-incorrect-password/#comment-12953)
@@ -477,6 +495,8 @@ https://jamf.it/dep-debug
 #### Documentation
 
 - [Workspace ONE UEM Docs](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/1907/rn/VMware-Workspace-ONE-UEM-Release-Notes-1907.html)
+- [Device Profiles](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/1908/iOS_Platform/GUID-AWT-IOS-PROFILE-OVERVIEW.html)
+	- [Windows](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/1908/Windows_Desktop_Device_Management/GUID-AWT-PROFILE-OVERVIEWWD.html)
 
 #### Tools
 
@@ -524,6 +544,8 @@ https://jamf.it/dep-debug
 ### VMware Horizon
 
 - [Horizon 7 Documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html)
+	- [Architecture Planning - v7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-architecture-planning.pdf)
+	- [Hardware Requirements](https://docs.vmware.com/en/VMware-Horizon-7/7.9/horizon-installation/GUID-332CFB83-784A-4578-9354-888C0538909A.html)
 - Carl Stalhood - [www.carlstalhood.com/](http://www.carlstalhood.com/)
 	- [7.7-8 - Installation](https://www.carlstalhood.com/vmware-horizon-7-configuration/#vcenter)
 - 50 Articles to fix everything - https://blogs.vmware.com/kb/2015/03/50-kbs-fix-everything-horizon-view.html
@@ -596,12 +618,13 @@ https://jamf.it/dep-debug
 
 #### Unified Access Gateway
 
-- [Load Balancing](https://communities.vmware.com/docs/DOC-32792)
+- [VMware Doc: Deploying and Configuring VMware Unified Access Gateway 3.6](https://docs.vmware.com/en/Unified-Access-Gateway/3.6/com.vmware.uag-36-deploy-config.doc/GUID-F5CE0D5E-BE85-4FA5-BBCF-0F86C9AB8A70.html)
 - [UAG 3.6 - Carl Stalhood](https://www.carlstalhood.com/vmware-unified-access-gateway/)
 - [UAG 3.5 - Carl Stalhood](https://www.carlstalhood.com/vmware-unified-access-gateway/)
 - [Replace the Default TLS/SSL Server Certificate for Unified Access Gateway](https://docs.vmware.com/en/Unified-Access-Gateway/3.1/com.vmware.uag-31-deploy-config.doc/GUID-EDC244DD-07AB-4841-A893-84ADF8D59838.html)
 - [UAG SAML Metadata File](https://docs.vmware.com/en/Unified-Access-Gateway/3.3.1/com.vmware.uag-331-deploy-config.doc/GUID-2A689F41-0A6A-4F41-A898-C286DFD70C85.html)
 - [UAG Multiple NICs](https://communities.vmware.com/docs/DOC-32926)
+- [Load Balancing](https://communities.vmware.com/docs/DOC-32792)
 
 
 #### View Connection Server
@@ -631,12 +654,17 @@ https://jamf.it/dep-debug
 - VDI Machine Naming
 	- [Provide a List of names and user assignments](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-virtual-desktops/GUID-F9A7022F-6CB0-482E-9D72-C912F117C240.html)
 
+*Desktop Pools*
+
+- [Carl Stalhood - VMware Horizon 7 – Virtual Desktop Pools](https://www.carlstalhood.com/vmware-horizon-7-virtual-desktop-pools/)
+
 *Errors*
 
 - [Accessing the Horizon View Administrator page displays a blank error window in Horizon 7 (2144768)](https://kb.vmware.com/s/article/2144768)
 
 #### Database Information
 
+- [Configuring Event Reporting - v7-7.9](https://docs.vmware.com/en/VMware-Horizon-7/7.9/horizon-installation/GUID-1E63A836-7B3D-4876-AD9A-4553955E3834.html)
 - [Create the ViewEvent Database - Horizon 7.7-8](https://www.virtuallyboring.com/vmware-horizon-view-7-create-events-database/)
 
 
@@ -693,6 +721,31 @@ https://jamf.it/dep-debug
 
 - [Provisioning View desktops fails due to customization timeout errors (2007319)](https://kb.vmware.com/s/article/2007319) - No longer required after 2018/12/17
 
+<a name="google_enterprise"></a>
+## Google Enterprise
+
+### Handy Links
+
+- [About Google Cloud Direcorty Sync](https://support.google.com/a/answer/106368?hl=en)
+- [G Suite Admin Help | Administrator Privilege Definitions](https://support.google.com/a/answer/1219251?hl=en)
+- [Manage Networks](https://support.google.com/chrome/a/answer/2634553)
+- [Google Chrome Enterprise Help | Set Chrome User Policies](https://support.google.com/chrome/a/answer/2657289?hl=en)
+- [Google Chrome Enterprise Help | Set Chrome Device Policies](https://support.google.com/chrome/a/answer/1375678?hl=en)
+- [Google Chrome Enterprise Help | Google Cloud Print Services](https://support.google.com/chrome/a/answer/3179168)
+- [Google Support](https://support.google.com/)
+- [Site Help pages](https://support.google.com/sites/answer/98081)
+- [G Suite Help | Build your support team](https://gsuite.google.com/setup/resources/support-users/)
+
+
+### Commands 
+
+- Google Enterprise Mode - `Ctrl+Alt+E`
+
+
+### Locations to Know
+
+- `chrome://policies` - verify that all required policies have been properly applied.
+- `chrome://version` - Chrome and platform version of the affected Chrome device.
 
 ## Related to Scripting & Development
 
@@ -723,11 +776,26 @@ https://jamf.it/dep-debug
 - [Send emails](https://realpython.com/python-send-email/)
 - [RealPython.com](https://realpython.com)
 
+*Learning Sites*
+
+- [CheckIO](https://checkio.org)
+
+*Modules*
+
+- [pyobjc-framework-SystemConfiguration 5.2](https://pypi.org/project/pyobjc-framework-SystemConfiguration/)
+
+	Wrappers for framework ‘SystemConfiguration’.
+These wrappers don’t include documentation, please check Apple’s documention for information on how to use this framework and PyObjC’s documentation for general tips and tricks regarding the translation between Python and (Objective-)C frameworks
+
+	[Docs](https://pyobjc.readthedocs.io/en/latest/)
+
+
 <a name="bash"></a>
 
 ### Bash
 
 - [Bash Cheat Sheet](https://devhints.io/bash)
+- [Cyber Dojo](https://www.cyber-dojo.org)
 - [bashoneliners.com](http://www.bashoneliners.com/oneliners/oneliner/popular/)
 - Shell Variables - <https://www.gnu.org/software/bash/manual/bash.html#Shell-Variables>
 - User input with a while loop - <http://alvinalexander.com/linux-unix/shell-script-how-prompt-read-user-input-bash>
@@ -743,6 +811,11 @@ https://jamf.it/dep-debug
 
 -   [vim wiki](http://vim.wikia.com/wiki)
 -   [NerdTree Doc](https://github.com/scrooloose/nerdtree/blob/master/doc/NERDTree.txt)
+
+*Learning*
+
+- [Vim Adventures](https://vim-adventures.com)
+
 
 <a name="atom"></a>
 
