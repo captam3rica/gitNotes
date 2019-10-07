@@ -8,6 +8,7 @@
 	1. [Tools](#macos_tools)
 	1. [Handy Terminal Commands](#macos_terminal_commands)
 	1. [Documentation](#macos_documentation)
+	2. [Apple Device Automation](#apple_device_automation)
 2. [Unix & GNU/Linux](#unix_linux)
 3. [Windows](#windows)
 1. [MDM](#mdm)
@@ -19,10 +20,11 @@
 1. [Virtualization](#virtualization)
 2. [Google Enterprise](#google_enterprise)
 1. [Related to Scripting & Development](#scripting-and-languages)
+	1. [Python](#python)
+	1. [Swift](#swift_code)
+	1. [Bash](#bash)
 	1. [Atom](#atom)
 	1. [Markdown](#markdown)
-	1. [Python](#python)
-	1. [Bash](#bash)
 
 ---
 
@@ -59,12 +61,8 @@
     Apple macOS Server Caching service.
 - MCXToProfile: convert `.plist` configuration files to `.mobileconfig` files for
     deployment through **Profile Manager**
-- **Automator**
-    - [ConfigAutomation](https://configautomation.com/)
-    - [APU Doc](https://configautomation.com/apu)
-    - IPSW Download location
-		`$HOME/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Downloads/ACUDownloadFileOperation/`
-		`$HOME/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Firmware/`
+- Automator
+- Apple Configurator2
 - [EraseInstall](https://bitbucket.org/prowarehouse-nl/erase-install/src/master/)
 - [InstallApplications](https://github.com/erikng/installapplications):
     dynamically download packages for use with `InstallApplication` 
@@ -78,6 +76,14 @@
 
 <a name="macos_terminal_commands"></a>    
 ### Handy Commands
+
+- Show `failedLoginCount` for a user
+	
+	`dscl . -readpl /Users/<user_name> accountPolicyData failedLoginCount`
+	
+- Reset `failedLoginCount` setting
+
+	`dscl . -deletepl /Users/<user_name> accountPolicyData failedLoginCount`
 
 - Read & Write Apple language preferences
 
@@ -136,7 +142,7 @@
 - [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
 - [Disabled Accounts](https://www.jamf.com/jamf-nation/discussions/18243/password-policy-profile-disables-user-account)
 - [Setting Printer Options Via CLI](http://www.brunerd.com/blog/2012/03/13/getting-and-setting-ppd-options-via-command-line-for-use-with-lpadmin-in-os-x/)
-
+	
 
 #### MDM Protocol Related
 
@@ -168,11 +174,28 @@
 	- `security authorizationdb write system.preferences allow`
 	- `security authorizationdb write system.preferences.startupdisk allow`
 
+- The `security` command
+
+	- Find a specific keychain item by name
+
+		`security find-generic-password -l Hermes`
+
 
 #### Encryption & FileVault
 
 - [Manage FileVault with `fdesetup`](https://derflounder.wordpress.com/2015/12/20/managing-el-capitans-filevault-2-with-fdesetup/)
 - [FileVault Institutional Recovery Keys - DerFlounder](https://derflounder.wordpress.com/2014/08/13/filevault-2-institutional-recovery-keys-creation-deployment-and-use/)
+
+
+<a name="apple_device_automation"></a>
+### Automation
+
+- [ConfigAutomation](https://configautomation.com/)  
+    - [Supervision Identities](https://configautomation.com/identity-files.html)
+    - [APU Doc](https://configautomation.com/apu)
+- IPSW Download location
+	`$HOME/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Downloads/ACUDownloadFileOperation/`
+	`$HOME/Library/Group\ Containers/K36BKF7T3D.group.com.apple.configurator/Library/Caches/Firmware/`
 
 
 ### Support
@@ -267,7 +290,8 @@
 	- [What is password hash synchronization with Azure AD?](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-phs)
 	- [What is federation with Azure AD?](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-fed)
 
-- [AzureAD Error Codes](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes)
+- [AzureADv1 Error Codes](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes)
+- [AzureADv2 Error Codes](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes)
 
 
 ### OIDC & Microsoft Identity Platform
@@ -515,7 +539,7 @@ https://jamf.it/dep-debug
 - 
 
 \[[top](#top)]
-<a name="scripting-and-languages"></a>
+<a name="virtualization"></a>
 
 ## Virtualization
 
@@ -528,11 +552,14 @@ https://jamf.it/dep-debug
 
 
 - [Product Documentation vIDM](https://docs.vmware.com/en/VMware-Identity-Manager/index.html)
+- [Carl Stalhood | IDM 19.03 Walkthrough](https://www.carlstalhood.com/vmware-identity-manager/)
 - [Upload a New Certificate Authority for SAML Signing Certificates](https://docs.vmware.com/en/VMware-AirWatch/9.1/com.vmware.idm-administrator_aw91/GUID-A31EDEF9-5819-4C06-9A91-6E3F67566A39.html)
+
 
 #### Identity Manager Connector
 
 - [Identity Manager Deployment v3.3](https://docs.vmware.com/en/VMware-Identity-Manager/3.3/com.vmware.vidm-dmz-deployment/GUID-570583AB-1B77-422F-9916-CB2337EE6140.html)
+- [Enable Outbound Mode for the Connector](https://docs.vmware.com/en/VMware-Identity-Manager/3.3/com.vmware.vidm-dmz-deployment/GUID-C97A4D37-8F1F-4B24-9A97-1A25A0033999.html)
 
 #### Troubleshooting
 
@@ -589,6 +616,7 @@ https://jamf.it/dep-debug
 - [Install and Setup - ESXi 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-671-installation-setup-guide.pdf)
 - [Install ESXi 6.7 on Workstation, VirtualBox, and Bare Metal](https://www.sysnettechsolutions.com/en/vmware/install-vmware-esxi-6-7/)
 - [Adding vSphere CA Cert](https://www.techazine.com/2017/09/22/an-easy-fix-for-vsphere-6-5-web-client-and-certificates-to-keep-your-uploads-flowing/)
+- [Import the VCSA Self-Signed Cert](https://tinkertry.com/how-to-get-rid-of-vsphere-browser-certificate-warnings-in-windows)
 
 
 #### vCenter Server
@@ -615,6 +643,14 @@ https://jamf.it/dep-debug
 
 - [Creating an Optimized Windows Image for a VMware Horizon Virtual Desktop](https://techzone.vmware.com/creating-optimized-windows-image-vmware-horizon-virtual-desktop#934148)
 
+*Handy Commands*
+
+- VMware has an easy way of retrieving logs both on the connection servers and the virtual machine.
+The command to collect the logs from a remote machine is:
+	
+	```
+	vdmadmin -A -getDCT -outfile file_name.zip -d pool_name -m virtual_machine_name
+	```
 
 #### Unified Access Gateway
 
@@ -640,14 +676,30 @@ https://jamf.it/dep-debug
 	- Horizon 7.2 and newer: 4000 connections
 	- Horizon 7.1 <= x < 7.2: 2000 connections
 - [Creating Single-User Desktop Pools](https://techzone.vmware.com/quick-start-tutorial-series-vmware-horizon-7/creating-single-user-desktop-pools#915877)
-- [Pool Creation - Carl Stalhood](https://www.carlstalhood.com/vmware-horizon-7-virtual-desktop-pools/#prep)
-- [Allow HTML Access Through a Gateway](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-FE26A9DE-E344-42EC-A1EE-E1389299B793.html?hWord=N4IghgNiBcIQ9gYwNYFMAmA6ADgJ3tqrgC4CWqAzgAQDmYxqA7mAJ4gC+QA)
+- [Allow HTML Access Through a Gateway](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-FE26A9DE-E344-42EC-A1EE-E1389299B793.html?hWord=N4IghgNiBcIQ9gYwNYFMAmA6ADgJ3tqrgC4CWqAzgAQDmYxqA7mAJ4gC+QA)  
+
+	Connection Server instances and security servers that are directly behind a gateway, such as Access Point, must know the address by which browsers will connect to the gateway when users use HTML Access.
+
+	For Connection Server instances and security servers that are behind a load-balancer or load-balanced gateway, perform the procedure described in [Allow HTML Access Through a Load Balancer](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-BFF2E726-A5EB-4105-A0EA-F3D718C5880E.html#GUID-BFF2E726-A5EB-4105-A0EA-F3D718C5880E).
+	
+	1. Go to the following directory: `C:\Program Files\VMware\VMware View\Server\sslgateway\conf\`
+	1.	Create the following document in this location `locked.properties`.
+	2.	Add the `checkOrigin=false` property and add the address of the UAG similar to the below.
+	3.	Restart the Connection server service.
+
 - [Modify the listed domains in Horizon Console, HTML Access, and Horizon Client](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-administration/GUID-3E9924EC-1554-43E5-A812-84F9711909A5.html)
+
+	Make sure to either launch PowerShell as an admin or pass credentials with the `-b` flag.
+
 	- List the domain configuration  
 		`vdmadmin -N -domains -list`
 	
 	- Add a domain to the include list
 		`vdmadmin -N -domains -include -domain <your_domain> -add`
+		
+	- `-s conn_server` Specifies that the operation applies to the domain filters on a Connection Server instance. You can specify the Connection Server instance by its name or IP address.
+
+		If you do not specify this option, any change that you make to the search configuration applies to all Connection Server instances in the group.
 		
 	- Make sure to go back into the Horizon Admin (Console) and enable the check box `Send Domain List` under **View Configuration > Global Settings > General**
 		- This option will not show up if at least one domain is not in the list.
@@ -657,6 +709,7 @@ https://jamf.it/dep-debug
 *Desktop Pools*
 
 - [Carl Stalhood - VMware Horizon 7 – Virtual Desktop Pools](https://www.carlstalhood.com/vmware-horizon-7-virtual-desktop-pools/)
+- [Pool Creation - Carl Stalhood](https://www.carlstalhood.com/vmware-horizon-7-virtual-desktop-pools/#prep)
 
 *Errors*
 
@@ -763,6 +816,8 @@ https://jamf.it/dep-debug
 
 ### Python
 
+![](Screenshots/Python/python-icon.png)
+
 -	Install `pip` python package manager MacOS - **P**ip **I**nstalls **P**ackages
 	- `sudo easy_install pip`
 -   For **pycodestyle** - PEP8 linter for _Atom_
@@ -789,6 +844,15 @@ These wrappers don’t include documentation, please check Apple’s documention
 
 	[Docs](https://pyobjc.readthedocs.io/en/latest/)
 
+<a name="swift_code"></a>
+
+### Swift
+
+![](Screenshots/Swift/swift_icon.png)
+
+#### Code Docs
+
+- [Updating and Deleting Keychain Items](https://developer.apple.com/documentation/security/keychain_services/keychain_items/updating_and_deleting_keychain_items)
 
 <a name="bash"></a>
 
@@ -803,6 +867,42 @@ These wrappers don’t include documentation, please check Apple’s documention
 - [25 Simple Find commands](http://www.binarytides.com/linux-find-command-examples/)
 - [The /sbin Directory](http://www.linfo.org/sbin.html)
 - [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
+
+
+#### File Testing
+
+| flag | Def |
+| :-- | :-- |
+| -b filename	| Block special file |
+| -c filename	| Special character file |
+| -d directory name | Check for directory existence |
+-e filename | Check for file existence |
+-f filename | Check for regular file existence not a directory |
+-G filename | Check if file exists and is owned by effective group ID. |
+-g filename | true if file exists and is set-group-id. |
+-k filename | Sticky bit |
+-L filename | Symbolic link |
+-O filename | True if file exists and is owned by the effective user id. |
+-r filename | Check if file is a readable |
+-S filename | Check if file is socket |
+-s filename | Check if file is nonzero size |
+-u filename | Check if file set-ser-id bit is set |
+-w filename | Check if file is writable |
+-x filename | Check if file is executable |
+
+
+#### String Comprehension
+
+| flag | Def |
+| :-- | :-- |
+| [ STRING1 == STRING2 ] | STRING1 is equal to STRING2 |
+| [ STRING1 = STRING2 ]	| STRING1 is equal to STRING2 |
+[ STRING1 != STRING2 ]	| STRING1 is NOT equal to STRING2
+[ STRING1 \> STRING2 ]	| STRING1 is lexically greater than STRING2 - b is greater than a
+[ STRING1 \< STRING2 ]	| STRING1 is lexically less than STRING2 - a is less than b
+[ -n STRING ]	| STRING is non zero - a variable has been set
+[ -z STRING ]	| STRING is zero - variable has no value
+[[ STRING1 =~ REGEXPRESSION ]] |	STRING1 matches Regular Expression
 
 \[[top](#top)]
 
