@@ -72,6 +72,7 @@
 
 - [http://www.getmacapps.com](http://www.getmacapps.com)
 - [macadmins.software](macadmins.software)
+- [https://derflounder.wordpress.com](https://derflounder.wordpress.com)
     
 
 <a name="macos_terminal_commands"></a>    
@@ -122,14 +123,29 @@
 <a name="macos_documentation"></a>
 ### Documentation
 
-- [Apple Document Style Guide](https://help.apple.com/applestyleguide/#/apsg3acde405)
-- [Apple Open Source Documentation](https://opensource.apple.com/)
-- [keyboard shortcuts](http://support.apple.com/kb/HT1343 )
+#### Apple KBs
+
+- [HT201407 - If you can't activate your iPhone](https://support.apple.com/en-us/HT201407)
+- [HT208643 - APNS Support Doc](https://support.apple.com/en-us/HT208643)
+- [HT201260 - macOS Builds](https://support.apple.com/en-us/HT201260)
+- [HT201255 - Mac Startup Cmd Options](https://support.apple.com/en-us/HT201255)
+- [HT201853 - Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
+
+
+#### Whitepapers
+
 - APNS
 	- [Apple Developer - APFS](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999-CH1-DontLinkElementID_19)
 	- [Apple Developer - APNS - API](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html#//apple_ref/doc/uid/TP40008194-CH11-SW1)
 	- [Apple Developer - APNS - Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)
-	- [APNS Support Doc - HT208643](https://support.apple.com/en-us/HT208643)
+
+
+#### Other
+
+- [Apple Document Style Guide](https://help.apple.com/applestyleguide/#/apsg3acde405)
+- [Apple Open Source Documentation](https://opensource.apple.com/)
+- [keyboard shortcuts](http://support.apple.com/kb/HT1343 )
+
 - Launchd Documentation
 	- `man launchd.plist` - to see a full list of keys available to daemons/agents.
 	- ~/Library/LaunchAgents         Per-user agents provided by the user.
@@ -137,11 +153,12 @@
 	- /Library/LaunchDaemons         System-wide daemons provided by the administrator.
 	- /System/Library/LaunchAgents   Per-user agents provided by OS X.
 	- /System/Library/LaunchDaemons  System-wide daemons provided by OS X.
-- [macOS Builds](https://support.apple.com/en-us/HT201260)
-- [Mac Startup Cmd Options](https://support.apple.com/en-us/HT201255)
+
+
 - [Apple software Restore (ASR)](https://en.wikipedia.org/wiki/Apple_Software_Restore)
 - [Disabled Accounts](https://www.jamf.com/jamf-nation/discussions/18243/password-policy-profile-disables-user-account)
 - [Setting Printer Options Via CLI](http://www.brunerd.com/blog/2012/03/13/getting-and-setting-ppd-options-via-command-line-for-use-with-lpadmin-in-os-x/)
+
 	
 
 #### MDM Protocol Related
@@ -155,6 +172,8 @@
 
 #### Networking & Wi-Fi
 
+- [HT210060 - Use Apple products on enterprise networks](https://support.apple.com/en-us/HT210060)
+- [HT201999 - About macOS, iOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/en-us/HT201999)
 - [Connet to a Wireless Network from CLI](http://osxdaily.com/2011/04/12/connect-wireless-network-command-line/)
 - [802.1x](https://www.esecurityplanet.com/views/article.php/3899996/How-to-Use-Enterprise-WiFi-Encryption-and-8021X-in-Mac-OS-X.htm)
 - [Port Specifications for Apple Services](https://support.apple.com/en-us/HT202944)
@@ -202,11 +221,6 @@
 
 - [ABM Support Numbers](https://help.apple.com/businessmanager/?lang=en-us#/apd098f3d709)
 - [Check Apple Services](https://www.apple.com/support/systemstatus/)
-
-
-### MISC
-
-- [Apple Video Adapters and Cables](https://support.apple.com/en-us/HT201853 "About Apple Video Adapters and Cables")
 
 
 \[[top](#top)]
@@ -362,6 +376,8 @@
 ### Error Codes
 
 - 0x80070422 - restart the windows update service
+- The trust relationship between this workstation and the primary domain failed.
+	- Un Bind/Bind
 
 \[[top](#top)]
 
@@ -421,6 +437,8 @@ https://jamf.it/dep-debug
 
 - [API Support](http://developer.jamf.com/apis/jamf-pro-api/index)
 - [New Swagger API - https://[your_url].jamfcloud.com/uapi/doc](https://[your_url].jamfcloud.com/uapi/doc/#)
+- What can be manipulated
+	- Enbale/disable Bluetooth
 
 
 *Maintenance URLs*
@@ -456,6 +474,7 @@ https://jamf.it/dep-debug
 *Conditional Access*
 
 - [Intune Integration - Traveling Tech Guy](https://travellingtechguy.eu/jamf-pro-and-ms-azure-intune-for-macos/)
+- [Jamf Pro Admin Guide - 10.15 - Intune integration](https://docs.jamf.com/10.15.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html)
 - [Conditional Access with Azure](https://resources.jamf.com/documents/white-papers/conditional-access-going-beyond-perimeter-based-security.pdf)
 
 
@@ -466,6 +485,7 @@ https://jamf.it/dep-debug
 - [Jamf Pro SCEP Communication](https://www.jamf.com/jamf-nation/articles/488/communication-of-jamf-pro-as-scep-proxy)
 - [Obtaining a SCEP Proxy Signing Certificate from a Microsoft CA Using Terminal and Uploading the Certificate to Jamf Pro](https://www.jamf.com/jamf-nation/articles/538/obtaining-a-scep-proxy-signing-certificate-from-a-microsoft-ca-using-terminal-and-uploading-the-certificate-to-jamf-pro) - using an external SCEP cert during device enrollment.
 - [Video on Setting up Jamf as a SCEP Proxy](https://www.youtube.com/watch?v=jn0HTWKubFY)
+- [SCEP - Microsoft CA Integration](https://www.ibm.com/support/knowledgecenter/en/SS8H2S/com.ibm.mc.doc/ce_source/concepts/ce_ca_ms_ca_int.htm)
 
 
 *Misc Documentation*
@@ -473,6 +493,10 @@ https://jamf.it/dep-debug
 - [All Product Documentation](https://www.jamf.com/resources/product-documentation/)
 - [Jamf Pro Security Overview](https://www.jamf.com/resources/product-documentation/jamf-pro-security-overview/)
 - [MacOS Security Checklist](https://resources.jamf.com/documents/products/documentation/macos-security-checklist.pdf)
+
+*Errors*
+
+- 
 
 
 #### Packaging
@@ -483,11 +507,9 @@ https://jamf.it/dep-debug
 
 #### Tools
 
-- [Jamf Connect 1.6.2](https://docs.jamf.com/jamf-connect/1.6.2/administrator-guide/About_this_Guide.html)
-	- [File Shares](https://docs.jamf.com/jamf-connect/1.0.0/sync/administrator-guide/File_Shares.html?)
-	- [Verify Preference Keys](https://www.jamf.com/jamf-nation/articles/628/jamf-connect-verify-preference-keys)
-	- [Jamf Connect and ADFS Incorrect Password issue](https://travellingtechguy.eu/jamf-connect-and-adfs-incorrect-password/#comment-12953)
-	- [Jamf Connect Login with Azure](https://travellingtechguy.eu/jamf-connect-login-with-azure/)
+- [GitHub](https://github.com/jamf)
+	- [DEPNotify-Starter](https://github.com/jamf/DEPNotify-Starter)
+- [Jamf Connect](https://www.jamf.com/resources/product-documentation/jamf-connect-administrators-guide/)
 	- Licensing
 		- Jamf Connect Verify preferences
 		- A .jamfconnectlicense file in /Library/Application Support/com.jamf.connect.verify
@@ -663,6 +685,10 @@ The command to collect the logs from a remote machine is:
 - [Load Balancing](https://communities.vmware.com/docs/DOC-32792)
 
 
+*Troubleshooting*
+
+- [Connection Problems Between Horizon Client and the PCoIP Secure Gateway](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-virtual-desktops/GUID-5117AC00-79FC-4A74-8234-014C157A17F6.html)
+
 #### View Connection Server
 
 - [Installation Pre Requisites - Horizon 7-7.8](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-68621B8E-F018-4BC4-811A-5CF76B55DB2C.html)
@@ -774,6 +800,11 @@ The command to collect the logs from a remote machine is:
 
 - [Provisioning View desktops fails due to customization timeout errors (2007319)](https://kb.vmware.com/s/article/2007319) - No longer required after 2018/12/17
 
+- Issues with Sysprep & Customization
+
+	- Guest Customization log: `C:/Windows/TEMP/vmware-imc/guestcust.log`
+	- Sysprep Log: `C:\Windows\System32\Sysprep\Panther\setupact.log`
+
 <a name="google_enterprise"></a>
 ## Google Enterprise
 
@@ -800,6 +831,9 @@ The command to collect the logs from a remote machine is:
 - `chrome://policies` - verify that all required policies have been properly applied.
 - `chrome://version` - Chrome and platform version of the affected Chrome device.
 
+
+\[[top](#top)]
+<a name="scripting-and-languages"></a>
 ## Related to Scripting & Development
 
 - [HTTPS Status Code Explainations](https://httpstatuses.com/)
@@ -810,6 +844,44 @@ The command to collect the logs from a remote machine is:
 ### Git
 
 - [GitHub Repo API](https://developer.github.com/v3/repos/#create)
+
+#### Error Running Git on MacOS After Upgrade
+
+
+***Error*** 
+
+```
+Avengers%: git
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+```
+
+***Solution***
+
+The Mac does not have the necessary developer tools installed.
+
+***Steps***
+
+1. Run the following command from Terminal.app:
+
+	```
+	xcode-select --install
+	```
+2. You'll then receive:
+	
+	```
+	xcode-select: note: install requested for command line developer tools
+	```
+	
+	And be prompted in a window to update Xcode Command Line tools.
+	
+	![](/Users/captam3rica/Desktop/Screen Shot 2019-10-25 at 15.20.44.png)
+
+3. After the update is completed, open a new terminal window and your development tools should be returned.
+
+
+	**Addition**: With any major or semi-major update you'll need to update the command line tools in order to get them functioning properly again. Check Xcode with any update. This goes beyond Mojave...
+
+4. After that restart your terminal
 
 
 <a name="python"></a>
@@ -868,6 +940,12 @@ These wrappers don’t include documentation, please check Apple’s documention
 - [The /sbin Directory](http://www.linfo.org/sbin.html)
 - [Working with tar](http://www.tecmint.com/18-tar-command-examples-in-linux/)
 
+
+#### Code Snippets
+
+- Remove training and leading whitespace
+
+	`sed -e 's/^[ \t]*//'`
 
 #### File Testing
 
@@ -1006,9 +1084,6 @@ atom-text-editor.editor .selection .region {
 }
 ```
 
-\[[top](#top)]
-<a name="scripting-and-languages"></a>
-
 <a name="markdown"></a>
 
 ### Markdown
@@ -1084,9 +1159,15 @@ atom-text-editor.editor .selection .region {
 [[top](#top)]
 
 
-## Encryption & Cryptography
+## Security
 
 -   [Hashing vs Encryption](http://www.darkreading.com/safely-storing-user-passwords-hashing-vs-encrypting/a/d-id/1269374)
+
+### Handy Commands
+
+- Check the SSL/TLS cert using openssl
+
+	`openssl s_client -connect example.com:443`
 
 [[top](#top)]
 
