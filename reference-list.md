@@ -874,7 +874,7 @@ The Mac does not have the necessary developer tools installed.
 	
 	And be prompted in a window to update Xcode Command Line tools.
 	
-	![](/Users/captam3rica/Desktop/Screen Shot 2019-10-25 at 15.20.44.png)
+	![](Screenshots/git/macos-git-error.png)
 
 3. After the update is completed, open a new terminal window and your development tools should be returned.
 
