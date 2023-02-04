@@ -1,0 +1,15 @@
+# ignore jamf100
+
+jamf100*
+
+# ignore jamf server config
+
+jamfpro*
+jamf_now*
+jnuc*
+
+# OSX ACLs
+
+osx*
+
+Whats*
